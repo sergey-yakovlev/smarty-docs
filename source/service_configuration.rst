@@ -100,7 +100,7 @@ API-ключ следует генерировать через утилиту p
 В служебной панели администрирования добавить установленные шаблоны порталов:
 http://smarty.example.com/admin/tvmiddleware/playdevicetemplate/
 
-Названия (пути) стандартных шаблонов: ``classic`` ``impuls`` ``iridium`` ``focus`` ``orbita``
+Названия (пути) стандартных шаблонов: ``classic`` ``impuls`` ``iridium`` ``focus`` ``orbit``
 
 Подробнее см. в разделе :ref:`Приложения для абонентских устройств <apps_for_devices>`
 
