@@ -9,27 +9,18 @@ Microimpuls Hybrid IPTV/OTT Middleware  - документация по Back-end
 Содержание:
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 3
 
-
-   service_configuration.rst
-   apps_for_devices.rst
-
-
-    Системные требования
-
-    Инсталляция системы
-        Debian-based
-            Установка из deb-пакетов
-                Требования к окружению
-                Описание пакетов
-            Автоматическая установка через Fabric
-            Запуск и остановка
-        CentOS
+    introduction.rst
+    installation.rst
+    system_configuration.rst
+    service_configuration.rst
+    apps_for_devices.rst
 
     Системная конфигурация
         Системные настройки
             Добавление конфигурации // идеология инстансов
+            Масштабирование и отказоустойчивость
         Настройка выполнения команд в crontab
         Настройка геолокации
 
