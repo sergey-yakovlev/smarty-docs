@@ -9,7 +9,7 @@ Microimpuls Hybrid IPTV/OTT Middleware  - документация по Back-end
 Содержание:
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
 
     introduction.rst
     installation.rst
@@ -39,4 +39,5 @@ Microimpuls Hybrid IPTV/OTT Middleware  - документация по Back-end
     +Приложения для абонентских устройств
 
     Техническая поддержка
+    За помощью в настройке smarty, порталов и серверов Middleware/SQL, репликации данных, балансировки нагрузки, кеширования, резервирования и прочего обращайтесь в службу технической поддержки Microimpuls support@microimpuls.com
 

@@ -122,7 +122,7 @@ http://smarty.example.com/admin/tvmiddleware/playdevice/
 +--------------------+-----------------------------------------------------------------+
 
 Поддерживаемые типы устройств (системные названия): ``android`` ``android_stb`` ``dune`` ``eltex`` ``lg_netcast``
-``lg_webos`` ``mag`` ``pc`` ``sagemcom`` ``samsung_smart_tv`` ``tizen_tv`` ``wrt``
+``lg_webos`` ``mag`` ``pc`` ``sagemcom`` ``samsung_smart_tv`` ``tizen_tv`` ``ios`` ``wrt`` ``amino``
 
 .. _playdevice-assigning-to-client:
 
@@ -226,3 +226,15 @@ http://smarty.example.com/admin/tvmiddleware/epgchannel/
 .. _template-engine-docs:
 
 Документация по работе шаблонизатора: http://djbook.ru/rel1.7/#the-template-layer
+
+Панель администрирования smarty
+===============================
+
+Биллинг
+-------
+
+.. _admin-tariffs:
+
+Тарифные планы
+~~~~~~~~~~~~~~
+
