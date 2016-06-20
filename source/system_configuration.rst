@@ -14,6 +14,8 @@
 Добавление конфигурации
 -----------------------
 
+.. _smarty-config:
+
 smarty
 ~~~~~~
 
@@ -26,10 +28,14 @@ smarty
 
 Конфигурация производится путем присваивания значений переменым на Python.
 
+.. _nginx-config:
+
 nginx
 ~~~~~
 
 Конфигурация для **nginx** находится в файле ``/etc/nginx/sites.available/smarty``.
+
+.. _uwsgi-config:
 
 uwsgi
 ~~~~~
@@ -149,6 +155,8 @@ SMARTY_URL ``str``
 
 Все локаторы требуют создания/обновления своей базы данных. База данных может быть в виде SQL-таблиц или бинарных данных (либо и то, и то).
 
+.. _django-geoip:
+
 django-geoip (ipgeobase)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -161,6 +169,8 @@ django-geoip (ipgeobase)
 Создание стран и городов на основе данных django-geoip (работает только если в системе нет ни одной страны и города):
 ::
     $ python manage.py sync_geo_geoip
+
+.. _ip2location:
 
 ip2location
 ~~~~~~~~~~~
@@ -233,6 +243,8 @@ SMS_BACKED ``str``
 
 SMS_ATTEMPTS ``int``
   Количество максимальных попыток отправки сообщения, после которого оно считается отправленным неуспешно.
+
+.. _smsc.ru:
 
 Шлюз smsc.ru
 ~~~~~~~~~~~~
@@ -329,6 +341,8 @@ SMSC_SENDER ``str``
 Настройка выполнения команд в crontab
 =====================================
 
+.. _epg-import-command:
+
 Импорт EPG
 ----------
 
@@ -337,6 +351,8 @@ SMSC_SENDER ``str``
     python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.<settings name>
 Рекомендуется запускать импорт несколько раз в день для поддержания актуальности телепрограммы
 (см. :ref:`Настройка EPG и телеканалов <epg-setup>`).
+
+.. _check-accounts-command:
 
 Команда списания/продления аккаунтов с помощью встроенного биллинга согласно рассчетным периодам
 ------------------------------------------------------------------------------------------------
@@ -347,6 +363,8 @@ SMSC_SENDER ``str``
 Рекомендуется запускать каждую ночь
 (см. :ref:`Описание встроенного биллинга <builtin-billing>`).
 
+.. _check-streams-command:
+
 Опрос анализаторов TS-потоков MicroTS (модуль мониторинга видеопотоков)
 -----------------------------------------------------------------------
 
@@ -354,6 +372,8 @@ SMSC_SENDER ``str``
 ::
     python /usr/local/nginx/html/microimpuls/smarty/manage.py check_streams --settings=settings.<settings name>
 Рекомендуется запускать каждые 1-5 минут для актуального состояния данных.
+
+.. _check-events-command:
 
 Выполнение действий по триггерам модуля мониторинга видеопотоков
 ----------------------------------------------------------------
@@ -363,6 +383,8 @@ SMSC_SENDER ``str``
     python /usr/local/nginx/html/microimpuls/smarty/manage.py check_events --settings=settings.<settings name>
 Рекомендуется запускать каждую минуту для актуального информирования об авариях.
 
+.. _send-activation-expires-messages-command:
+
 Рассылка информационных сообщений на экраны устройств и email о приближении срока деактивации/необходимости оплаты
 ------------------------------------------------------------------------------------------------------------------
 
@@ -371,12 +393,16 @@ SMSC_SENDER ``str``
     python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count <количество оставшихся дней> --settings=settings.<settings name>
 Рекомендуется запускать каждый вечер.
 
+.. _clean-old-messages-command:
+
 Очистка старых недоставленных информационных сообщений
 ------------------------------------------------------
 
 Команда:
 ::
     python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.<settings name>
+
+.. _resend-sms-command:
 
 Повторная отправка SMS-сообщений, недоставленных с первого раза
 ---------------------------------------------------------------
@@ -385,6 +411,8 @@ SMSC_SENDER ``str``
 ::
     python /usr/local/nginx/html/microimpuls/smarty/manage.py resend_sms --settings=settings.<settings name>
 Рекомендуется запускать каждые 1-3 минуты.
+
+.. _crontab-example:
 
 Пример настройки crontab
 ------------------------
