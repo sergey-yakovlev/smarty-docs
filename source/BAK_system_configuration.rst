@@ -1,10 +1,8 @@
-.. _system_configuration:
 
 **********************
 Системная конфигурация
 **********************
 
-.. _system-settings:
 
 Системные настройки
 ===================
@@ -56,6 +54,45 @@ SECRET_KEY ``str``
 INSTALLED_APPS ``list``
   Список установленных модулей. Список дополняет базовые модули, прописанные в ``base.py``, через операцию ``+=``.
 
+.. DEFAULT_FROM_EMAIL = 'robot@microimpuls.com'
+SERVER_EMAIL = 'robot@microimpuls.com'
+EMAIL_FROM = 'robot@microimpuls.com'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'robot@microimpuls.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
+
+.. MAIL_SPAWNER_DOMAINS = ['example.com',]
+
+.. MONITORING_THUMBNAILS_ROOT = rel('media/thumbnails')
+MONITORING_THUMBNAILS_URL = '/media/thumbnails/'
+MONITORING_CONCURRENT_STREAMS_COUNT = 15
+MONITORING_STREAM_TEST_DURATION = 10
+MONITORING_AGENT_SOCKET_TCP_BUFFER = 4096
+
+.. TVMIDDLEWARE_PORTAL_DOMAIN = 'microimpuls.com'
+TVMIDDLEWARE_API_URL = 'http://smarty.microimpuls.com/tvmiddleware/api'
+SMARTY_URL = 'http://smarty.microimpuls.com'
+
+.. SMS_BACKEND = 'sms.backends.smscru.SMSCBackend'
+SMS_ATTEMPTS = 3
+
+.. SMSC_LOGIN = 'microimpuls'
+SMSC_PASSWORD = ''
+SMSC_SENDER = 'ImpulsTV'
+
+.. MONGODB_HOST = 'mdb1.vm2.noris.nbg.mpls.im'
+MONGODB_PORT = 27017
+MONGODB_NAME = 'smarty_microimpuls'
+MONGODB_USERNAME = 'smarty_microimpuls_admin'
+MONGODB_PASSWORD = ''
+
+.. DATABASE_SLAVES = ['slave1', 'slave2']
+DATABASE_SLAVES = []
+DATABASE_ROUTERS = ['django_replicated.ReplicationRouter']
+DATABASE_DOWNTIME = 60
+
 Добавление лицензионного ключа сервера
 --------------------------------------
 
@@ -91,8 +128,52 @@ INSTALLED_APPS ``list``
 Подключение системы мониторинга ошибок Sentry
 ---------------------------------------------
 
+добавить в модули raven.contrib.django.raven_compat
+и добавить в settings:
+RAVEN_CONFIG = {
+   'dsn': 'http://33c7020cb60340f1a2dfca25e4f7f188:0a2b2cee6ede45c2a7aac33d3e35eecc@sentry.mpls.im/5',
+}
+
 Настройка расширенного логирования
 ----------------------------------
+
+"""
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[%(asctime)s] %(levelname)s %(name)s %(lineno)d "%(message)s"'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    }
+}
+"""
 
 Запуск, остановка, перезапуск
 =============================

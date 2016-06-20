@@ -9,13 +9,14 @@ Microimpuls Hybrid IPTV/OTT Middleware  - документация по Back-end
 Содержание:
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
 
     introduction.rst
     installation.rst
     system_configuration.rst
     service_configuration.rst
     apps_for_devices.rst
+    integration.rst
 
     Системная конфигурация
         Системные настройки
@@ -36,16 +37,6 @@ Microimpuls Hybrid IPTV/OTT Middleware  - документация по Back-end
                 Создание шаблонов документов
 
     +Приложения для абонентских устройств
-
-    Интеграция с внешними системами
-       Взаимодействие с абонентскими устройствами
-       Интеграция с биллингом
-       Платежный шлюз
-       Встраивание модулей в сайт
-
-    Дополнительный инструментарий
-       Скрипт миграции данных smarty между БД
-       Скрипт миграции с OFT Middleware на Microimpuls
 
     Техническая поддержка
 
