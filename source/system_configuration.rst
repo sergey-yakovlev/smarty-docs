@@ -329,15 +329,53 @@ SMSC_SENDER ``str``
 Настройка выполнения команд в crontab
 =====================================
 
-0 5,9,13 * * *	python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import
-*/2 * * * *	python /usr/local/nginx/html/microimpuls/smarty/manage.py check_streams
-*/1 * * * *	python /usr/local/nginx/html/microimpuls/smarty/manage.py check_events
-0 4 * * *       python /usr/local/nginx/html/microimpuls/smarty/manage.py check_accounts
-0 18 * * *	python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 5
-0 18 * * *      python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 3
-0 18 * * *      python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 1
-*/3 * * * *     python /usr/local/nginx/html/microimpuls/smarty/manage.py resend_sms
-0 3 * * *	python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3
+**Импорт EPG:**
+::
+    python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.<settings name>
+Рекомендуется запускать импорт несколько раз в день для поддержания актуальности телепрограммы
+(см. :ref:`Настройка EPG и телеканалов <epg-setup>`).
+
+**Выполнение списания денег и продления аккаунтов с помощью встроенного биллинга согласно рассчетным периодам:**
+::
+    python /usr/local/nginx/html/microimpuls/smarty/manage.py check_accounts --settings=settings.<settings name>
+Рекомендуется запускать каждую ночь
+(см. :ref:`Описание встроенного биллинга <builtin-billing>`).
+
+**Опрос анализаторов TS-потоков MicroTS (модуль мониторинга видеопотоков):**
+::
+    python /usr/local/nginx/html/microimpuls/smarty/manage.py check_streams --settings=settings.<settings name>
+Рекомендуется запускать каждые 1-5 минут для актуального состояния данных.
+
+**Выполнение действий по триггерам модуля мониторинга видеопотоков:**
+::
+    python /usr/local/nginx/html/microimpuls/smarty/manage.py check_events --settings=settings.<settings name>
+Рекомендуется запускать каждую минуту для актуального информирования об авариях.
+
+**Рассылка информационных сообщений на экраны устройств и email о приближении срока деактивации/необходимости оплаты:**
+::
+    python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count <количество оставшихся дней> --settings=settings.<settings name>
+Рекомендуется запускать каждый вечер.
+
+**Очистка старых недоставленных информационных сообщений:**
+::
+    python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.<settings name>
+
+**Повторная отправка SMS-сообщений, недоставленных с первого раза:**
+::
+    python /usr/local/nginx/html/microimpuls/smarty/manage.py resend_sms --settings=settings.<settings name>
+Рекомендуется запускать каждые 1-3 минуты.
+
+Пример настройки crontab:
+::
+    0 5,9,13 * * *      python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import
+    */2 * * * *	        python /usr/local/nginx/html/microimpuls/smarty/manage.py check_streams
+    */1 * * * *	        python /usr/local/nginx/html/microimpuls/smarty/manage.py check_events
+    0 4 * * *           python /usr/local/nginx/html/microimpuls/smarty/manage.py check_accounts
+    0 18 * * *	        python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 5
+    0 18 * * *          python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 3
+    0 18 * * *          python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 1
+    */3 * * * *         python /usr/local/nginx/html/microimpuls/smarty/manage.py resend_sms
+    0 3 * * *           python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3
 
 .. _scalability-failsafe:
 
