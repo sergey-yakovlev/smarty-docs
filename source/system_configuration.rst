@@ -419,15 +419,16 @@ SMSC_SENDER ``str``
 
 Пример:
 ::
-    0 5,9,13 * * *      python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import
-    */2 * * * *	        python /usr/local/nginx/html/microimpuls/smarty/manage.py check_streams
-    */1 * * * *	        python /usr/local/nginx/html/microimpuls/smarty/manage.py check_events
-    0 4 * * *           python /usr/local/nginx/html/microimpuls/smarty/manage.py check_accounts
-    0 18 * * *	        python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 5
-    0 18 * * *          python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 3
-    0 18 * * *          python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 1
-    */3 * * * *         python /usr/local/nginx/html/microimpuls/smarty/manage.py resend_sms
-    0 3 * * *           python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    0 5,9,13 * * *      python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.prod
+    */2 * * * *	        python /usr/local/nginx/html/microimpuls/smarty/manage.py check_streams --settings=settings.prod
+    */1 * * * *	        python /usr/local/nginx/html/microimpuls/smarty/manage.py check_events --settings=settings.prod
+    0 4 * * *           python /usr/local/nginx/html/microimpuls/smarty/manage.py check_accounts --settings=settings.prod
+    0 18 * * *	        python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 5 --settings=settings.prod
+    0 18 * * *          python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 3 --settings=settings.prod
+    0 18 * * *          python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count 1 --settings=settings.prod
+    */3 * * * *         python /usr/local/nginx/html/microimpuls/smarty/manage.py resend_sms --settings=settings.prod
+    0 3 * * *           python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
 
 .. _scalability-failsafe:
 
@@ -469,18 +470,14 @@ Front-end серверов, с CDN, либо напрямую из прошив�
 
 После этого необходимо добавить в файл конфигурации следующие опции:
 
-DATABASE_SLAVES ``list``
+REPLICATED_DATABASE_SLAVES ``list``
   По-умолчанию, роль каждого подключения определена как *Master*, для выделения *Slave* ролей необходимо
-  в массиве DATABASE_SLAVES указать имена подключений, которые будут использоваться как Slave.
+  в массиве REPLICATED_DATABASE_SLAVES указать имена подключений, которые будут использоваться как Slave.
 
-DATABASE_ROUTERS ``list``
-  Механизм репликации. Используйте встроенный ``django_replicated.ReplicationRouter``.
-
-DATABASE_DOWNTIME ``int``
+REPLICATED_DATABASE_DOWNTIME ``int``
   Время недоступности сервера БД в секундах, по прошествию которого он отключается из схемы распределения запросов.
 
 Пример:
 ::
-    DATABASE_SLAVES = ['slave1', 'slave2']
-    DATABASE_ROUTERS = ['django_replicated.ReplicationRouter']
-    DATABASE_DOWNTIME = 60
+    REPLICATED_DATABASE_SLAVES = ['slave1', 'slave2']
+    REPLICATED_DATABASE_DOWNTIME = 60
