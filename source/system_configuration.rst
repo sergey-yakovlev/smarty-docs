@@ -19,10 +19,10 @@
 smarty
 ~~~~~~
 
-После первичной установки базовый файл конфигурации smarty находится по адресу ``/etc/smarty/base.py``
+После первичной установки базовый файл конфигурации smarty находится по адресу ``/etc/microimpuls/smarty/base.py``
 (симлинк на ``/usr/share/nginx/html/microimpuls/smarty/settings/base.py``).
 
-Основной файл конфигурации, используемый для production-режима работы - ``/etc/smarty/prod.py``.
+Основной файл конфигурации, используемый для production-режима работы - ``/etc/microimpuls/smarty/prod.py``.
 На этот файл (или на другой используемый конфиг) должен указывать симлинк в ``/usr/share/nginx/html/microimpuls/smarty/settings/<setings name>.py``.
 Именно в нем следует производить настройку smarty.
 

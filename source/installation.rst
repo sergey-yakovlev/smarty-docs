@@ -44,7 +44,7 @@ Debian
     sudo pip install -r /usr/share/nginx/html/microimpuls/smarty/requirements.txt
 
 После установки пакета smarty-base создается конфигурационный файл для nginx в ``/etc/nginx/sites-available/smarty``.
-По-умолчанию настроен на домен ``smarty.example.com`` и слушает порт ``80`` и ``8080``.
+По-умолчанию настроен на домен ``smarty.example.com`` и слушает порт ``80`` и ``8180``.
 
 Файлы Web-приложения smarty размещаются в ``/usr/share/nginx/html/microimpuls/smarty``.
 
