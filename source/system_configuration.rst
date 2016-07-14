@@ -142,6 +142,12 @@ SMARTY_URL ``str``
         'socket_timeout': 3, # connection timeout in seconds, optional
     }
 
+Важно! В файле конфигурации Redis ``/etc/redis/redis.conf`` необходимо прописать:
+::
+    stop-writes-on-bgsave-error no
+
+Для вступления изменений в силу требуется перезагрузить Redis и uwsgi.
+
 .. _geo-settings:
 
 Настройка геолокации
