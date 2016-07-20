@@ -23,7 +23,8 @@
 Примеры кода
 ------------
 
-Библиотека на Python: https://github.com/microimpuls/smarty-billing-api-python
+* Библиотека на Python: https://github.com/microimpuls/smarty-billing-api-python
+* Скрипт интеграции с биллингом `"Гидра" <http://www.hydra-billing.ru/>`_: https://github.com/microimpuls/admin-tools/tree/master/hydra_billing_script
 
 см. :ref:`Дополнительные инструменты <tools-and-scripts>`
 
