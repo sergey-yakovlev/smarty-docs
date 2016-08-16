@@ -28,7 +28,9 @@
 * Скрипт интеграции с биллингом `Гидра <http://www.hydra-billing.ru/>`_:
   https://github.com/microimpuls/admin-tools/tree/master/hydra_billing_script
 
-см. :ref:`Дополнительные инструменты <tools-and-scripts>`
+.. note::
+
+  Смотрите также другие :ref:`дополнительные инструменты <tools-and-scripts>`
 
 .. _billing-integration-scenarios:
 
@@ -130,4 +132,6 @@
 Скрипт массового создания аккаунтов через Billing API
   https://github.com/microimpuls/admin-tools/tree/master/mass_customer_creator
 
-Другие полезные скрипты и утилиты см. в репозитории https://github.com/microimpuls/admin-tools
+.. note::
+
+  Другие полезные скрипты и утилиты см. в репозитории Microimpuls на Github: https://github.com/microimpuls/admin-tools
