@@ -16,7 +16,7 @@
 Интеграция с биллингом
 ======================
 
-`Документация по Billing API <http://smarty.microimpuls.com/docs/billing_api/>`_
+`Документация по Billing API <https://microimpuls.github.io/smarty-billing-api-docs>`_
 
 .. _billing-api-samples:
 
