@@ -121,7 +121,7 @@ http://smarty.example.com/admin/tvmiddleware/playdevice/
 Системное название
     Системное название типа устройства, возможные значения см. ниже.
 
-Поддерживаемые типы устройств (системные названия): ``android`` ``android_stb`` ``dune`` ``eltex`` ``lg_netcast``
+Поддерживаемые типы устройств (системные названия): ``android`` ``android_stb`` ``dune`` ``eltex`` ``tvip`` ``lg_netcast``
 ``lg_webos`` ``mag`` ``pc`` ``sagemcom`` ``samsung_smart_tv`` ``tizen_tv`` ``ios`` ``wrt`` ``amino``
 
 .. _playdevice-assigning-to-client:
