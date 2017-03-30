@@ -408,7 +408,7 @@ stream_service_checking_success
 
 
 
-4.1.11. smarty_admin - лог панели администрирования Smarty
+4.1.12. smarty_admin - лог панели администрирования Smarty
 ----------------------------------------------------------
 
 admin_request
