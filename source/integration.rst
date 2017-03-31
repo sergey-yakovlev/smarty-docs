@@ -115,9 +115,36 @@
 
 `Документация по Site-Widgets API <http://smarty.microimpuls.com/docs/widgets_api/>`_
 
+.. _common-video-servers-integration:
+
+5.5. Интеграция с популярными видео-серверами
+=============================================
+
+.. _astra:
+
+5.5.1. Интеграция с Astra
+-------------------------
+
+Для интеграции механизма авторизации видеопотоков (стриминг-сервисов) с `Astra <http://cesbo.com>`_ используется механизм генерации
+одноразовых токенов для ссылок на поток на стороне сервера Smarty. Astra в момент разбора HTTP Request от
+абонентского устройства выделяет токен и проверяет его на сервере Smarty на валидность.
+
+Для генерации токена необходимо в маске URL стриминг-сервиса в Smarty добавить переменную ``$token`` в запрос,
+например: ::
+
+  http://streamer.example.com:8080/mychannel/?token=$token
+
+
+.. note::
+
+  Дополнительная информация:
+
+  * `StreamService API - метод проверки токена StreamServiceTokenCheck <https://microimpuls.github.io/smarty-tvmw-api-docs/#api-StreamService-StreamServiceTokenCheck>`_
+  * :ref:`Настройка стриминг-сервисов <smarty-admin-guide-videostreaming-video-services>`
+
 .. _tools-and-scripts:
 
-5.5. Дополнительные инструменты
+5.6. Дополнительные инструменты
 ===============================
 
 Скрипт миграции данных smarty между БД по client_id
