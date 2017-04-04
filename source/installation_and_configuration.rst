@@ -71,7 +71,14 @@
     python /usr/share/nginx/html/microimpuls/smarty/manage.py migrate --settings=settings.<settings filename>
 
 - *<settings filename>* - имя файла настроек Smarty, в котором должны быть установлены параметры подключения к БД
-(см. :ref:`Описание основных параметров <settings-description>`).
+  (см. :ref:`Описание основных параметров <settings-description>`).
+
+.. note::
+
+    Дополнительные материалы:
+
+    - :ref:`Особенности установки и настройки подключения Smarty к СУБД Oracle <cx_oracle>`
+
 
 .. _install-on-centos:
 
