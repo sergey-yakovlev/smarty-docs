@@ -219,7 +219,7 @@ ID канала в источнике EPG
 Если приложение требует иконки с определенными размерами, то сервер будет выдавать иконки с адресом
 ``<имя файла><ширина>_<высота>.<расширение>``.
 Например, если иконка стандартного размера располагается по адресу
-``/tvmiddleware/media/img/logo/default/somelogo.png``, то иконка размера 400*400 - ``/tvmiddleware/media/img/logo/default/somelogo400_400.png``.
+``/tvmiddleware/media/img/logo/default/somelogo.png``, то иконка размера 400x400px - ``/tvmiddleware/media/img/logo/default/somelogo400_400.png``.
 
 Требуемые размеры иконок передаются приложением как аргументы ``icon_width``, ``icon_height`` в запросах :ref:`TVMiddleware API <tvmiddleware-api>`.
 
