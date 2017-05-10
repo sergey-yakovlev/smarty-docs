@@ -16,6 +16,7 @@ Microimpuls Middleware «Smarty»  - документация по решени�
     service_configuration.rst
     log.rst
     integration.rst
+    portal_setup.rst
     troubleshooting.rst
     additional_docs.rst
 
