@@ -15,7 +15,7 @@
 
 Пример записи в логе: ::
 
-    Fri Mar 24 10:22:35+0300 2017 DEBUG api:621 get[83630.Thread-3] event='some_event' 'ip'='127.0.0.1' args=['foo', 'bar']
+    Fri Mar 24 10:22:35+0300 2017 DEBUG api:621 get[83630.Thread-3] SOME_EVENT 'ip'='127.0.0.1' args=['foo', 'bar']
 
 В этом примере:
 
@@ -37,7 +37,7 @@ api:621
     название файла и номер строки
 get[83630.Thread-3]
     название функции, pid и имя треда
-some_event
+SOME_EVENT
     название события
 *ip* и *args*
     дополнительный контекст
@@ -50,7 +50,7 @@ some_event
 
 Типы событий:
 
-urls_initialized
+URLS_INITIALIZED
 ++++++++++++++++
 
 Конфигурация Smarty инициализирована.
@@ -67,12 +67,12 @@ urls_initialized
 Дополнительный контекст: локальные переменные функции, в которой произошла ошибка.
 
 
-4.1.2. smarty_accounts_login - лог авторизации абонентов
+4.1.2. smarty_accounts - лог абонентов
 --------------------------------------------------------
 
 Типы событий:
 
-login_success
+LOGIN_SUCCESS
 +++++++++++++
 
 Успешная авторизация, контекст:
@@ -82,7 +82,7 @@ login_success
 * ``params`` - параметры запроса
 
 
-login_error
+LOGIN_ERROR
 +++++++++++
 
 Ошибка авторизации, контекст:
@@ -98,7 +98,7 @@ login_error
 * ``params`` - параметры запроса
 
 
-account_device_error
+ACCOUNT_DEVICE_ERROR
 ++++++++++++++++++++
 
 Ошибка при создании устройства аккаунта, контекст:
@@ -108,11 +108,100 @@ account_device_error
 * ``device_uid`` - UID устройства
 * ``client`` - оператор
 
+ACCOUNT_ACTIVATED
++++++++++++++++++
+
+Аккаунт был активирован, контекст:
+
+* ``activation_result`` - ответ, который вернула внешняя система
+* ``params`` - параметры запроса
+
+
+
+ACCOUNT_CREATED
++++++++++++++++
+
+Создание аккаунта, контекст:
+
+* ``account_id`` - идентификатор аккаунта
+
+
+ACCOUNT_CHANGED
++++++++++++++++
+
+Изменение аккаунта, контекст:
+
+* ``account_id`` - идентификатор аккаунта
+* изменённые поля
+
+
+
+ACCOUNT_TARIFFS_ASSIGNED
+++++++++++++++++++++++++
+
+Добавление тарифов аккаунту, контекст:
+
+* ``account_id`` - идентификатор аккаунта
+* ``tariffs_ids`` - список идентификаторов подключенных тарифов
+
+
+ACCOUNT_TARIFFS_REMOVED
++++++++++++++++++++++++
+
+Удаление тарифов у аккаунта, контекст:
+
+* ``account_id`` - идентификатор аккаунта
+* ``tariffs_ids`` - список идентификаторов удаленных тарифов
+
+
+CUSTOMER_CREATED
+++++++++++++++++
+
+Создание абонента, контекст:
+
+* ``customer_id`` - идентификатор абонента
+
+
+CUSTOMER_CHANGED
+++++++++++++++++
+
+Изменение абонента, контекст:
+
+* ``customer_id`` - идентификатор абонента
+* изменённые поля
+
+
+CUSTOMER_TARIFFS_ASSIGNED
++++++++++++++++++++++++++
+
+Добавление тарифов абоненту, контекст:
+
+* ``customer_id`` - идентификатор абонента
+* ``tariffs_ids`` - список идентификаторов подключенных тарифов
+
+
+CUSTOMER_TARIFFS_REMOVED
+++++++++++++++++++++++++
+
+Удаление тарифов у абонента, контекст:
+
+* ``customer_id`` - идентификатор абонента
+* ``tariffs_ids`` - список идентификаторов удаленных тарифов
+
+
+ACCOUNT_DEVICE_REMOVED
+++++++++++++++++++++++
+
+Удаление устройства аккаунта, контекст:
+
+* ``account_id`` - идентификатор аккаунта
+* ``device_uid`` - идентификатор устройства
+
 
 4.1.3. smarty_billing_out - запросы к внешним системам
 ------------------------------------------------------
 
-init_error
+INIT_ERROR
 ++++++++++
 
 Ошибка инициализации обработчика API, контекст:
@@ -122,7 +211,7 @@ init_error
 * stacktrace
 
 
-customer_balance_request_error
+CUSTOMER_BALANCE_REQUEST_ERROR
 ++++++++++++++++++++++++++++++
 
 Ошибка при запросе баланса, контекст:
@@ -132,7 +221,7 @@ customer_balance_request_error
 * stacktrace
 
 
-customer_balance_request_success
+CUSTOMER_BALANCE_REQUEST_SUCCESS
 ++++++++++++++++++++++++++++++++
 
 Успешный запрос баланса, контекст:
@@ -142,7 +231,7 @@ customer_balance_request_success
 * ``result`` - результат запроса
 
 
-customer_payment_list_request_error
+CUSTOMER_PAYMENT_LIST_REQUEST_ERROR
 +++++++++++++++++++++++++++++++++++
 
 Ошибка при запросе списка транзакций, контекст:
@@ -152,7 +241,7 @@ customer_payment_list_request_error
 * stacktrace
 
 
-customer_payment_list_request_success
+CUSTOMER_PAYMENT_LIST_REQUEST_SUCCESS
 +++++++++++++++++++++++++++++++++++++
 
 Успешный запрос списка транзакций, контекст:
@@ -162,7 +251,7 @@ customer_payment_list_request_success
 * result - результат запроса
 
 
-video_actions_list_request_error
+VIDEO_ACTIONS_LIST_REQUEST_ERROR
 ++++++++++++++++++++++++++++++++
 
 Ошибка при запросе вариантов действий с видео, контекст:
@@ -172,7 +261,7 @@ video_actions_list_request_error
 * stacktrace
 
 
-video_actions_list_request_success
+VIDEO_ACTIONS_LIST_REQUEST_SUCCESS
 ++++++++++++++++++++++++++++++++++
 
 Успешный запрос вариантов действий с видео, контекст:
@@ -182,7 +271,7 @@ video_actions_list_request_success
 * result - результат запроса
 
 
-video_action_request_error
+VIDEO_ACTION_REQUEST_ERROR
 ++++++++++++++++++++++++++
 
 Ошибка при попытке произвести действие с видео, контекст:
@@ -192,7 +281,7 @@ video_action_request_error
 * stacktrace
 
 
-video_action_request_success
+VIDEO_ACTION_REQUEST_SUCCESS
 ++++++++++++++++++++++++++++
 
 Успешное действие с видео, контекст:
@@ -205,7 +294,7 @@ video_action_request_success
 4.1.4. smarty_billing_in - входящие запросы к Billing API
 ---------------------------------------------------------
 
-billing_request_error
+BILLING_REQUEST_ERROR
 +++++++++++++++++++++
 
 Ошибка при запросе к Billing API, контекст:
@@ -217,7 +306,7 @@ billing_request_error
 * ``error`` - код ошибки
 
 
-billing_request_success
+BILLING_REQUEST_SUCCESS
 +++++++++++++++++++++++
 
 Успешный запрос в биллинг, контекст:
@@ -230,7 +319,7 @@ billing_request_success
 4.1.5. smarty_cache - события, связанные с кешированием
 -------------------------------------------------------
 
-object_cached
+OBJECT_CACHED
 +++++++++++++
 
 Обьект закеширован, контекст:
@@ -241,7 +330,7 @@ object_cached
 * ``deps`` - обьекты, при изменении которых кешируемый обьект должен быть инвалидирован
 
 
-object_invalidated
+OBJECT_INVALIDATED
 ++++++++++++++++++
 
 Обьект инвалидирован, контекст:
@@ -253,7 +342,7 @@ object_invalidated
 4.1.6. smarty_messaging - лог отправленных сообщений для аккаунтов
 ------------------------------------------------------------------
 
-message_created
+MESSAGE_CREATED
 +++++++++++++++
 
 Создано сообщение, контекст:
@@ -263,7 +352,7 @@ message_created
 * ``text`` - текст сообщения
 
 
-message_send
+MESSAGE_SEND
 ++++++++++++
 
 Сообщение отправлено, контекст:
@@ -274,7 +363,7 @@ message_send
 * ``uuid`` - идентификатор сообщения
 
 
-message_deleted
+MESSAGE_DELETED
 +++++++++++++++
 
 Сообщение удалено, дополнительный контекст:
@@ -288,7 +377,7 @@ message_deleted
 4.1.7. smarty_management - лог периодических команд
 ---------------------------------------------------
 
-management_command_success
+MANAGEMENT_COMMAND_SUCCESS
 ++++++++++++++++++++++++++
 
 Успешное выполнение команды, дополнительный контекст:
@@ -297,7 +386,7 @@ management_command_success
 * ``execution_time`` - время выполнения
 
 
-management_command_error
+MANAGEMENT_COMMAND_ERROR
 ++++++++++++++++++++++++
 
 Ошибка выполнения команды, дополнительный контекст:
@@ -309,7 +398,7 @@ management_command_error
 4.1.8. smarty_epg - лог импорта EPG
 -----------------------------------
 
-epg_channel_imported
+EPG_CHANNEL_IMPORTED
 ++++++++++++++++++++
 
 Программы для канала успешно импортированы, дополнительный контекст:
@@ -319,7 +408,7 @@ epg_channel_imported
 * ``programs_imported`` - количество импортированных программ
 
 
-epg_channel_import_error
+EPG_CHANNEL_IMPORT_ERROR
 ++++++++++++++++++++++++
 
 Ошибка при импорте программ, дополнительный контекст:
@@ -329,7 +418,7 @@ epg_channel_import_error
 * stacktrace
 
 
-epg_import_finished
+EPG_IMPORT_FINISHED
 +++++++++++++++++++
 
 Импорт программ завершен, дополнительный контекст:
@@ -338,7 +427,7 @@ epg_import_finished
 * ``programms_imported`` - количество импортированных программ
 
 
-epg_removed
+EPG_REMOVED
 +++++++++++
 
 В ходе парсинга были удалены старые записи, дополнительный контекст:
@@ -348,7 +437,7 @@ epg_removed
 * ``removed_objects`` - удаленные обьекты
 
 
-epg_time_overlap
+EPG_TIME_OVERLAP
 ++++++++++++++++
 
 Время окончания предыдущей программы больше времени начала текущей, дополнительный контекст:
@@ -361,7 +450,7 @@ epg_time_overlap
 * ``previous_time_end`` - время окончания предыдущей программы
 
 
-epg_time_hole
+EPG_TIME_HOLE
 +++++++++++++
 
 Время окончания предыдущей программы меньше времени начала текущей, дополнительный контекст:
@@ -374,7 +463,7 @@ epg_time_hole
 * ``previous_time_end`` - время окончания предыдущей программы
 
 
-epg_name_double
+EPG_NAME_DOUBLE
 +++++++++++++++
 
 Название текущей программы совпадает с предыдущей, дополнительный контекст:
@@ -387,7 +476,7 @@ epg_name_double
 4.1.9. smarty_content_requests - запросы на получение ссылки/адреса потока через TVMW API
 -----------------------------------------------------------------------------------------
 
-content_request_fail
+CONTENT_REQUEST_FAIL
 ++++++++++++++++++++
 
 Произошла необработанная ошибка в процессе запроса, необходимо обратиться к разработчику.
@@ -398,7 +487,7 @@ content_request_fail
 * ``params`` - параметры запроса
 * stacktrace
 
-content_request_error
+CONTENT_REQUEST_ERROR
 +++++++++++++++++++++
 
 Обработанная ошибка в процессе запроса, дополнительный контекст:
@@ -413,7 +502,7 @@ content_request_error
 * запрос к устравшем данным (например, попытка воспроизвести слишком старую передачу из архива)
 
 
-content_request_success
+CONTENT_REQUEST_SUCCESS
 +++++++++++++++++++++++
 
 Успешный запрос, ссылка получена, дополнительный контекст:
@@ -423,7 +512,7 @@ content_request_success
 * дополнительная информация, в т.ч. адрес потока (в зависимости от метода)
 
 
-client_channels_not_found
+CLIENT_CHANNELS_NOT_FOUND
 +++++++++++++++++++++++++
 
 В кеше не обнаружены каналы для данного Client ID,
@@ -435,7 +524,7 @@ client_channels_not_found
 4.1.10. smarty_portal - лог событий портала
 -------------------------------------------
 
-portal_event
+PORTAL_EVENT
 ++++++++++++
 
 Событие в портале, дополнительный контекст:
@@ -450,7 +539,7 @@ portal_event
 4.1.11. smarty_stream_services - лог стриминг-сервисов
 -------------------------------------------------------
 
-stream_service_checking_error
+STREAM_SERVICE_CHECKING_ERROR
 +++++++++++++++++++++++++++++
 
 Ошибка при проверке доступности стриминг-сервиса, дополнительный контекст:
@@ -464,7 +553,7 @@ stream_service_checking_error
 * stacktrace
 
 
-stream_service_checking_success
+STREAM_SERVICE_CHECKING_SUCCESS
 +++++++++++++++++++++++++++++++
 
 Успешная проверка доступности стриминг-сервиса, дополнительный контекст:
@@ -481,7 +570,7 @@ stream_service_checking_success
 4.1.11. smarty_admin - лог панели администрирования Smarty
 ----------------------------------------------------------
 
-admin_request
+ADMIN_REQUEST
 +++++++++++++
 
 Запрос к административному интерфейсу, дополнительный контекст:
