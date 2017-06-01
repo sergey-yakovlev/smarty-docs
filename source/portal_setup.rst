@@ -273,6 +273,13 @@ reboot_device_after_login_with_password ``bool``
     По умолчанию *false*.
     Поддерживается только в шаблонах: ``futuristic``.
 
+show_number_of_channels_in_all_category ``bool``
+    При значении *true* в разделе "ТВ" в названии категории "Все каналы" будет добавлено отображения количества
+    телеканалов в этой категории.
+    По умолчанию *false*.
+    Поддерживается только в шаблонах: ``futuristic``.
+
+
 .. _portal_event_system:
 
 6.3. Механизм событий
