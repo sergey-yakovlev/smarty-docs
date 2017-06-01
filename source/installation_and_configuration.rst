@@ -258,16 +258,16 @@ TVMIDDLEWARE_STREAM_SERVICE_TOKEN_TTL ``int``
     CACHES = {
         "default": {
             "BACKEND": "core.cache.backends.RedisCache",
-            "LOCATION": "redis://10.1.1.1:6379/0",
+            "LOCATION": "redis://10.1.1.1:7000/0",
             "OPTIONS": {
                 "REDIS_CLIENT_CLASS": "rediscluster.client.StrictRedisCluster",
                 "CONNECTION_POOL_CLASS": "rediscluster.connection.ClusterConnectionPool",
                 "CONNECTION_POOL_KWARGS": {
                     "startup_nodes": [
-                        {"host": "10.1.1.1", "port": "6379"},
-                        {"host": "10.1.1.2", "port": "6379"},
-                        {"host": "10.1.1.3", "port": "6379"},
-                        {"host": "10.1.1.4", "port": "6379"},
+                        {"host": "10.1.1.1", "port": "7000"},
+                        {"host": "10.1.1.2", "port": "7000"},
+                        {"host": "10.1.1.3", "port": "7000"},
+                        {"host": "10.1.1.4", "port": "7000"},
                     ]
                 }
             }
