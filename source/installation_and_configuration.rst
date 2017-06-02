@@ -273,16 +273,16 @@ STATSD_PORT ``int``
     CACHES = {
         "default": {
             "BACKEND": "core.cache.backends.RedisCache",
-            "LOCATION": "redis://10.1.1.1:7000/0",
+            "LOCATION": "redis://192.168.33.11:7000/0", # не используется, но необходимо
             "OPTIONS": {
                 "REDIS_CLIENT_CLASS": "rediscluster.client.StrictRedisCluster",
-                "CONNECTION_POOL_CLASS": "rediscluster.connection.ClusterConnectionPool",
+                "CONNECTION_POOL_CLASS": "core.cache.cluster_connection.ClusterConnectionPool",
                 "CONNECTION_POOL_KWARGS": {
                     "startup_nodes": [
-                        {"host": "10.1.1.1", "port": "7000"},
-                        {"host": "10.1.1.2", "port": "7000"},
-                        {"host": "10.1.1.3", "port": "7000"},
-                        {"host": "10.1.1.4", "port": "7000"},
+                        # masters
+                        {"host": "192.168.33.11", "port": "7000"},
+                        {"host": "192.168.33.12", "port": "7000"},
+                        {"host": "192.168.33.13", "port": "7000"},
                     ]
                 }
             }
