@@ -397,7 +397,7 @@ SMS_ATTEMPTS ``int``
 2.4.8.1. Шлюз smsc.ru
 ~~~~~~~~~~~~~~~~~~~~~
 
-Значение для **SMS_BACKEND** = ``sms.backends.smscru.SMSCBackend``
+Значение для **SMS_BACKEND** = ``'sms.backends.smscru.SMSCBackend'``
 
 SMSC_LOGIN ``str``
   Имя пользователя в сервисе smsc.ru
@@ -407,6 +407,22 @@ SMSC_PASSWORD ``str``
 
 SMSC_SENDER ``str``
   Имя отправителя, которое будет отображаться в SMS, отправленных через сервис smsc.ru
+
+.. _mobipace:
+
+2.4.8.2. Шлюз mobipace.com
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Значение для **SMS_BACKEND** = ``'sms.backends.mobipace.MobipaceBackend'``
+
+MOBIPACE_LOGIN ``str``
+  Имя пользователя в сервисе mobipace.
+
+MOBIPACE_PASSWORD ``str``
+  Пароль в сервисе mobipace.
+
+MOBIPACE_SENDER ``str``
+  Имя отправителя для СМС-сообщений.
 
 .. _sentry-settings:
 
