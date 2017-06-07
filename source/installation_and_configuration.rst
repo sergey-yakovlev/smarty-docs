@@ -464,7 +464,7 @@ MOBIPACE_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.<settings name>
 
 Рекомендуется запускать эту команду каждую минуту. При пустом кеше списка телеканалов абоненту будет выдаваться сообщение,
 что список телеканалов пуст.
@@ -476,7 +476,7 @@ MOBIPACE_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.<settings name>
 
 Рекомендуется запускать импорт несколько раз в день для поддержания актуальности телепрограммы
 (см. :ref:`Настройка EPG и телеканалов <epg-setup>`).
@@ -489,7 +489,7 @@ MOBIPACE_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py check_accounts --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py check_accounts --settings=settings.<settings name>
 
 Команда осуществляет деактивацию аккаунтов, для которых подошел к концу расчетный период, а также производит списание средств
 и продление действующих аккаунтов. Рекомендуется запускать каждую ночь (см. :ref:`Описание встроенного биллинга <builtin-billing>`).
@@ -501,7 +501,7 @@ MOBIPACE_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py check_streams --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py check_streams --settings=settings.<settings name>
 
 Рекомендуется запускать каждые 1-5 минут для актуального состояния данных.
 
@@ -512,7 +512,7 @@ MOBIPACE_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py check_events --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py check_events --settings=settings.<settings name>
 
 Рекомендуется запускать каждую минуту для актуального информирования об авариях.
 
@@ -523,7 +523,7 @@ MOBIPACE_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count <количество оставшихся дней> --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count <количество оставшихся дней> --settings=settings.<settings name>
 
 Рекомендуется запускать каждый вечер.
 
@@ -534,7 +534,7 @@ MOBIPACE_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.<settings name>
 
 .. _resend-sms-command:
 
@@ -543,7 +543,7 @@ MOBIPACE_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py resend_sms --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py resend_sms --settings=settings.<settings name>
 
 Рекомендуется запускать каждые 1-3 минуты.
 
@@ -555,9 +555,9 @@ MOBIPACE_SENDER ``str``
 Пример: ::
 
     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-    */1 * * * *         python /usr/local/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.prod
-    0 5,9,13 * * *      python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.prod
-    0 3 * * *           python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
+    */1 * * * *         python /usr/share/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.prod
+    0 5,9,13 * * *      python /usr/share/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.prod
+    0 3 * * *           python /usr/share/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
 
 .. _init-script:
 
