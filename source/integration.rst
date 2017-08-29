@@ -9,7 +9,7 @@
 5.1. Взаимодействие с абонентскими устройствами
 ===============================================
 
-`Документация по TVMiddleware API <http://smarty.microimpuls.com/docs/tvmiddleware_api/>`_
+`Документация по TVMiddleware API <https://microimpuls.github.io/smarty-tvmw-api-docs>`_
 
 .. _billing-api:
 
