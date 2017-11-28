@@ -314,6 +314,12 @@ allow_autoregistration ``bool``
     По умолчанию *false*.
     Поддерживается только в шаблонах: ``impuls``.
 
+switching_channels_inside_category ``bool``
+    При значении *true* переключение каналов кнопками CH+/CH- будет происходить внутри выбранной категории каналов,
+    а не в полном списке каналов.
+    По умолчанию *false*.
+    Поддерживается только в шаблонах: ``futuristic``.
+
 
 .. _portal_event_system:
 
