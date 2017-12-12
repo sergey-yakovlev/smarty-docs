@@ -179,7 +179,7 @@ Smarty содержит модуль для интеграции с онлайн
     будут видеть фильмы в видеотеке и иметь возможность их купить (по подписке или транзакционно, в зависимости
     от параметров фильма в MEGOGO)
 * Указать дополнительные аттрибуты внешней системы:
-* * ``xml_url`` - ссылка на XML-файл с каталогом фильмов MEGOGO. Для РФ: http://xml.megogo.net/assets/files/ru/all_mgg.xml (полный список доступен по адресу: https://docs.google.com/document/u/1/d/1VC23qjezcog4xsdTURV6SQnzPcGwUL64IEjJblE7Sew/pub)
+* * ``xml_url`` - ссылка на XML-файл с каталогом фильмов MEGOGO. Для РФ: http://xml.megogo.net/assets/files/ru/all_mgg.xml
 * * ``mobile_private_key`` - закрытый ключ для мобильных устройств (предоставляется MEGOGO)
 * * ``mobile_public_key`` - открытый ключ для мобильных устройств (предоставляется MEGOGO)
 * * ``smart_tv_private_key`` - закрытый ключ для Smart TV (предоставляется MEGOGO)
