@@ -336,6 +336,18 @@ switching_channels_inside_category ``bool``
     По умолчанию *false*.
     Поддерживается только в шаблонах: ``futuristic``.
 
+main_screen_mode ``str``
+    Режим отображения главного меню портала. Возможные значения для шаблона ``futuristic``:
+    *classic_menu* - стандартное меню с виджетами;
+    *showcase* - витрина с контентом, виджетами, приложениями и меню.
+    По умолчаию ``classic_menu``.
+    Поддерживается только в шаблонах: ``futuristic``.
+
+allow_to_change_main_screen_mode ``bool``
+    При значении *true* при нажатии желтой кнопки в главное меню будет изменяться режим *main_screen_mode*.
+    По умолчанию *false*.
+    Поддерживается только в шаблонах: ``futuristic``.
+
 
 .. _portal_event_system:
 
