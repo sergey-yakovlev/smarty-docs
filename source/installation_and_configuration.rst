@@ -212,6 +212,10 @@ TVMIDDLEWARE_EXCHANGE_WIDGET_SECOND_CURRENCY ``str``
   Вторая валюта для виджета курсов валют в портале. (см. http://www.cbr.ru/scripts/Root.asp?PrtId=SXML)
   По умолчанию "EUR".
 
+TVMIDDLEWARE_RSS_WIDGET_CACHE_TIMEOUT ``int``
+  Время в секундах, на которое необходимо кешировать результат запроса RSS-ленты. Используется, чтобы
+  уменьшить количество запросов. По умолчанию 900.
+
 TVMIDDLEWARE_STREAM_SERVICE_TOKEN_TTL ``int``
   Время жизни одноразового токена для авторизации стриминг-сервисов (при использовании Smarty как токен-сервера) в
   секундах. По умолчанию 3600 (60 минут).
