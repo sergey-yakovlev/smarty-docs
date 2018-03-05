@@ -834,7 +834,7 @@ Smarty позволяет выгружать в statsd статистику по
     )
 
     STATSD_HOST = 'X.X.X.X'
-    STATS_PORT = '8125'
+    STATSD_PORT = '8125'
 
 Где:
 
