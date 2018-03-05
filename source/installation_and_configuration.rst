@@ -306,12 +306,6 @@ TVMW_PREVENT_CASCADE_DELETION ``bool``
   При значении False удаление таких объектов разрешено, но дочерние объекты при этом удалены не будут.
   По умолчанию False.
 
-STATSD_HOST ``str``
-  IP-адрес сервера statsd для выгрузки данных статистики и мониторинга работы сервера Smarty.
-
-STATSD_PORT ``int``
-  Порт сервера statsd для выгрузки данных статистики и мониторинга работы сервера Smarty.
-
 
 .. _license-settings:
 
@@ -822,3 +816,30 @@ REPLICATED_DATABASE_DOWNTIME ``int``
 
     REPLICATED_DATABASE_SLAVES = ['slave1', 'slave2']
     REPLICATED_DATABASE_DOWNTIME = 60
+
+
+.. _statsd:
+
+2.8.3. Настройка логирования статистики запросов в statsd
+---------------------------------------------------------
+
+statsd - сервер аггрегации статистических данных: https://github.com/etsy/statsd.
+
+Smarty позволяет выгружать в statsd статистику по запросам к API (количество запросов, время ответа, количество
+выполненных SQL-запросов, время ответа СУБД). Для этого необходимо добавить в файл конфигурации Smarty параметры,
+указанные ниже: ::
+
+    MIDDLEWARE_CLASSES += (
+        'core.middleware.StatsMiddleware',
+    )
+
+    STATSD_HOST = 'X.X.X.X'
+    STATS_PORT = '8125'
+
+Где:
+
+STATSD_HOST ``str``
+  IP-адрес сервера statsd для выгрузки данных статистики и мониторинга работы сервера Smarty.
+
+STATSD_PORT ``int``
+  Порт сервера statsd для выгрузки данных статистики и мониторинга работы сервера Smarty.
