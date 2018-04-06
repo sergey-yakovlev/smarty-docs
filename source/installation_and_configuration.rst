@@ -206,11 +206,19 @@ TVMIDDLEWARE_EXCHANGE_WIDGET_CACHE_TIMEOUT ``int``
 
 TVMIDDLEWARE_EXCHANGE_WIDGET_FIRST_CURRENCY ``str``
   Первая валюта для виджета курсов валют в портале. (см. http://www.cbr.ru/scripts/Root.asp?PrtId=SXML)
-  По умолчанию "USD".
+  По умолчанию ``USD``.
 
 TVMIDDLEWARE_EXCHANGE_WIDGET_SECOND_CURRENCY ``str``
   Вторая валюта для виджета курсов валют в портале. (см. http://www.cbr.ru/scripts/Root.asp?PrtId=SXML)
-  По умолчанию "EUR".
+  По умолчанию ``EUR``.
+
+TVMIDDLEWARE_EXCHANGE_WIDGET_COUNTRY_CODE ``str``
+  Код страны. В зависимости от этого будет выбран источник данных для курсов валют.
+  Возможные значения:
+  ``RU`` (http://www.cbr.ru/scripts/XML_daily.asp),
+  ``KG`` (http://www.nbkr.kg/XML/daily.xml),
+  ``EE`` (https://www.eestipank.ee/en/exchange-rates/export/xml/latest).
+  По умолчанию ``RU``.
 
 TVMIDDLEWARE_RSS_WIDGET_CACHE_TIMEOUT ``int``
   Время в секундах, на которое необходимо кешировать результат запроса RSS-ленты. Используется, чтобы
