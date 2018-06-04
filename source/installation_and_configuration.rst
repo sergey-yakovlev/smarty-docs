@@ -73,6 +73,35 @@
 
     - :ref:`Особенности установки и настройки подключения Smarty к СУБД Oracle <cx_oracle>`
 
+.. _create-superuser:
+
+2.2.4. Создание пользователя администратора
+-------------------------------------------
+
+Создание пользователя с правами служебного администратора осуществляется командой: ::
+
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py createsuperuser --settings=settings.<settings filename>
+
+- *<settings filename>* - имя файла настроек Smarty, в котором должны быть установлены параметры подключения к БД
+  (см. :ref:`Описание основных параметров <settings-description>`).
+
+
+.. _create-setup-initial-data:
+
+2.2.5. Создание системных объектов в базе данных и примера настроек оператора
+-----------------------------------------------------------------------------
+
+Для создания системных объектов Smarty в базе данных, а также примера настроек выполните команду: ::
+
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py setup_initial_data --settings=settings.<settings filename>
+
+- *<settings filename>* - имя файла настроек Smarty, в котором должны быть установлены параметры подключения к БД
+  (см. :ref:`Описание основных параметров <settings-description>`).
+
+.. note::
+
+    Можно пропустить создание образца настроек оператора, добавив флаг ``--no-sample-data``
+
 
 .. _install-on-centos:
 
