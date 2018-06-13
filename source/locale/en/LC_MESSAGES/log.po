@@ -1,0 +1,1061 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Microimpuls LLC, www.microimpuls.com
+# This file is distributed under the same license as the Smarty package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Smarty Last\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 17:53+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/log.rst:5
+msgid "4. Логирование работы Smarty"
+msgstr "4. Logging Smarty"
+
+#: ../../source/log.rst:8
+msgid "4.1. Логи Smarty"
+msgstr "4.1. Logs Smarty"
+
+#: ../../source/log.rst:10
+msgid "Записи в логах имеют следующий вид: ::"
+msgstr "Entries in the logs are as follows: ::"
+
+#: ../../source/log.rst:14
+msgid ""
+"Сообщение (message text) состоит из названия события и дополнительного "
+"контекста."
+msgstr ""
+"The message (message text) consists of the name of events and additional "
+"context."
+
+#: ../../source/log.rst:16
+msgid "Пример записи в логе: ::"
+msgstr "An example entry in the log: ::"
+
+#: ../../source/log.rst:20
+msgid "В этом примере:"
+msgstr "In this example:"
+
+#: ../../source/log.rst:22
+msgid "Fri"
+msgstr "Fri"
+
+#: ../../source/log.rst:23
+msgid "день недели"
+msgstr "day of the week"
+
+#: ../../source/log.rst:24
+msgid "Mar"
+msgstr "Mar"
+
+#: ../../source/log.rst:25
+msgid "месяц"
+msgstr "a month"
+
+#: ../../source/log.rst:26
+msgid "24"
+msgstr "24"
+
+#: ../../source/log.rst:27
+msgid "дата"
+msgstr "date"
+
+#: ../../source/log.rst:28
+msgid "10:22:35"
+msgstr "10:22:35"
+
+#: ../../source/log.rst:29
+msgid ""
+"локальное время в таймзоне, которая указана в settings.py в константе "
+"TIME_ZONE"
+msgstr ""
+"local time in timezone specified in settings.py in the constant TIME_ZONE"
+
+#: ../../source/log.rst:30
+msgid "+0300"
+msgstr "+0300"
+
+#: ../../source/log.rst:31
+msgid "смещение относительно UTC"
+msgstr "the offset relative to UTC"
+
+#: ../../source/log.rst:32
+msgid "2017"
+msgstr "2017"
+
+#: ../../source/log.rst:33
+msgid "год"
+msgstr "year"
+
+#: ../../source/log.rst:34
+msgid "DEBUG"
+msgstr "DEBUG"
+
+#: ../../source/log.rst:35
+msgid "уровень лога"
+msgstr "the level of logging"
+
+#: ../../source/log.rst:36
+msgid "api:621"
+msgstr "api:621"
+
+#: ../../source/log.rst:37
+msgid "название файла и номер строки"
+msgstr "the file name and line number"
+
+#: ../../source/log.rst:38
+msgid "get[83630.Thread-3]"
+msgstr "get[83630.Thread-3]"
+
+#: ../../source/log.rst:39
+msgid "название функции, pid и имя треда"
+msgstr "the name of the function, the pid and the name of the thread"
+
+#: ../../source/log.rst:40
+msgid "SOME_EVENT"
+msgstr "SOME_EVENT"
+
+#: ../../source/log.rst:41
+msgid "название события"
+msgstr "event name"
+
+#: ../../source/log.rst:44
+msgid "*ip* и *args*"
+msgstr "*ip* and *args*"
+
+#: ../../source/log.rst:43
+msgid "дополнительный контекст"
+msgstr "additional context"
+
+#: ../../source/log.rst:46
+msgid ""
+"Уровень лога выстваляется в настройках "
+"проекта(smarty/settings/settings_<local>.py). Например, чтобы выставить "
+"уровень INFO для лога запросов к api, необходимо добавить следующий код:  ::"
+msgstr ""
+"The level of logging westvlaamse in the project "
+"settings(smarty/settings/settings_<local>.py). For example, to set the INFO "
+"level to log api requests, you must add the following code: ::"
+
+#: ../../source/log.rst:52
+msgid ""
+"События в зависимости от типа группируются в разных файлах. По умолчанию, "
+"логи сохраняются по адресу ``/var/log/microimpuls/smarty/``."
+msgstr ""
+"Events depending on type are grouped in different files. By default, logs "
+"are stored at the address ``/var/log/microimpuls/smarty/``."
+
+#: ../../source/log.rst:55
+msgid "4.1.1. smarty_main - основной лог"
+msgstr "4.1.1. smarty_main - main log"
+
+#: ../../source/log.rst:57 ../../source/log.rst:79
+msgid "Типы событий:"
+msgstr "Types of events:"
+
+#: ../../source/log.rst:60
+msgid "URLS_INITIALIZED"
+msgstr "URLS_INITIALIZED"
+
+#: ../../source/log.rst:62
+msgid ""
+"Конфигурация Smarty инициализирована. Происходит во время старта приложения,"
+" дополнительный контекст:"
+msgstr ""
+"Smarty configuration initialized. Occurs during the application start, "
+"additional context:"
+
+#: ../../source/log.rst:65
+msgid "``available_apps`` - доступные модули"
+msgstr "``available_apps`` - available modules"
+
+#: ../../source/log.rst:69
+msgid "События, необработанные другими логгерами"
+msgstr "Events that are unprocessed other loggers"
+
+#: ../../source/log.rst:71
+msgid ""
+"Происходит во время ошибки, необходимо обратиться к разработчику для решения"
+" проблемы."
+msgstr "Occurs during the error, you need to contact the developer to solve."
+
+#: ../../source/log.rst:73
+msgid ""
+"Дополнительный контекст: локальные переменные функции, в которой произошла "
+"ошибка."
+msgstr ""
+"Additional context: local variables of the function in which the error "
+"occurred."
+
+#: ../../source/log.rst:77
+msgid "4.1.2. smarty_accounts - лог абонентов"
+msgstr "4.1.2. smarty_accounts - log subscribers"
+
+#: ../../source/log.rst:82
+msgid "LOGIN_SUCCESS"
+msgstr "LOGIN_SUCCESS"
+
+#: ../../source/log.rst:84
+msgid "Успешная авторизация, контекст:"
+msgstr "A successful authorization, the context:"
+
+#: ../../source/log.rst:86
+msgid ""
+"``login_type`` - тип логина (мультилогин, базовое устройство, дополнительное "
+"устройство)"
+msgstr ""
+"``login_type`` - type login (multilogin, basic device, additional equipment)"
+
+#: ../../source/log.rst:87
+msgid ""
+"``login_method`` - метод логина (по абонементу и паролю, только по абонементу,"
+" только по UID устройства)"
+msgstr ""
+"``login_method`` - the method login (and password pass only pass only the UID "
+"of the device)"
+
+#: ../../source/log.rst:88 ../../source/log.rst:104 ../../source/log.rst:123
+#: ../../source/log.rst:226 ../../source/log.rst:236 ../../source/log.rst:246
+#: ../../source/log.rst:256 ../../source/log.rst:266 ../../source/log.rst:276
+#: ../../source/log.rst:286 ../../source/log.rst:296 ../../source/log.rst:493
+#: ../../source/log.rst:502 ../../source/log.rst:517
+msgid "``params`` - параметры запроса"
+msgstr "``params`` - the query parameters"
+
+#: ../../source/log.rst:92
+msgid "LOGIN_ERROR"
+msgstr "LOGIN_ERROR"
+
+#: ../../source/log.rst:94
+msgid "Ошибка авторизации, контекст:"
+msgstr "Authorization error, context:"
+
+#: ../../source/log.rst:96
+msgid "``reason`` - причина ошибки:"
+msgstr "``reason`` - the cause of the error:"
+
+#: ../../source/log.rst:97
+msgid ""
+"account_does_not_exist - аккаунт не существует - абонемент или пароль или "
+"device_uid неверный"
+msgstr ""
+"account_does_not_exist account there is no subscription or password is "
+"invalid or device_uid"
+
+#: ../../source/log.rst:98
+msgid "account_is_not_active - аккаунт не активен"
+msgstr "account_is_not_active account is not active"
+
+#: ../../source/log.rst:99
+msgid "client_does_not_exist - неверный client_id или api_key"
+msgstr "client_does_not_exist - invalid api_key or client_id"
+
+#: ../../source/log.rst:100
+msgid ""
+"basic_device_sessions_limit - превышен лимит сессий на базовом устройстве"
+msgstr "basic_device_sessions_limit - exceeded session limit on the base unit"
+
+#: ../../source/log.rst:101
+msgid "account_deivce_invalid - такое базовое устройство уже существует"
+msgstr "account_deivce_invalid - such a basic device already exists"
+
+#: ../../source/log.rst:102
+msgid ""
+"external_api_error - ошибка запроса к внешней системе (например, к внешнему "
+"биллингу)"
+msgstr ""
+"external_api_error - request error to the external system (e.g. external "
+"billing)"
+
+#: ../../source/log.rst:103
+msgid "unknown_error - неизвестная ошибка (сопровождается stacktrace'ом)"
+msgstr "unknown_error - unknown error (accompanied by stacktrace'ohms)"
+
+#: ../../source/log.rst:108
+msgid "ACCOUNT_DEVICE_ERROR"
+msgstr "ACCOUNT_DEVICE_ERROR"
+
+#: ../../source/log.rst:110
+msgid "Ошибка при создании устройства аккаунта, контекст:"
+msgstr "Error when creating a device account context:"
+
+#: ../../source/log.rst:112
+msgid "``account`` - аккаунт"
+msgstr "``account`` - account"
+
+#: ../../source/log.rst:113
+msgid "``device`` - устройство"
+msgstr "``device`` - device"
+
+#: ../../source/log.rst:114
+msgid "``device_uid`` - UID устройства"
+msgstr "``device_uid`` - the UID of the device"
+
+#: ../../source/log.rst:115
+msgid "``client`` - оператор"
+msgstr "``client`` - operator"
+
+#: ../../source/log.rst:118
+msgid "ACCOUNT_ACTIVATED"
+msgstr "ACCOUNT_ACTIVATED"
+
+#: ../../source/log.rst:120
+msgid "Аккаунт был активирован, контекст:"
+msgstr "Account has been activated, the context:"
+
+#: ../../source/log.rst:122
+msgid "``activation_result`` - ответ, который вернула внешняя система"
+msgstr "``activation_result`` - the answer returned by the external system"
+
+#: ../../source/log.rst:128
+msgid "ACCOUNT_CREATED"
+msgstr "ACCOUNT_CREATED"
+
+#: ../../source/log.rst:130
+msgid "Создание аккаунта, контекст:"
+msgstr "Create account context:"
+
+#: ../../source/log.rst:132 ../../source/log.rst:140 ../../source/log.rst:150
+#: ../../source/log.rst:159 ../../source/log.rst:203
+msgid "``account_id`` - идентификатор аккаунта"
+msgstr "``account_id`` - the account ID"
+
+#: ../../source/log.rst:136
+msgid "ACCOUNT_CHANGED"
+msgstr "ACCOUNT_CHANGED"
+
+#: ../../source/log.rst:138
+msgid "Изменение аккаунта, контекст:"
+msgstr "Change the account context:"
+
+#: ../../source/log.rst:141 ../../source/log.rst:177
+msgid "изменённые поля"
+msgstr "changed fields"
+
+#: ../../source/log.rst:146
+msgid "ACCOUNT_TARIFFS_ASSIGNED"
+msgstr "ACCOUNT_TARIFFS_ASSIGNED"
+
+#: ../../source/log.rst:148
+msgid "Добавление тарифов аккаунту, контекст:"
+msgstr "Adding tariffs account context:"
+
+#: ../../source/log.rst:151 ../../source/log.rst:186
+msgid "``tariffs_ids`` - список идентификаторов подключенных тарифов"
+msgstr "``tariffs_ids`` - the list of IDs of the connected tariffs"
+
+#: ../../source/log.rst:155
+msgid "ACCOUNT_TARIFFS_REMOVED"
+msgstr "ACCOUNT_TARIFFS_REMOVED"
+
+#: ../../source/log.rst:157
+msgid "Удаление тарифов у аккаунта, контекст:"
+msgstr "The removal of tariffs to the account context:"
+
+#: ../../source/log.rst:160 ../../source/log.rst:195
+msgid "``tariffs_ids`` - список идентификаторов удаленных тарифов"
+msgstr "``tariffs_ids`` - the list of IDs of deleted rates"
+
+#: ../../source/log.rst:164
+msgid "CUSTOMER_CREATED"
+msgstr "CUSTOMER_CREATED"
+
+#: ../../source/log.rst:166
+msgid "Создание абонента, контекст:"
+msgstr "Create subscriber context:"
+
+#: ../../source/log.rst:168 ../../source/log.rst:176 ../../source/log.rst:185
+#: ../../source/log.rst:194
+msgid "``customer_id`` - идентификатор абонента"
+msgstr "``customer_id`` caller ID"
+
+#: ../../source/log.rst:172
+msgid "CUSTOMER_CHANGED"
+msgstr "CUSTOMER_CHANGED"
+
+#: ../../source/log.rst:174
+msgid "Изменение абонента, контекст:"
+msgstr "The change of the subscriber context:"
+
+#: ../../source/log.rst:181
+msgid "CUSTOMER_TARIFFS_ASSIGNED"
+msgstr "CUSTOMER_TARIFFS_ASSIGNED"
+
+#: ../../source/log.rst:183
+msgid "Добавление тарифов абоненту, контекст:"
+msgstr "Adding tariffs to the subscriber, the context:"
+
+#: ../../source/log.rst:190
+msgid "CUSTOMER_TARIFFS_REMOVED"
+msgstr "CUSTOMER_TARIFFS_REMOVED"
+
+#: ../../source/log.rst:192
+msgid "Удаление тарифов у абонента, контекст:"
+msgstr "The removal of tariffs subscriber context:"
+
+#: ../../source/log.rst:199
+msgid "ACCOUNT_DEVICE_REMOVED"
+msgstr "ACCOUNT_DEVICE_REMOVED"
+
+#: ../../source/log.rst:201
+msgid "Удаление устройства аккаунта, контекст:"
+msgstr "Delete the device account context:"
+
+#: ../../source/log.rst:204 ../../source/log.rst:540
+msgid "``device_uid`` - идентификатор устройства"
+msgstr "``device_uid`` - the device ID"
+
+#: ../../source/log.rst:208
+msgid "4.1.3. smarty_billing_out - запросы к внешним системам"
+msgstr "4.1.3. smarty_billing_out requests to external systems"
+
+#: ../../source/log.rst:211
+msgid "INIT_ERROR"
+msgstr "INIT_ERROR"
+
+#: ../../source/log.rst:213
+msgid "Ошибка инициализации обработчика API, контекст:"
+msgstr "Error initializing API handler, context:"
+
+#: ../../source/log.rst:215
+msgid "``kwargs`` - аргументы, переданные в класс обработчика"
+msgstr "``kwargs`` - the arguments passed in the handler class"
+
+#: ../../source/log.rst:216 ../../source/log.rst:225 ../../source/log.rst:235
+#: ../../source/log.rst:245 ../../source/log.rst:255 ../../source/log.rst:265
+#: ../../source/log.rst:275 ../../source/log.rst:285 ../../source/log.rst:295
+msgid "``api_client_class`` - название класса обработчика API"
+msgstr "``api_client_class`` - the class name of the handler API"
+
+#: ../../source/log.rst:217 ../../source/log.rst:227 ../../source/log.rst:247
+#: ../../source/log.rst:267 ../../source/log.rst:287 ../../source/log.rst:401
+#: ../../source/log.rst:424 ../../source/log.rst:494 ../../source/log.rst:559
+msgid "stacktrace"
+msgstr "stacktrace"
+
+#: ../../source/log.rst:221
+msgid "CUSTOMER_BALANCE_REQUEST_ERROR"
+msgstr "CUSTOMER_BALANCE_REQUEST_ERROR"
+
+#: ../../source/log.rst:223
+msgid "Ошибка при запросе баланса, контекст:"
+msgstr "Error balance inquiry, context:"
+
+#: ../../source/log.rst:231
+msgid "CUSTOMER_BALANCE_REQUEST_SUCCESS"
+msgstr "CUSTOMER_BALANCE_REQUEST_SUCCESS"
+
+#: ../../source/log.rst:233
+msgid "Успешный запрос баланса, контекст:"
+msgstr "A successful balance inquiry, context:"
+
+#: ../../source/log.rst:237
+msgid "``result`` - результат запроса"
+msgstr "``result`` - the result of the query"
+
+#: ../../source/log.rst:241
+msgid "CUSTOMER_PAYMENT_LIST_REQUEST_ERROR"
+msgstr "CUSTOMER_PAYMENT_LIST_REQUEST_ERROR"
+
+#: ../../source/log.rst:243
+msgid "Ошибка при запросе списка транзакций, контекст:"
+msgstr "Error when requesting list of transactions that context:"
+
+#: ../../source/log.rst:251
+msgid "CUSTOMER_PAYMENT_LIST_REQUEST_SUCCESS"
+msgstr "CUSTOMER_PAYMENT_LIST_REQUEST_SUCCESS"
+
+#: ../../source/log.rst:253
+msgid "Успешный запрос списка транзакций, контекст:"
+msgstr "A successful list request transaction context:"
+
+#: ../../source/log.rst:257 ../../source/log.rst:277 ../../source/log.rst:297
+msgid "result - результат запроса"
+msgstr "result - the query result"
+
+#: ../../source/log.rst:261
+msgid "VIDEO_ACTIONS_LIST_REQUEST_ERROR"
+msgstr "VIDEO_ACTIONS_LIST_REQUEST_ERROR"
+
+#: ../../source/log.rst:263
+msgid "Ошибка при запросе вариантов действий с видео, контекст:"
+msgstr "Error query options with the video context:"
+
+#: ../../source/log.rst:271
+msgid "VIDEO_ACTIONS_LIST_REQUEST_SUCCESS"
+msgstr "VIDEO_ACTIONS_LIST_REQUEST_SUCCESS"
+
+#: ../../source/log.rst:273
+msgid "Успешный запрос вариантов действий с видео, контекст:"
+msgstr "A successful query options with the video context:"
+
+#: ../../source/log.rst:281
+msgid "VIDEO_ACTION_REQUEST_ERROR"
+msgstr "VIDEO_ACTION_REQUEST_ERROR"
+
+#: ../../source/log.rst:283
+msgid "Ошибка при попытке произвести действие с видео, контекст:"
+msgstr "Error when trying to perform an action with the video context:"
+
+#: ../../source/log.rst:291
+msgid "VIDEO_ACTION_REQUEST_SUCCESS"
+msgstr "VIDEO_ACTION_REQUEST_SUCCESS"
+
+#: ../../source/log.rst:293
+msgid "Успешное действие с видео, контекст:"
+msgstr "Successful action with the video context:"
+
+#: ../../source/log.rst:301
+msgid "4.1.4. smarty_billing_in - входящие запросы к Billing API"
+msgstr "4.1.4. smarty_billing_in incoming requests to the Billing API"
+
+#: ../../source/log.rst:304
+msgid "BILLING_REQUEST_ERROR"
+msgstr "BILLING_REQUEST_ERROR"
+
+#: ../../source/log.rst:306
+msgid "Ошибка при запросе к Billing API, контекст:"
+msgstr "Error when querying the Billing API context:"
+
+#: ../../source/log.rst:308 ../../source/log.rst:320 ../../source/log.rst:516
+msgid "``url`` - URL метода, к которому производился запрос"
+msgstr "``url`` - URL method, which made the request"
+
+#: ../../source/log.rst:309 ../../source/log.rst:321
+msgid "``ip`` - IP-адрес, с которого производлися запрос"
+msgstr "``the ip`` - the IP address from which the request proizvodite"
+
+#: ../../source/log.rst:310 ../../source/log.rst:322 ../../source/log.rst:608
+msgid "``args`` - аргументы запроса"
+msgstr "``args`` - arguments of the request"
+
+#: ../../source/log.rst:311
+msgid "``error_message`` - сообщение об ошибке"
+msgstr "``error_message`` - error message"
+
+#: ../../source/log.rst:312
+msgid "``error`` - код ошибки"
+msgstr "``\"error\" `` - error code"
+
+#: ../../source/log.rst:316
+msgid "BILLING_REQUEST_SUCCESS"
+msgstr "BILLING_REQUEST_SUCCESS"
+
+#: ../../source/log.rst:318
+msgid "Успешный запрос в биллинг, контекст:"
+msgstr "A successful request to the billing system, the context:"
+
+#: ../../source/log.rst:326
+msgid "4.1.5. smarty_cache - события, связанные с кешированием"
+msgstr "4.1.5. smarty_cache events related to caching"
+
+#: ../../source/log.rst:329
+msgid "OBJECT_CACHED"
+msgstr "OBJECT_CACHED"
+
+#: ../../source/log.rst:331
+msgid "Обьект закеширован, контекст:"
+msgstr "Cached object, context:"
+
+#: ../../source/log.rst:333
+msgid "``object`` - кешируемый обьект"
+msgstr "``object`` - cached object"
+
+#: ../../source/log.rst:334
+msgid "``timeout`` - время, по истечении которого обьект будет удален из кеша"
+msgstr ""
+"``timeout`` - the time after which the object will be removed from the cache"
+
+#: ../../source/log.rst:335
+msgid "``key`` - ключ обьекта в кеше"
+msgstr "``key`` key object in the cache"
+
+#: ../../source/log.rst:336
+msgid ""
+"``deps`` - обьекты, при изменении которых кешируемый обьект должен быть "
+"инвалидирован"
+msgstr ""
+"``deps`` - objects, changing of which the cached object should be invalizilor"
+
+#: ../../source/log.rst:340
+msgid "OBJECT_INVALIDATED"
+msgstr "OBJECT_INVALIDATED"
+
+#: ../../source/log.rst:342
+msgid "Обьект инвалидирован, контекст:"
+msgstr "Invalizilor object, context:"
+
+#: ../../source/log.rst:344
+msgid "``object`` -  обьект, который был удален из кеша"
+msgstr "``object`` - the object that was removed from the cache"
+
+#: ../../source/log.rst:345
+msgid ""
+"``deps_key`` - ключ обьекта, где находятся ключи связанных обьектов, которые "
+"тоже должны быть инвалидированы"
+msgstr ""
+"``deps_key`` - the key of the object, where the keys of related objects, which"
+" must also be Invalidovna"
+
+#: ../../source/log.rst:349
+msgid "4.1.6. smarty_messaging - лог отправленных сообщений для аккаунтов"
+msgstr "4.1.6. smarty_messaging - log sent messages for accounts"
+
+#: ../../source/log.rst:352
+msgid "MESSAGE_CREATED"
+msgstr "MESSAGE_CREATED"
+
+#: ../../source/log.rst:354
+msgid "Создано сообщение, контекст:"
+msgstr "Created message context:"
+
+#: ../../source/log.rst:356 ../../source/log.rst:366 ../../source/log.rst:377
+msgid "``account`` - аккаунт, которому было отправлено сообщение"
+msgstr "``account`` - the account to which the message was sent"
+
+#: ../../source/log.rst:357 ../../source/log.rst:367 ../../source/log.rst:378
+msgid "``subject`` - тема сообщения"
+msgstr "``subject`` - the subject of the message"
+
+#: ../../source/log.rst:358 ../../source/log.rst:368 ../../source/log.rst:379
+msgid "``text`` - текст сообщения"
+msgstr "``text`` - the message text"
+
+#: ../../source/log.rst:362
+msgid "MESSAGE_SEND"
+msgstr "MESSAGE_SEND"
+
+#: ../../source/log.rst:364
+msgid "Сообщение отправлено, контекст:"
+msgstr "The message was sent, the context:"
+
+#: ../../source/log.rst:369 ../../source/log.rst:380
+msgid "``uuid`` - идентификатор сообщения"
+msgstr "``uuid`` - the message ID"
+
+#: ../../source/log.rst:373
+msgid "MESSAGE_DELETED"
+msgstr "MESSAGE_DELETED"
+
+#: ../../source/log.rst:375
+msgid "Сообщение удалено, дополнительный контекст:"
+msgstr "Message deleted, additional context:"
+
+#: ../../source/log.rst:384
+msgid "4.1.7. smarty_management - лог периодических команд"
+msgstr "4.1.7. smarty_management - log periodic commands"
+
+#: ../../source/log.rst:387
+msgid "MANAGEMENT_COMMAND_SUCCESS"
+msgstr "MANAGEMENT_COMMAND_SUCCESS"
+
+#: ../../source/log.rst:389
+msgid "Успешное выполнение команды, дополнительный контекст:"
+msgstr "Successful execution of the command, additional context:"
+
+#: ../../source/log.rst:391 ../../source/log.rst:400
+msgid "``command`` - название команды"
+msgstr "``command`` - the team name"
+
+#: ../../source/log.rst:392
+msgid "``execution_time`` - время выполнения"
+msgstr "``execution_time`` - run time"
+
+#: ../../source/log.rst:396
+msgid "MANAGEMENT_COMMAND_ERROR"
+msgstr "MANAGEMENT_COMMAND_ERROR"
+
+#: ../../source/log.rst:398
+msgid "Ошибка выполнения команды, дополнительный контекст:"
+msgstr "Error executing the command for more context:"
+
+#: ../../source/log.rst:405
+msgid "4.1.8. smarty_epg - лог импорта EPG"
+msgstr "4.1.8. smarty_epg - log import EPG"
+
+#: ../../source/log.rst:408
+msgid "EPG_CHANNEL_IMPORTED"
+msgstr "EPG_CHANNEL_IMPORTED"
+
+#: ../../source/log.rst:410
+msgid "Программы для канала успешно импортированы, дополнительный контекст:"
+msgstr "Programs for channel imported successfully, more context:"
+
+#: ../../source/log.rst:412 ../../source/log.rst:422 ../../source/log.rst:441
+#: ../../source/log.rst:451 ../../source/log.rst:464 ../../source/log.rst:477
+msgid "``epg_channel`` - канал"
+msgstr "``epg_channel`` - channel"
+
+#: ../../source/log.rst:413 ../../source/log.rst:423
+msgid "``source`` - источник EPG"
+msgstr "``source`` - the EPG source"
+
+#: ../../source/log.rst:414
+msgid "``programs_imported`` - количество импортированных программ"
+msgstr "``programs_imported`` - the number of imported programmes"
+
+#: ../../source/log.rst:418
+msgid "EPG_CHANNEL_IMPORT_ERROR"
+msgstr "EPG_CHANNEL_IMPORT_ERROR"
+
+#: ../../source/log.rst:420
+msgid "Ошибка при импорте программ, дополнительный контекст:"
+msgstr "Error when importing programs, additional context:"
+
+#: ../../source/log.rst:428
+msgid "EPG_IMPORT_FINISHED"
+msgstr "EPG_IMPORT_FINISHED"
+
+#: ../../source/log.rst:430
+msgid "Импорт программ завершен, дополнительный контекст:"
+msgstr "Import programs are completed, additional context:"
+
+#: ../../source/log.rst:432
+msgid "``channels_processed`` - количество обработанных каналов"
+msgstr "``channels_processed`` - the number of processed channels"
+
+#: ../../source/log.rst:433
+msgid "``programms_imported`` - количество импортированных программ"
+msgstr "``programms_imported`` - the number of imported programmes"
+
+#: ../../source/log.rst:437
+msgid "EPG_REMOVED"
+msgstr "EPG_REMOVED"
+
+#: ../../source/log.rst:439
+msgid "В ходе парсинга были удалены старые записи, дополнительный контекст:"
+msgstr ""
+"In the course of parsing have been removed the old entry for more context:"
+
+#: ../../source/log.rst:442 ../../source/log.rst:452 ../../source/log.rst:465
+#: ../../source/log.rst:478
+msgid "``source`` - источник epg"
+msgstr "``source`` - the epg source"
+
+#: ../../source/log.rst:443
+msgid "``removed_objects`` - удаленные обьекты"
+msgstr "``removed_objects`` - deleted objects"
+
+#: ../../source/log.rst:447
+msgid "EPG_TIME_OVERLAP"
+msgstr "EPG_TIME_OVERLAP"
+
+#: ../../source/log.rst:449
+msgid ""
+"Время окончания предыдущей программы больше времени начала текущей, "
+"дополнительный контекст:"
+msgstr ""
+"The end time of the previous program start time of the current, more "
+"context:"
+
+#: ../../source/log.rst:453 ../../source/log.rst:466 ../../source/log.rst:479
+msgid "``program_name`` - название программы"
+msgstr "``program_name`` - the name of the program"
+
+#: ../../source/log.rst:454 ../../source/log.rst:467
+msgid "``previous_program_name`` - название предыдущей программы"
+msgstr "``previous_program_name`` - the name of the previous program"
+
+#: ../../source/log.rst:455 ../../source/log.rst:468
+msgid "``program_time_begin`` - время начала текущей программы"
+msgstr "``program_time_begin`` - the start time of the current program"
+
+#: ../../source/log.rst:456 ../../source/log.rst:469
+msgid "``previous_time_end`` - время окончания предыдущей программы"
+msgstr "``previous_time_end`` - the end time of the previous program"
+
+#: ../../source/log.rst:460
+msgid "EPG_TIME_HOLE"
+msgstr "EPG_TIME_HOLE"
+
+#: ../../source/log.rst:462
+msgid ""
+"Время окончания предыдущей программы меньше времени начала текущей, "
+"дополнительный контекст:"
+msgstr ""
+"The end time of the previous program start time less the current, more "
+"context:"
+
+#: ../../source/log.rst:473
+msgid "EPG_NAME_DOUBLE"
+msgstr "EPG_NAME_DOUBLE"
+
+#: ../../source/log.rst:475
+msgid ""
+"Название текущей программы совпадает с предыдущей, дополнительный контекст:"
+msgstr ""
+"The name of the current program coincides with the previous one, the "
+"additional context:"
+
+#: ../../source/log.rst:483
+msgid ""
+"4.1.9. smarty_content_requests - запросы на получение ссылки/адреса потока "
+"через TVMW API"
+msgstr ""
+"4.1.9. smarty_content_requests - requests for links to/addresses of the "
+"stream using TVMW API"
+
+#: ../../source/log.rst:486
+msgid "CONTENT_REQUEST_FAIL"
+msgstr "CONTENT_REQUEST_FAIL"
+
+#: ../../source/log.rst:488
+msgid ""
+"Произошла необработанная ошибка в процессе запроса, необходимо обратиться к "
+"разработчику."
+msgstr ""
+"Has encountered an unhandled error in the request process, you must contact "
+"the developer."
+
+#: ../../source/log.rst:490
+msgid "Дополнительный контекст:"
+msgstr "Additional context:"
+
+#: ../../source/log.rst:492 ../../source/log.rst:501
+msgid "``url``  - URL метода, к которому производился запрос"
+msgstr "``url`` - URL method, which made the request"
+
+#: ../../source/log.rst:497
+msgid "CONTENT_REQUEST_ERROR"
+msgstr "CONTENT_REQUEST_ERROR"
+
+#: ../../source/log.rst:499
+msgid "Обработанная ошибка в процессе запроса, дополнительный контекст:"
+msgstr "Processed error in the request process, additional context:"
+
+#: ../../source/log.rst:504
+msgid "Возможные причины:"
+msgstr "Possible causes:"
+
+#: ../../source/log.rst:506
+msgid "неверные параметры запроса"
+msgstr "invalid request parameters"
+
+#: ../../source/log.rst:507
+msgid "устаревший ключ авторизации"
+msgstr "legacy authorization key"
+
+#: ../../source/log.rst:508
+msgid ""
+"запрос к устравшем данным (например, попытка воспроизвести слишком старую "
+"передачу из архива)"
+msgstr ""
+"request to ustravel data (for example, trying to play too old transfer from "
+"archive)"
+
+#: ../../source/log.rst:512
+msgid "CONTENT_REQUEST_SUCCESS"
+msgstr "CONTENT_REQUEST_SUCCESS"
+
+#: ../../source/log.rst:514
+msgid "Успешный запрос, ссылка получена, дополнительный контекст:"
+msgstr "A successful query, link the received additional context:"
+
+#: ../../source/log.rst:518
+msgid ""
+"дополнительная информация, в т.ч. адрес потока (в зависимости от метода)"
+msgstr ""
+"additional information, including the address of the thread (depending on "
+"method)"
+
+#: ../../source/log.rst:522
+msgid "CLIENT_CHANNELS_NOT_FOUND"
+msgstr "CLIENT_CHANNELS_NOT_FOUND"
+
+#: ../../source/log.rst:524
+msgid ""
+"В кеше не обнаружены каналы для данного Client ID, возможно был сброшен кеш "
+"или произошла ошибка выполнения команды ``cache_channel_list``, дополнительный"
+" контекст:"
+msgstr ""
+"Not found in the cache channels for a given Client ID may have been reset "
+"cache or an error occurred executing the command ``cache_channel_list``, "
+"additional context:"
+
+#: ../../source/log.rst:527
+msgid "``client`` - Client ID"
+msgstr "``client`` - Client ID"
+
+#: ../../source/log.rst:531
+msgid "4.1.10. smarty_portal - лог событий портала"
+msgstr "4.1.10. smarty_portal - log events portal"
+
+#: ../../source/log.rst:534
+msgid "PORTAL_EVENT"
+msgstr "PORTAL_EVENT"
+
+#: ../../source/log.rst:536
+msgid "Событие в портале, дополнительный контекст:"
+msgstr "The event in the portal additional context:"
+
+#: ../../source/log.rst:538
+msgid "``event_description`` - описание события"
+msgstr "``event_description`` - the event description"
+
+#: ../../source/log.rst:539
+msgid "``ip`` - IP-адрес устройства абонента"
+msgstr "``the ip`` - the IP address of the device of the subscriber"
+
+#: ../../source/log.rst:541
+msgid "``screen_name`` - название экрана"
+msgstr "``screen_name`` - title screen"
+
+#: ../../source/log.rst:542
+msgid "``user_agent`` - User-Agent устройства"
+msgstr "``user_agent`` - User-Agent device"
+
+#: ../../source/log.rst:546
+msgid "4.1.11. smarty_stream_services - лог стриминг-сервисов"
+msgstr "4.1.11. smarty_stream_services - log-streaming-services"
+
+#: ../../source/log.rst:549
+msgid "STREAM_SERVICE_CHECKING_ERROR"
+msgstr "STREAM_SERVICE_CHECKING_ERROR"
+
+#: ../../source/log.rst:551
+msgid ""
+"Ошибка при проверке доступности стриминг-сервиса, дополнительный контекст:"
+msgstr ""
+"Error checking of availability of the streaming service, for more context:"
+
+#: ../../source/log.rst:553 ../../source/log.rst:567
+msgid "``stream_service`` - стриминг-сервис"
+msgstr "``stream_service`` - streaming service"
+
+#: ../../source/log.rst:554 ../../source/log.rst:568
+msgid ""
+"``was_available_before`` - указывает, был ли стриминг-сервис доступен ранее"
+msgstr ""
+"``was_available_before`` - indicates whether a streaming service available "
+"earlier"
+
+#: ../../source/log.rst:555
+msgid "``check_ping_success`` - была ли успешной проверка пингом (опционально)"
+msgstr "``check_ping_success`` - was a successful test of ping (optional)"
+
+#: ../../source/log.rst:556
+msgid ""
+"``check_tcp_success``- была ли успешной проверка попыткой открыть сокет "
+"(опционально)"
+msgstr ""
+"``check_tcp_success``- whether successful verification attempt to open socket "
+"(optional)"
+
+#: ../../source/log.rst:557
+msgid ""
+"``check_http_success`` - была ли успешной проверка попыткой открыть URL "
+"(опционально)"
+msgstr ""
+"``check_http_success`` - whether successful verification attempt to access the"
+" URL (optional)"
+
+#: ../../source/log.rst:558
+msgid ""
+"``check_is_alive_success`` - была ли успешной проверка is_alive (опционально)"
+msgstr ""
+"``check_is_alive_success`` - whether successful test is_alive (optional)"
+
+#: ../../source/log.rst:563
+msgid "STREAM_SERVICE_CHECKING_SUCCESS"
+msgstr "STREAM_SERVICE_CHECKING_SUCCESS"
+
+#: ../../source/log.rst:565
+msgid ""
+"Успешная проверка доступности стриминг-сервиса, дополнительный контекст:"
+msgstr ""
+"Successful checking of availability of the streaming service, for more "
+"context:"
+
+#: ../../source/log.rst:569
+msgid "``check_ping_success`` - проверка пингом была успешной (опционально)"
+msgstr "``check_ping_success`` - the ping test was successful (optional)"
+
+#: ../../source/log.rst:570
+msgid ""
+"``check_tcp_success``- проверка попыткой открыть сокет была успешной "
+"(опционально)"
+msgstr ""
+"``check_tcp_success``- check the attempt to open the socket was successful "
+"(optional)"
+
+#: ../../source/log.rst:571
+msgid ""
+"``check_http_success`` - проверка попыткой открыть URL была успешной "
+"(опционально)"
+msgstr ""
+"``check_http_success`` - check by trying to open a URL was successful "
+"(optional)"
+
+#: ../../source/log.rst:572
+msgid ""
+"``check_is_alive_success`` - проверка is_alive была успешной (опционально)"
+msgstr "``check_is_alive_success`` - check is_alive was successful (optional)"
+
+#: ../../source/log.rst:577
+msgid "4.1.12. smarty_admin - лог панели администрирования Smarty"
+msgstr "4.1.12. smarty_admin - log admin panel Smarty"
+
+#: ../../source/log.rst:580
+msgid "ADMIN_REQUEST"
+msgstr "ADMIN_REQUEST"
+
+#: ../../source/log.rst:582
+msgid "Запрос к административному интерфейсу, дополнительный контекст:"
+msgstr "Query the administration interface, additional context:"
+
+#: ../../source/log.rst:584 ../../source/log.rst:599
+msgid "``user`` - пользователь, осуществивший запрос"
+msgstr "``user`` - the user who typed the query"
+
+#: ../../source/log.rst:585 ../../source/log.rst:597
+msgid "``ip`` - IP пользовтаеля"
+msgstr "``the ip`` - the IP of the consumers"
+
+#: ../../source/log.rst:586 ../../source/log.rst:600
+msgid "``path`` - путь запроса"
+msgstr "``path`` - the request path"
+
+#: ../../source/log.rst:587 ../../source/log.rst:598
+msgid "``user_agent`` - User-Agent браузера"
+msgstr "``user_agent`` - User-Agent browser"
+
+#: ../../source/log.rst:590
+msgid "4.1.13. smarty_videoservices - лог обращений к видеосервисам"
+msgstr "4.1.13. smarty_videoservices - log of requests to video"
+
+#: ../../source/log.rst:593
+msgid "VIDEOSERVICES_REQUEST"
+msgstr "VIDEOSERVICES_REQUEST"
+
+#: ../../source/log.rst:595
+msgid "Запрос пользователя в Smarty на выполнение команды:"
+msgstr "The user's query in Smarty to run the command:"
+
+#: ../../source/log.rst:603
+msgid "VIDEOSERVICES_API_REQUEST"
+msgstr "VIDEOSERVICES_API_REQUEST"
+
+#: ../../source/log.rst:605
+msgid "Запрос Smarty к видеосервису:"
+msgstr "The Smarty request to the video service:"
+
+#: ../../source/log.rst:607
+msgid "``host`` - тип и адрес видеосервиса"
+msgstr "``the host`` - the type and address of video service"
+
+#: ../../source/log.rst:609
+msgid "``command`` - вызываемый метод"
+msgstr "``command`` - the called method"
+
+#: ../../source/log.rst:610
+msgid "``message`` - ответ сервера (только при ошибке)"
+msgstr "``message`` - the server's response (only if error)"
