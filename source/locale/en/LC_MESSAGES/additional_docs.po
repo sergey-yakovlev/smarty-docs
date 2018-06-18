@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Microimpuls LLC, www.microimpuls.com
+# This file is distributed under the same license as the Smarty package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Smarty Last\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 17:53+0300\n"
+"PO-Revision-Date: 2018-06-05 19:13+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"Last-Translator: Елизавета <travka.zeleneet@pm.ru>\n"
+"Language-Team: \n"
+"Language: en\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: ../../source/additional_docs.rst:5
+msgid "B. Дополнительные материалы"
+msgstr "B. Additional materials"
+
+#: ../../source/additional_docs.rst:10
+msgid ""
+"B.1. Установка драйвера cx_Oracle на Debian и пример настройки "
+"подключения Smarty к Oracle"
+msgstr ""
+"B.1. cx_Oracle driver installation on Debian and an example of Smarty to "
+"Oracle connection setup"
+
+#: ../../source/additional_docs.rst:12
+msgid "Установить пакет ``oracle-instantclient11.2-basic``."
+msgstr "Install the package ``oracle-instantclient11.2-basic``."
+
+#: ../../source/additional_docs.rst:14
+msgid ""
+"При установке на Debian необходимо сконвертировать rpm-пакет, \\ "
+"предоставляемый Oracle, в deb-пакет с помощью утилиты ``alien``: ::"
+msgstr ""
+"When installing on Debian you need to convert the rpm package \\ "
+"provided by Oracle into deb package using the utility ``alien``: ::"
+
+#: ../../source/additional_docs.rst:21
+msgid "Установить пакет ``oracle-instantclient11.2-devel``: ::"
+msgstr "Install the package ``oracle-instantclient11.2-devel``: ::"
+
+#: ../../source/additional_docs.rst:26
+msgid "Установить пакет ``oracle-instantclient11.2-sqlplus``: ::"
+msgstr "Install the package ``oracle-instantclient11.2-sqlplus``: ::"
+
+#: ../../source/additional_docs.rst:31
+msgid "Установить python-модуль ``cx_Oracle``: ::"
+msgstr "Install the python module ``cx_Oracle``: ::"
+
+#: ../../source/additional_docs.rst:35
+msgid "Установить ``libaio1``: ::"
+msgstr "Install ``libaio1``: ::"
+
+#: ../../source/additional_docs.rst:42
+msgid "B.1.1. Настройка подключения Smarty к Oracle"
+msgstr "B.1.1. Smarty to Oracle connection setup"
+
+#: ../../source/additional_docs.rst:44
+msgid ""
+"В файл конфигурации Smarty в секции настроек подключения к БД необходимо "
+"прописать: ::"
+msgstr ""
+"This is needed to be written into the database connection settings "
+"section of the Smarty configuration file: ::"

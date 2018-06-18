@@ -1,0 +1,472 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Microimpuls LLC, www.microimpuls.com
+# This file is distributed under the same license as the Smarty package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Smarty Last\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 17:53+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/troubleshooting.rst:5
+msgid "A. Решение проблем и рекомендации"
+msgstr "A. problem solving and recommendations"
+
+#: ../../source/troubleshooting.rst:7
+msgid ""
+"Компания \"Майкроимпульс\" оказывает услуги профессиональной технической "
+"поддержки по проектам, включая услуги по администрирования и настройке "
+"серверов Smarty, порталов, систем управления БД, а также осуществляет "
+"настройку репликации данных, балансировки нагрузки, кеширования, "
+"резервирования и прочее."
+msgstr ""
+"The company \"Microimpulse\" provides professional technical support on "
+"projects, including administration and server configuration, Smarty, "
+"portals, management systems database, and customize data replication, load "
+"balancing, caching, redundancy and more."
+
+#: ../../source/troubleshooting.rst:11
+msgid ""
+"Подробную информацию о стоимости технической поддержки можно получить у "
+"своего менеджера."
+msgstr ""
+"Detailed information on the cost of technical support can be obtained from "
+"your Manager."
+
+#: ../../source/troubleshooting.rst:13
+msgid ""
+"Кроме того, задать свой вопрос или найти решение той или иной проблемы можно"
+" на официальном техническом сообществе http://forum.micro.im"
+msgstr ""
+"In addition, to ask a question or find a solution to a particular problem in"
+" the technical community http://forum.micro.im"
+
+#: ../../source/troubleshooting.rst:19
+msgid ""
+"A.1. Проблемы в работе сервера Middleware и сопутствующих системах и их "
+"решение"
+msgstr ""
+"A. 1. Problems with the server Middleware, and associated systems and "
+"solutions"
+
+#: ../../source/troubleshooting.rst:22
+msgid "Не отображается список телеканалов на устройстве абонента"
+msgstr "Not displayed list of TV channels on the subscriber's device"
+
+#: ../../source/troubleshooting.rst:24 ../../source/troubleshooting.rst:36
+#: ../../source/troubleshooting.rst:51 ../../source/troubleshooting.rst:62
+#: ../../source/troubleshooting.rst:73 ../../source/troubleshooting.rst:84
+#: ../../source/troubleshooting.rst:104 ../../source/troubleshooting.rst:117
+#: ../../source/troubleshooting.rst:125 ../../source/troubleshooting.rst:134
+#: ../../source/troubleshooting.rst:143 ../../source/troubleshooting.rst:152
+#: ../../source/troubleshooting.rst:163 ../../source/troubleshooting.rst:172
+#: ../../source/troubleshooting.rst:181
+msgid "**Возможные причины и решения:**"
+msgstr "**Possible causes and solutions:**"
+
+#: ../../source/troubleshooting.rst:26
+msgid ""
+"Для абонента/аккаунта не установлены тарифные пакеты, содержащие необходимый"
+" набор каналов и стриминг-сервисов."
+msgstr ""
+"For a subscriber/account no installed packages containing the required set "
+"of channels and streaming services."
+
+#: ../../source/troubleshooting.rst:27
+msgid ""
+"В составе подключенных для абонента/аккаунта тарифных пакетов не найдено ни "
+"одного доступного стриминг-сервиса."
+msgstr ""
+"The composition is connected for a subscriber/account tariff packages not "
+"found any available streaming service."
+
+#: ../../source/troubleshooting.rst:28
+msgid ""
+"Кеш списка телеканалов пуст, необходимо выполнить команду "
+"**cache_channel_list**, см. в :ref:`Кеширование списка телеканалов <cache-"
+"channel-list-command>`."
+msgstr ""
+"Cache the list of channels is empty, you must run the command "
+"**cache_channel_list**, see :ref:`Caching channel list <cache-channel-list-"
+"command>`."
+
+#: ../../source/troubleshooting.rst:30 ../../source/troubleshooting.rst:38
+msgid ""
+"После установки обновления не выполнена команда **flushall**, что привело к "
+"порче кеша. См. в :ref:`Установка обновлений Smarty <install-updates>`."
+msgstr ""
+"After installing the update is not performed **flushall** that led to damage"
+" of the cache. Cm. in :ref:`Install updates Smarty <install-updates>`."
+
+#: ../../source/troubleshooting.rst:34
+msgid ""
+"В работе приложения у абонента возникают ошибки и/или при включении "
+"приставки возникает ошибка авторизации"
+msgstr ""
+"In the application of the subscriber errors occur and/or when you turn on "
+"the console an error occurs, the authorization"
+
+#: ../../source/troubleshooting.rst:40
+msgid ""
+"Если используется единственный сервер Redis и в директории для сохранения "
+"дампа закончилось место, то это может приводить к ошибкам *\"MISCONF Redis "
+"is configured to save RDB snapshots, but is currently not able to persist on"
+" disk\"*. Необходимо освободить свободное место и отключить опцию *stop-"
+"writes-on-bgsave-error*, см. в :ref:`Настройка кеширования <cache-"
+"settings>`."
+msgstr ""
+"If you are using a single Redis server and directory to save the dump over "
+"the place, this can lead to errors *\"MISCONF Redis is configured to save "
+"RDB snapshots, but is currently not able to persist on disk\"*. You need to "
+"release free space and disable the option *stop-writes-on-bgsave-error*, see"
+" :ref:`configure caching <cache-settings>`."
+
+#: ../../source/troubleshooting.rst:47
+msgid ""
+"В телепрограмме на устройстве абонента не отображаются значки доступности "
+"записи телепередач"
+msgstr ""
+"In the TV program on the subscriber's device does not display the icons of "
+"the availability of recorded shows"
+
+#: ../../source/troubleshooting.rst:49
+msgid ""
+"**Проблема:** при включенном и настроенном сервисе PVR абоненту недоступно "
+"включение передач из записи."
+msgstr ""
+"**Problem:** when enabled and configured the PVR service subscriber is "
+"unavailable switch gears from the record."
+
+#: ../../source/troubleshooting.rst:53
+msgid ""
+"Для абонента/аккаунта не установлен тарифный пакет, содержащий "
+"соответствующий и доступный стриминг-сервис."
+msgstr ""
+"For a subscriber/account is not selected tariff package that contains the "
+"appropriate and accessible streaming service."
+
+#: ../../source/troubleshooting.rst:54
+msgid ""
+"Созданы технические работы, затрагивающие работу сервиса, см. в "
+":ref:`Технические работы <smarty-admin-guide-videostreaming-maintenance>`."
+msgstr ""
+"Created technical work affecting the operation of the service, see "
+":ref:`Technical work <smarty-admin-guide-videostreaming-maintenance>`."
+
+#: ../../source/troubleshooting.rst:58
+msgid "Высокая нагрузка на CPU на сервере MongoDB"
+msgstr "High CPU load on the MongoDB server"
+
+#: ../../source/troubleshooting.rst:60
+msgid ""
+"**Проблема:** потребление CPU на сервере MongoDB близко к 100% по всем "
+"ядрам, недоступны отчеты телесмотрения."
+msgstr ""
+"**Problem:** the CPU consumption on the server MongoDB close to 100% across "
+"all cores, and reports are not available in viewership."
+
+#: ../../source/troubleshooting.rst:64
+msgid ""
+"Сервер MongoDB запущен без поддержки NUMA (такое также может быть при "
+"использовании виртуализации). Решение: "
+"https://docs.mongodb.com/manual/administration/production-notes/#mongodb-"
+"and-numa-hardware"
+msgstr ""
+"The MongoDB server is running without the support of NUMA (this can also be "
+"when using virtualization). Solution: "
+"https://docs.mongodb.com/manual/administration/production-notes/#mongodb-"
+"and-numa-hardware"
+
+#: ../../source/troubleshooting.rst:66
+msgid ""
+"В процессе установки Smarty и настройки сервера MongoDB не были добавлены "
+"индексы. Решение: запустить команду *migrate*, которая добавляет нужные "
+"индексы в настроенную БД MongoDB, см. в :ref:`Установка обновлений Smarty "
+"<install-updates>`."
+msgstr ""
+"In the process of installing Smarty and configure the MongoDB server was not"
+" added to the indexes. Solution: run the command *migrate* that adds the "
+"index to the configured database MongoDB, see the :ref:`Install updates "
+"Smarty <install-updates>`."
+
+#: ../../source/troubleshooting.rst:71
+msgid ""
+"В ходе установки обновления Smarty возник всплеск нагрузки на сервер "
+"Middleware и СУБД"
+msgstr ""
+"During the installation of the update Smarty arose a surge load on the "
+"server, Middleware and DBMS"
+
+#: ../../source/troubleshooting.rst:75
+msgid ""
+"Если в момент обновления планировщиком была запущена команда импорта EPG, то"
+" попытка выполнить команду *flushall* может привести к конфликту инвалидации"
+" объектов, т.к. один процесс их создает, а другой инвалидирует. Это может "
+"привести к массовой инвалидации объектов в кеше. Для предотвращения такой "
+"ситуации при установке обновления необходимо завершать фоновые команды "
+"*epg_import* и *cache_channel_list*. См. в :ref:`Установка обновлений Smarty"
+" <install-updates>`."
+msgstr ""
+"If you upgrade the scheduler has been running the import command EPG, try to"
+" execute the command *flushall* could lead to invalidation conflict of "
+"interest, since one process creates them, and the other invalidates. This "
+"can result in the mass invalidation of objects in the cache. To prevent such"
+" a situation when you install the update you must complete a background "
+"command *epg_import* and *cache_channel_list*. Cm. in :ref:`Install updates "
+"Smarty <install-updates>`."
+
+#: ../../source/troubleshooting.rst:82
+msgid ""
+"При массовом количестве абонентов возникает повышенная нагрузка на CPU и она"
+" не уменьшается"
+msgstr ""
+"At a mass number of subscribers there is an increased load on the CPU and it"
+" does not decrease"
+
+#: ../../source/troubleshooting.rst:86
+msgid ""
+"Недостаточно воркеров uwsgi или nginx. Необходимо провести оптимальную "
+"настройку сервера приложений и веб-сервера согласно общим рекомендациям под "
+"высокую нагрузку."
+msgstr ""
+"Not enough workarou uwsgi or nginx. It is necessary to conduct the optimal "
+"configuration of the application server and web server in accordance with "
+"General guidelines under high load."
+
+#: ../../source/troubleshooting.rst:88
+msgid ""
+"Недостаточно оперативной памяти или CPU. См. в :ref:`Системные требования "
+"<system-requirements-middleware>`. Временным решением проблемы может быть "
+"включение кеша nginx, для этого необходимо для наиболее частых запросов "
+"задействовать обработчик *@cached* в конфиге nginx, например:"
+msgstr ""
+"Insufficient RAM or CPU. Cm. in :ref:`System requirements <system-"
+"requirements-middleware>`. A temporary solution might be to enable nginx "
+"cache, it is necessary for the most frequent queries to use the handler "
+"*@cached* in the nginx configuration, for example:"
+
+#: ../../source/troubleshooting.rst:102
+msgid "Периодически возникает всплек нагрузки на сеть на сервере Middleware"
+msgstr "Periodically there splek network load on the Middleware server"
+
+#: ../../source/troubleshooting.rst:106
+msgid ""
+"Включена опция *\"Включить автообновление данных без перезагрузки "
+"устройства\"* в настройках устройства (см. в :ref:`Настройки STB и виджетов "
+"<smarty-admin-guide-main-device-configuration>`). Если данная нагрузка "
+"нежелательна, то необходимо отключить опицю. Тогда полный список телеканалов"
+" и EPG не будет осуществляться."
+msgstr ""
+"Enabled *\"Enable auto-refresh the data without restarting the device\"* "
+"device settings (see :ref:`Settings STB and widgets <smarty-admin-guide-"
+"main-device-configuration>`). If this load is undesirable, you should "
+"disable opico. Then a full list of TV channels and EPG will not be "
+"performed."
+
+#: ../../source/troubleshooting.rst:110
+msgid ""
+"При некорректной работе сети или использовании виртуализации может возникать"
+" ситуация задерживания пакетов в очередях, что при освобождении очереди "
+"может привести к всплеску запросов, и как следствие - к всплескам трафика. "
+"Необходимо устранить сетевые проблемы и обеспечить быструю передачу данных."
+msgstr ""
+"If an incorrect network or the virtualization could be a situation the "
+"retention of packets in queues, when queue release may lead to a surge of "
+"requests, and as a result a surge of traffic. You need to troubleshoot "
+"network problems and provide fast data transfer."
+
+#: ../../source/troubleshooting.rst:115
+msgid ""
+"Некоторые страницы панели администратора открываются с существенной "
+"задержкой, также возникают задержки в работе устройств"
+msgstr ""
+"Some pages of the admin panel open with a significant delay also delays "
+"operation of devices"
+
+#: ../../source/troubleshooting.rst:119
+msgid ""
+"Проверьте доступность сервера СУБД для сервера Smarty. Необходимо обеспечить"
+" минимальное время отклика для быстрой работы системы. Также может помочь "
+"отключение DNS resolving на сервере БД, например для MySQL: http://pe-"
+"kay.blogspot.ru/2011/08/problem-of-high-number-of.html)"
+msgstr ""
+"Verify that the DBMS server to server Smarty. It is necessary to ensure "
+"minimum response time for fast operation of the system. Can also help "
+"disable DNS resolving on the database server, e.g. for MySQL: http://pe-"
+"kay.blogspot.ru/2011/08/problem-of-high-number-of.html)"
+
+#: ../../source/troubleshooting.rst:123
+msgid "Сервер приложений uwsgi не загружается, Smarty недоступна"
+msgstr "Application server, uwsgi is not loaded, Smarty is not available"
+
+#: ../../source/troubleshooting.rst:127
+msgid ""
+"Нет прав на запись для пользователя www-data в директорию "
+"/var/log/microimpuls или /var/log/microimpuls/smarty. Необходимо разрешить "
+"запись в эти директории."
+msgstr ""
+"No write permissions for user www-data directory to /var/log/microimpuls or "
+"/var/log/microimpuls/smarty. You must allow writing to these directories."
+
+#: ../../source/troubleshooting.rst:129
+msgid "Другая причина - см. в логи /var/log/uwsgi/."
+msgstr "Another reason - see the logs /var/log/uwsgi/."
+
+#: ../../source/troubleshooting.rst:132
+msgid ""
+"Команда импорта EPG epg_import останавливается, EPG не импортируется из "
+"панели администратора"
+msgstr ""
+"The import command stops epg_import EPG, EPG is not imported from the admin "
+"panel"
+
+#: ../../source/troubleshooting.rst:136
+msgid ""
+"Нет прав на запись в директорию "
+"/usr/share/nginx/html/microimpuls/smarty/media. Необходимо назначить "
+"пользователя и группу www-data на директорию smarty, выполнив команду: "
+"*chown -R www-data:www-data /usr/share/nginx/html/microimpuls*."
+msgstr ""
+"No write permissions in /usr/share/nginx/html/microimpuls/smarty/media. You "
+"must assign user and group www-data to the smarty directory, perform the "
+"command: *chown-R www-data:www-data /usr/share/nginx/html/microimpuls*."
+
+#: ../../source/troubleshooting.rst:138
+msgid ""
+"Другая причина - см. в логи /var/log/microimpuls/smarty/smarty_epg.log."
+msgstr ""
+"Another reason - see the logs /var/log/microimpuls/smarty/smarty_epg.log."
+
+#: ../../source/troubleshooting.rst:141
+msgid ""
+"В приложении абонента не отображаются иконки телеканалов и картинки передач"
+msgstr ""
+"In the application the subscriber is not displayed icons of television and "
+"picture transmission"
+
+#: ../../source/troubleshooting.rst:145
+msgid ""
+"Некорректно установлено значение опции MEDIA_BASE_URL (см. в :ref:`Описание "
+"основных параметров <settings-description>`), либо некорректно настроен "
+"nginx. Для отладки необходимо открыть портал в браузере и с помощью "
+"инструментов разрабочика (например, Firebug) отследить запросы к картинкам."
+msgstr ""
+"Incorrect option value MEDIA_BASE_URL (see :ref:`description of the main "
+"parameters <settings-description>`) or incorrectly configured nginx. For "
+"debugging, you must open the portal in the browser and using symfony "
+"developer tools (e.g. Firebug) to track requests for pictures."
+
+#: ../../source/troubleshooting.rst:150
+msgid "В приложении абонента спустя некоторое время сбиваются часы и EPG"
+msgstr ""
+"In the application of the subscriber after some time, get off the clock and "
+"EPG"
+
+#: ../../source/troubleshooting.rst:154
+msgid ""
+"Если на устройстве используется синхронизация времени с NTP, то при разрыве "
+"соединения с NTP-серверов время может испортиться. Необходимо обеспечить "
+"корректную работу и доступность NTP-сервера. Время на сервере Middleware "
+"также должно быть синхронизировано со временем на серверах PVR."
+msgstr ""
+"If the device is used to synchronize time with NTP when the connection with "
+"the NTP server time may deteriorate. It is necessary to ensure proper "
+"operation and accessibility of the NTP server. Time on the Middleware server"
+" must also be synchronized with the time on the server PVR."
+
+#: ../../source/troubleshooting.rst:159
+msgid ""
+"Не работает опрос серверов MicroTS, возникают ошибки при взаимодействии "
+"Smarty с видео-серверами Microimpuls"
+msgstr ""
+"Not working the servers MicroTS, errors occur in the interaction Smarty "
+"video servers Microimpuls"
+
+#: ../../source/troubleshooting.rst:161
+msgid ""
+"**Проблема:** данные мониторинга не собираются, не отображается мониторинг "
+"транскодирования потоков, заданий записи и др."
+msgstr ""
+"**Problem:** monitoring data is collected, the monitoring does not appear "
+"transcoding streams, tasks, records etc."
+
+#: ../../source/troubleshooting.rst:165
+msgid ""
+"Порт JSON-RPC API соответствующих сервисов недоступен для сервера Smarty. "
+"Необходимо обеспечить их доступность."
+msgstr ""
+"The port of the JSON-RPC API of the respective service unavailable server "
+"Smarty. It is necessary to ensure their availability."
+
+#: ../../source/troubleshooting.rst:166
+msgid ""
+"Установлена неверная версия пакета python-jsonrpctcp. Необходимо установить "
+"пакет из репозитория Microimpuls, см. в :ref:`Установка Smarty и модулей "
+"<install-smarty-and-modules>`."
+msgstr ""
+"Installed wrong version of package python-jsonrpctcp. You need to install "
+"the package from the repository Microimpuls, see :ref:`Installing Smarty and"
+" modules <install-smarty-and-modules>`."
+
+#: ../../source/troubleshooting.rst:170
+msgid ""
+"Сторонее приложение, использующее TVMiddleware API, не может получить доступ"
+" с другого домена из-за политики CORS"
+msgstr ""
+"A third party application that uses TVMiddleware API, can't access from "
+"another domain due to CORS policy"
+
+#: ../../source/troubleshooting.rst:174
+msgid ""
+"В файле конфигурации Smarty необходимо прописать исключение CORS для этого "
+"домена в опции CORS_ORIGIN_WHITELIST, тогда в заголовках HTTP для запросов с"
+" этого домена будут выданы необходимые разрешения. Пример: "
+"*CORS_ORIGIN_WHITELIST = ( 'example.com', )*"
+msgstr ""
+"In the config file of Smarty you need to set the CORS exception for that "
+"domain in the options CORS_ORIGIN_WHITELIST, then in the HTTP headers for "
+"requests from that domain will be granted the necessary permissions. "
+"Example: *CORS_ORIGIN_WHITELIST = ( 'example.com', )*"
+
+#: ../../source/troubleshooting.rst:179
+msgid "Не загружаются обложки и описание фильма с сервиса Кинопоиск"
+msgstr "Do not load the cover art and movie description from IMDb"
+
+#: ../../source/troubleshooting.rst:183
+msgid ""
+"При частом использовании функции скачивания информации с сервиса Кинопоиск в"
+" панели администратора IP-адрес сервера Smarty может быть заблокирован "
+"системой защиты от ботов Кинопоиска. Для решения этой проблемы необходимо "
+"снизить активность запросов либо обратиться в службу технической поддержки "
+"сервиса Кинопоиск."
+msgstr ""
+"If you frequently use the function to download information from IMDb in the "
+"admin panel, the IP address of the server Smarty can be blocked by the "
+"system of protection against bots Either. To resolve this problem, it is "
+"necessary to reduce the activity of the queries or contact technical support"
+" service Kinopoisk."
+
+#: ../../source/troubleshooting.rst:190
+msgid "A.2. Рекомендации"
+msgstr "A. 2. Recommendations"
+
+#: ../../source/troubleshooting.rst:195
+msgid "Рекомендуемые параметры ядра"
+msgstr "Recommended kernel parameters"
+
+#: ../../source/troubleshooting.rst:197
+msgid "Изменения нужно вносить в файл /etc/sysctl.conf: ::"
+msgstr "Changes you need to make the file /etc/sysctl.conf: ::"
+
+#: ../../source/troubleshooting.rst:211
+msgid "Затем выполнить команду для применения изменений: ::"
+msgstr "Then run the command to apply the changes: ::"

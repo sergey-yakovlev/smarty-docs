@@ -1,0 +1,1818 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Microimpuls LLC, www.microimpuls.com
+# This file is distributed under the same license as the Smarty package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Smarty Last\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 17:53+0300\n"
+"PO-Revision-Date: 2018-06-09 17:31+0300\n"
+"Last-Translator: Елизавета <travka.zeleneet@pm.ru>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: ../../source/installation_and_configuration.rst:5
+msgid "2. Установка и настройка сервера Smarty"
+msgstr "2. Installation and configuration of the Smarty server"
+
+#: ../../source/installation_and_configuration.rst:10
+msgid "2.1. Где скачать установочные пакеты"
+msgstr "2.1. Where to download the installation packages"
+
+#: ../../source/installation_and_configuration.rst:12
+msgid ""
+"Инсталляционные пакеты ПО распространяются через FTP, доступ к которому "
+"предоставляется на время действия договора."
+msgstr ""
+"Installation packages are distributed via FTP, access to which is granted "
+"for the duration of the contract."
+
+#: ../../source/installation_and_configuration.rst:17
+msgid "2.2. Установка на ОС Linux Debian"
+msgstr "2.2. Installation on Linux Debian"
+
+#: ../../source/installation_and_configuration.rst:19
+msgid ""
+"Все модули Smarty поставляются в виде установочных deb-пакетов и "
+"устанавливаются утилитой dpkg. Обязательным модулем является ``smarty-base``."
+msgstr ""
+"All the Smarty modules are shipped as an installable deb packages, and are "
+"installable with dpkg utility. ``smarty-base`` is an integral module."
+
+#: ../../source/installation_and_configuration.rst:22
+msgid ""
+"Для работы необходим web-сервер ``nginx``, ``uwsgi`` и ``python 2.7``, а также "
+"несколько других пакетов."
+msgstr ""
+"Needed packages are ``nginx`` web server, ``uwsgi``, ``python 2.7``, and several "
+"others."
+
+#: ../../source/installation_and_configuration.rst:27
+msgid "2.2.1. Установка зависимостей"
+msgstr "2.2.1. Installing dependencies"
+
+#: ../../source/installation_and_configuration.rst:29
+msgid "Установка через ``apt-get``: ::"
+msgstr "Installing via ``apt-get``: ::"
+
+#: ../../source/installation_and_configuration.rst:34
+msgid "Установка утилиты ``pip``: ::"
+msgstr "Installation of the ``pip`` utility: ::"
+
+#: ../../source/installation_and_configuration.rst:41
+msgid "2.2.2. Установка Smarty и модулей"
+msgstr "2.2.2. Installing Smarty and modules"
+
+#: ../../source/installation_and_configuration.rst:43
+msgid "Установка через ``dpkg``: ::"
+msgstr "Installing via ``dpkg``: ::"
+
+#: ../../source/installation_and_configuration.rst:48
+msgid ""
+"После установки пакетов Smarty необходимо установить python-библиотеки через"
+" ``pip``: ::"
+msgstr ""
+"After installing Smarty pakages, you need to install the python libraries "
+"via ``pip``: ::"
+
+#: ../../source/installation_and_configuration.rst:52
+msgid ""
+"После установки пакета smarty-base создается конфигурационный файл для nginx"
+" в ``/etc/nginx/sites-available/smarty``. По умолчанию настроен на домен "
+"``smarty.example.com`` и слушает порт ``80`` и ``8180``. Необходимо перенастроить "
+"данный домен на необходимый."
+msgstr ""
+"After installation of the smarty-base package it is being created a "
+"configuration file for nginx in ``/etc/nginx/sites-available/smarty``. "
+"Defaults to the domain ``smarty.example.com`` and listening to port ``80`` and "
+"``8180``. Change this domain to yours."
+
+#: ../../source/installation_and_configuration.rst:56
+msgid "Файлы Smarty размещаются в ``/usr/share/nginx/html/microimpuls/smarty``."
+msgstr ""
+"Smarty files are located in ``/usr/share/nginx/html/microimpuls/smarty``."
+
+#: ../../source/installation_and_configuration.rst:61
+msgid "2.2.3. Установка схемы базы данных"
+msgstr "2.2.3. Installing the database schema"
+
+#: ../../source/installation_and_configuration.rst:63
+msgid "Первичная установка схемы базы данных осуществляется командой: ::"
+msgstr ""
+"Initial installation of the database schema is performed with the command: "
+"::"
+
+#: ../../source/installation_and_configuration.rst:67
+#: ../../source/installation_and_configuration.rst:85
+#: ../../source/installation_and_configuration.rst:98
+msgid ""
+"*<settings filename>* - имя файла настроек Smarty, в котором должны быть "
+"установлены параметры подключения к БД (см. :ref:`Описание основных "
+"параметров <settings-description>`)."
+msgstr ""
+"*<settings filename>* - the file name of the Smarty settings, in which must "
+"be set the connection settings to the database (see :ref:`Description of the"
+" main parameters of <settings-description>`)."
+
+#: ../../source/installation_and_configuration.rst:72
+msgid "Дополнительные материалы:"
+msgstr "Additional materials:"
+
+#: ../../source/installation_and_configuration.rst:74
+msgid ""
+":ref:`Особенности установки и настройки подключения Smarty к СУБД Oracle "
+"<cx_oracle>`"
+msgstr ""
+":ref:`the Specifics of installing and configuring Smarty connection to "
+"Oracle database <cx_oracle>`"
+
+#: ../../source/installation_and_configuration.rst:79
+msgid "2.2.4. Создание пользователя администратора"
+msgstr "2.2.4. Creating user administrator"
+
+#: ../../source/installation_and_configuration.rst:81
+msgid ""
+"Создание пользователя с правами служебного администратора осуществляется "
+"командой: ::"
+msgstr "Create user with service admin rights with the command: ::"
+
+#: ../../source/installation_and_configuration.rst:92
+msgid ""
+"2.2.5. Создание системных объектов в базе данных и примера настроек "
+"оператора"
+msgstr ""
+"2.2.5. Creating system objects in the database and examples of operator "
+"settings "
+
+#: ../../source/installation_and_configuration.rst:94
+msgid ""
+"Для создания системных объектов Smarty в базе данных, а также примера "
+"настроек выполните команду: ::"
+msgstr ""
+"To create system objects Smarty in the database, as well as example "
+"settings, run the command: ::"
+
+#: ../../source/installation_and_configuration.rst:103
+msgid ""
+"Можно пропустить создание образца настроек оператора, добавив флаг ``--no-"
+"sample-data``"
+msgstr ""
+"You can skip creating the sample operator settings, adding the flag ``--no-"
+"sample-data``"
+
+#: ../../source/installation_and_configuration.rst:109
+msgid "2.3. Установка на ОС Linux CentOS"
+msgstr "2.3. Installation on Linux CentOS"
+
+#: ../../source/installation_and_configuration.rst:111
+msgid ""
+"Поддержка CentOS является экспериментальной - корректная работа всех функций"
+" Smarty не гарантируется. Скрипт установки для fabric и примеры конфигурации"
+" на CentOS можно найти здесь: https://github.com/microimpuls/smarty-centos"
+msgstr ""
+"Support for CentOS is experimental - correct operation of all functions of "
+"Smarty is not guaranteed. The setup script for fabric and the configuration "
+"examples for CentOS can be found here: "
+"https://github.com/microimpuls/smarty-centos"
+
+#: ../../source/installation_and_configuration.rst:117
+msgid "2.4. Конфигурация Smarty"
+msgstr "2.4. Smarty Configuration"
+
+#: ../../source/installation_and_configuration.rst:122
+msgid "2.4.1. Файл настроек Smarty"
+msgstr "2.4.1. The configuration file Smarty"
+
+#: ../../source/installation_and_configuration.rst:124
+msgid ""
+"После первичной установки базовый файл конфигурации Smarty находится по "
+"адресу ``/etc/microimpuls/smarty/base.py`` (симлинк на "
+"``/usr/share/nginx/html/microimpuls/smarty/settings/base.py``)."
+msgstr ""
+"After the initial installation of the base configuration file Smarty is "
+"located at the address ``/etc/microimpuls/smarty/base.py`` (link to "
+"``/usr/share/nginx/html/microimpuls/smarty/settings/base.py``)."
+
+#: ../../source/installation_and_configuration.rst:127
+msgid ""
+"Основной файл конфигурации, используемый для production-режима работы - "
+"``/etc/microimpuls/smarty/prod.py``. На этот файл (или на другой используемый "
+"конфиг) должен указывать симлинк в "
+"``/usr/share/nginx/html/microimpuls/smarty/settings/<setings name>.py``. "
+"Именно в нем следует производить настройку Smarty, т.к. базовый файл "
+"конфигурации может быть перезаписан после установки обновлений."
+msgstr ""
+"The main configuration file used for production-mode - "
+"``/etc/microimpuls/smarty/prod.py``. This file (or other configuration used) "
+"must specify the symlink in "
+"``/usr/share/nginx/html/microimpuls/smarty/settings/<setings name>.py``. It "
+"should be set Smarty, because a basic configuration file can be overwritten "
+"after updates."
+
+#: ../../source/installation_and_configuration.rst:131
+msgid ""
+"Конфигурация производится путем присваивания значений переменным на Python."
+msgstr "Configuration is made by assigning values to variables in Python."
+
+#: ../../source/installation_and_configuration.rst:136
+msgid "2.4.1.1. Обслуживание нескольких инстансов Smarty на одном сервере"
+msgstr "2.4.1.1. Maintaining multiple Smarty instances on a single server"
+
+#: ../../source/installation_and_configuration.rst:138
+msgid ""
+"Для удобства конфигурации и размещения на одном сервере нескольких инстансов"
+" Smarty рекомендуется вместо использования файла настроек ``prod.py`` создать "
+"собственный файл с кратким символическим именем, совпадающим с названием "
+"сервиса, например ``myiptv.py``."
+msgstr ""
+"For convenience, the configuration and placement on a single server, "
+"multiple instances of Smarty instead of using the settings file ``prod.py`` "
+"create your own file with a short symbolic name that matches the service "
+"name, for example ``myiptv.py``."
+
+#: ../../source/installation_and_configuration.rst:142
+msgid ""
+"Данное имя затем также рекомендуется использование как суффикс или префикс в"
+" именах файлов конфигурации *nginx*, *uwsgi*, именах папок для логов, pid-"
+"файлов и др."
+msgstr ""
+"This name is then also recommended to use as a prefix or suffix in the names"
+" of configuration files *nginx*, *uwsgi*, the names of the folders for logs,"
+" pid files, etc."
+
+#: ../../source/installation_and_configuration.rst:148
+msgid "2.4.2. Описание параметров конфигурации Smarty"
+msgstr "2.4.2. Description of the configuration parameters to Smarty"
+
+#: ../../source/installation_and_configuration.rst:150
+msgid "Файл конфигурации задается на языке Python."
+msgstr "The configuration file is specified in the Python language."
+
+#: ../../source/installation_and_configuration.rst:153
+msgid "DEBUG ``bool``"
+msgstr "DEBUG ``bool``"
+
+#: ../../source/installation_and_configuration.rst:153
+msgid ""
+"Включить режим отладки. При возникновении ошибок будут показаны развернутые "
+"stacktrace ошибки в браузере."
+msgstr ""
+"To enable debug mode. Errors will be shown detailed stacktrace of the error "
+"in the browser."
+
+#: ../../source/installation_and_configuration.rst:157
+msgid "DATABASES ``dict``"
+msgstr "DATABASES ``language``"
+
+#: ../../source/installation_and_configuration.rst:156
+msgid ""
+"В этом массиве настраивается подключение к СУБД. При использовании "
+"нескольких СУБД для репликации необходимо отдельно настроить подключение к "
+"каждой из них, задав для каждого подключения уникальное имя."
+msgstr ""
+"In this array configures the connection to the DBMS. If you use multiple "
+"DBMS replication is necessary to separately configure the connection to each"
+" of them, giving each connection a unique name."
+
+#: ../../source/installation_and_configuration.rst:160
+msgid "TIME_ZONE ``str``"
+msgstr "TIME_ZONE ``str``"
+
+#: ../../source/installation_and_configuration.rst:160
+msgid "Часовой пояс сервера согласно именованию IANA."
+msgstr "Server time zone according to the IANA naming Convention."
+
+#: ../../source/installation_and_configuration.rst:164
+msgid "SECRET_KEY ``str``"
+msgstr "SECRET_KEY ``str``"
+
+#: ../../source/installation_and_configuration.rst:163
+msgid ""
+"Уникальный секретный ключ инстанса. Используется для безопасного кеширования"
+" секретных данных в процессе работы. Не забудьте поменять параметр "
+"SECRET_KEY на уникальное значение."
+msgstr ""
+"Unique secret key of the instance. Used for safe caching of sensitive data "
+"in the process. Do not forget to change the SECRET_KEY parameter to a unique"
+" value."
+
+#: ../../source/installation_and_configuration.rst:167
+msgid "INSTALLED_APPS ``list``"
+msgstr "INSTALLED_APPS ``list``"
+
+#: ../../source/installation_and_configuration.rst:167
+msgid ""
+"Список установленных модулей. Список дополняет базовые модули, прописанные в"
+" ``base.py``, через операцию ``+=``."
+msgstr ""
+"List of installed modules. The list complements the core modules prescribed "
+"in ``base.py`` through the operation ``+=``."
+
+#: ../../source/installation_and_configuration.rst:170
+msgid "EMAIL_HOST ``str``"
+msgstr "EMAIL_HOST ``str``"
+
+#: ../../source/installation_and_configuration.rst:170
+msgid "Адрес smtp-сервера."
+msgstr "The address of the smtp server."
+
+#: ../../source/installation_and_configuration.rst:173
+msgid "EMAIL_PORT ``int``"
+msgstr "EMAIL_PORT ``int``"
+
+#: ../../source/installation_and_configuration.rst:173
+msgid "Порт smtp-сервера."
+msgstr "The port of the smtp server."
+
+#: ../../source/installation_and_configuration.rst:176
+msgid "EMAIL_HOST_USER ``str``"
+msgstr "EMAIL_HOST_USER ``str``"
+
+#: ../../source/installation_and_configuration.rst:176
+msgid "Имя пользователя для авторизации на smtp-сервере."
+msgstr "User name for authorization on smtp server."
+
+#: ../../source/installation_and_configuration.rst:179
+msgid "EMAIL_HOST_PASSWORD ``str``"
+msgstr "EMAIL_HOST_PASSWORD ``str``"
+
+#: ../../source/installation_and_configuration.rst:179
+msgid "Пароль для авторизации на smtp-сервере."
+msgstr "Password for authentication on the smtp server."
+
+#: ../../source/installation_and_configuration.rst:182
+msgid "EMAIL_USE_TLS ``bool``"
+msgstr "EMAIL_USE_TLS ``bool``"
+
+#: ../../source/installation_and_configuration.rst:182
+msgid "Включает использование защищенного протокола TLS при отправке писем."
+msgstr "Enables use of secure TLS when sending mail."
+
+#: ../../source/installation_and_configuration.rst:185
+msgid "DEFAULT_FROM_EMAIL ``str``"
+msgstr "DEFAULT_FROM_EMAIL ``str``"
+
+#: ../../source/installation_and_configuration.rst:185
+msgid "Отображаемый адрес \"От\" в отправляемых служебных email по умолчанию."
+msgstr "The displayed \"From\" address sent in email service by default."
+
+#: ../../source/installation_and_configuration.rst:189
+msgid "SMARTY_URL ``str``"
+msgstr "SMARTY_URL ``str``"
+
+#: ../../source/installation_and_configuration.rst:188
+msgid ""
+"URL к инстансу Smarty. Используется в панели администратора. По умолчанию "
+"\"http://smarty.example.com\"."
+msgstr ""
+"URL to the Smarty instance. Used in the admin panel. Default "
+"\"http://smarty.example.com\"."
+
+#: ../../source/installation_and_configuration.rst:193
+msgid "MEDIA_BASE_URL ``str``"
+msgstr "MEDIA_BASE_URL ``str``"
+
+#: ../../source/installation_and_configuration.rst:192
+msgid ""
+"URL, который используется в ответах API в качестве базового пути к "
+"изображениям и статическим ресурсам, например для иконок телеканалов, "
+"картинок EPG или обложек фильмов."
+msgstr ""
+"The URL used in API responses as the base path for images and static "
+"resources such as icons of TV channels, EPG pictures or art films."
+
+#: ../../source/installation_and_configuration.rst:197
+msgid "TVMIDDLEWARE_PORTAL_DOMAIN ``str``"
+msgstr "TVMIDDLEWARE_PORTAL_DOMAIN ``str``"
+
+#: ../../source/installation_and_configuration.rst:196
+msgid ""
+"Домен, на котором располагается портал для устройств типа STB и Smart TV. "
+"Используется только для вспомогательных информационных целей и не влияет на "
+"работу приложения."
+msgstr ""
+"Domain, which is a portal for devices like STB and Smart TV. Only used for "
+"auxiliary informational purposes and does not affect the operation of the "
+"application."
+
+#: ../../source/installation_and_configuration.rst:202
+msgid "TVMIDDLEWARE_API_URL ``str``"
+msgstr "TVMIDDLEWARE_API_URL ``str``"
+
+#: ../../source/installation_and_configuration.rst:200
+msgid ""
+"URL к интерфейсу TVMiddleware API для использования в абонентских "
+"приложениях. По умолчанию \"http://smarty.example.com/tvmiddleware/api\". "
+"Для мультидоменной инсталляции можно использовать относительное значение "
+"\"/api\"."
+msgstr ""
+"The URL to the interface TVMiddleware API for using in customer "
+"applications. Default \"http://smarty.example.com/tvmiddleware/api\". For "
+"multi-domain installations, you can use a relative value of \"/api\"."
+
+#: ../../source/installation_and_configuration.rst:207
+msgid "TVMIDDLEWARE_PROGRAM_LIST_SEARCH_DAYS ``int``"
+msgstr "TVMIDDLEWARE_PROGRAM_LIST_SEARCH_DAYS ``int``"
+
+#: ../../source/installation_and_configuration.rst:205
+msgid ""
+"Глубина поиска EPG в днях. Используется при запросах на поиск контента. При "
+"использовании большого значения поиск будет осуществляться дольше и "
+"задействовать больше ресурсов сервера БД и Middleware. По умолчанию 1."
+msgstr ""
+"The depth of the search EPG in days. Used when querying for content search. "
+"When using a large value the search will be longer and use more resources of"
+" the database server and Middleware. Default is 1."
+
+#: ../../source/installation_and_configuration.rst:212
+msgid "TVMIDDLEWARE_VIDEO_NEW_DAYS ``int``"
+msgstr "TVMIDDLEWARE_VIDEO_NEW_DAYS ``int``"
+
+#: ../../source/installation_and_configuration.rst:210
+msgid ""
+"Период в днях с даты добавления фильма, в течение которого добавленный фильм"
+" считается новинкой и отображается в соответствующем разделе в приложениях "
+"абонента. По умолчанию 60."
+msgstr ""
+"The period in days from the date of adding of the film, during which the "
+"attached film is a novelty and is displayed in the corresponding section in "
+"the annexes of the subscriber. The default is 60."
+
+#: ../../source/installation_and_configuration.rst:216
+msgid "TVMIDDLEWARE_CONTENT_POSITION_TTL_DAYS ``int``"
+msgstr "TVMIDDLEWARE_CONTENT_POSITION_TTL_DAYS ``int``"
+
+#: ../../source/installation_and_configuration.rst:215
+msgid ""
+"Период в днях, в течение которого необходимо хранить на сервере сохраненные "
+"позиции просмотра контента для возможности предложить абоненту продолжить "
+"просмотр с прошлой позиции. По умолчанию 30."
+msgstr ""
+"The period in days during which you want to store on the server the saved "
+"position of the viewing content to be able to offer the subscriber to "
+"continue viewing from the last position. Default is 30."
+
+#: ../../source/installation_and_configuration.rst:219
+msgid "TVMIDDLEWARE_RECOMMENDATIONS_ENABLED ``bool``"
+msgstr "TVMIDDLEWARE_RECOMMENDATIONS_ENABLED ``bool``"
+
+#: ../../source/installation_and_configuration.rst:219
+msgid ""
+"Включить категорию \"Рекомендуемые\" в разделе \"ТВ по интересам\". По "
+"умолчанию False."
+msgstr ""
+"To include a category of \"Recommended\" in the \"TV interest\". Defaults to"
+" False."
+
+#: ../../source/installation_and_configuration.rst:223
+msgid "TVMIDDLEWARE_WEATHER_WIDGET_OPENWEATHERMAP_CITY ``str``"
+msgstr "TVMIDDLEWARE_WEATHER_WIDGET_OPENWEATHERMAP_CITY ``str``"
+
+#: ../../source/installation_and_configuration.rst:222
+msgid ""
+"Название города на английском языке (например, Moscow), для которого будет "
+"показан прогноз погоды по умолчанию в соответствующем виджете в приложениях "
+"абонента. Город должен существовать в сервисе OpenWeatherMap."
+msgstr ""
+"The city's name in English (for example, Moscow), which shows the weather "
+"forecast by default in the corresponding widget in the application of the "
+"subscriber. The city must exist in the service OpenWeatherMap."
+
+#: ../../source/installation_and_configuration.rst:226
+msgid "TVMIDDLEWARE_WEATHER_WIDGET_OPENWEATHERMAP_APPID ``int``"
+msgstr "TVMIDDLEWARE_WEATHER_WIDGET_OPENWEATHERMAP_APPID ``int``"
+
+#: ../../source/installation_and_configuration.rst:226
+msgid ""
+"App ID в сервисе OpenWeatherMap, используется в обращениях к API сервиса при"
+" запросе прогноза погоды."
+msgstr ""
+"App ID in the service OpenWeatherMap is used in calls to the service API "
+"when you request a weather forecast."
+
+#: ../../source/installation_and_configuration.rst:230
+msgid "TVMIDDLEWARE_WEATHER_WIDGET_CACHE_TIMEOUT ``int``"
+msgstr "TVMIDDLEWARE_WEATHER_WIDGET_CACHE_TIMEOUT ``int``"
+
+#: ../../source/installation_and_configuration.rst:229
+msgid ""
+"Время в секундах, на которое необходимо кешировать результат запроса "
+"прогноза погоды. Используется, чтобы уменьшить количество запросов. По "
+"умолчанию 900."
+msgstr ""
+"The time in seconds you want to cache the query result of the weather. Used "
+"to reduce the number of queries. Default 900."
+
+#: ../../source/installation_and_configuration.rst:234
+msgid "TVMIDDLEWARE_EXCHANGE_WIDGET_CACHE_TIMEOUT ``int``"
+msgstr "TVMIDDLEWARE_EXCHANGE_WIDGET_CACHE_TIMEOUT ``int``"
+
+#: ../../source/installation_and_configuration.rst:233
+msgid ""
+"Время в секундах, на которое необходимо кешировать результат запроса курсов "
+"валют. Используется, чтобы уменьшить количество запросов. По умолчанию 7200."
+msgstr ""
+"The time in seconds you want to cache the query result in exchange rates. "
+"Used to reduce the number of queries. The default is 7200."
+
+#: ../../source/installation_and_configuration.rst:238
+msgid "TVMIDDLEWARE_EXCHANGE_WIDGET_FIRST_CURRENCY ``str``"
+msgstr "TVMIDDLEWARE_EXCHANGE_WIDGET_FIRST_CURRENCY ``str``"
+
+#: ../../source/installation_and_configuration.rst:237
+msgid ""
+"Первая валюта для виджета курсов валют в портале. (см. "
+"http://www.cbr.ru/scripts/Root.asp?PrtId=SXML) По умолчанию ``USD``."
+msgstr ""
+"The first currency widget currency exchange rates in the portal. (see "
+"http://www.cbr.ru/scripts/Root.asp?PrtId=SXML) default ``USD``."
+
+#: ../../source/installation_and_configuration.rst:242
+msgid "TVMIDDLEWARE_EXCHANGE_WIDGET_SECOND_CURRENCY ``str``"
+msgstr "TVMIDDLEWARE_EXCHANGE_WIDGET_SECOND_CURRENCY ``str``"
+
+#: ../../source/installation_and_configuration.rst:241
+msgid ""
+"Вторая валюта для виджета курсов валют в портале. (см. "
+"http://www.cbr.ru/scripts/Root.asp?PrtId=SXML) По умолчанию ``EUR``."
+msgstr ""
+"The second currency widget currency exchange rates in the portal. (see "
+"http://www.cbr.ru/scripts/Root.asp?PrtId=SXML) default ``EUR``."
+
+#: ../../source/installation_and_configuration.rst:250
+msgid "TVMIDDLEWARE_EXCHANGE_WIDGET_COUNTRY_CODE ``str``"
+msgstr "TVMIDDLEWARE_EXCHANGE_WIDGET_COUNTRY_CODE ``str``"
+
+#: ../../source/installation_and_configuration.rst:245
+msgid ""
+"Код страны. В зависимости от этого будет выбран источник данных для курсов "
+"валют. Возможные значения: ``RU`` (http://www.cbr.ru/scripts/XML_daily.asp), "
+"``KG`` (http://www.nbkr.kg/XML/daily.xml), ``EE`` "
+"(https://www.eestipank.ee/en/exchange-rates/export/xml/latest). По умолчанию"
+" ``RU``."
+msgstr ""
+"The country code. Depending on this, you will select the data source for "
+"currency exchange rates. Possible values are: ``EN`` "
+"(http://www.cbr.ru/scripts/XML_daily.asp), ``KG`` "
+"(http://www.nbkr.kg/XML/daily.xml), ``EE`` "
+"(https://www.eestipank.ee/en/exchange-rates/export/xml/latest). Default "
+"``EN``."
+
+#: ../../source/installation_and_configuration.rst:254
+msgid "TVMIDDLEWARE_RSS_WIDGET_CACHE_TIMEOUT ``int``"
+msgstr "TVMIDDLEWARE_RSS_WIDGET_CACHE_TIMEOUT ``int``"
+
+#: ../../source/installation_and_configuration.rst:253
+msgid ""
+"Время в секундах, на которое необходимо кешировать результат запроса RSS-"
+"ленты. Используется, чтобы уменьшить количество запросов. По умолчанию 900."
+msgstr ""
+"The time in seconds you want to cache the result of the query RSS feed. Used"
+" to reduce the number of queries. Default 900."
+
+#: ../../source/installation_and_configuration.rst:258
+msgid "TVMIDDLEWARE_STREAM_SERVICE_TOKEN_TTL ``int``"
+msgstr "TVMIDDLEWARE_STREAM_SERVICE_TOKEN_TTL ``int``"
+
+#: ../../source/installation_and_configuration.rst:257
+msgid ""
+"Время жизни одноразового токена для авторизации стриминг-сервисов (при "
+"использовании Smarty как токен-сервера) в секундах. По умолчанию 3600 (60 "
+"минут)."
+msgstr ""
+"Life time one-time token to authorize the streaming services (if you are "
+"using Smarty as the token servers) in seconds. Default 3600 (60 minutes)."
+
+#: ../../source/installation_and_configuration.rst:263
+msgid "TVMIDDLEWARE_CLEAN_OLD_SESSIONS_DAYS ``int``"
+msgstr "TVMIDDLEWARE_CLEAN_OLD_SESSIONS_DAYS ``int``"
+
+#: ../../source/installation_and_configuration.rst:261
+msgid ""
+"Время жизни сессии авторизации в днях. Если сессия не была в статусе "
+"\"онлайн\" в течение этого периода, то она будет автоматически удалена. По "
+"умолчанию 3650."
+msgstr ""
+"The lifetime of the session authorization in days. If the session has not "
+"been in the status \"online\" during this period, it will be automatically "
+"removed. Default 3650."
+
+#: ../../source/installation_and_configuration.rst:267
+msgid "TVMIDDLEWARE_MULTILOGIN_ENABLED ``bool``"
+msgstr "TVMIDDLEWARE_MULTILOGIN_ENABLED ``bool``"
+
+#: ../../source/installation_and_configuration.rst:266
+msgid ""
+"Включает или отключает механизм мультилогинов (аккаунт с неограниченными "
+"возможностями авторизации) в Smarty. По умолчанию True."
+msgstr ""
+"Enables or disables the mechanism multilogin (account with unlimited "
+"authorization) in Smarty. Defaults to True."
+
+#: ../../source/installation_and_configuration.rst:270
+msgid "TVMIDDLEWARE_CHANNEL_AUTOSORT ``list``"
+msgstr "TVMIDDLEWARE_CHANNEL_AUTOSORT ``list``"
+
+#: ../../source/installation_and_configuration.rst:270
+msgid ""
+"Позволяет отключить функцию автосортировки каналов в Smarty, если задать "
+"значение ``[]``."
+msgstr "Allows you to disable auto sort channels in Smarty, if set ``[]``."
+
+#: ../../source/installation_and_configuration.rst:277
+msgid "TVMIDDLEWARE_ADS_ENABLED ``bool``"
+msgstr "TVMIDDLEWARE_ADS_ENABLED ``bool``"
+
+#: ../../source/installation_and_configuration.rst:273
+msgid ""
+"При значении True будет в методах ChannelUrl и ProgramUrl будет возвращаться"
+" параметр ``ads``. Необходимо для работоспособности функционала рекламных "
+"блоков и роликов в шаблонах, которые это поддерживают. Может приводить к "
+"снижению производительности Smarty при большом количестве пользователей на "
+"один сервер. По умолчанию False."
+msgstr ""
+"If True, ChannelUrl be in the methods and ProgramUrl will return the "
+"parameter ``ads``. It is necessary for the health of the functionality of ad "
+"blocks, and clips in templates that support it. Can lead to reduced "
+"performance Smarty with a large number of users on a single server. Defaults"
+" to False."
+
+#: ../../source/installation_and_configuration.rst:281
+msgid "TVMW_CLIENT_LOGO_MAX_HEIGHT ``int``"
+msgstr "TVMW_CLIENT_LOGO_MAX_HEIGHT ``int``"
+
+#: ../../source/installation_and_configuration.rst:280
+msgid ""
+"Максимальная высота логотипа оператора. Загруженный логотип будет сжат до "
+"этого размера. По умолчанию 240."
+msgstr ""
+"The maximum height of a operator logo. Uploaded logo will be shrunk to that "
+"size. Default 240."
+
+#: ../../source/installation_and_configuration.rst:285
+msgid "TVMW_CLIENT_LOGO_MAX_WIDTH ``int``"
+msgstr "TVMW_CLIENT_LOGO_MAX_WIDTH ``int``"
+
+#: ../../source/installation_and_configuration.rst:284
+msgid ""
+"Максимальная ширина логотипа оператора. Загруженный логотип будет сжат до "
+"этого размера. По умолчанию 320."
+msgstr ""
+"The maximum width of the operator logo. Uploaded logo will be shrunk to that"
+" size. Default 320."
+
+#: ../../source/installation_and_configuration.rst:289
+msgid "TVMW_CLIENT_PLAY_DEVICE_LOGO_MAX_HEIGHT ``int``"
+msgstr "TVMW_CLIENT_PLAY_DEVICE_LOGO_MAX_HEIGHT ``int``"
+
+#: ../../source/installation_and_configuration.rst:288
+msgid ""
+"Максимальная высота основного логотипа в абонентском приложении. Загруженный"
+" логотип будет сжат до этого размера. По умолчанию 240."
+msgstr ""
+"The maximum height of the main logo in the customer application. Uploaded "
+"logo will be shrunk to that size. Default 240."
+
+#: ../../source/installation_and_configuration.rst:293
+msgid "TVMW_CLIENT_PLAY_DEVICE_LOGO_MAX_WIDTH ``int``"
+msgstr "TVMW_CLIENT_PLAY_DEVICE_LOGO_MAX_WIDTH ``int``"
+
+#: ../../source/installation_and_configuration.rst:292
+msgid ""
+"Максимальная ширина основного логотипа в абонентском приложении. Загруженный"
+" логотип будет сжат до этого размера. По умолчанию 320."
+msgstr ""
+"The maximum width of the main logo in the customer application. Uploaded "
+"logo will be shrunk to that size. Default 320."
+
+#: ../../source/installation_and_configuration.rst:297
+msgid "TVMW_CLIENT_PLAY_DEVICE_LOGO_LOGIN_MAX_HEIGHT ``int``"
+msgstr "TVMW_CLIENT_PLAY_DEVICE_LOGO_LOGIN_MAX_HEIGHT ``int``"
+
+#: ../../source/installation_and_configuration.rst:296
+msgid ""
+"Максимальная высота логотипа для экрана авторизации в абонентском "
+"приложении. Загруженный логотип будет сжат до этого размера. По умолчанию "
+"240."
+msgstr ""
+"The maximum height of the logo for the login screen in the user application."
+" Uploaded logo will be shrunk to that size. Default 240."
+
+#: ../../source/installation_and_configuration.rst:301
+msgid "TVMW_CLIENT_PLAY_DEVICE_LOGO_LOGIN_MAX_WIDTH ``int``"
+msgstr "TVMW_CLIENT_PLAY_DEVICE_LOGO_LOGIN_MAX_WIDTH ``int``"
+
+#: ../../source/installation_and_configuration.rst:300
+#: ../../source/installation_and_configuration.rst:308
+msgid ""
+"Максимальная ширина логотипа для экрана авторизации в абонентском "
+"приложении. Загруженный логотип будет сжат до этого размера. По умолчанию "
+"320."
+msgstr ""
+"Maximum width of logo for the login screen in the user application. Uploaded"
+" logo will be shrunk to that size. Default 320."
+
+#: ../../source/installation_and_configuration.rst:305
+msgid "TVMW_CLIENT_PLAY_DEVICE_LOGO_LOADING_MAX_HEIGHT ``int``"
+msgstr "TVMW_CLIENT_PLAY_DEVICE_LOGO_LOADING_MAX_HEIGHT ``int``"
+
+#: ../../source/installation_and_configuration.rst:304
+msgid ""
+"Максимальная высота логотипа для экрана загрузки в абонентском приложении. "
+"Загруженный логотип будет сжат до этого размера. По умолчанию 240."
+msgstr ""
+"The maximum height of the logo for the loading screen in the customer "
+"application. Uploaded logo will be shrunk to that size. Default 240."
+
+#: ../../source/installation_and_configuration.rst:309
+msgid "TVMW_CLIENT_PLAY_DEVICE_LOGO_LOADING_MAX_WIDTH ``int``"
+msgstr "TVMW_CLIENT_PLAY_DEVICE_LOGO_LOADING_MAX_WIDTH ``int``"
+
+#: ../../source/installation_and_configuration.rst:313
+msgid "TVMW_VIDEO_POSTER_BIG_MAX_HEIGHT ``int``"
+msgstr "TVMW_VIDEO_POSTER_BIG_MAX_HEIGHT ``int``"
+
+#: ../../source/installation_and_configuration.rst:312
+msgid ""
+"Максимальная высота обложки фильма VOD. Загруженная обложка будет сжата до "
+"этого размера. По умолчанию 800."
+msgstr ""
+"The maximum height of the cover film VOD. Uploaded cover will be compressed "
+"to this size. Defaults to 800."
+
+#: ../../source/installation_and_configuration.rst:317
+msgid "TVMW_VIDEO_POSTER_BIG_MAX_WIDTH ``int``"
+msgstr "TVMW_VIDEO_POSTER_BIG_MAX_WIDTH ``int``"
+
+#: ../../source/installation_and_configuration.rst:316
+msgid ""
+"Максимальная ширина обложки фильма VOD. Загруженная обложка будет сжата до "
+"этого размера. По умолчанию 800."
+msgstr ""
+"Maximum width of cover film VOD. Uploaded cover will be compressed to this "
+"size. Defaults to 800."
+
+#: ../../source/installation_and_configuration.rst:321
+msgid "TVMW_VIDEO_POSTER_SMALL_MAX_HEIGHT ``int``"
+msgstr "TVMW_VIDEO_POSTER_SMALL_MAX_HEIGHT ``int``"
+
+#: ../../source/installation_and_configuration.rst:320
+msgid ""
+"Максимальная высота обложки для предпросмотра фильма VOD. Загруженная "
+"обложка будет сжата до этого размера. По умолчанию 300."
+msgstr ""
+"The maximum height of cover for preview of the film VOD. Uploaded cover will"
+" be compressed to this size. The default is 300."
+
+#: ../../source/installation_and_configuration.rst:325
+msgid "TVMW_VIDEO_POSTER_SMALL_MAX_WIDTH ``int``"
+msgstr "TVMW_VIDEO_POSTER_SMALL_MAX_WIDTH ``int``"
+
+#: ../../source/installation_and_configuration.rst:324
+msgid ""
+"Максимальная ширина обложки для предпросмотра фильма VOD. Загруженная "
+"обложка будет сжата до этого размера. По умолчанию 300."
+msgstr ""
+"The maximum width of the cover for the preview of the film VOD. Uploaded "
+"cover will be compressed to this size. The default is 300."
+
+#: ../../source/installation_and_configuration.rst:329
+msgid "TVMW_VIDEO_FILE_PROMO_IMAGE_MAX_HEIGHT ``int``"
+msgstr "TVMW_VIDEO_FILE_PROMO_IMAGE_MAX_HEIGHT ``int``"
+
+#: ../../source/installation_and_configuration.rst:328
+msgid ""
+"Максимальная высота промо-картинки видео-ассета в VOD. Загруженная картинка "
+"будет сжата до этого размера. По умолчанию 720."
+msgstr ""
+"The maximum height of a promotional picture of the video asset to VOD. "
+"Uploaded image will be compressed to this size. Default 720."
+
+#: ../../source/installation_and_configuration.rst:333
+msgid "TVMW_VIDEO_FILE_PROMO_IMAGE_MAX_WIDTH ``int``"
+msgstr "TVMW_VIDEO_FILE_PROMO_IMAGE_MAX_WIDTH ``int``"
+
+#: ../../source/installation_and_configuration.rst:332
+msgid ""
+"Максимальная ширина промо-картинки видео-ассета в VOD. Загруженная картинка "
+"будет сжата до этого размера. По умолчанию 1280."
+msgstr ""
+"Maximum width of the promo images a video asset to VOD. Uploaded image will "
+"be compressed to this size. Default 1280."
+
+#: ../../source/installation_and_configuration.rst:337
+msgid "TVMW_ACTOR_PHOTO_MAX_HEIGHT ``int``"
+msgstr "TVMW_ACTOR_PHOTO_MAX_HEIGHT ``int``"
+
+#: ../../source/installation_and_configuration.rst:336
+msgid ""
+"Максимальная высота фотографии актера в VOD. Загруженная картинка будет "
+"сжата до этого размера. По умолчанию 800."
+msgstr ""
+"The maximal height of the actor in VOD. Uploaded image will be compressed to"
+" this size. Defaults to 800."
+
+#: ../../source/installation_and_configuration.rst:341
+msgid "TVMW_ACTOR_PHOTO_MAX_WIDTH ``int``"
+msgstr "TVMW_ACTOR_PHOTO_MAX_WIDTH ``int``"
+
+#: ../../source/installation_and_configuration.rst:340
+msgid ""
+"Максимальная ширина фотографии актера в VOD. Загруженная картинка будет "
+"сжата до этого размера. По умолчанию 800."
+msgstr ""
+"The maximum width of pictures of the actor in VOD. Uploaded image will be "
+"compressed to this size. Defaults to 800."
+
+#: ../../source/installation_and_configuration.rst:346
+msgid "TVMW_CONSIDER_PROGRAM_CATEGORY ``bool``"
+msgstr "TVMW_CONSIDER_PROGRAM_CATEGORY ``bool``"
+
+#: ../../source/installation_and_configuration.rst:344
+msgid ""
+"Если значение False, то в выдаче API-метода ProgramCategoryChannelList (\"ТВ"
+" по интересам\") категория текущей передачи не учитывается, и список каналов"
+" формируется только исходя из категории EpgChannel. По умолчанию True."
+msgstr ""
+"If False, the results of the API-method ProgramCategoryChannelList (\"TV "
+"interest\") category current transmission is ignored and the channel list is"
+" formed only on the basis of the categories EpgChannel. Defaults to True."
+
+#: ../../source/installation_and_configuration.rst:352
+msgid "TVMW_PREVENT_CASCADE_DELETION ``bool``"
+msgstr "TVMW_PREVENT_CASCADE_DELETION ``bool``"
+
+#: ../../source/installation_and_configuration.rst:349
+msgid ""
+"При значении True запрещает удаление объектов в Smarty через панель "
+"администратора при наличии у объектов дочерних связанных объектов. При "
+"значении False удаление таких объектов разрешено, но дочерние объекты при "
+"этом удалены не будут. По умолчанию False."
+msgstr ""
+"If True, prevents the deletion of objects in Smarty via admin panel in the "
+"presence of the child objects of related objects. If False, the removal of "
+"such objects is permitted, but the child objects in this case will not be "
+"removed. Defaults to False."
+
+#: ../../source/installation_and_configuration.rst:357
+msgid "2.4.3. Добавление лицензионного ключа сервера Smarty"
+msgstr "2.4.3. Adding a license key server, Smarty"
+
+#: ../../source/installation_and_configuration.rst:359
+msgid ""
+"Каждый инстанс Smarty привязывается к аппаратной и программной конфигурации "
+"сервера лицензионным ключом, который может быть ограничен по времени "
+"действия и максимальному числу настроенных Client ID (см. "
+":ref:`Мультипровайдер <client-creation>`)."
+msgstr ""
+"Each instance of Smarty is tied to the hardware and software configuration "
+"server license key, which can be limited by time steps and the maximum "
+"number of configured Client ID (see :ref:`Multiprovider <client-creation>`)."
+
+#: ../../source/installation_and_configuration.rst:362
+msgid ""
+"Лицензионный ключ настраивается в файле конфигурации в следующих переменных:"
+" ::"
+msgstr ""
+"The license key is configured in the configuration file in the following "
+"variables: ::"
+
+#: ../../source/installation_and_configuration.rst:368
+msgid ""
+"Для получения ключа необходимо обратиться к своему менеджеру по договору."
+msgstr "To obtain the key you must contact your Manager on the contract."
+
+#: ../../source/installation_and_configuration.rst:373
+msgid "2.4.4. Настройка кеширования"
+msgstr "2.4.4. Setting up caching"
+
+#: ../../source/installation_and_configuration.rst:375
+msgid ""
+"Для кеширования используется сервер **Redis** - является обязательным "
+"компонентом системы. Требуется версия Redis >= 2.6."
+msgstr ""
+"For caching server is used **Redis** - is a required component of the "
+"system. It requires Redis >= 2.6."
+
+#: ../../source/installation_and_configuration.rst:377
+msgid ""
+"По умолчанию конфигурация подразумевает локальную установку сервера Redis на"
+" тот же сервер Smarty, однако при необходимости их можно разделить. Для "
+"изменения параметров подключения к Redis необходимо в конфигурации Smarty "
+"прописать массив **CACHES** следующим образом: ::"
+msgstr ""
+"The default configuration assumes a local installation of Redis server on "
+"the same server with Smarty, but if necessary, they can be divided. To "
+"change connection settings for Redis configuration is required Smarty to "
+"register an array **CACHES** as follows: ::"
+
+#: ../../source/installation_and_configuration.rst:390
+msgid ""
+"В файле конфигурации Redis ``/etc/redis/redis.conf`` необходимо прописать: ::"
+msgstr ""
+"In the configuration file Redis ``/etc/redis/redis.conf`` I need to write: ::"
+
+#: ../../source/installation_and_configuration.rst:394
+msgid "Для вступления изменений в силу требуется перезагрузить Redis и uwsgi."
+msgstr "For the changes require you to restart Redis and uwsgi."
+
+#: ../../source/installation_and_configuration.rst:396
+msgid ""
+"Также поддерживается работа в кластерном режиме с группой серверов Redis, "
+"пример настройки: ::"
+msgstr ""
+"Operation is also supported in cluster mode with a group of Redis servers "
+"configuration example: ::"
+
+#: ../../source/installation_and_configuration.rst:420
+msgid "2.4.5. Настройка модуля геолокации"
+msgstr "2.4.5. Configuration of the module geolocation"
+
+#: ../../source/installation_and_configuration.rst:422
+msgid ""
+"Поддерживается несколько локаторов на основе IP-адреса абонента, работающие "
+"с разными источниками гео-данных. В :ref:`служебной панели администрирования"
+" <service_configuration>` для настраиваемого Client ID необходимо установить"
+" используемый локатор, наиболее подходящий для оператора и его региона "
+"оказания услуг."
+msgstr ""
+"Supports multiple locators based on IP addresses of the subscriber, working "
+"with different sources of geo-data. In :ref:`service-admin "
+"<service_configuration>` for custom Client ID, you must install the locator "
+"used, the most suitable for the operator and its region of service "
+"provision."
+
+#: ../../source/installation_and_configuration.rst:426
+msgid ""
+"*Если до изменения локатора база данных стран и городов уже была заполнена, "
+"то рекомендуется очистить её.*"
+msgstr ""
+"*If you have to change the locator database of countries and cities have "
+"already been filled, it is recommended to clean it.*"
+
+#: ../../source/installation_and_configuration.rst:428
+msgid ""
+"Все локаторы требуют создания/обновления своей базы данных. База данных "
+"может быть в виде SQL-таблиц или бинарных данных (либо и то, и то)."
+msgstr ""
+"All locators require the creation/updating its database. The database can be"
+" in the form of SQL tables, or binary data (or both)."
+
+#: ../../source/installation_and_configuration.rst:433
+msgid "2.4.5.1. Локатор django-geoip (ipgeobase)"
+msgstr "2.4.5.1. Locator django-geoip (ipgeobase)"
+
+#: ../../source/installation_and_configuration.rst:435
+msgid ""
+"Представляет собой обёртку над https://django-"
+"geoip.readthedocs.org/en/latest/"
+msgstr ""
+"Is a wrapper around the https://django-geoip.readthedocs.org/en/latest/"
+
+#: ../../source/installation_and_configuration.rst:437
+msgid "Команда для обновления базы: ::"
+msgstr "The command to update the database: ::"
+
+#: ../../source/installation_and_configuration.rst:441
+msgid ""
+"Создание стран и городов на основе данных django-geoip (работает только если"
+" в системе нет ни одной страны и города): ::"
+msgstr ""
+"The creation of countries and cities based on the data of django-geoip (only"
+" works if there is no country and city): ::"
+
+#: ../../source/installation_and_configuration.rst:448
+msgid "2.4.5.2. Локатор ip2location"
+msgstr "2.4.5.2. Locator ip2location"
+
+#: ../../source/installation_and_configuration.rst:450
+msgid "Обновление базы: ::"
+msgstr "Database update: ::"
+
+#: ../../source/installation_and_configuration.rst:454
+msgid ""
+"Эта команда скачивает бинарную базу данных для определения местоположения и "
+"CSV-базу для создания справочника городов и стран."
+msgstr ""
+"This command downloads a binary database to determine the location and CSV "
+"database to create a directory of cities and countries."
+
+#: ../../source/installation_and_configuration.rst:456
+msgid ""
+"Создание стран и городов на основе данных ip2location (работает только если "
+"в системе нет ни одной страны и города): ::"
+msgstr ""
+"The creation of countries and cities based on data from ip2location (only "
+"works if there is no country and city): ::"
+
+#: ../../source/installation_and_configuration.rst:461
+msgid ""
+"После выбора локатора и синхронизации данных механизм геолокации готов к "
+"использованию. Доступность тех или иных сервисов Middleware (телеканалы, "
+"фильмы, стриминг-сервисы, опции и т.д.) определяется тарифными пакетами (см."
+" :ref:`Возможности тарификации <billing-tariffs-features>`), в настройках "
+"которых можно указать те страны и города, в которых они действуют."
+msgstr ""
+"After you select the locator and synchronization mechanism geolocation is "
+"ready to use. The availability of various Middleware services (TV, movies, "
+"streaming services, options, etc.) is determined by the tariff packages (see"
+" :ref:`the possibility of billing <billing-tariffs-features>`), in the "
+"settings where you can specify the country and city in which they operate."
+
+#: ../../source/installation_and_configuration.rst:469
+msgid "2.4.6. Настройка модуля мониторинга видеопотоков"
+msgstr "2.4.6. Setting of the monitoring module of the video streams"
+
+#: ../../source/installation_and_configuration.rst:471
+#: ../../source/installation_and_configuration.rst:493
+msgid "Настройки задаются переменными в файле конфигурации Smarty."
+msgstr "The settings are variables in the configuration file Smarty."
+
+#: ../../source/installation_and_configuration.rst:475
+msgid "MONITORING_CONCURRENT_STREAMS_COUNT ``int``"
+msgstr "MONITORING_CONCURRENT_STREAMS_COUNT ``int``"
+
+#: ../../source/installation_and_configuration.rst:474
+msgid ""
+"Количество одновременно опрашиваемых потоков с анализаторов MicroTS. Данный "
+"параметр влияет на производительность и быстроту обновления данных на "
+"странице мониторинга потоков."
+msgstr ""
+"The number of simultaneous streams from the respondents analyzers MicroTS. "
+"This parameter affects the performance and speed of data refresh on the "
+"monitoring page of threads."
+
+#: ../../source/installation_and_configuration.rst:478
+msgid "MONITORING_AGENT_SOCKET_TCP_BUFFER ``int``"
+msgstr "MONITORING_AGENT_SOCKET_TCP_BUFFER ``int``"
+
+#: ../../source/installation_and_configuration.rst:478
+msgid ""
+"Размер буфера данных при приеме ответа от анализатора MicroTS. Значение по "
+"умолчанию 4096 байт."
+msgstr ""
+"The data buffer size when receiving the response from the analyzer MicroTS. "
+"The default value is 4096 bytes."
+
+#: ../../source/installation_and_configuration.rst:480
+msgid ""
+"Скрипт опроса анализаторов запускается через crontab - см. :ref:`Настройка "
+"планировщика задач crontab <crontab-settings>`."
+msgstr ""
+"Script survey analyzers is run via a crontab see :ref:`configure the task "
+"scheduler crontab <crontab-settings>`."
+
+#: ../../source/installation_and_configuration.rst:485
+msgid "2.4.7. Настройка модуля статистики и отчетов"
+msgstr "2.4.7. Configuration of the module statistics and reports"
+
+#: ../../source/installation_and_configuration.rst:487
+msgid ""
+"Для сохранения данных телесмотрения абонентов используется сервер "
+"**MongoDB**."
+msgstr ""
+"To save the data of TV-watching subscribers using a server **MongoDB**."
+
+#: ../../source/installation_and_configuration.rst:491
+msgid "Минимальная версия MongoDB необходимая для работы - 3.4"
+msgstr "The minimum version of MongoDB is required to work 3.4"
+
+#: ../../source/installation_and_configuration.rst:497
+msgid "MONGODB_HOST ``str``"
+msgstr "MONGODB_HOST ``str``"
+
+#: ../../source/installation_and_configuration.rst:497
+msgid "Адрес сервера MongoDB."
+msgstr "The address of the MongoDB server."
+
+#: ../../source/installation_and_configuration.rst:500
+msgid "MONGODB_PORT ``int``"
+msgstr "MONGODB_PORT ``int``"
+
+#: ../../source/installation_and_configuration.rst:500
+msgid "Порт сервера MongoDB."
+msgstr "The port of the MongoDB server."
+
+#: ../../source/installation_and_configuration.rst:503
+msgid "MONGODB_NAME ``str``"
+msgstr "MONGODB_NAME ``str``"
+
+#: ../../source/installation_and_configuration.rst:503
+msgid "Название базы данных."
+msgstr "The name of the database."
+
+#: ../../source/installation_and_configuration.rst:506
+msgid "MONGODB_USERNAME ``str``"
+msgstr "MONGODB_USERNAME ``str``"
+
+#: ../../source/installation_and_configuration.rst:506
+msgid "Имя пользователя для авторизации."
+msgstr "User name for authorization."
+
+#: ../../source/installation_and_configuration.rst:509
+msgid "MONGODB_PASSWORD ``str``"
+msgstr "MONGODB_PASSWORD ``str``"
+
+#: ../../source/installation_and_configuration.rst:509
+msgid "Пароль для авторизации."
+msgstr "The password for authorization."
+
+#: ../../source/installation_and_configuration.rst:514
+msgid "2.4.8. Настройка модуля отправки SMS"
+msgstr "2.4.8. Configuring the module for sending SMS"
+
+#: ../../source/installation_and_configuration.rst:516
+msgid ""
+"SMS отправляются системой при использовании виджетов, интегрированных с "
+"сайтом, например, во время регистрации абонента. Настройки задаются "
+"переменными в файле конфигурации Smarty."
+msgstr ""
+"SMS messages are sent by the system when using widgets, integrated with the "
+"site, for example, during registration of the subscriber. The settings are "
+"variables in the configuration file Smarty."
+
+#: ../../source/installation_and_configuration.rst:521
+msgid "SMS_BACKED ``str``"
+msgstr "SMS_BACKED ``str``"
+
+#: ../../source/installation_and_configuration.rst:520
+msgid ""
+"Используемый СМС-шлюз для отправки сообщений. Модуль, реализующий "
+"взаимодействие со шлюзом, должен располагаться в директории Smarty в папке "
+"``sms/backends/``."
+msgstr ""
+"Used SMS gateway to send messages. The module that implements the "
+"interaction with the gateway must reside in directories in the Smarty folder"
+" ``sms/backends/``."
+
+#: ../../source/installation_and_configuration.rst:524
+msgid "SMS_ATTEMPTS ``int``"
+msgstr "SMS_ATTEMPTS ``int``"
+
+#: ../../source/installation_and_configuration.rst:524
+msgid ""
+"Количество максимальных попыток отправки сообщения, после которого оно "
+"считается отправленным неуспешно."
+msgstr ""
+"The maximum number of attempts to send the message, after which it is sent "
+"successfully."
+
+#: ../../source/installation_and_configuration.rst:529
+msgid "2.4.8.1. Шлюз smsc.ru"
+msgstr "2.4.8.1. Gateway smsc.ru"
+
+#: ../../source/installation_and_configuration.rst:531
+msgid "Значение для **SMS_BACKEND** = ``'sms.backends.smscru.SMSCBackend'``"
+msgstr "The value for **SMS_BACKEND** = ``'sms.backends.smscru.SMSCBackend'``"
+
+#: ../../source/installation_and_configuration.rst:534
+msgid "SMSC_LOGIN ``str``"
+msgstr "SMSC_LOGIN ``str``"
+
+#: ../../source/installation_and_configuration.rst:534
+msgid "Имя пользователя в сервисе smsc.ru"
+msgstr "The name of the user in the service smsc.ru"
+
+#: ../../source/installation_and_configuration.rst:537
+msgid "SMSC_PASSWORD ``str``"
+msgstr "SMSC_PASSWORD ``str``"
+
+#: ../../source/installation_and_configuration.rst:537
+msgid "Пароль в сервисе smsc.ru"
+msgstr "The password in the service smsc.ru"
+
+#: ../../source/installation_and_configuration.rst:540
+msgid "SMSC_SENDER ``str``"
+msgstr "SMSC_SENDER ``str``"
+
+#: ../../source/installation_and_configuration.rst:540
+msgid ""
+"Имя отправителя, которое будет отображаться в SMS, отправленных через сервис"
+" smsc.ru"
+msgstr ""
+"The sender name that will be displayed in the SMS sent through the service "
+"smsc.ru"
+
+#: ../../source/installation_and_configuration.rst:545
+msgid "2.4.8.2. Шлюз mobipace.com"
+msgstr "2.4.8.2. Gateway mobipace.com"
+
+#: ../../source/installation_and_configuration.rst:547
+msgid ""
+"Значение для **SMS_BACKEND** = ``'sms.backends.mobipace.MobipaceBackend'``"
+msgstr ""
+"The value for **SMS_BACKEND** = ``'sms.backends.mobipace.MobipaceBackend'``"
+
+#: ../../source/installation_and_configuration.rst:550
+msgid "MOBIPACE_LOGIN ``str``"
+msgstr "MOBIPACE_LOGIN ``str``"
+
+#: ../../source/installation_and_configuration.rst:550
+msgid "Имя пользователя в сервисе mobipace."
+msgstr "The name of the user in the service mobipace."
+
+#: ../../source/installation_and_configuration.rst:553
+msgid "MOBIPACE_PASSWORD ``str``"
+msgstr "MOBIPACE_PASSWORD ``str``"
+
+#: ../../source/installation_and_configuration.rst:553
+msgid "Пароль в сервисе mobipace."
+msgstr "The password in the service mobipace."
+
+#: ../../source/installation_and_configuration.rst:556
+msgid "MOBIPACE_SENDER ``str``"
+msgstr "MOBIPACE_SENDER ``str``"
+
+#: ../../source/installation_and_configuration.rst:556
+msgid "Имя отправителя для СМС-сообщений."
+msgstr "The sender's name for SMS messages."
+
+#: ../../source/installation_and_configuration.rst:561
+msgid "2.4.9. Подключение системы мониторинга ошибок Sentry"
+msgstr "2.4.9. System connection monitoring error Sentry"
+
+#: ../../source/installation_and_configuration.rst:563
+msgid ""
+"Для подключения ``Sentry`` необходимо в файле конфигурации Smarty добавить в "
+"**INSTALLED_APPS** модуль ``raven.contrib.django.raven_compat`` и прописать "
+"параметры подключения: ::"
+msgstr ""
+"To connect ``Sentry`` need in the configuration file to add Smarty in "
+"**INSTALLED_APPS** module ``raven.contrib.django.raven_compat`` and set the "
+"connection parameters: ::"
+
+#: ../../source/installation_and_configuration.rst:570
+msgid "Строку подключения можно получить из настроек проекта в Sentry."
+msgstr ""
+"The connection string can be obtained from the project settings in Sentry."
+
+#: ../../source/installation_and_configuration.rst:575
+msgid "2.4.10. Настройка nginx и uwsgi"
+msgstr "2.4.10. Configuring nginx and uwsgi"
+
+#: ../../source/installation_and_configuration.rst:577
+msgid ""
+"Образец файла конфигурации для **nginx** находится в файле "
+"``/etc/nginx/sites-available/smarty``."
+msgstr ""
+"A sample configuration file for the **nginx** is in the file "
+"``/etc/nginx/sites-available/smarty``."
+
+#: ../../source/installation_and_configuration.rst:579
+msgid ""
+"Конфигурация для **uwsgi** находится в файлах ``/etc/uwsgi/apps-"
+"available/smarty`` и ``/etc/microimpuls/smarty/uwsgi/smarty.uwsgi``, на него "
+"(или на другой используемый конфиг) должен указывать симлинк в "
+"``/usr/share/nginx/html/microimpuls/smarty/<uwsgi settings name>.uwsgi``."
+msgstr ""
+"Configuration for **uwsgi** is in the file ``/etc/uwsgi/apps-"
+"available/smarty`` and ``/etc/microimpuls/smarty/uwsgi/smarty.uwsgi`` on it (or"
+" another used the config) must specify the symlink in "
+"``/usr/share/nginx/html/microimpuls/smarty/<uwsgi settings name>.uwsgi``."
+
+#: ../../source/installation_and_configuration.rst:583
+msgid "2.4.11. Настройка мультиязычности контента в Smarty"
+msgstr "2.4.11. Setting up multilingual content in Smarty"
+
+#: ../../source/installation_and_configuration.rst:585
+msgid ""
+"Smarty позволяет сохранять в базе данных контент с названиями локализуемых "
+"полей на разных языках - например, названия телеканалов, фильмов, категорий,"
+" жанров, EPG и др. Чтобы активировать этот механизм, необходимо добавить в "
+"файл конфигурации параметр **SMARTY_ADDITIONAL_LANGUAGES** с перечнем "
+"необходимых языков (не более 5 дополнительных к основному языков), а также "
+"указать основной язык. Названия языков должны совпадать с названием "
+"локализации в абонентском приложении, по умолчанию используются "
+"двухбуквенные названия."
+msgstr ""
+"Smarty allows you to save database content of names of localizable fields in"
+" different languages - for example, the names of channels, movies, "
+"categories, genres, EPG etc. to activate this mechanism, you must add a "
+"configuration file option **SMARTY_ADDITIONAL_LANGUAGES** list of required "
+"languages (not more than 5 additional to the main languages), and specify "
+"the primary language. The language names must match the locale name in the "
+"user application, the default is to use the two-letter names."
+
+#: ../../source/installation_and_configuration.rst:594
+msgid "SMARTY_DEFAULT_LANGUAGE ``str``"
+msgstr "SMARTY_DEFAULT_LANGUAGE ``str``"
+
+#: ../../source/installation_and_configuration.rst:593
+msgid "Название основного языка. По умолчанию ``ru``."
+msgstr "The name of the main language. Default ``EN``."
+
+#: ../../source/installation_and_configuration.rst:599
+msgid "SMARTY_ADDITIONAL_LANGUAGES ``list``"
+msgstr "SMARTY_ADDITIONAL_LANGUAGES ``list``"
+
+#: ../../source/installation_and_configuration.rst:597
+msgid ""
+"Список дополнительных языков, задается в квадратных скобках с указанием "
+"значений через запятую, например: ``[ 'en', 'fr', 'de', 'es', 'pt' ]`` По "
+"умолчанию пустой."
+msgstr ""
+"A list of additional languages, specified in square brackets with indication"
+" of values separated by commas, for example: ``[ 'en', 'fr', 'de', 'es', 'pt'"
+" ]`` default empty."
+
+#: ../../source/installation_and_configuration.rst:601
+msgid ""
+"После настройки параметров мультиязычности и перезагрузки **uwsgi** в панели"
+" администратора Smarty в полях формы локализуемых полей появится возможность"
+" указать название на дополнительных языках."
+msgstr ""
+"After setting up of multilingual settings and reboot **uwsgi** in the admin "
+"panel Smarty in the form of localizable fields will have the opportunity to "
+"indicate the name in additional languages."
+
+#: ../../source/installation_and_configuration.rst:604
+msgid ""
+"Для того, чтобы сервер Smarty в ответе на запрос API вернул значение на "
+"нужном языке, необходимо дополнительно передавать параметр ``lang``. Подробнее"
+" в документации `TVMiddleware API <https://microimpuls.github.io/smarty-"
+"tvmw-api-docs>`_."
+msgstr ""
+"For the server to Smarty in response to the request the API returned the "
+"value in the desired language, you must additionally pass a parameter "
+"``lang``. Read more in the documentation `TVMiddleware API "
+"<https://microimpuls.github.io/smarty-tvmw-api-docs>`_."
+
+#: ../../source/installation_and_configuration.rst:611
+msgid "2.5. Системные команды Smarty и настройка crontab"
+msgstr "2.5. System team Smarty and configure crontab"
+
+#: ../../source/installation_and_configuration.rst:615
+msgid ""
+"Внимание! Некоторые команды планировщика являются обязательными для "
+"функционирования сервиса."
+msgstr ""
+"Attention! Some commands of the scheduler are required for the operation of "
+"the service."
+
+#: ../../source/installation_and_configuration.rst:620
+msgid "2.5.1. Кеширование списка телеканалов для абонентских устройств"
+msgstr "2.5.1. Caching for the list of channels to subscriber devices"
+
+#: ../../source/installation_and_configuration.rst:622
+#: ../../source/installation_and_configuration.rst:634
+#: ../../source/installation_and_configuration.rst:649
+#: ../../source/installation_and_configuration.rst:661
+#: ../../source/installation_and_configuration.rst:672
+#: ../../source/installation_and_configuration.rst:683
+#: ../../source/installation_and_configuration.rst:692
+#: ../../source/installation_and_configuration.rst:703
+#: ../../source/installation_and_configuration.rst:712
+msgid "Команда: ::"
+msgstr "Team: ::"
+
+#: ../../source/installation_and_configuration.rst:626
+msgid ""
+"Рекомендуется запускать эту команду каждую минуту. При пустом кеше списка "
+"телеканалов абоненту будет выдаваться сообщение, что список телеканалов "
+"пуст."
+msgstr ""
+"It is recommended to run this command every minute. Empty cache of the list "
+"of channels the subscriber will receive a message that the channel list is "
+"empty."
+
+#: ../../source/installation_and_configuration.rst:632
+msgid "2.5.2. Импорт EPG"
+msgstr "2.5.2. Import EPG"
+
+#: ../../source/installation_and_configuration.rst:638
+msgid ""
+"Рекомендуется запускать импорт несколько раз в день для поддержания "
+"актуальности телепрограммы (см. :ref:`Настройка EPG и телеканалов <epg-"
+"setup>`). Если не произвести импорт EPG, то программа телепередач на "
+"устройстве абонента будет пустой."
+msgstr ""
+"It is recommended to run the import several times a day to maintain the "
+"relevance of TV shows (see :ref:`configuring channels and EPG <epg-setup>`)."
+" If you are not importing the EPG, the program guide to the subscriber's "
+"device and will be empty."
+
+#: ../../source/installation_and_configuration.rst:642
+msgid ""
+"В данную команду можно также передать параметр ``--epg_channel_id`` для "
+"импорта EPG только для определенного EpgChannel."
+msgstr ""
+"In this command you can also pass a parameter ``--epg_channel_id`` to import "
+"EPG only for a certain EpgChannel."
+
+#: ../../source/installation_and_configuration.rst:647
+msgid ""
+"2.5.3. Команда списания/продления аккаунтов с помощью встроенного биллинга "
+"согласно рассчетным периодам"
+msgstr ""
+"2.5.3. Team cancellation/renewal accounts using the built-in billing "
+"according to the payment periods"
+
+#: ../../source/installation_and_configuration.rst:653
+msgid ""
+"Команда осуществляет деактивацию аккаунтов, для которых подошел к концу "
+"расчетный период, а также производит списание средств и продление "
+"действующих аккаунтов. Рекомендуется запускать каждую ночь (см. "
+":ref:`Описание встроенного биллинга <builtin-billing>`)."
+msgstr ""
+"The team carries out the deactivation of accounts that have reached the end "
+"of the billing period, and makes write-offs and the extension of existing "
+"accounts. It is recommended to run every night (see :ref:`Description of in-"
+"app billing <builtin-billing>`)."
+
+#: ../../source/installation_and_configuration.rst:659
+msgid ""
+"2.5.4. Опрос анализаторов TS-потоков MicroTS (модуль мониторинга "
+"видеопотоков)"
+msgstr ""
+"2.5.4. The survey analyzers TS-streams MicroTS (monitor video streams)"
+
+#: ../../source/installation_and_configuration.rst:665
+msgid ""
+"Рекомендуется запускать каждые 1-5 минут для актуального состояния данных."
+msgstr ""
+"It is recommended to run every 1-5 minutes for the current state of the "
+"data."
+
+#: ../../source/installation_and_configuration.rst:670
+msgid ""
+"2.5.6. Рассылка информационных сообщений на экраны устройств и email о "
+"приближении срока деактивации/необходимости оплаты"
+msgstr ""
+"2.5.6. Sending informational messages to the screens of devices and email of"
+" the approaching date deactivation/need payment"
+
+#: ../../source/installation_and_configuration.rst:676
+msgid "Рекомендуется запускать каждый вечер."
+msgstr "It is recommended to run every night."
+
+#: ../../source/installation_and_configuration.rst:681
+msgid "2.5.7. Очистка старых недоставленных информационных сообщений"
+msgstr "2.5.7. Cleanup of old undelivered informational messages"
+
+#: ../../source/installation_and_configuration.rst:690
+msgid "2.5.8. Повторная отправка SMS-сообщений, недоставленных с первого раза"
+msgstr "2.5.8. Resending SMS messages, undeliverable the first time"
+
+#: ../../source/installation_and_configuration.rst:696
+msgid "Рекомендуется запускать каждые 1-3 минуты."
+msgstr "It is recommended to run every 1-3 minutes."
+
+#: ../../source/installation_and_configuration.rst:701
+msgid ""
+"2.5.9. Команда удаления всех сессий авторизации всех аккаунтов для заданного"
+" Client ID"
+msgstr ""
+"2.5.9. The command for deleting all sessions authorize all accounts for the "
+"specified Client ID"
+
+#: ../../source/installation_and_configuration.rst:707
+msgid "Внимание, выполнение команды приведет к логауту всех устройств."
+msgstr "Attention, the command will lead to logout all devices."
+
+#: ../../source/installation_and_configuration.rst:710
+msgid ""
+"2.5.10. Команда проверки доступности стриминг-сервисов для механизма "
+"отказоустойчивости"
+msgstr ""
+"2.5.10. The team check the availability of streaming services for the fault "
+"mechanism"
+
+#: ../../source/installation_and_configuration.rst:716
+msgid ""
+"При настройке отказоустойчивой схемы сервиса с балансировкой нагрузки "
+"рекомендуется выполнять эту команду каждую минуту."
+msgstr ""
+"When configuring a failover scheme with service load balancing is "
+"recommended to run this command every minute."
+
+#: ../../source/installation_and_configuration.rst:718
+msgid ""
+"Команда проверяет сервисы по тем методам проверки, которые настроены в "
+"свойствах стриминг-сервиса."
+msgstr ""
+"The command checks the services for the test methods that are configured in "
+"the properties of the streaming service."
+
+#: ../../source/installation_and_configuration.rst:723
+msgid "2.5.11. Пример настройки crontab"
+msgstr "2.5.11. An example of configuring the crontab"
+
+#: ../../source/installation_and_configuration.rst:725
+#: ../../source/installation_and_configuration.rst:848
+msgid "Пример: ::"
+msgstr "For example: ::"
+
+#: ../../source/installation_and_configuration.rst:735
+msgid "2.6. Запуск, перезапуск и остановка Smarty"
+msgstr "2.6. Start, restart and stop Smarty"
+
+#: ../../source/installation_and_configuration.rst:737
+msgid ""
+"Для управления процессами сервера приложений uwsgi используется init-скрипт "
+"``/etc/init.d/uwsgi``: ::"
+msgstr ""
+"For the process control application server uses uwsgi init script "
+"``/etc/init.d/uwsgi``: ::"
+
+#: ../../source/installation_and_configuration.rst:742
+msgid "Все команды действуют на все запущенные инстансы uwsgi."
+msgstr "All commands operate on all running uwsgi instances."
+
+#: ../../source/installation_and_configuration.rst:744
+msgid ""
+"Логи по умолчанию сохраняются в ``/var/log/uwsgi/``, ``/var/log/nginx/`` и "
+"``/var/log/microimpuls/``."
+msgstr ""
+"The logs are stored by default in ``/var/log/uwsgi/``, ``/var/log/nginx/`` and "
+"``/var/log/microimpuls/``."
+
+#: ../../source/installation_and_configuration.rst:749
+msgid "2.7. Установка обновлений Smarty"
+msgstr "2.7. Install updates Smarty"
+
+#: ../../source/installation_and_configuration.rst:753
+msgid ""
+"Перед установкой пакетов обновления, пожалуйста, сделайте резервную копию "
+"конфигурации, файлов Smarty, а также дамп базы данных."
+msgstr ""
+"Before installing the service packs, please make a backup of the "
+"configuration files, Smarty, and database dump."
+
+#: ../../source/installation_and_configuration.rst:755
+msgid "Обновления устанавливаются командой ``dpkg``: ::"
+msgstr "Updates are installed by a team ``dpkg``: ::"
+
+#: ../../source/installation_and_configuration.rst:759
+msgid ""
+"После установки обновления необходимо установить новые требуемые python-"
+"библиотеки через ``pip``: ::"
+msgstr ""
+"After you install the update you need to install the new required python "
+"libraries using ``pip``: ::"
+
+#: ../../source/installation_and_configuration.rst:763
+msgid "Миграция схемы БД осуществляется командой: ::"
+msgstr "Migration of the database schema with the command: ::"
+
+#: ../../source/installation_and_configuration.rst:767
+msgid ""
+"После установки всех обновлений и миграции схем БД необходимо перезапустить "
+"сервер приложений uwsgi, завершить все команды *epg_import* и "
+"*cache_channel_list* (через вызов *kill*), а затем выполнить команду "
+"обновления кеша: ::"
+msgstr ""
+"After installing all the upgrade and migration of database schemas, you must"
+" restart the application server, uwsgi, complete all commands *epg_import* "
+"and *cache_channel_list* (via a call to *kill*), and then run a command to "
+"update the cache: ::"
+
+#: ../../source/installation_and_configuration.rst:775
+msgid ""
+"Если не выполнить команду обновления кеша *flushall*, то в кеше могут "
+"оказаться данные со старой структурой, что может привести к непредсказуемым "
+"ошибкам в работе приложений."
+msgstr ""
+"If you do not run the command to update the cache *flushall*, then the cache"
+" may be the data from the old structure, which can lead to unpredictable "
+"errors in the applications."
+
+#: ../../source/installation_and_configuration.rst:779
+msgid "2.7.1. Устранение ошибки конфликта миграций"
+msgstr "2.7.1. Troubleshoot conflict migrations"
+
+#: ../../source/installation_and_configuration.rst:781
+msgid ""
+"В процессе миграции схемы БД может возникнуть ошибка конфликта миграций: ``To"
+" fix them run 'python manage.py makemigrations --merge'``. Не нужно делать "
+"команду ``makemigrations``. Ошибка может возникнуть в случае нарушения "
+"правильного порядка действий при установке или обновлении системы. Чтобы "
+"устранить эту ошибку, необходимо выполнить следующие действия:"
+msgstr ""
+"During the migration of the database schema error may occur conflict "
+"migration: ``To fix them run 'python manage.py makemigrations --merge'``. No "
+"need to make a team ``makemigrations``. Error may occur in case of violation "
+"of correct procedure when installing or updating a system. To resolve this "
+"error, you must perform the following steps:"
+
+#: ../../source/installation_and_configuration.rst:786
+msgid "Удалить содержимое папки /tvmiddleware/migrations"
+msgstr "To remove the contents of the folder /tvmiddleware/migrations"
+
+#: ../../source/installation_and_configuration.rst:788
+msgid ""
+"Переустановить пакет обновления smarty, который был установлен в тот момент,"
+" когда возникла данная ошибка. Временно удалить из папки "
+"/tvmiddleware/migrations все новые миграции (дата создания у которых новее "
+"чем дата последнего успешного обновления smarty)."
+msgstr ""
+"To reinstall service pack smarty, which was installed at the time when the "
+"error occurred. Temporarily remove from the folder /tvmiddleware/migrations "
+"all available new migrations (creation date, which is newer than the date of"
+" the last successful update smarty)."
+
+#: ../../source/installation_and_configuration.rst:791
+msgid "Очистить таблицу ``django_migrations`` в базе данных smarty."
+msgstr "Clear table ``django_migrations`` database in smarty."
+
+#: ../../source/installation_and_configuration.rst:793
+msgid "Выполнить команду: ::"
+msgstr "Run the command: ::"
+
+#: ../../source/installation_and_configuration.rst:797
+msgid ""
+"Скопировать обратно миграции, временно удаленные на шаге 2. Повторно "
+"выполнить команду миграции: ::"
+msgstr ""
+"Copy back the migration, is temporarily removed in step 2. Re-run the "
+"migration command: ::"
+
+#: ../../source/installation_and_configuration.rst:804
+msgid "2.8. Масштабирование и отказоустойчивость"
+msgstr "2.8. Scalability and fault tolerance"
+
+#: ../../source/installation_and_configuration.rst:809
+msgid "2.8.1. Доступные средства масштабирования и отказоустойчивости"
+msgstr "2.8.1. Available scaling and fault tolerance"
+
+#: ../../source/installation_and_configuration.rst:811
+msgid ""
+"Основной способ горизонтального масштабирования **на уровне серверов** "
+"Smarty заключается в кластерном режиме работы - использовании распределенных"
+" по серверам инстансов и распределения запросов между ними на http-сервере "
+"nginx через механизм `upstream "
+"<http://nginx.org/ru/docs/http/ngx_http_upstream_module.html>`_, при "
+"использовании общего кластера СУБД."
+msgstr ""
+"The main way of horizontal scaling **for servers** Smarty is a clustered "
+"mode of operation using the distributed server instances and distribute the "
+"requests between them on the http server nginx through the mechanism of "
+"`upstream <http://nginx.org/ru/docs/http/ngx_http_upstream_module.html>`_, "
+"if you are using a shared cluster database."
+
+#: ../../source/installation_and_configuration.rst:815
+msgid ""
+"Дополнительной мерой для распределения нагрузки может быть выделение роли "
+"инстансов под конкретные цели, например, отделение сервера для модуля "
+"статистики и отчетов и сервера мониторинга от серверов TV Middleware."
+msgstr ""
+"An additional measure to distribute the load can be the allocation of a role"
+" instance for a specific purpose, for example, branch servers for statistics"
+" module and reporting and monitoring server from server TV Middleware."
+
+#: ../../source/installation_and_configuration.rst:818
+msgid ""
+"Для отказоустойчивости серверов Back-end можно использовать решение "
+"**keepalived**, аппаратный балансировщик запросов, механизм Geo DNS или "
+"Anycast."
+msgstr ""
+"For failover servers, Back-end, you can use the solution **keepalived**, "
+"hardware load balancer, mechanism of Geo DNS or Anycast."
+
+#: ../../source/installation_and_configuration.rst:820
+msgid ""
+"Абонентские приложения (для Set-Top Box, Smart TV и других устройств) могут "
+"загружать абонентский портал с отдельных Front-end серверов, с CDN, либо "
+"напрямую из прошивки устройства (т.н. *толстый* клиент), поскольку состоят "
+"только из статических файлов или разработаны на нативном языке устройства. С"
+" серверами Back-end абонентские приложения взаимодействуют через JSON или "
+"XML-RPC API."
+msgstr ""
+"Subscriber application (for Set-Top Box, Smart TV and other devices) can "
+"download the subscription portal with a separate Front-end servers, from CDN"
+" or directly from the device firmware (the so-called *fat* client) because "
+"it only consist of static files or developed in the native language of the "
+"device. With the server Back-end and subscriber applications communicate via"
+" JSON or XML-RPC API."
+
+#: ../../source/installation_and_configuration.rst:825
+msgid ""
+"Кроме того, абонентские приложения имеют встроенный механизм работы с "
+"несколькими Back-end серверами, что дополнительно обеспечивает распределение"
+" нагрузки и отказоустойчивость **на уровне приложения**."
+msgstr ""
+"In addition, subscription applications have a built-in mechanism to work "
+"with multiple Back-end servers, which further provides load balancing and "
+"fault tolerance **application level**."
+
+#: ../../source/installation_and_configuration.rst:828
+msgid ""
+"Масштабирование и отказоустойчивость **на уровне данных** могут быть "
+"обеспечены благодаря механизму репликации СУБД. Поддерживаются схемы Multi-"
+"Master и Master-Slave."
+msgstr ""
+"Scalability and fault tolerance **the data** can be achieved with the "
+"replication mechanism DBMS. Supported schema Multi-Master and Master-Slave."
+
+#: ../../source/installation_and_configuration.rst:834
+msgid "2.8.2. Настройка подключения к СУБД с использованием репликации"
+msgstr "2.8.2. Configure a connection to a DBMS using replication"
+
+#: ../../source/installation_and_configuration.rst:836
+msgid ""
+"При использовании репликации на уровне СУБД необходимо в файле конфигурации "
+"Smarty прописать подключение к каждой СУБД в переменной **DATABASES**, задав"
+" каждому подключению уникальное имя."
+msgstr ""
+"If you are using replication at the DBMS level required in the configuration"
+" file Smarty to register a connection to each database in a variable "
+"**DATABASES** by setting each connection a unique name."
+
+#: ../../source/installation_and_configuration.rst:839
+msgid "После этого необходимо добавить в файл конфигурации следующие опции:"
+msgstr ""
+"After that you must add to the configuration file the following options:"
+
+#: ../../source/installation_and_configuration.rst:843
+msgid "REPLICATED_DATABASE_SLAVES ``list``"
+msgstr "REPLICATED_DATABASE_SLAVES ``list``"
+
+#: ../../source/installation_and_configuration.rst:842
+msgid ""
+"По умолчанию, роль каждого подключения определена как *Master*, для "
+"выделения *Slave* ролей необходимо в массиве REPLICATED_DATABASE_SLAVES "
+"указать имена подключений, которые будут использоваться как Slave."
+msgstr ""
+"By default, the role of each connection identified as *Master* to highlight "
+"*Slave* role required in the array REPLICATED_DATABASE_SLAVES to specify the"
+" connection names to be used as Slave."
+
+#: ../../source/installation_and_configuration.rst:846
+msgid "REPLICATED_DATABASE_DOWNTIME ``int``"
+msgstr "REPLICATED_DATABASE_DOWNTIME ``int``"
+
+#: ../../source/installation_and_configuration.rst:846
+msgid ""
+"Время недоступности сервера БД в секундах, по прошествию которого он "
+"отключается из схемы распределения запросов."
+msgstr ""
+"Unavailable time of the database server, in seconds, after which it is "
+"disconnected from the scheme of allocation requests."
+
+#: ../../source/installation_and_configuration.rst:857
+msgid "2.8.3. Настройка логирования статистики запросов в statsd"
+msgstr "2.8.3. Configure the logging of query statistics to statsd"
+
+#: ../../source/installation_and_configuration.rst:859
+msgid ""
+"statsd - сервер аггрегации статистических данных: "
+"https://github.com/etsy/statsd."
+msgstr "statsd - server aggregate statistics: https://github.com/etsy/statsd."
+
+#: ../../source/installation_and_configuration.rst:861
+msgid ""
+"Smarty позволяет выгружать в statsd статистику по запросам к API (количество"
+" запросов, время ответа, количество выполненных SQL-запросов, время ответа "
+"СУБД). Для этого необходимо добавить в файл конфигурации Smarty параметры, "
+"указанные ниже: ::"
+msgstr ""
+"Smarty allows you to upload a statsd statistics API requests (number of "
+"requests, response time, number of executed SQL queries, the response time "
+"of the DBMS). To do this, you must add the configuration file Smarty the "
+"parameters listed below: ::"
+
+#: ../../source/installation_and_configuration.rst:872
+msgid "Где:"
+msgstr "Where:"
+
+#: ../../source/installation_and_configuration.rst:875
+msgid "STATSD_HOST ``str``"
+msgstr "STATSD_HOST ``str``"
+
+#: ../../source/installation_and_configuration.rst:875
+msgid ""
+"IP-адрес сервера statsd для выгрузки данных статистики и мониторинга работы "
+"сервера Smarty."
+msgstr ""
+"The IP address of the statsd server to upload data for statistics and "
+"monitoring of servers with Smarty."
+
+#: ../../source/installation_and_configuration.rst:878
+msgid "STATSD_PORT ``int``"
+msgstr "STATSD_PORT ``int``"
+
+#: ../../source/installation_and_configuration.rst:878
+msgid ""
+"Порт сервера statsd для выгрузки данных статистики и мониторинга работы "
+"сервера Smarty."
+msgstr ""
+"The port of the statsd server to upload data for statistics and monitoring "
+"of servers with Smarty."
+
+#: ../../source/installation_and_configuration.rst:880
+msgid "STATSD_PREFIX ``str``"
+msgstr "STATSD_PREFIX ``str``"
+
+#: ../../source/installation_and_configuration.rst:881
+msgid ""
+"Префикс, который будет добавляться (если задан) к ключам параметров, "
+"передаваемых в statsd."
+msgstr ""
+"The prefix that will be added (if used) to the key parameters that are "
+"passed to statsd."

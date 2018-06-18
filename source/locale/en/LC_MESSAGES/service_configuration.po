@@ -1,0 +1,2092 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Microimpuls LLC, www.microimpuls.com
+# This file is distributed under the same license as the Smarty package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Smarty Last\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 17:53+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/service_configuration.rst:5
+msgid "3. Настройка сервиса IPTV/OTT в Smarty"
+msgstr "3. Configure a service IPTV/OTT in Smarty"
+
+#: ../../source/service_configuration.rst:7
+msgid ""
+"Для настройки сервиса доступны две панели администрирования - служебная и "
+"основная. Служебная панель необходима для настройки общих и базовых "
+"сущностей, а также редактирования любых объектов."
+msgstr ""
+"To configure the service available for two admin panel and the main service."
+" The tool required to configure the General and basic entities, as well as "
+"edit any objects."
+
+#: ../../source/service_configuration.rst:10
+msgid ""
+"В основной панели настраивается непосредственно сам сервис IPTV/OTT для "
+"конкретного оператора (Client ID)."
+msgstr ""
+"In the main pane configures the service IPTV/OTT operator-specific (Client "
+"ID)."
+
+#: ../../source/service_configuration.rst:13
+msgid "Служебная"
+msgstr "Service"
+
+#: ../../source/service_configuration.rst:13
+msgid "http://smarty.example.com/admin"
+msgstr "http://smarty.example.com/admin"
+
+#: ../../source/service_configuration.rst:15
+msgid "Основная"
+msgstr "The main"
+
+#: ../../source/service_configuration.rst:15
+msgid "http://smarty.example.com"
+msgstr "http://smarty.example.com"
+
+#: ../../source/service_configuration.rst:18
+msgid ""
+"Служебная панель администрирования доступна только для супер-администратора "
+"(общий администратор системы)."
+msgstr ""
+"The service dashboard is available only for super admin (system "
+"administrator)."
+
+#: ../../source/service_configuration.rst:22
+msgid ""
+"Домен example.com приведен для примера, используйте свой домен, настроенный "
+"в файле конфигурации nginx."
+msgstr ""
+"Domain example.com sample only use your domain that is configured in the "
+"configuration file for nginx."
+
+#: ../../source/service_configuration.rst:27
+msgid "3.1. Первичная настройка"
+msgstr "3.1. Initial configuration"
+
+#: ../../source/service_configuration.rst:32
+msgid ""
+"3.1.1. Добавление Client ID и возможность работы в режиме "
+"\"Мультипровайдер\""
+msgstr ""
+"3.1.1. Adding the Client ID and the ability to work in a \"Multiprovider\""
+
+#: ../../source/service_configuration.rst:36
+#: ../../source/service_configuration.rst:103
+#: ../../source/service_configuration.rst:118
+#: ../../source/service_configuration.rst:142
+#: ../../source/service_configuration.rst:271
+msgid ""
+"Можно пропустить этот шаг, если была выполнена команда "
+":ref:`setup_initial_data <create-setup-initial-data>`"
+msgstr ""
+"You can skip this step if the command was executed :ref:`setup_initial_data "
+"<create-setup-initial-data>`"
+
+#: ../../source/service_configuration.rst:38
+msgid ""
+"Мультипровайдер - это возможность подключения нескольких проектов или "
+"операторов в рамках одной инсталляции системы. Для каждого проекта при этом "
+"будет использоваться независимый набор настроек, абонентская база, параметры"
+" устройств, услуг и т.д."
+msgstr ""
+"The multiprovider is the ability to connect multiple projects or operators "
+"within the same system installation. For each project you will be using an "
+"independent set of settings, subscriber base, device settings, services, "
+"etc."
+
+#: ../../source/service_configuration.rst:42
+msgid ""
+"Для функционирования системы необходимо, чтобы был создан хотя бы один "
+"Client ID. Под Client ID подразумевается оператор услуг или проект "
+"оператора."
+msgstr ""
+"For operation of the system, you need to have created at least one Client "
+"ID. Under Client ID refers to the service provider or the project operator."
+
+#: ../../source/service_configuration.rst:45
+msgid ""
+"Создать Client ID необходимо в служебной панели администрирования по ссылке:"
+" http://smarty.example.com/admin/clients/client/"
+msgstr ""
+"To create a Client ID is required in the service dashboard the link: "
+"http://smarty.example.com/admin/clients/client/"
+
+#: ../../source/service_configuration.rst:47
+#: ../../source/service_configuration.rst:124
+#: ../../source/service_configuration.rst:160
+#: ../../source/service_configuration.rst:212
+#: ../../source/service_configuration.rst:288
+#: ../../source/service_configuration.rst:297
+msgid "Описание полей:"
+msgstr "The fields are:"
+
+#: ../../source/service_configuration.rst:50
+#: ../../source/service_configuration.rst:127
+#: ../../source/service_configuration.rst:215
+msgid "Название"
+msgstr "Name"
+
+#: ../../source/service_configuration.rst:50
+msgid "Название оператора или проекта."
+msgstr "The name of the operator or project."
+
+#: ../../source/service_configuration.rst:53
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: ../../source/service_configuration.rst:53
+msgid "E-mail для отправки системных сообщений."
+msgstr "E-mail to send system messages."
+
+#: ../../source/service_configuration.rst:56
+msgid "Поддомен"
+msgstr "Subdomain"
+
+#: ../../source/service_configuration.rst:56
+msgid "Имя поддомена для настройки порталов, например provider.example.com."
+msgstr ""
+"A subdomain name for customizing portals, for example provider.example.com."
+
+#: ../../source/service_configuration.rst:59
+msgid "Адрес сайта"
+msgstr "Website address"
+
+#: ../../source/service_configuration.rst:59
+msgid "Адрес сайта сервиса."
+msgstr "The website address of the service."
+
+#: ../../source/service_configuration.rst:62
+msgid "API key"
+msgstr "API key"
+
+#: ../../source/service_configuration.rst:62
+msgid "Ключ API для подключения абонентских устройств."
+msgstr "The API key for connecting subscriber devices."
+
+#: ../../source/service_configuration.rst:65
+msgid "Billing API key"
+msgstr "Billing API key"
+
+#: ../../source/service_configuration.rst:65
+msgid "Ключ API для скрипта интеграции с внешним биллингом."
+msgstr "The key API for script integration with external billing."
+
+#: ../../source/service_configuration.rst:68
+msgid "Валюта по умолчанию"
+msgstr "The default currency"
+
+#: ../../source/service_configuration.rst:68
+msgid "Валюта, которая будет выбрана при оплате услуг абонентом."
+msgstr ""
+"The currency that will be selected when the payment for the services by the "
+"subscriber."
+
+#: ../../source/service_configuration.rst:71
+msgid "Способ оплаты по умолчанию"
+msgstr "Payment method by default"
+
+#: ../../source/service_configuration.rst:71
+msgid "Способ оплаты, который будет выбран при оплате услуг абонентом."
+msgstr ""
+"The payment method will be chosen when paying for the services by the "
+"subscriber."
+
+#: ../../source/service_configuration.rst:74
+msgid "Максимально дней пробного просмотра"
+msgstr "Maximum days trial safe"
+
+#: ../../source/service_configuration.rst:74
+msgid "Ограничение для запросов к API на создание аккаунтов."
+msgstr "The limit for API requests to create accounts."
+
+#: ../../source/service_configuration.rst:77
+msgid "Маска номера договора"
+msgstr "Number mask of the contract"
+
+#: ../../source/service_configuration.rst:77
+msgid ""
+"Маска формирования номера договора (см. :ref:`Документы <smarty-admin-guide-"
+"billing-documents>`)."
+msgstr ""
+"Mask the formation of the contract number (see :ref:`Documents <smarty-"
+"admin-guide-billing-documents>`)."
+
+#: ../../source/service_configuration.rst:80
+msgid "Механизм GeoIP"
+msgstr "The Mechanism For GeoIP"
+
+#: ../../source/service_configuration.rst:80
+msgid ""
+"Используемый механизм геолокации (см. :ref:`Настройка гео-локации <geo-"
+"settings>`)."
+msgstr ""
+"The mechanism used for geolocation (see :ref:`configuring geo-location <geo-"
+"settings>`)."
+
+#: ../../source/service_configuration.rst:85
+msgid "3.1.1.1. Привязка абонентского устройства к Client ID"
+msgstr "3.1.1.1. The binding of the subscriber device to the Client ID"
+
+#: ../../source/service_configuration.rst:87
+msgid ""
+"Для привязки приложения абонента к конкретному Client ID используется ключ "
+"API (api_key) и client_id. Эти параметры необходимо прописать в файле "
+"настроек client.js при настройке портала, а также при сборке нативных "
+"клиентов под устройства."
+msgstr ""
+"For an application to bind the subscriber to a specific Client ID, use the "
+"API key (api_key) and client_id. These parameters must be set in the "
+"settings file client.js when configuring the portal, and when building "
+"native clients on the devices."
+
+#: ../../source/service_configuration.rst:91
+msgid ""
+"API-ключ рекомендуется генерировать через утилиту pwgen с ключом ``-s`` длиной"
+" не менее ``64`` символов, например: ::"
+msgstr ""
+"An API key is recommended to generate using pwgen utility key ``-s`` length "
+"less than ``64`` characters, e.g.: ::"
+
+#: ../../source/service_configuration.rst:99
+msgid "3.1.2. Добавление шаблонов порталов"
+msgstr "3.1.2. Adding templates portals"
+
+#: ../../source/service_configuration.rst:106
+msgid ""
+"В служебной панели администрирования добавить установленные шаблоны "
+"порталов: http://smarty.example.com/admin/tvmiddleware/playdevicetemplate/"
+msgstr ""
+"In the service administration panel to add installed templates portals: "
+"http://smarty.example.com/admin/tvmiddleware/playdevicetemplate/"
+
+#: ../../source/service_configuration.rst:109
+msgid ""
+"Названия (пути) стандартных шаблонов: ``classic`` ``impuls`` ``iridium`` ``focus`` "
+"``futuristic``"
+msgstr ""
+"The name (path) of the standard templates: ``classic`` ``impuls`` ``iridium`` "
+"``focus`` ``futuristic``"
+
+#: ../../source/service_configuration.rst:114
+msgid "3.1.3. Добавление поддерживаемых устройств"
+msgstr "3.1.3. Adding supported devices"
+
+#: ../../source/service_configuration.rst:121
+msgid ""
+"В служебной панели администрирования добавить поддерживаемые типы устройств:"
+" http://smarty.example.com/admin/tvmiddleware/playdevice/"
+msgstr ""
+"In the service administration panel, you add the supported device types: "
+"http://smarty.example.com/admin/tvmiddleware/playdevice/"
+
+#: ../../source/service_configuration.rst:127
+msgid "Название типа устройства."
+msgstr "The name of the device type."
+
+#: ../../source/service_configuration.rst:130
+msgid "Системное название"
+msgstr "System name"
+
+#: ../../source/service_configuration.rst:130
+msgid "Системное название типа устройства, возможные значения см. ниже."
+msgstr "System name device type, possible values see below."
+
+#: ../../source/service_configuration.rst:132
+msgid ""
+"Поддерживаемые типы устройств (системные названия): ``android`` ``android_stb`` "
+"``dune`` ``eltex`` ``tvip`` ``lg_netcast`` ``lg_webos`` ``mag`` ``pc`` ``sagemcom`` "
+"``samsung_smart_tv`` ``tizen_tv`` ``ios`` ``wrt`` ``amino`` ``imaqliq`` ``kodi``"
+msgstr ""
+"Supported devices (system name): ``android`` ``android_stb`` ``dune`` ``eltex`` "
+"``tvip`` ``lg_netcast`` ``lg_webos`` ``mag`` ``pc`` ``sagemcom`` ``samsung_smart_tv`` "
+"``tizen_tv`` ``ios`` ``wrt`` ``amino`` ``imaqliq`` ``kodi``"
+
+#: ../../source/service_configuration.rst:138
+msgid "3.1.4. Подключение разрешенных типов устройств для Client ID"
+msgstr "3.1.4. Connect allowed device types for Client ID"
+
+#: ../../source/service_configuration.rst:145
+msgid ""
+"В служебной панели администрирования добавить разрешенные типы устройств для"
+" каждого Client ID: "
+"http://smarty.example.com/admin/tvmiddleware/clientplaydevice/"
+msgstr ""
+"In the service administration panel to add the permitted device types for "
+"each Client ID: "
+"http://smarty.example.com/admin/tvmiddleware/clientplaydevice/"
+
+#: ../../source/service_configuration.rst:151
+msgid "3.1.5. Настройка EPG и иконок телеканалов"
+msgstr "3.1.5. Configure EPG and icons of TV channels"
+
+#: ../../source/service_configuration.rst:153
+msgid ""
+"В системе существует базовое понятие EPG Channel - это телеканал с "
+"прикрепленными иконками и программой передач. При создании сетки каналов "
+"оператора каждому каналу ставится в соответствие один из базовых каналов. "
+"Таким образом, за телеканалами оператора закрепляется иконка и телепрограмма"
+" (EPG)."
+msgstr ""
+"In the system there is a basic concept of the EPG Channel is a channel with "
+"attached icons and program guide. When you create the channel grid operator "
+"each channel corresponds to one of the basic channels. Thus, for channels "
+"operator fixed icon and TV guide (EPG)."
+
+#: ../../source/service_configuration.rst:157
+msgid ""
+"Телепрограмма может быть получена из разных источников, которые "
+"настраиваются в служебной панели администрирования: "
+"http://smarty.example.com/admin/tvmiddleware/epgsource/"
+msgstr ""
+"The television program can be obtained from different sources, which are "
+"configured in the service dashboard: "
+"http://smarty.example.com/admin/tvmiddleware/epgsource/"
+
+#: ../../source/service_configuration.rst:163
+msgid "Название источника"
+msgstr "The name of the source"
+
+#: ../../source/service_configuration.rst:163
+msgid "Название для отображения."
+msgstr "The name to display."
+
+#: ../../source/service_configuration.rst:166
+msgid "Имя модуля парсера"
+msgstr "The name of the parser module"
+
+#: ../../source/service_configuration.rst:166
+msgid ""
+"Имя должно соответствовать имени файла с классом парсера в папке "
+"``/tvmiddleware/epg_parsers/``."
+msgstr ""
+"The name must match the name of the class file parser in the folder "
+"``/tvmiddleware/epg_parsers/``."
+
+#: ../../source/service_configuration.rst:169
+msgid "Маска URL"
+msgstr "Mask URL"
+
+#: ../../source/service_configuration.rst:169
+msgid "Предоставляется поставщиком EPG."
+msgstr "By the provider EPG."
+
+#: ../../source/service_configuration.rst:171
+msgid "Существующие парсеры:"
+msgstr "Existing parsers:"
+
+#: ../../source/service_configuration.rst:174
+msgid "Имя модуля"
+msgstr "The name of the module"
+
+#: ../../source/service_configuration.rst:174
+msgid "Поставщик EPG"
+msgstr "Provider EPG"
+
+#: ../../source/service_configuration.rst:176
+msgid "yandex"
+msgstr "yandex"
+
+#: ../../source/service_configuration.rst:176
+msgid "http://tv.yandex.ru, бесплатный доступ (парсер с сайта)."
+msgstr "http://tv.yandex.ru free access (the parser)."
+
+#: ../../source/service_configuration.rst:178
+#: ../../source/service_configuration.rst:182
+#: ../../source/service_configuration.rst:202
+#: ../../source/service_configuration.rst:206
+msgid "Маска URL: оставить пустым"
+msgstr "Mask URL: leave blank"
+
+#: ../../source/service_configuration.rst:180
+msgid "teleguide"
+msgstr "teleguide"
+
+#: ../../source/service_configuration.rst:180
+msgid "http://teleguide.info, бесплатный доступ (парсер с сайта)."
+msgstr "http://teleguide.info free access (the parser)."
+
+#: ../../source/service_configuration.rst:184
+msgid "epgservice"
+msgstr "epgservice"
+
+#: ../../source/service_configuration.rst:184
+msgid "http://epgservice.ru, платный доступ, формат XMLTV."
+msgstr "http://epgservice.ru, paid access, the XMLTV format."
+
+#: ../../source/service_configuration.rst:186
+msgid "Маска URL:"
+msgstr "Mask URL:"
+
+#: ../../source/service_configuration.rst:188
+#, python-format
+msgid "http://xmldata.epgservice.ru:8181/EPGService/hs/xmldata/<id>/file/%s"
+msgstr "http://xmldata.epgservice.ru:8181/EPGService/hs/xmldata/<id>/file/%s"
+
+#: ../../source/service_configuration.rst:190
+msgid "<id> - идентификатор сервиса, предоставляется epgservice"
+msgstr "the <id> is the identifier of a service provided epgservice"
+
+#: ../../source/service_configuration.rst:192
+msgid "xmltv_common"
+msgstr "xmltv_common"
+
+#: ../../source/service_configuration.rst:192
+msgid "Универсальный парсер XMLTV."
+msgstr "A universal parser for XMLTV."
+
+#: ../../source/service_configuration.rst:194
+msgid "Маска URL: указать на источник XMLTV"
+msgstr "URL mask: specify the source XMLTV"
+
+#: ../../source/service_configuration.rst:196
+msgid "xmltv_from_file"
+msgstr "xmltv_from_file"
+
+#: ../../source/service_configuration.rst:196
+msgid "Парсер XMLTV-файлов, основан на xmltv_common."
+msgstr "The XMLTV parser-based file xmltv_common."
+
+#: ../../source/service_configuration.rst:198
+msgid "Маска URL: указать путь до файла на сервере Smarty"
+msgstr "Mask URL: enter the path to the file on the server, Smarty"
+
+#: ../../source/service_configuration.rst:200
+msgid "walla"
+msgstr "walla"
+
+#: ../../source/service_configuration.rst:200
+msgid "http://walla.co.il, бесплатный доступ (парсер с сайта)."
+msgstr "http://walla.co.il free access (the parser)."
+
+#: ../../source/service_configuration.rst:204
+msgid "ucom"
+msgstr "ucom"
+
+#: ../../source/service_configuration.rst:204
+msgid ""
+"https://www.ucom.am/en/personal/home-services/u-tv/epg (парсер с сайта)"
+msgstr "https://www.ucom.am/en/personal/home-services/u-tv/epg (parser)"
+
+#: ../../source/service_configuration.rst:209
+msgid ""
+"Настройка EPG-каналов осуществляется в служебной панели администрирования: "
+"http://smarty.example.com/admin/tvmiddleware/epgchannel/"
+msgstr ""
+"Configure EPG-channels is done in the service administration panel: "
+"http://smarty.example.com/admin/tvmiddleware/epgchannel/"
+
+#: ../../source/service_configuration.rst:215
+msgid "Название канала."
+msgstr "The name of the channel."
+
+#: ../../source/service_configuration.rst:218
+msgid "URL иконки"
+msgstr "URL icons"
+
+#: ../../source/service_configuration.rst:218
+msgid ""
+"Путь к иконке, абсолютный или относительный, начиная с "
+"``/tvmiddleware/media/``."
+msgstr ""
+"Path to the icon, relative or absolute, starting with "
+"``/tvmiddleware/media/``."
+
+#: ../../source/service_configuration.rst:221
+#: ../../source/service_configuration.rst:300
+msgid "Источник EPG"
+msgstr "The EPG source"
+
+#: ../../source/service_configuration.rst:221
+#: ../../source/service_configuration.rst:300
+msgid "Имя источника."
+msgstr "The name of the source."
+
+#: ../../source/service_configuration.rst:224
+msgid "ID канала в источнике EPG"
+msgstr "The channel ID in the EPG source"
+
+#: ../../source/service_configuration.rst:224
+msgid "ID канала в сервисе источника."
+msgstr "ID of the channel in the source."
+
+#: ../../source/service_configuration.rst:227
+msgid "Номер для сортировки"
+msgstr "Room for sorting"
+
+#: ../../source/service_configuration.rst:227
+msgid ""
+"Позиция в общем списке, используется для автоматической сортировки "
+"оператора."
+msgstr "Position in the list is used for automatic sorting operator."
+
+#: ../../source/service_configuration.rst:230
+msgid "Сдвиг в часах"
+msgstr "The shift in hours"
+
+#: ../../source/service_configuration.rst:230
+msgid "Сдвиг программы в часах относительно UTC+0."
+msgstr "The program shift in hours relative to UTC+0."
+
+#: ../../source/service_configuration.rst:232
+msgid ""
+"Иконки каналов по умолчанию находятся по адресу "
+"``/tvmiddleware/media/img/logo/default/``."
+msgstr ""
+"Icons default channel is located at the address "
+"``/tvmiddleware/media/img/logo/default/``."
+
+#: ../../source/service_configuration.rst:234
+msgid "**Использование иконок нескольких размеров**"
+msgstr "**The use of icons in several sizes**"
+
+#: ../../source/service_configuration.rst:236
+msgid ""
+"Если приложение требует иконки с определенными размерами, то сервер будет "
+"выдавать иконки с адресом ``<имя файла><ширина>_<высота>.<расширение>``. "
+"Например, если иконка стандартного размера располагается по адресу "
+"``/tvmiddleware/media/img/logo/default/somelogo.png``, то иконка размера "
+"400x400px - ``/tvmiddleware/media/img/logo/default/somelogo400_400.png``."
+msgstr ""
+"If the application requires icons of a certain size, then the server will "
+"issue the icons with the address ``<file name><width>_<height>.<extension>``. "
+"For example, if the standard icon size is located at the address "
+"``/tvmiddleware/media/img/logo/default/somelogo.png``, icon size 400x400px - "
+"``/tvmiddleware/media/img/logo/default/somelogo400_400.png``."
+
+#: ../../source/service_configuration.rst:241
+msgid ""
+"Требуемые размеры иконок передаются приложением как аргументы ``icon_width``, "
+"``icon_height`` в запросах :ref:`TVMiddleware API <tvmiddleware-api>`."
+msgstr ""
+"The required icon sizes are passed by the application as arguments "
+"``icon_width``, ``icon_height`` in queries :ref:`API TVMiddleware <tvmiddleware-"
+"api>`."
+
+#: ../../source/service_configuration.rst:246
+msgid ""
+"Сервер не проверяет существование файла с иконкой, указание неправильных "
+"размеров приведет к выдаче URL на несуществующую иконку."
+msgstr ""
+"The server does not check existence of icon file, incorrect size will lead "
+"to a results URL to a non-existent icon."
+
+#: ../../source/service_configuration.rst:252
+msgid "3.1.5.1. Добавление нового типа парсера"
+msgstr "3.1.5.1. To add a new parser"
+
+#: ../../source/service_configuration.rst:254
+msgid ""
+"Для добавления собственного парсера EPG необходимо создать модуль на Python "
+"в папке /tvmiddleware/epg_parsers/, который должен содержать класс "
+"EpgParser, наследуемый от EpgParserBase и реализующий все его методы, а "
+"затем создать запись в EPG Source."
+msgstr ""
+"To add your own EPG parser, you must create a module in Python in the folder"
+" /tvmiddleware/epg_parsers/ which should contain a class EpgParser inherited"
+" from EpgParserBase and implements all its methods and then create a record "
+"in the EPG Source."
+
+#: ../../source/service_configuration.rst:261
+msgid "3.1.5.2. Редактирование EPG в ручном режиме"
+msgstr "3.1.5.2. Edit the EPG in manual mode"
+
+#: ../../source/service_configuration.rst:263
+msgid ""
+"Редактирование EPG доступно в служебной панели администрирования по адресу: "
+"http://smarty.example.com/admin/tvmiddleware/epg/"
+msgstr ""
+"Edit the EPG is available in the service administration panel at: "
+"http://smarty.example.com/admin/tvmiddleware/epg/"
+
+#: ../../source/service_configuration.rst:267
+msgid "3.1.5.3. Добавление EPG-категорий и EPG-жанров"
+msgstr "3.1.5.3. Adding EPG-EPG categories and genres"
+
+#: ../../source/service_configuration.rst:274
+msgid ""
+"Для возможности более детальной и удобной фильтрации контента введены "
+"понятия EPG-категорий и EPG-жанров - данные метрики предоставляются "
+"поставщиком EPG в составе описания каждой конкретной программы. Таким "
+"образом, помимо категории телеканала, пользователю также доступны категория "
+"и жанр любой передачи в отдельности, которые могут не совпадать с тематикой "
+"самого канала."
+msgstr ""
+"For detailed and easy content filtering and introduced the notion of EPG-EPG"
+" categories and genres - the data metrics are supplied by the provider EPG "
+"part of the description of each specific program. Thus, in addition to the "
+"category, the channel is also available to users category, and genre of any "
+"transfer of individually, which may not coincide with the theme of the "
+"channel."
+
+#: ../../source/service_configuration.rst:280
+msgid ""
+"Именно на основе EPG-категорий и EPG-жанров работает фильтрация передач в "
+"экране \"TB по интересам\"."
+msgstr ""
+"It is through the EPG categories and EPG-genres filtering works in the "
+"\"screen TB of interests\"."
+
+#: ../../source/service_configuration.rst:282
+msgid ""
+"Добавление EPG-категорий и EPG-жанров осуществляется аналогично, поэтому "
+"ниже будет представлено описание этого процесса для категорий."
+msgstr ""
+"Adding EPG-EPG categories-genres is done similarly, so below is presented "
+"the description of this process for categories."
+
+#: ../../source/service_configuration.rst:285
+msgid ""
+"1. В первую очередь создаются категории, которые в дальнейшем будут "
+"отображаться для абонентов в приложении: "
+"http://smarty.example.com/admin/tvmiddleware/epgcategory/"
+msgstr ""
+"1. First and foremost, the categories are created, which will later be "
+"displayed to subscribers in the application: "
+"http://smarty.example.com/admin/tvmiddleware/epgcategory/"
+
+#: ../../source/service_configuration.rst:291
+msgid "Category name"
+msgstr "Category name"
+
+#: ../../source/service_configuration.rst:291
+msgid "Название категории."
+msgstr "The name of the category."
+
+#: ../../source/service_configuration.rst:293
+msgid ""
+"2. Далее создается \"карта отображения\" созданных категорий, на те, что "
+"предоставляет источник EPG (список данных категорий запрашивается у "
+"поставщика EPG): "
+"http://smarty.example.com/admin/tvmiddleware/epgsourcecategorymap/"
+msgstr ""
+"2. Next, create a \"display card\" - created categories, those that provides"
+" the EPG source (the list of data categories is requested from the provider "
+"EPG): http://smarty.example.com/admin/tvmiddleware/epgsourcecategorymap/"
+
+#: ../../source/service_configuration.rst:303
+msgid "Название категории у источника"
+msgstr "The name of the category at the source"
+
+#: ../../source/service_configuration.rst:303
+msgid "Имя категории в том виде, в котором его отдаёт источник EPG."
+msgstr ""
+"The name of the category in the form in which it gives the EPG source."
+
+#: ../../source/service_configuration.rst:306
+msgid "Категория EPG"
+msgstr "Category EPG"
+
+#: ../../source/service_configuration.rst:306
+msgid ""
+"Имя одного из объектов epgcategory, заранее созданных в панели "
+"администратора на шаге 1, либо созданных в процессе."
+msgstr ""
+"The name of one of the objects epgcategory that you have already created in "
+"admin panel in step 1 or created in the process."
+
+#: ../../source/service_configuration.rst:308
+msgid ""
+"Шаг 2 необходимо проделать для всех названий категорий, отдаваемых "
+"источником."
+msgstr "Step 2 must be done for all the category names given by the source."
+
+#: ../../source/service_configuration.rst:314
+msgid "3.2. Руководство по работе в панели администратора"
+msgstr "3.2. Guide to working in the admin panel"
+
+#: ../../source/service_configuration.rst:319
+msgid "3.2.1. Общие сведения об административном интерфейсе"
+msgstr "3.2.1. General information about the administrative interface"
+
+#: ../../source/service_configuration.rst:321
+msgid ""
+"Условно интерфейс можно разделить на две области: панель управления и "
+"область данных."
+msgstr ""
+"Conventionally, the interface can be divided into two areas: a control panel"
+" and a data area."
+
+#: ../../source/service_configuration.rst:323
+msgid "Панель управления имеет следующие элементы:"
+msgstr "The control panel has the following elements:"
+
+#: ../../source/service_configuration.rst:325
+msgid ""
+"Ссылки на разделы настроек — обеспечивает удобную навигацию по интерфейсу."
+msgstr ""
+"Links to sections in the settings — provides easy navigation through the "
+"interface."
+
+#: ../../source/service_configuration.rst:326
+msgid ""
+"Выбор текущего оператора в рамках функции :ref:`Мультипровайдер <client-"
+"creation>`."
+msgstr ""
+"Select the current operator in the framework of the function "
+":ref:`Multiprovider <client-creation>`."
+
+#: ../../source/service_configuration.rst:327
+msgid ""
+"Выбор языка — кнопки переключения языка интерфейса (русский и английский)."
+msgstr ""
+"The choice of language button to switch language of interface (Russian and "
+"English)."
+
+#: ../../source/service_configuration.rst:328
+msgid ""
+"Имя пользователя — показывает имя текущего пользователя, а так же позволяет "
+"выйти из административного интерфейса, если при нажатии на имя пользователя "
+"в открывшемся списке выбрать \"Выход\"."
+msgstr ""
+"User name — shows the name of the current user and allows you to exit the "
+"administrative interface, if you click on the user name in the list to "
+"select \"Exit\"."
+
+#: ../../source/service_configuration.rst:330
+msgid ""
+"Область данных может выглядеть по-разному в зависимости от текущего раздела."
+msgstr "The data area can look different depending on the current section."
+
+#: ../../source/service_configuration.rst:335
+msgid "3.2.2. Описание интерфейса"
+msgstr "3.2.2. A description of the interface"
+
+#: ../../source/service_configuration.rst:337
+msgid ""
+"Все настройки административного интерфейса тематически сгруппированы в меню "
+"на панели управления. При выборе любого пункта выводится список "
+"настраиваемых сущностей. Если в списке нет ни одного пункта, то вместо "
+"списка выводится сообщение о том, что они не найдены."
+msgstr ""
+"All settings of the administrative interface are thematically grouped in the"
+" menu on the control panel. Selecting any item displays a list of custom "
+"entities. If no item, then instead of a list I get a message saying that "
+"they are not found."
+
+#: ../../source/service_configuration.rst:341
+msgid ""
+"Для списков доступна сортировка, но только по одному столбцу. При этом "
+"доступные для сортировки столбцы имеют нижнее точечное подчеркивание своего "
+"наименования."
+msgstr ""
+"For lists you can sort, but only one column. It is available to sort columns"
+" have a lower point underlining their names."
+
+#: ../../source/service_configuration.rst:346
+msgid ""
+"Чтобы отсортировать список нужно просто нажать на название столбца. Первый "
+"клик отсортирует список по возрастанию, второй — по убыванию, дальнейшие "
+"клики будут чередовать эти два способа сортировки. При этом сортировка по "
+"возрастанию обозначается стрелкой вверх рядом с наименованием столбца, а "
+"сортировка по убыванию — стрелкой вниз."
+msgstr ""
+"To sort the list simply click the column name. The first click sorts the "
+"list in ascending, the second descending, further clicks will alternate "
+"between these two ways of sorting. The ascending sort order is indicated by "
+"the up arrow next to the name column, and sort descending — down arrow."
+
+#: ../../source/service_configuration.rst:352
+msgid ""
+"Для некоторых данных используется специальная колонка *Порядок сортировки*. "
+"Она сортирует элементы не только в административном интерфейсе, но и "
+"определяет порядок отображения элементов в интерфейсе на устройстве "
+"абонентов. В этой колонке каждому элементу списка соответствует свой значок "
+"стрелки. В зависимости от того, вверх или вниз направлена стрелка, при "
+"нажатии на нее элемент уйдет вверх или вниз по списку соответственно."
+msgstr ""
+"For some data uses a specific column *sort Order*. It sorts the elements not"
+" only in the administrative interface, but also defines the order of items "
+"in the interface on the device subscribers. In this column, each element of "
+"the list corresponds to the arrow icon. Depending on up or down directional "
+"arrow, clicking on it, the item will go up or down in the list respectively."
+
+#: ../../source/service_configuration.rst:360
+msgid ""
+"Если список элементов большой, то он разбивается на страницы. На одной "
+"странице обычно размещается 25 записей, но можно выбрать другое значение — "
+"10, 50, 100 или 250, за эту функцию отвечает раскрывающийся список внизу "
+"страницы."
+msgstr ""
+"If the items list is large, it is split into pages. On one page is usually "
+"placed 25 records, but you can choose another value with 10, 50, 100, or "
+"250, for this feature drop-down list at the bottom of the page."
+
+#: ../../source/service_configuration.rst:365
+msgid ""
+"При выборе нового значения текущая страница обновляется, и в зависимости от "
+"получившегося количества страниц, отображается либо та же по счету страница,"
+" на которой была произведена смена значений, либо первая ближайшая к ней. "
+"Навигация между страницами осуществляется с помощью навигационной панели с "
+"номерами страниц. На панели располагается 10 кнопок с номерами страниц, "
+"остальные кнопки позволяют перемещаться между страницами. Так кнопки **<** и"
+" **>** ведут на предыдущую и следующую страницы соответственно. А кнопки "
+"**<<** и **>>** загружают первую и последнюю страницы соответственно."
+msgstr ""
+"When you select a new value the current page is updated, and depending on "
+"the number of pages displayed is either the same on the account page where "
+"you were required to change values, or the first nearest to her. Navigating "
+"between pages is done using the navigation bar with page numbers. Panel is "
+"10 buttons with page numbers, the other buttons allow you to navigate "
+"between pages. So button **<** and **>** lead to the previous and next page,"
+" respectively. And buttons **<<** and **>>** load the first and last pages, "
+"respectively."
+
+#: ../../source/service_configuration.rst:374
+msgid "Почти во всех разделах доступен поиск или фильтрация данных."
+msgstr "In almost all the sections available to search or filter data."
+
+#: ../../source/service_configuration.rst:378
+msgid ""
+"Для возврата от результатов поиска к полному списку служит кнопка "
+"**Сбросить**."
+msgstr "To return from search results to the full list press **Reset**."
+
+#: ../../source/service_configuration.rst:380
+msgid ""
+"Практически для всех настроек доступно добавление/удаление пунктов. Эту "
+"функцию обеспечивают кнопки **Добавить**, **Изменить** и **Удалить "
+"выбранные** над списком."
+msgstr ""
+"For almost all settings available to add/remove items. This feature provides"
+" the buttons **Add**, **Change** and **Delete selected** the above list."
+
+#: ../../source/service_configuration.rst:385
+msgid ""
+"При этом кнопки **Изменить** и **Удалить выбранные** становятся активными, "
+"только после выбора хотя бы одного пункта списка."
+msgstr ""
+"When this button **Change** and **Delete selected** become active only after"
+" you select at least one item of the list."
+
+#: ../../source/service_configuration.rst:388
+msgid ""
+"Для удаления сущности достаточно нажать на кнопку **Удалить выбранные**. "
+"После нажатия кнопки **Изменить** открывается страница редактирования, где "
+"можно менять значения параметров."
+msgstr ""
+"To delete an entity, click **Delete selected**. After clicking **Edit** "
+"opens the edit page where you can change the values of the parameters."
+
+#: ../../source/service_configuration.rst:393
+msgid ""
+"Кнопка **Сохранить изменения** сохраняет внесенные правки. Кнопка "
+"**Вернуться к списку** не сохраняя внесенных правок, просто перемещает "
+"пользователя к списку настраиваемых сущностей."
+msgstr ""
+"Button **Save changes** saves the edits. Button **back to the list** without"
+" having saved any changes, just moves the user to the list of custom "
+"entities."
+
+#: ../../source/service_configuration.rst:396
+msgid ""
+"В некоторых разделах доступна сводная статистика активности, например в "
+"аккаунтах абонентов."
+msgstr ""
+"In some parts of the available summary statistics activity, for example in "
+"the accounts of the subscribers."
+
+#: ../../source/service_configuration.rst:400
+msgid ""
+"Синим цветом в таких таблицах обозначается общее количество записей. Зеленым"
+" обозначается количество записей, у которых в настройках выбрано: *Активен* "
+"или *Включен*, либо их статус *Online*, соответственно красный цвет — "
+"количество записей, у которых не включены значения *Активен* или *Включен*. "
+"Серый цвет — количество записей со статусом *Offline*."
+msgstr ""
+"Blue in these tables indicated the total number of records. Green indicates "
+"the number of records that have the selected: *Active* or ** or their status"
+" is *Online*, respectively, red color — the number of records that have not "
+"included the values of the *Active* or **. Gray — the number of records with"
+" a status of *Offline*."
+
+#: ../../source/service_configuration.rst:407
+msgid "3.2.3. Обзор основных разделов"
+msgstr "3.2.3. An overview of the main sections"
+
+#: ../../source/service_configuration.rst:409
+msgid ""
+"Панель администора позволяет управлять настройками таких компонентов как:"
+msgstr ""
+"Bar administor allows you to control the settings of components such as:"
+
+#: ../../source/service_configuration.rst:411
+msgid "Абонентская база"
+msgstr "The subscriber base"
+
+#: ../../source/service_configuration.rst:412
+msgid "Тарифные пакеты и набор услуг"
+msgstr "Packages and range of services"
+
+#: ../../source/service_configuration.rst:413
+msgid "Телеканалы"
+msgstr "TV channels"
+
+#: ../../source/service_configuration.rst:414
+msgid "Телепрограмма (EPG)"
+msgstr "TV guide (EPG)"
+
+#: ../../source/service_configuration.rst:415
+msgid "Радиостанции"
+msgstr "Radio"
+
+#: ../../source/service_configuration.rst:416
+msgid "Каталог видеотеки"
+msgstr "Catalogue of the library"
+
+#: ../../source/service_configuration.rst:417
+msgid "Каталог приложений"
+msgstr "The application catalog"
+
+#: ../../source/service_configuration.rst:418
+msgid "Стриминг-сервисы (Live, VOD, PVR и др.)"
+msgstr "Streaming services (Live, VOD, PVR, etc.)"
+
+#: ../../source/service_configuration.rst:419
+msgid "Устройства"
+msgstr "The device"
+
+#: ../../source/service_configuration.rst:421
+msgid ""
+"Для удобства настройки сгруппированы в меню на главной панели и разделены на"
+" категории:"
+msgstr ""
+"For convenience settings are grouped in the menu on the main panel and is "
+"divided into categories:"
+
+#: ../../source/service_configuration.rst:423
+msgid "Общие настройки"
+msgstr "General settings"
+
+#: ../../source/service_configuration.rst:424
+msgid "Видео-серверы"
+msgstr "Video servers"
+
+#: ../../source/service_configuration.rst:425
+msgid "Мониторинг"
+msgstr "Monitoring"
+
+#: ../../source/service_configuration.rst:426
+msgid "Настройки стриминга"
+msgstr "Settings streaming"
+
+#: ../../source/service_configuration.rst:427
+msgid "Биллинг"
+msgstr "Billing"
+
+#: ../../source/service_configuration.rst:428
+msgid "Настройки контента"
+msgstr "Content settings"
+
+#: ../../source/service_configuration.rst:429
+msgid "Абоненты"
+msgstr "Subscribers"
+
+#: ../../source/service_configuration.rst:430
+msgid "Отчеты"
+msgstr "Reports"
+
+#: ../../source/service_configuration.rst:432
+msgid ""
+"Чтобы начать работать с настройками следует выбрать необходимый пункт в "
+"выпадающем списке интересующей категории. Каждая настройка представляет "
+"собой список, элементы которого можно добавлять/удалять, а так же менять "
+"значения их параметров, что позволяет настраивать различные компоненты."
+msgstr ""
+"To start working with the settings you should select in the drop-down list "
+"of categories. Each setting is a list whose elements you can add/delete and "
+"change the values of their parameters, which allows you to configure the "
+"various components."
+
+#: ../../source/service_configuration.rst:439
+msgid "3.2.4. Раздел: Общие настройки"
+msgstr "3.2.4. Section: General settings"
+
+#: ../../source/service_configuration.rst:444
+msgid "3.2.4.1. Настройки STB и приложений"
+msgstr "3.2.4.1. STB settings and applications"
+
+#: ../../source/service_configuration.rst:446
+msgid ""
+"Этот раздел содержит список устройств для просмотра сервиса IPTV (приставки "
+"Set-Top Box, Smart TV, мобильные устройства, компьютер и др.), которые "
+"поддерживаются оператором (см. :ref:`Подключение разрешенных оператору типов"
+" устройств<playdevice-assigning-to-client>`)."
+msgstr ""
+"This section contains a list of devices to view the IPTV service (STB Set-"
+"Top Box, Smart TV, mobile device, computer, etc.) supported by the operator "
+"(see :ref:`allowed to Connect the operator device types<playdevice-"
+"assigning-to-client>`)."
+
+#: ../../source/service_configuration.rst:450
+msgid ""
+"Здесь указываются базовые настройки для взаимодействия устройств с сервисом."
+msgstr ""
+"Here you specify the basic settings for communication with the service."
+
+#: ../../source/service_configuration.rst:452
+msgid ""
+"Для редактирования настроек устройства можно использовать кнопку "
+"**Настройки**, либо нажать на название устройства."
+msgstr ""
+"To edit the device settings, you can click **Settings**, either click on the"
+" name of the device."
+
+#: ../../source/service_configuration.rst:458
+msgid "3.2.4.2. Виджеты для интеграции с сайтом"
+msgstr "3.2.4.2. Widgets for integration with website"
+
+#: ../../source/service_configuration.rst:460
+msgid ""
+"В этом разделе настраиваются виджеты для интеграции сайта с сервисом IPTV. "
+"Подробнее о механизме :ref:`встраивания модулей в сайт <widgets-api>`."
+msgstr ""
+"In this section, you configure widgets to integrate your website with the "
+"IPTV service. Read more about the mechanism :ref:`installation of modules in"
+" the <widgets-api>`."
+
+#: ../../source/service_configuration.rst:463
+msgid "Доступны следующие типы виджетов:"
+msgstr "The following types of widgets:"
+
+#: ../../source/service_configuration.rst:465
+msgid ""
+"*Channel list* - список телеканалов с группировкой по тарифным пакетам и "
+"возможностью поиска."
+msgstr ""
+"*Channel list* - a list of TV channels grouped by tariff packages and search"
+" capability."
+
+#: ../../source/service_configuration.rst:466
+msgid "*Registration* - страница регистрации с помощью e-mail и СМС."
+msgstr "*Registration* sign - up page by e-mail and SMS."
+
+#: ../../source/service_configuration.rst:467
+msgid ""
+"*Account page* - личный кабинет абонента, из которого доступно "
+"подключение/отключение тарифных пакетов, оплата, редактирования профиля и "
+"др."
+msgstr ""
+"*Account page* - a personal account of subscriber, which is used to "
+"connect/disconnect packages, payment, profile editing etc."
+
+#: ../../source/service_configuration.rst:468
+msgid "*EPG program* - телепрограмма на все подключенные телеканалы."
+msgstr "*EPG program* the program on all connected channels."
+
+#: ../../source/service_configuration.rst:474
+msgid "3.2.4.3. Настройка прав пользователей"
+msgstr "3.2.4.3. Configure the user rights"
+
+#: ../../source/service_configuration.rst:476
+msgid ""
+"В этом разделе администратору доступно редактирование прав других "
+"администраторов или модераторов сервиса для ограничения их доступа к тем или"
+" иным разделам или функциональности."
+msgstr ""
+"In this section, administrators can edit permissions of other administrators"
+" or moderators of the service to limit their access to certain sections or "
+"functionality."
+
+#: ../../source/service_configuration.rst:479
+msgid ""
+"Добавление новых пользователей производится в служебной панели "
+"администрирования по ссылке: http://smarty.example.com/admin/users/user/."
+msgstr ""
+"Adding new users is done in the service administration panel to: "
+"http://smarty.example.com/admin/users/user/."
+
+#: ../../source/service_configuration.rst:482
+msgid ""
+"Права доступа разделены по группам согласно категориям разделов в панели "
+"администратора. Детальные права на выполнение тех или иных действий с "
+"данными состоят из:"
+msgstr ""
+"Access rights are divided into groups according to topic categories, in the "
+"admin panel. Detailed rights to perform certain actions with the data "
+"consist of:"
+
+#: ../../source/service_configuration.rst:485
+msgid "*Can view ...* - имеет доступ к просмотру информации"
+msgstr "*Can view ...* - has access to view information"
+
+#: ../../source/service_configuration.rst:486
+msgid "*Can create ...* - имеет доступ к созданию элементов"
+msgstr "*Can create ...* - has access to create items"
+
+#: ../../source/service_configuration.rst:487
+msgid "*Can edit ...* - имеет доступ к редактированию"
+msgstr "*Can edit ...* - has access to edit"
+
+#: ../../source/service_configuration.rst:488
+msgid "*Can delete ...* - имеет доступ к удалению"
+msgstr "*Can delete ... * has access to delete"
+
+#: ../../source/service_configuration.rst:493
+msgid "3.2.5. Раздел: Настройки стриминга"
+msgstr "3.2.5. Section: Setup streaming"
+
+#: ../../source/service_configuration.rst:498
+msgid "3.2.5.1. Дата-центры"
+msgstr "3.2.5.1. Data centers"
+
+#: ../../source/service_configuration.rst:500
+msgid ""
+"Под дата-центром подразумевается либо физический узел размещения группы "
+"серверов, либо виртуальная группа стриминг-сервисов. Используется для "
+"объединения сервисов и дальнейшей маршрутизации на основании "
+"предпочтительного географического либо иного отношения аккаунтов к тем или "
+"иным сервисам."
+msgstr ""
+"Under the data center means a physical or host server group, or virtual "
+"group streaming services. Used for service aggregation and routing on the "
+"basis of preferred geographic or any other relationship accounts for "
+"different services."
+
+#: ../../source/service_configuration.rst:508
+msgid "3.2.5.2. Стриминг-сервисы"
+msgstr "3.2.5.2. Streaming services"
+
+#: ../../source/service_configuration.rst:510
+msgid ""
+"Стриминг-сервисы представляют собой серверы, осуществляющие вещание и "
+"обработку видеопотоков. Набор настроек различается в зависимости от типа "
+"выбранного стриминг-сервиса, однако параметры в блоках *Основные параметры* "
+"являются общими для всех."
+msgstr ""
+"Streaming services are the servers, broadcasting, and video processing. The "
+"range of settings varies depending on the type of the selected streaming "
+"services, however, the parameters in blocks *Basic settings* are common to "
+"all."
+
+#: ../../source/service_configuration.rst:515
+msgid "3.2.5.2.1. Динамическая и статическая маршрутизация"
+msgstr "3.2.5.2.1. Dynamic and static routing"
+
+#: ../../source/service_configuration.rst:517
+msgid ""
+"Если для телеканала, фильма или другой единицы контента заданы активные "
+"стриминг-сервисы и не задан прямой URI потока, то будет использована "
+"динамическая маршрутизация. В момент обращения абонентской приставки к "
+"соответствующему контенту осуществляется поиск одного из подключенных "
+"стриминг-сервисов на основании типа контента, подключенных тарифных пакетов,"
+" а также доступности и нагруженности сервиса. Затем, исходя из настроек "
+"стриминг-сервиса, формируется URL контента, по маске либо после вычисления "
+"скрипта."
+msgstr ""
+"If for TV, film or other content unit is set to an active streaming services"
+" and not asked a direct URI of the stream, we will use dynamic routing. At "
+"the time of treatment set-top box to the corresponding content is searched "
+"from one of connected streaming services based on content type, tariff "
+"packages, as well as accessibility and loading service. Then, based on the "
+"settings of a streaming service, forming a content URL, the mask or after "
+"the calculating of the script."
+
+#: ../../source/service_configuration.rst:523
+msgid ""
+"При статической маршрутизации URL контента генерируется при формировании "
+"плейлиста. Такой тип маршрутизации может быть использован для потоков без "
+"авторизации, Multicast-потоков для IPTV, либо внешних Unicast-потоков "
+"партнеров."
+msgstr ""
+"When static routing content URL is generated when forming the playlist. This"
+" type of routing can be used for streams without authorization, the "
+"Multicast streams for IPTV or external Unicast streams partners."
+
+#: ../../source/service_configuration.rst:527
+msgid "3.2.5.2.2. Динамическая маршрутизация, задаваемая скриптом"
+msgstr "3.2.5.2.2. Dynamic routing is specified by the script"
+
+#: ../../source/service_configuration.rst:529
+msgid ""
+"Скрипт позволяет создать нестандартную логику маршрутизации. Используемый "
+"язык - Python. В результате работы скрипта должна быть определена переменная"
+" ``uri``, содержащая URL видеопотока."
+msgstr ""
+"The script allows you to create custom routing logic. The language used is "
+"Python. The result of the script must be defined variable ``uri`` containing "
+"the URL of the video stream."
+
+#: ../../source/service_configuration.rst:532
+msgid "Пример скрипта: ::"
+msgstr "Example script: ::"
+
+#: ../../source/service_configuration.rst:560
+msgid ""
+"Выше приведен пример скрипта, в котором URL видеопотока задается сначала по "
+"маске, а затем, если у аккаунта задан определенный дата-центр (id = 4 в "
+"примере), то для него случайным образом выбирается один из прокси-серверов, "
+"после чего URL заменяется на прокси."
+msgstr ""
+"Above is an example of the script in which the URL of the video stream sets "
+"the first mask, and then, if the account is set to a specific data center "
+"(id = 4 in the example), then it randomly selects one of the proxy servers, "
+"then the URL is replaced with the proxy."
+
+#: ../../source/service_configuration.rst:567
+msgid "3.2.5.3. Технические работы"
+msgstr "3.2.5.3. Technical work"
+
+#: ../../source/service_configuration.rst:569
+msgid ""
+"Технические работы используются для частичного ограничения доступа к сервису"
+" когда это необходимо. Например, в заданный временной период, пока "
+"проводятся технические работы либо произошла авария, абонентам может быть "
+"недоступен просмотр записанных программ."
+msgstr ""
+"The technical work used to partially restrict access to the service when "
+"necessary. For example, in a given time period, while under maintenance or "
+"accident, subscribers may be prevented from viewing recorded programs."
+
+#: ../../source/service_configuration.rst:577
+msgid "3.2.6. Раздел: Биллинг"
+msgstr "3.2.6. Section: Billing"
+
+#: ../../source/service_configuration.rst:582
+msgid "3.2.6.1. Тарифные пакеты"
+msgstr "3.2.6.1. Packages"
+
+#: ../../source/service_configuration.rst:584
+msgid ""
+"Раздел позволяет управлять списком тарифных пакетов и их настройками. См. "
+":ref:`Возможности тарификации <billing-tariffs-features>`."
+msgstr ""
+"Section allows you to manage the list of tariff packages and their settings."
+" Cm. :ref:`the possibility of billing <billing-tariffs-features>`."
+
+#: ../../source/service_configuration.rst:591
+msgid "3.2.6.3. Финансовые операции"
+msgstr "3.2.6.3. Financial transactions"
+
+#: ../../source/service_configuration.rst:593
+msgid ""
+"Раздел содержит информацию о движении денежных средств по аккаунтам "
+"абонентов."
+msgstr ""
+"Section contains information about the movement of funds on accounts of the "
+"subscribers."
+
+#: ../../source/service_configuration.rst:596
+msgid ""
+"Данные могут добавляться как вручную, так и автоматически в случае "
+"использования биллинга (см. :ref:`Сценарии взаимодействия с биллинговой "
+"системой <billing-integration-scenarios>`). Если используется внешняя "
+"система биллинга, то для получения списка транзакций в этом разделе "
+"необходима синхронизация через :ref:`Billing API <billing-api>`."
+msgstr ""
+"Data can be added manually or automatically in case of use billing (see "
+":ref:`Scenarios of interaction with a billing system <billing-integration-"
+"scenarios>`). If you use an external billing system, to retrieve a list of "
+"transactions in this section, you must synchronize using :ref:`API Billing "
+"<billing-api>`."
+
+#: ../../source/service_configuration.rst:601
+msgid ""
+"Поиск здесь представляет собой фильтр, как по одному параметру, так и по "
+"нескольким сразу:"
+msgstr "Search here is a filter as one parameter, and multiple at once:"
+
+#: ../../source/service_configuration.rst:605
+msgid "Также доступен экспорт отчета по транзакциям в файл CSV:"
+msgstr "Also available report export transactions to a CSV file:"
+
+#: ../../source/service_configuration.rst:612
+msgid "3.2.7. Раздел: Настройки контента"
+msgstr "3.2.7. Section: content Settings"
+
+#: ../../source/service_configuration.rst:617
+msgid "3.2.7.1. Категории ТВ"
+msgstr "3.2.7.1. Categories: TV"
+
+#: ../../source/service_configuration.rst:619
+msgid ""
+"В этом разделе добавляются категории телеканалов. Каждый телеканал должен "
+"обязательно относится к той или иной категории. В абонентском приложении, в "
+"зависимости от шаблона, но как правило, присутствует возможность отображения"
+" телеканалов определенной категории для упрощения поиска нужного контента."
+msgstr ""
+"Use this section to add categories TV channels. Each channel must belong to "
+"the given category. In the customer application, depending on the template, "
+"but as a rule, there is the ability to display TV channels in a certain "
+"category to facilitate the search for the desired content."
+
+#: ../../source/service_configuration.rst:627
+msgid "3.2.7.2. Каналы"
+msgstr "3.2.7.2. Channels"
+
+#: ../../source/service_configuration.rst:629
+msgid ""
+"Это один из основных разделов для настройки сервиса IPTV/OTT. Здесь "
+"производится настройка списка телеканалов, которые вещает оператор, а также "
+"конфигурация их вещания и отображения."
+msgstr ""
+"This is one of the main sections to configure a service IPTV/OTT. Here is "
+"the configuration list of the channels that broadcasts the operator and "
+"configuration of their broadcast and display."
+
+#: ../../source/service_configuration.rst:632
+msgid ""
+"Кроме ручного выставления порядка каналов с помощью поля *Порядок "
+"сортировки* списку телеканалов можно автоматически задать сортировку, "
+"которая будет использоваться на устройствах пользователей, используя методы "
+"из списка **Авто-сортировка**, который расположен выше остальных кнопок "
+"управления:"
+msgstr ""
+"In addition to manually setting the channel order by using the fields *sort "
+"Order* the list of channels can be automatically set sorting to be used on "
+"the user device, using the methods from list **Auto-sort**, which is located"
+" above the rest of the control buttons:"
+
+#: ../../source/service_configuration.rst:640
+msgid "Автоматически"
+msgstr "Automatically"
+
+#: ../../source/service_configuration.rst:637
+msgid ""
+"Сортировка осуществляется по номерам кнопок каналов, которые задаются в поле"
+" *Номер для сортировки* при настройке EPG-каналов, см. :ref:`Настройка EPG "
+"<epg-setup>`. При использовании Microimpuls Middleware как платформы от ООО "
+"\"Майкроимпульс\" в рамках услуги \"Виртуальный оператор\" данный метод "
+"отсортирует каналы согласно заключенным лицензионным договорам между ООО "
+"\"Майкроимпульс\" и правообладателями и действующему законодательству."
+msgstr ""
+"Sorting is carried out by button number of channels that are specified in "
+"the *Room for sorting* when configuring the EPG-channels, see "
+":ref:`configure EPG <epg-setup>`. When using Microimpuls Middleware as a "
+"platform from company \"Microimpulse\" within the service \"Virtual "
+"operator\" this method sorts the channels according to the signed license "
+"agreements between OOO \"Microimpulse\" and copyright holders and the law."
+
+#: ../../source/service_configuration.rst:643
+msgid "По ID"
+msgstr "ID"
+
+#: ../../source/service_configuration.rst:643
+msgid ""
+"При добавлении канала в список ему присваивается ID, данная сортировка "
+"происходит по этому параметру."
+msgstr ""
+"When you add a channel in the list is assigned the ID, the sorting is done "
+"according to this parameter."
+
+#: ../../source/service_configuration.rst:646
+msgid "По названию"
+msgstr "The title"
+
+#: ../../source/service_configuration.rst:646
+msgid "Сортировка осуществляется по наименованию канала."
+msgstr "Sorting is done by name of the channel."
+
+#: ../../source/service_configuration.rst:650
+msgid "Пользовательская сортировка"
+msgstr "Custom sorting"
+
+#: ../../source/service_configuration.rst:649
+msgid ""
+"Если была применена одна из предыдущих сортировок, выбор этого пункта вернет"
+" к первоначальной ручной сортировке оператора."
+msgstr ""
+"If you apply one of the previous sorting, selecting this item will return to"
+" the original manual sorting operator."
+
+#: ../../source/service_configuration.rst:655
+msgid "3.2.7.3. Телепрограмма"
+msgstr "3.2.7.3. TV program"
+
+#: ../../source/service_configuration.rst:657
+msgid ""
+"Раздел позволяет просматривать EPG для всех каналов, а также очищать и "
+"принудительно переимпортировать EPG для отдельных каналов."
+msgstr ""
+"Section allows you to view the EPG for all channels, as well as to clear and"
+" force to primordiality EPG for individual channels."
+
+#: ../../source/service_configuration.rst:660
+msgid ""
+"Выбор канала осуществляется в левом меню. Для очистки телепрограммы "
+"необходимо нажать кнопку **Очистить EPG**, для импортирования - "
+"**Принудительно импортировать EPG**."
+msgstr ""
+"Channel selection is done in the left menu. To clean the TV program, click "
+"**Clear EPG**, import - **Forced to import EPG**."
+
+#: ../../source/service_configuration.rst:665
+msgid ""
+"Автоматический импорт настраивается через планировщик, см. :ref:`Настройка "
+"выполнения команд в crontab <crontab-settings>`."
+msgstr ""
+"Automatic import is configured through the scheduler, see the "
+":ref:`customize run commands in crontab <crontab-settings>`."
+
+#: ../../source/service_configuration.rst:668
+msgid ""
+"Расширенное редактирование EPG доступно в служебной панели администратора, "
+"см. :ref:`Редактирование EPG в ручном режиме <manual-epg-editing>`."
+msgstr ""
+"Advanced editing EPG service available in the admin panel, see :ref:`Edit "
+"EPG in manual mode <manual-epg-editing>`."
+
+#: ../../source/service_configuration.rst:674
+msgid "3.2.7.4. Жанры и категории VOD"
+msgstr "3.2.7.4. Genres and categories of VOD"
+
+#: ../../source/service_configuration.rst:676
+msgid ""
+"В этом разделе можно добавлять/удалять и редактировать жанры для фильмов, "
+"предоставляемых по услуге Video-On-Demand."
+msgstr ""
+"In this section you can add/delete and edit genres for movies provided on "
+"the service Video-On-Demand."
+
+#: ../../source/service_configuration.rst:678
+msgid ""
+"Жанры отображаются в пользовательском интерфейсе на абонентских устройствах,"
+" при выборе пункта меню, соответствующего данной услуге. Так же для "
+"определения порядка, в котором жанры выводятся на устройстве абонента, "
+"используется колонка *Порядок сортировки*."
+msgstr ""
+"The genres displayed in the user interface on a client device, selecting a "
+"menu item corresponding to this service. As well to determine the order in "
+"which genres are displayed on the subscriber's device used a column *sort "
+"Order*."
+
+#: ../../source/service_configuration.rst:685
+msgid "3.2.7.5. Фильмы"
+msgstr "3.2.7.5. Movies"
+
+#: ../../source/service_configuration.rst:687
+msgid ""
+"В этом разделе осуществляется управление каталогом фильмов и видео-файлов."
+msgstr "In this section you manage the catalog of movies and video files."
+
+#: ../../source/service_configuration.rst:689
+msgid ""
+"В списке фильмов есть кнопка **Assets**, при нажатии на которую будет открыт"
+" раздел редактирования ассетов (файлов), относящихся к данному видео. У "
+"одного видео может быть несколько ассетов, выбор конкретного ассета для "
+"воспроизведения доступен абоненту при просмотре информации о фильме на своем"
+" устройстве."
+msgstr ""
+"In the list of movies is the button **Assets**, when clicked, will open a "
+"section for editing assets (files) related to this video. One video can have"
+" multiple assets, select the specific asset available for playback to the "
+"caller when you view the movie details on your device."
+
+#: ../../source/service_configuration.rst:693
+msgid ""
+"Обратите внимание, что для того чтобы вернуться к изначальному списку "
+"ассетов видеотеки, следует нажать кнопку **Вернуться к списку**, которая "
+"расположена над списком."
+msgstr ""
+"Please note that in order to return to the original list of assets video "
+"library, click **back to list**, which is located above the list."
+
+#: ../../source/service_configuration.rst:699
+msgid "3.2.7.6. Радиостанции"
+msgstr "3.2.7.6. Radio"
+
+#: ../../source/service_configuration.rst:701
+msgid "В этом разделе осуществляется редактирование списка радиостанций."
+msgstr "In this section you can edit the list of radio stations."
+
+#: ../../source/service_configuration.rst:706
+msgid "3.2.7.7. Рекламные ролики"
+msgstr "3.2.7.7. Commercials"
+
+#: ../../source/service_configuration.rst:708
+msgid ""
+"В этом разделе добавляются рекламные ролики, которые затем могут быть "
+"сформированы в *Рекламные блоки* (см. далее)."
+msgstr ""
+"Use this section to add commercials, which can then be formed in *Ad units* "
+"(see below)."
+
+#: ../../source/service_configuration.rst:712
+msgid ""
+"Поддержка данного функционала возможна не на всех устройствах и её "
+"реализация зависит от абонентского приложения."
+msgstr ""
+"Support for this functionality is not available in all devices and it is "
+"dependent on the subscription application."
+
+#: ../../source/service_configuration.rst:718
+msgid "3.2.7.8. Рекламные блоки"
+msgstr "3.2.7.8. Ad units"
+
+#: ../../source/service_configuration.rst:720
+msgid ""
+"В этом разделе добавляются рекламные блоки, состоящие из последовательности "
+"роликов."
+msgstr ""
+"In this section, you will add ad units, consisting of a sequence of rollers."
+
+#: ../../source/service_configuration.rst:725
+msgid "3.2.7.9. Каталог приложений"
+msgstr "3.2.7.9. The application directory"
+
+#: ../../source/service_configuration.rst:727
+msgid ""
+"В данном разделе производится управление каталогом внешних приложений, "
+"доступных на абонентском устройстве в портале, кроме основного сервиса IPTV."
+" Внешним приложение может быть, например, плеер Youtube, онлайн-чат, служба "
+"прогноза погоды или пробок, игры и другие сервисы. Приложение представляет "
+"собой Web-страницу на Javascript."
+msgstr ""
+"In this section you can manage the directory of the external applications "
+"available to the subscriber device to the portal, in addition to the basic "
+"IPTV service. An external application can be, for example, Youtube player, "
+"online chat, weather forecast or traffic, games and other services. The "
+"application is a Web-page using Javascript."
+
+#: ../../source/service_configuration.rst:733
+msgid ""
+"При разработке собственного внешнего приложения будет полезна документация "
+"разработчика по движку абонентского портала Justify, которая доступна по "
+"адресу: http://mi-justify-dev-docs.readthedocs.io/"
+msgstr ""
+"When you develop your own external application will be useful for developer "
+"documentation according to the engine subscriber portal Justify, which is "
+"available at: http://mi-justify-dev-docs.readthedocs.io/"
+
+#: ../../source/service_configuration.rst:740
+msgid "3.2.8. Раздел: Абоненты"
+msgstr "3.2.8. Section: Subscribers"
+
+#: ../../source/service_configuration.rst:745
+msgid "3.2.8.1. Абоненты"
+msgstr "3.2.8.1. Subscribers"
+
+#: ../../source/service_configuration.rst:747
+msgid ""
+"В данном разделе производится заведение абонентов. В списке абонентов есть "
+"три специальные колонки: *Аккаунты*, *Платежи* и *Сообщения* - они содержат "
+"ссылки на соответствующие связанные с абонентом разделы."
+msgstr ""
+"The section is the institution of the subscribers. In the list of "
+"subscribers there are three special columns: *Accounts*, *Payments,* and "
+"*Messages* - they contain references to the relevant associated with the "
+"subscriber sections."
+
+#: ../../source/service_configuration.rst:750
+msgid ""
+"При нажатии на имя абонента открывается карточка абонента и страница "
+"редактирования его параметров."
+msgstr ""
+"When you click on the name of the subscriber opens the customer page and "
+"edit its settings."
+
+#: ../../source/service_configuration.rst:755
+msgid "3.2.8.2. Аккаунты"
+msgstr "3.2.8.2. Accounts"
+
+#: ../../source/service_configuration.rst:757
+msgid ""
+"В этом разделе производится заведение аккаунтов абонентов. При нажатии на "
+"номер аккаунта открывается карточка аккаунта, где также доступно "
+"редактирование его параметров."
+msgstr ""
+"This section is the establishment of the subscribers ' accounts. When you "
+"click on the account number open a card account, where you can also edit its"
+" parameters."
+
+#: ../../source/service_configuration.rst:763
+msgid "3.2.8.3. Устройства"
+msgstr "3.2.8.3. The device"
+
+#: ../../source/service_configuration.rst:765
+msgid ""
+"В этом разделе отображается список зарегистрированных устройств абонентов. "
+"Информация об устройствах добавляется в систему автоматически, при первом "
+"подключении абонента, но также допускается и ручное добавление устройств."
+msgstr ""
+"This section displays the list of registered devices of subscribers. "
+"Information about the devices added to the system automatically on first "
+"connection of the subscriber, but also allowed manual addition of devices."
+
+#: ../../source/service_configuration.rst:771
+msgid "3.2.8.4. Сообщения"
+msgstr "3.2.8.4. Messages"
+
+#: ../../source/service_configuration.rst:773
+msgid ""
+"В этом разделе можно создавать информационные рассылки на устройства "
+"абонентов. Такие сообщения могут быть добавлены как вручную из интерфейса "
+"личного кабинета, так и добавляются системой автоматически, например при "
+"поступлении платежа из личного кабинета, или подключении/отключении "
+"тарифного пакета, или при приближающейся дате окончания подписки."
+msgstr ""
+"In this section you can create a newsletter on subscriber devices. These "
+"messages can be added either manually from the dashboard interface and added"
+" automatically by the system, for example when you receive a payment from "
+"your personal account, or connecting/disconnecting the tariff package, or "
+"when approaching the end date of the subscription."
+
+#: ../../source/service_configuration.rst:778
+msgid ""
+"В большинстве абонентских приложений Microimpuls входящие сообщения "
+"реализованы как всплывающие окна."
+msgstr ""
+"In most subscriber applications Microimpuls incoming messages are "
+"implemented as pop-UPS."
+
+#: ../../source/service_configuration.rst:781
+msgid ""
+"Мобильные и нативные приложения могут не поддерживать HTML-форматирование."
+msgstr "Mobile and native applications may not support HTML formatting."
+
+#: ../../source/service_configuration.rst:786
+msgid "3.2.8.4.1. Массовая рассылка сообщений"
+msgstr "3.2.8.4.1. Bulk mail"
+
+#: ../../source/service_configuration.rst:788
+msgid ""
+"Инструмент **Массовая рассылка** позволяет сформировать рассылку сообщений "
+"группе абонентов, которую можно выбрать по нескольким критериям:"
+msgstr ""
+"Tool **Mass mailing** allows you to create messaging groups, which can be "
+"chosen according to several criteria:"
+
+#: ../../source/service_configuration.rst:791
+msgid ""
+"Период последней активности аккаунтов - позволяет выбрать абонентов, которые"
+" использовали сервис в определенный период."
+msgstr ""
+"The last activity accounts - allows you to select subscribers who used the "
+"service in a given period."
+
+#: ../../source/service_configuration.rst:793
+msgid ""
+"Тарифные пакеты - позволяет выбрать тарифные пакеты, в этом случае в выборку"
+" попадут абоненты, которым подключены выбранные тарифные пакеты."
+msgstr ""
+"Packages - allows you to select packages, in this case, the sample will get "
+"subscribers, which is connected to the selected tariff packages."
+
+#: ../../source/service_configuration.rst:796
+msgid ""
+"При использовании массовой рассылки в теме и тексте сообщения можно "
+"использовать переменные, которые будут автоматически заменены на значения в "
+"момент создания сообщения: ``$firstname`` - имя абонента, ``$lastname`` - "
+"фамилия абонента."
+msgstr ""
+"When you use mass mailing in the subject and message text can contain "
+"variables that are automatically replaced by their value at the time of "
+"message creation: ``$firstname`` - the name of the person ``$lastname`` - the "
+"name of the subscriber."
+
+#: ../../source/service_configuration.rst:802
+msgid "3.2.8.5. Дилеры"
+msgstr "3.2.8.5. Dealers"
+
+#: ../../source/service_configuration.rst:804
+msgid ""
+"Дилеры — это партнеры, которые могут предоставлять услуги и "
+"взаимодействовать с абонентами от имени оператора. В этом разделе "
+"указывается информация о дилерах, набор полей и структура раздела схожа со "
+"страницей :ref:`Абоненты <smarty-admin-guide-customers-customers>`."
+msgstr ""
+"Dealers are the partners who can provide services and interact with "
+"subscribers on behalf of the operator. In this section you enter information"
+" about the dealers, a set of fields and the structure of the section is "
+"similar to the page :ref:`Subscribers <smarty-admin-guide-customers-"
+"customers>`."
+
+#: ../../source/service_configuration.rst:808
+msgid ""
+"Отдельно стоить обратить внимание на поля *Имя пользователя* и *Пароль* - "
+"эти данные нужны для создания учетной записи дилера в панели "
+"администрирования Smarty. Такая учетная запись имеет ограниченные права и не"
+" имеет доступа к некоторым возможностям, однако позволяет создавать "
+"абонентов и аккаунтов, таким образом подключая их к сервису."
+msgstr ""
+"Separately to cost to pay attention to the field *username* and *Password* -"
+" these data are needed to create an account, dealer in admin panel Smarty. "
+"This account has limited privileges and does not have access to some "
+"features, but allows you to create users and accounts, thus connecting them "
+"to the service."
+
+#: ../../source/service_configuration.rst:812
+msgid "Созданные абоненты и аккаунты автоматически привязываются к дилеру."
+msgstr "Created the subscriber accounts are automatically linked to dealer."
+
+#: ../../source/service_configuration.rst:818
+msgid "3.3. Общие особенности работы с услугами и аккаунтами в Smarty"
+msgstr "3.3. General features of the services and accounts in Smarty"
+
+#: ../../source/service_configuration.rst:823
+msgid "3.3.1. Возможности тарификации"
+msgstr "3.3.1. Ability to rate"
+
+#: ../../source/service_configuration.rst:825
+msgid ""
+"Тарифный пакет представляет собой группу объединенных в него услуг, например"
+" телеканалов, интерактивных функций, фильмов и т.д."
+msgstr ""
+"The tariff package is a group of combined services such as television "
+"channels, interactive features, movies, etc."
+
+#: ../../source/service_configuration.rst:828
+msgid ""
+"Набор подключенных тарифных пакетов у абонента и аккаунта определяет набор "
+"доступных для него услуг, при этом возможно пересечение услуг в разных "
+"тарифных пакетах."
+msgstr ""
+"Enabled tariff package of the subscriber and account defines the set of "
+"available services, as well as the intersection of features at different "
+"pricing packages."
+
+#: ../../source/service_configuration.rst:831
+msgid ""
+"Тарифный пакет может не содержать ни одной услуг, однако обладать "
+"определенными опциями и разрешениями, в таком случае тарифный пакет "
+"считается тарифной опцией."
+msgstr ""
+"The tariff package may not contain any services, however, have certain "
+"options and permissions in this case the tariff package as a tariff option."
+
+#: ../../source/service_configuration.rst:837
+msgid "3.3.2. Типы тарифных пакетов"
+msgstr "3.3.2. Types of tariff packages"
+
+#: ../../source/service_configuration.rst:839
+msgid ""
+"Помесячная оплата - тарифный пакет рассчитывается биллингом в рамках "
+"ежемесячной подписки."
+msgstr ""
+"Monthly payment for tariff package is calculated by billing the monthly "
+"subscription."
+
+#: ../../source/service_configuration.rst:841
+msgid "Ежегодная оплата - во встроенном биллинге не реализовано."
+msgstr "Annual payment - in the built-in billing is not implemented."
+
+#: ../../source/service_configuration.rst:843
+msgid ""
+"Скрытый - тарифный пакет не участвует в расчетах и невидим для абонента."
+msgstr ""
+"Hidden - tariff package is not involved in the calculations and invisible to"
+" the subscriber."
+
+#: ../../source/service_configuration.rst:848
+msgid "3.3.3. Мультиабонемент"
+msgstr "3.3.3. Multielement"
+
+#: ../../source/service_configuration.rst:850
+msgid ""
+"Мультиабонемент - это возможность использовать единый аккаунт на нескольких "
+"устройствах. Smarty позволяет гибко настроить возможности мультиабонемента "
+"для разного типа устройств - базовых (например, Multicast-устройства) и "
+"дополнительных (например, Unicast-устройства). Тип устройства (базовое или "
+"дополнительное) задается произвольно каждым оператором в настройках "
+"устройств в панели администратора (раздел \"Общие настройки\")."
+msgstr ""
+"Multiapartment is the ability to use a single account on multiple devices. "
+"Smarty allows you to flexibly configure the possibility of multielement for "
+"different types of devices - basic (e.g., Multicast device) and additional "
+"(e.g., Unicast) device. Device type (basic or advanced) is specified "
+"arbitrarily by each operator in the device settings in the administrator "
+"panel (see section \"General settings\")."
+
+#: ../../source/service_configuration.rst:855
+msgid ""
+"Ограничения мультиабонемента настраиваются в параметрах тарифного пакета. "
+"Если у абонента/аккаунта подключено несколько тарифных пакетов, то "
+"соответствующее ограничение определяется как максимальное значение из всех "
+"подключенных пакетов."
+msgstr ""
+"Restrictions multielement configured in the tariff package. If the "
+"subscriber/account is connected to a number of tariff packages, the "
+"limitation is defined as the maximum value of all attached packages."
+
+#: ../../source/service_configuration.rst:859
+msgid ""
+"*Максимальное количество базовых устройств* - это ограничение действует на "
+"максимальное количество привязанных к аккаунту базовых устройств, имеющих "
+"сессию авторизации в Smarty (не обязательно online). На запрос авторизации с"
+" базового устройства сверх лимита сервером будет возвращен запрет "
+"авторизации (код 5)."
+msgstr ""
+"*The maximum number of base devices* - this is a limitation on the maximum "
+"number tied to the account of the basic devices with session authorization "
+"in Smarty (not necessarily online). The authorization request from the base "
+"device over the limit the server will return a deny authorization (code 5)."
+
+#: ../../source/service_configuration.rst:863
+msgid ""
+"*Максимальное количество одновременных сессий дополнительных устройств* - "
+"это ограничение работает по принципу \"карусели\" и действует на количество "
+"одновременных (online) сессий аккаунта с дополнительных устройств. "
+"Авторизация с дополнительного устройства сверх лимита разрешена, однако в "
+"этом случае самая старая сессия аккаунта будет деавторизована."
+msgstr ""
+"*The maximum number of concurrent sessions to more devices* - this limit "
+"works on the principle of \"carousel\" and is valid for concurrent (online) "
+"sessions of the account with additional devices. Authorization of additional"
+" devices in excess of the limit allowed, but in this case, the oldest "
+"session will be deauthorizing account."
+
+#: ../../source/service_configuration.rst:868
+msgid ""
+"Дополнительно существует возможность включить проверку на IP-адрес, с "
+"которых авторизованы одновременно используемые дополнительные устройства. "
+"Если проверка включена, то при авторизации нового дополнительного устройства"
+" с другого IP-адреса, все устройства с предыдущего IP-адреса будут "
+"деавторизованы."
+msgstr ""
+"Additionally, it is possible to include checking the IP address from which "
+"logged in at the same time used by the secondary device. If validation is "
+"enabled, the authorization of a new additional device with a different IP "
+"address, all devices with the previous IP address will be deauthorize."
+
+#: ../../source/service_configuration.rst:876
+msgid "3.3.4. Признак базового тарифа"
+msgstr "3.3.4. The characteristic of the base fare"
+
+#: ../../source/service_configuration.rst:878
+msgid ""
+"Поле *\"Признак базового тарифа\"* означает принадлежность тарифа к Базовому"
+" и его вес среди них. Например, может быть создано несколько базовых "
+"тарифов, при этом тариф с наибольшим приоритетом будет устанавливаться "
+"абонентам по умолчанию."
+msgstr ""
+"The *\"Sign of the base fare\"* refers to the Base rate and weight among "
+"them. For example, you can create several base rates, the tariff with the "
+"highest priority will be set to subscribers by default."
+
+#: ../../source/service_configuration.rst:881
+msgid ""
+"Абонент может выбрать только один из базовых тарифов при регистрации и в "
+"личном кабинете."
+msgstr ""
+"The subscriber can choose only one of the base rates when you register in "
+"the personal Cabinet."
+
+#: ../../source/service_configuration.rst:883
+msgid ""
+"Тариф, не являющийся базовым, считается дополнительным. Дополнительные "
+"тарифы могут быть подключены только дополнительно к одному из базовых, и не "
+"могут быть подключены отдельно от него."
+msgstr ""
+"Rate, which is not the parent, is considered an extra. Additional rates may "
+"only be connected optionally to one of the base and can not be connected "
+"separately."
+
+#: ../../source/service_configuration.rst:889
+msgid "3.3.5. Доступность тарифа для неактивных аккаунтов"
+msgstr "3.3.5. The availability rate for inactive accounts"
+
+#: ../../source/service_configuration.rst:891
+msgid ""
+"Специальная опция тарифа *\"доступен для неактивных аккаунтов\"* позволяет "
+"создать тарифные пакеты с набором бесплатных услуг, доступных абонентам, "
+"которые были отключены по причине неоплаты, или другой причине."
+msgstr ""
+"A special option rate *\"available for inactive account\"* allows you to "
+"create packages with a set of free services available to subscribers who "
+"have been disconnected due to non-payment or other reason."
+
+#: ../../source/service_configuration.rst:894
+msgid ""
+"Таким образом, можно создать набор телеканалов или дополнительных сервисов, "
+"которые будут доступны неактивным абонентам."
+msgstr ""
+"Thus, it is possible to create a set of channels or additional services that"
+" will be available to inactive subscribers."
+
+#: ../../source/service_configuration.rst:896
+msgid ""
+"Для аккаунтов, у абонентов которых есть подключенные тарифные пакеты с такой"
+" опцией, разрешается авторизация в системе даже будучи неактивными, однако "
+"им выдается ограниченный данными тарифными пакетами набор услуг."
+msgstr ""
+"For accounts that have subscribers which are connected tariff packages with "
+"this option, be authorized by the system even when inactive, but they are "
+"given a limited data tariff packages the set of services."
+
+#: ../../source/service_configuration.rst:899
+msgid ""
+"Это может быть использовано, например, для бесплатной трансляции каналов 1 и"
+" 2 мультиплекса."
+msgstr ""
+"This can be used, for example, free broadcast channels 1 and 2 of multiplex."
+
+#: ../../source/service_configuration.rst:905
+msgid "3.4. Выбор модели работы с внешней или встроенной биллинговой системой"
+msgstr ""
+"3.4. The choice of model work with an external or built-in billing system"
+
+#: ../../source/service_configuration.rst:908
+msgid "3.4.1. Описание режимов работы биллинга"
+msgstr "3.4.1. Description of the modes of billing"
+
+#: ../../source/service_configuration.rst:913
+msgid ""
+"3.4.1.A. Встроенный биллинг по датам активации и деактивации (предоплатная "
+"модель)"
+msgstr ""
+"3.4.1.A. Built-in billing for dates of activation and deactivation (prepaid "
+"model)"
+
+#: ../../source/service_configuration.rst:915
+msgid ""
+"Для каждого аккаунта может быть задана дата активации и дата деактивации. "
+"Когда наступает дата активации аккаунт автоматически активируется и может "
+"быть авторизован в системе и получить доступ к просмотру. Когда наступает "
+"дата деактивации, аккаунт деактивируется. Биллинг самостоятельно не "
+"устанавливает эти даты, поэтому такой вариант биллинга является ручным или "
+"полуавтоматическим."
+msgstr ""
+"Each account can be specified activation date and deactivation date. When is"
+" the activation date, the account is automatically enabled and can be logged"
+" in the system and to access the view. When is the date of deactivation, the"
+" account will be deactivated. Billing alone does not set these dates, so "
+"this option billing is manual or semi-automatic."
+
+#: ../../source/service_configuration.rst:920
+msgid "Варианты использования:"
+msgstr "Use cases:"
+
+#: ../../source/service_configuration.rst:922
+msgid "Даты устанавливаются администратором / оператором абонентского отдела"
+msgstr ""
+"Dates are set by the administrator / operator of subscriber Department"
+
+#: ../../source/service_configuration.rst:923
+msgid ""
+"Даты устанавливаются внешней биллинговой системой через :ref:`Billing API "
+"<billing-api>`"
+msgstr ""
+"Date installed external billing system via :ref:`API Billing <billing-api>`"
+
+#: ../../source/service_configuration.rst:924
+msgid ""
+"Для предоставления первичного доступа к сервису после регистрации, или "
+"раздачи тестовых аккаунтов. В таком случае используется специальное поле "
+"*\"количество дней активации\"*, которое предустанавливается для нового "
+"аккаунта. Если это поле задано, то после первой авторизации такого аккаунта "
+"(разрешается авторизоваться неактивным аккаунтом) он сразу активируется, при"
+" этом устанавливается дата активации (текущая дата) и дата деактивации (дата"
+" активации + число дней тестового доступа). Затем по наступлении даты "
+"деактивации аккаунт отключается, как описано выше."
+msgstr ""
+"To provide primary access to the service after registration, or the "
+"distribution of test accounts. In this case, a special field *\"number of "
+"days of activation\"*, which is pre-assigned to a new account. If this field"
+" is set, then after the first login of this account (allowed to login with "
+"an inactive account) it is immediately activated, with the set activation "
+"date (the current date) and deactivation date (activation date + number of "
+"days of test access). Then, on the date of deactivation, the account is "
+"disabled, as described above."
+
+#: ../../source/service_configuration.rst:933
+msgid "3.4.1.B. Встроенный биллинг: автоматический (предоплатная модель)"
+msgstr "3.4.1.B. Built-in billing: automatic (prepaid model)"
+
+#: ../../source/service_configuration.rst:935
+msgid ""
+"Ежемесячная подписка. Логика работы повторяет режим I, кроме следующих "
+"исключений: а) в момент наступления даты деактивации происходит попытка "
+"списания средств и продления аккаунта, а также устанавливается дата "
+"продления, равная текущей дате; б) если наступает дата, равная дате "
+"последнего продления + календарный месяц, то происходит попытка списания "
+"средств и продления аккаунта."
+msgstr ""
+"A monthly subscription. The logic of operation follows the mode I with the "
+"following exceptions: a) at the time of the date of the deactivation attempt"
+" is made debiting and the account of extension, and also set the renewal "
+"date, equal to the current date; b) if the date equal to the date of the "
+"last renewal + a calendar month, then the attempt to charge and extend the "
+"account."
+
+#: ../../source/service_configuration.rst:939
+msgid ""
+"Ежегодная подписка - не реализовано во встроенном биллинге, требуется "
+"использование внешнего биллинга."
+msgstr ""
+"The annual subscription is not implemented in the built-in billing system, "
+"requires the use of external billing."
+
+#: ../../source/service_configuration.rst:940
+msgid ""
+"Другое (система скидок, платежи за несколько месяцев) - не реализовано во "
+"встроенном биллинге, требуется использование внешнего биллинга."
+msgstr ""
+"A different (system of discounts, payments over a few months) is not "
+"implemented in the built-in billing system, requires the use of external "
+"billing."
+
+#: ../../source/service_configuration.rst:945
+msgid "3.4.1.B.1. Механизм списания средств и продления"
+msgstr "3.4.1.B.1. The mechanism of the charge and renewal"
+
+#: ../../source/service_configuration.rst:947
+msgid ""
+"Если на счете абонента есть необходимая сумма денег для оплаты всех "
+"подключенных тарифных пакетов и опций на очередной месяц, то происходит "
+"списание этих средств и аккаунт не деактивируется. Устанавливается дата "
+"продления, равная текущей дате (необходима для расчета следующего списания)."
+msgstr ""
+"If the subscriber account has the required amount of money to pay for all "
+"tariff packages and options for the next month, the writing off of these "
+"funds and the account is not deactivated. Set the renewal date, equal to the"
+" current date (needed to calculate the following cancellation)."
+
+#: ../../source/service_configuration.rst:951
+msgid ""
+"Если средств недостаточно, то аккаунт деактивируется. В момент списания "
+"средств создается транзакция с отрицательной суммой операции."
+msgstr ""
+"If funds are insufficient, the account will be deactivated. At the time of "
+"the debit transaction is created with a negative amount."
+
+#: ../../source/service_configuration.rst:957
+msgid "3.4.1.B.2. Механизм оплаты"
+msgstr "3.4.1.B.2. The payment mechanism"
+
+#: ../../source/service_configuration.rst:959
+msgid ""
+"Оплата возможна через ручное создание транзакции в биллинге, через внешний "
+"биллинг, через оплату в личном кабинете (оплата разными способами через шлюз"
+" WalletOne, оплата кредитной картой, Paypal). После подтверждения транзакции"
+" если аккаунт абонента неактивен, то происходит попытка списания средств и "
+"продления аккаунта, а если он активен - то простое зачисления средств на "
+"личный счет в системе. В момент оплаты создается транзакция с положительной "
+"суммой операции."
+msgstr ""
+"Payment can be done through the manual creation of transactions in the "
+"billing system, via an external billing through payment in personal account "
+"(payment in different ways through the gateway WalletOne, credit card "
+"payment, Paypal). After the transaction if the account subscriber is "
+"inactive, it tries to charge and extend the account, and if it is active it "
+"is a simple transfer of funds to the personal account in the system. At the "
+"time of payment creates a transaction with a positive amount."
+
+#: ../../source/service_configuration.rst:968
+msgid "3.4.1.C. Встроенный биллинг отключен, использование внешнего биллинга"
+msgstr "3.4.1.C. Built-in billing is disabled, use external billing"
+
+#: ../../source/service_configuration.rst:970
+msgid ""
+"Если не установлена ни дата активации, ни дата деактивации, ни дата "
+"продления (не используется ни режим A, ни B), то биллинг для аккаунта "
+"считается отключенным. Такой аккаунт может быть постоянно активированным, "
+"или управляться внешней биллинговой системой без задействования встроенного "
+"биллинга. См. :ref:`Варианты взаимодействия с внешней биллинговой системой "
+"<billing-integration-scenarios>`."
+msgstr ""
+"If set to no activation date or deactivation date or the renewal date (do "
+"not use either the mode A or B) that billing account is disabled. This "
+"account can be permanently activated, or managed by external billing system "
+"without requiring in-app billing. Cm. :ref:`Options for interaction with "
+"external billing <billing-integration-scenarios>`."

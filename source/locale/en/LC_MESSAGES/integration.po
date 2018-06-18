@@ -1,0 +1,959 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Microimpuls LLC, www.microimpuls.com
+# This file is distributed under the same license as the Smarty package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Smarty Last\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 17:53+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/integration.rst:5
+msgid "5. Интеграция Smarty с внешними системами и сервисами"
+msgstr "5. Smarty integration with external systems and services"
+
+#: ../../source/integration.rst:10
+msgid "5.1. Взаимодействие с абонентскими устройствами"
+msgstr "5.1. Interact with customer devices"
+
+#: ../../source/integration.rst:12
+msgid ""
+"`Документация по TVMiddleware API <https://microimpuls.github.io/smarty-"
+"tvmw-api-docs>`_"
+msgstr ""
+"`Documentation TVMiddleware API <https://microimpuls.github.io/smarty-tvmw-"
+"api-docs>`_"
+
+#: ../../source/integration.rst:17
+msgid "5.2. Интеграция с биллингом"
+msgstr "5.2. Integration with billing"
+
+#: ../../source/integration.rst:19
+msgid ""
+"`Документация по Billing API <https://microimpuls.github.io/smarty-billing-"
+"api-docs>`_"
+msgstr ""
+"`Documentation for Billing API <https://microimpuls.github.io/smarty-"
+"billing-api-docs>`_"
+
+#: ../../source/integration.rst:24
+msgid "5.2.1. Примеры кода"
+msgstr "5.2.1. Code examples"
+
+#: ../../source/integration.rst:26
+msgid ""
+"Библиотека на Python, реализующая Billing API: "
+"https://github.com/microimpuls/smarty-billing-api-python"
+msgstr ""
+"A library in Python that implements a Billing API: "
+"https://github.com/microimpuls/smarty-billing-api-python"
+
+#: ../../source/integration.rst:28
+msgid ""
+"Скрипт интеграции с биллингом `Гидра <http://www.hydra-billing.ru/>`_: "
+"https://github.com/microimpuls/admin-tools/tree/master/hydra_billing_script"
+msgstr ""
+"Script integration with billing `gidra <http://www.hydra-billing.ru/>`_: "
+"https://github.com/microimpuls/admin-tools/tree/master/hydra_billing_script"
+
+#: ../../source/integration.rst:33
+msgid ""
+"Смотрите также другие :ref:`дополнительные инструменты <tools-and-scripts>`"
+msgstr "See also other :ref:`additional tools: <tools-and-scripts>`"
+
+#: ../../source/integration.rst:38
+msgid "5.2.2. Основные варианты взаимодействия с биллинговой системой"
+msgstr "5.2.2. The basic options for interaction with billing system"
+
+#: ../../source/integration.rst:40
+msgid ""
+"Существует три варианта взаимодействия внешней биллинговой системы с "
+"сервером smarty:"
+msgstr ""
+"There are three options of interaction the external billing system server "
+"smarty:"
+
+#: ../../source/integration.rst:42
+msgid ""
+"Полный - встроенный биллинг не используется, управлением подписок полностью "
+"управляет внешний биллинг."
+msgstr ""
+"Fully - integrated billing is not used, the management of subscriptions is "
+"fully controlled by an external billing."
+
+#: ../../source/integration.rst:43
+msgid ""
+"Транзакционный - внешний биллинг создает финансовые транзакции в smarty, "
+"управлением подписок занимается встроенный биллинг."
+msgstr ""
+"Transactional - external billing creates financial transactions in smarty, "
+"management of subscriptions is engaged in integrated billing."
+
+#: ../../source/integration.rst:44
+msgid ""
+"Сокращенный - используется какая-либо часть функций из полного варианта."
+msgstr "Abridged - used of any of the functions from the full version."
+
+#: ../../source/integration.rst:46
+msgid ""
+"Также возможно использование только встроенного биллинга - см. "
+":ref:`Встроенный биллинг <builtin-billing>`."
+msgstr ""
+"Also you can only use the in-app billing - see :ref:`Built-in billing "
+"<builtin-billing>`."
+
+#: ../../source/integration.rst:51
+msgid "5.2.3. Полный вариант взаимодействия"
+msgstr "5.2.3. Full connectivity option"
+
+#: ../../source/integration.rst:53
+msgid ""
+"В полном варианте всё управление абонентами и их подписками осуществляется "
+"через интерфейс внешней биллинговой системы, а произведенные операции "
+"синхронизируются с smarty путем отправки команд через :ref:`Billing API "
+"<billing-api>`."
+msgstr ""
+"In the full version all manage subscribers and their subscriptions through "
+"the interface to external billing system, and the operations are "
+"synchronized with smarty by sending commands via :ref:`API Billing <billing-"
+"api>`."
+
+#: ../../source/integration.rst:56
+msgid ""
+"Биллинг осуществляет списание/начисление средств исходя из информации, "
+"предоставляемой системой предоставления услуг о приобретении/потреблении той"
+" или иной услуги, а также осуществляет периодические операции над счетами, "
+"такие как списание абонентской платы и т.п."
+msgstr ""
+"Billing shall debit/crediting of funds on the basis of information provided "
+"by the service providing system of acquisition/consumption of a service and "
+"performs periodic operations on the accounts such as debiting of a "
+"subscription fee, etc."
+
+#: ../../source/integration.rst:60
+msgid ""
+"Список тарифных пакетов формируется на стороне smarty и на стороне внешнего "
+"биллинга, производится соответствие идентификаторов тарифных пакетов в "
+"скрипте интеграции."
+msgstr ""
+"The list of tariff packages is formed on the side of the smarty and on the "
+"side of the external billing system, is produced according to the "
+"identifiers of tariff packages in the script integration."
+
+#: ../../source/integration.rst:63
+msgid ""
+"Формирование ценообразования пакетов и услуг происходит на стороне внешнего "
+"биллинга."
+msgstr ""
+"The formation of pricing packages and services occurs on the side of the "
+"external billing."
+
+#: ../../source/integration.rst:65
+msgid ""
+"Подробная информация об абонентах хранится во внешнем биллинге, в smarty "
+"достаточно хранить только лицевые счета и услуги."
+msgstr ""
+"Detailed information about subscribers is stored in an external billing "
+"system, smarty is sufficient to keep only personal accounts and services."
+
+#: ../../source/integration.rst:67
+msgid ""
+"Для целей ведения внутреннего учета на стороне smarty внешний биллинг может "
+"создавать транзакции в smarty."
+msgstr ""
+"For the purposes of internal record keeping. on the side of the smarty "
+"external billing can create transactions in smarty."
+
+#: ../../source/integration.rst:69
+msgid ""
+"Для авторизации абонентских устройств может использоваться пара абонемент-"
+"пароль, только абонемент, или только UID устройства (например, MAC-адрес). В"
+" качестве абонемента может выступать лицевой счет."
+msgstr ""
+"For authorization of subscriber devices can be used a couple of "
+"subscription-password subscription only, or only the UID of the device "
+"(e.g., MAC address). As a subscription can be a personal account."
+
+#: ../../source/integration.rst:75
+msgid "5.2.3.1. Сценарии взаимодействия при полном варианте"
+msgstr "5.2.3.1. Scenarios of interaction with the full version"
+
+#: ../../source/integration.rst:79
+msgid ""
+"При реализации полного варианта взаимодействия реализуются все отображенные "
+"на рисунке команды от биллинговой системы к smarty, кроме команд с "
+"пунктирной стрелкой (они могут быть реализованы по усмотрению)."
+msgstr ""
+"When implemented with interaction implemented all displayed on the drawing "
+"command from the billing system to smarty, except for teams with a dashed "
+"line (they can be implemented at the discretion)."
+
+#: ../../source/integration.rst:82
+msgid ""
+"Кроме того smarty может дополнительно запрашивать у внешнего биллинга "
+"информацию о детализации платежей, начислений, списке подключенных услуг и "
+"их стоимостей, а также проводить обещанный платеж. Эти дополнительные "
+"возможности могут быть реализованы в интерфейсе абонента по усмотрению."
+msgstr ""
+"In addition smarty can be obtained from external billing information on the "
+"detail of the payments, accruals, the list of connected services and their "
+"costs, as well as to carry out the promised payment. These additional "
+"features can be implemented in the interface of the subscriber's discretion."
+
+#: ../../source/integration.rst:86
+msgid ""
+"При наличии технической возможности абоненту можно также предоставить "
+"возможность проводить оплату сервиса с помощью кредитной карты из "
+"абонентского интерфейса на своем устройстве."
+msgstr ""
+"If technically possible, the subscriber can also provide the ability to pay "
+"for service using credit card from the customer interface on your device."
+
+#: ../../source/integration.rst:92
+msgid "5.2.4. Транзакционный вариант взаимодействия"
+msgstr "5.2.4. Transactional experience"
+
+#: ../../source/integration.rst:94
+msgid ""
+"В транзакционном варианте управление абонентами и их подписками "
+"осуществляется встроенным биллингом smarty."
+msgstr ""
+"In the transactional version management of subscribers and their "
+"subscription billing built-in smarty."
+
+#: ../../source/integration.rst:96
+msgid ""
+"Встроенный биллинг осуществляет списание/начисление средств исходя из команд"
+" на создание/удаление транзакций из внешнего биллинга, панели "
+"администратора, или при ежемесячном автоматическом списании средств с "
+"виртуального счета, а также пополнения через встроенные средства оплаты."
+msgstr ""
+"Built-in billing carries out the withdrawal/crediting of funds on the basis "
+"of the commands for creating/deleting transactions from external billing, "
+"admin panel, or with a monthly automatic debit from the virtual account and "
+"recharge through built in means of payment."
+
+#: ../../source/integration.rst:100
+msgid ""
+"Формирование тарифных пакетов и их ценообразования происходит на стороне "
+"smarty."
+msgstr ""
+"The formation of tariff packages and their pricing occurs on the side of "
+"smarty."
+
+#: ../../source/integration.rst:102
+msgid "Подробная информация об абонентах хранится на стороне smarty."
+msgstr ""
+"Detailed information about subscribers is stored on the side of smarty."
+
+#: ../../source/integration.rst:107
+msgid "5.3. Встраивание модулей в сайт"
+msgstr "5.3. Embedding modules in the website"
+
+#: ../../source/integration.rst:109
+msgid ""
+"Интеграция модулей сервиса IPTV в сайт осуществляется через вызов "
+"Javascript-кода, который запрашивает с сервера API содержимое виджета и "
+"отображает его на сайте."
+msgstr ""
+"The integration of the modules of the IPTV service to the site is via a call"
+" to Javascript code that requests the server API the widget contents and "
+"displays it on the website."
+
+#: ../../source/integration.rst:113
+msgid "5.3.1. Типы виджетов"
+msgstr "5.3.1. Types of widgets"
+
+#: ../../source/integration.rst:115
+msgid ""
+"Список телеканалов - отображает список телеканалов, сгрупированный по "
+"тарифным планам клиента."
+msgstr ""
+"The channel list displays list of channels, sgruppirovany the tariff plans "
+"of the customer."
+
+#: ../../source/integration.rst:116
+msgid ""
+"Страница регистрации - форма регистрации для абонента. После регистрации "
+"автоматически создается первый аккаунт абонента."
+msgstr ""
+"Registration page - a registration form for the subscriber. After the "
+"registration is automatically created the first account of the subscriber."
+
+#: ../../source/integration.rst:117
+msgid ""
+"Личный кабинет абонента - в личном кабинете абонента доступно создание новых"
+" аккаунтов, редактирование профиля, подключение тарифных планов. Доступ "
+"осуществляется по абонементу и паролю любого из аккаунтов абонента."
+msgstr ""
+"The subscriber's personal account in the personal Cabinet of subscriber, you"
+" can create new accounts, edit profile, connection, tariff plans. Access is "
+"by subscription and the password of any accounts of the subscribers."
+
+#: ../../source/integration.rst:118
+msgid "Телепрограмма - отображает программу передач для каналов клиента."
+msgstr "TV guide - displays the program guide for channels of the client."
+
+#: ../../source/integration.rst:119
+msgid "Платежная форма. Список поддерживаемых аргументов см. ниже."
+msgstr "Payment form. The list of supported parameters, see below."
+
+#: ../../source/integration.rst:121
+msgid ""
+"Параметры виджета платежной формы (передаются как GET-параметры "
+"дополнительно к основным):"
+msgstr ""
+"The widget options the payment form (passed as GET parameters in addition to"
+" the main):"
+
+#: ../../source/integration.rst:124
+msgid "amount ``int``"
+msgstr "amount ``int``"
+
+#: ../../source/integration.rst:124
+msgid "Сумма платежа, игнорируется, если передан ``order_id``"
+msgstr "The payment amount is ignored if the passed - ``order_id``"
+
+#: ../../source/integration.rst:127
+msgid "client_id ``int``"
+msgstr "client_id ``int``"
+
+#: ../../source/integration.rst:127
+msgid "Client ID, игнорируется, если передан ``order_id``"
+msgstr "Client ID is ignored, if transmitted ``order_id``"
+
+#: ../../source/integration.rst:130
+msgid "order_id ``int``"
+msgstr "order_id ``int``"
+
+#: ../../source/integration.rst:130
+msgid ""
+"Ext ID транзакции, используется, чтобы провести оплату по ранее созданной "
+"транзакции через метод PaymentCreate."
+msgstr ""
+"Ext transaction ID used to pay the previously created transaction via the "
+"method PaymentCreate."
+
+#: ../../source/integration.rst:133
+msgid "payment_type ``str``"
+msgstr "payment_type ``str``"
+
+#: ../../source/integration.rst:133
+msgid "Тип платежного шлюза, возможные значения: ``w1``, ``arca``, ``paypal``."
+msgstr "The type of payment gateway possible values: ``w1``, ``arca``, ``paypal``."
+
+#: ../../source/integration.rst:137
+msgid ""
+"Client ID и метод PaymentCreate описаны в `TVMiddleware API "
+"<https://microimpuls.github.io/smarty-tvmw-api-docs>`_"
+msgstr ""
+"Client ID and PaymentCreate method described in the `TVMiddleware API "
+"<https://microimpuls.github.io/smarty-tvmw-api-docs>`_"
+
+#: ../../source/integration.rst:141
+msgid "5.3.2. Подключение виджета"
+msgstr "5.3.2. The connection widget"
+
+#: ../../source/integration.rst:143
+msgid "Для вставки виджета на сайт используйте следующий код: ::"
+msgstr "To insert a widget on the website use the following code: ::"
+
+#: ../../source/integration.rst:150
+msgid ""
+"Вместо ``ID`` необходимо указать идентификатор виджета. Содержимое виджета "
+"будет размещено внутри элемента с идентификатором, переданным в поле "
+"``container_id`` в качестве GET-параметра."
+msgstr ""
+"Instead ``ID`` you must specify the ID of the widget. The contents of the "
+"widget will be placed inside the element with ID transferred in the "
+"``container_id`` as a GET parameter."
+
+#: ../../source/integration.rst:154
+msgid "5.3.3. Решение проблем с работой виджетов в разных браузерах"
+msgstr "5.3.3. Solving problems with widgets in different browsers"
+
+#: ../../source/integration.rst:156
+msgid ""
+"Поскольку виджеты встраиваются в сайт через iframe с домена, отличного от "
+"домена сайта, то в некоторых браузерах при включенных настройках блокировки "
+"Cookies и данных с внешних ресурсов возможна некорректная работа виджетов."
+msgstr ""
+"Since widgets are built into the website via iframe from different domain "
+"than the domain of the site in some browsers, while the settings to block "
+"Cookies and data from external resources can not work correctly widgets."
+
+#: ../../source/integration.rst:160
+msgid ""
+"В этом случае для гарантированной работы виджетов рекомендуется подключать "
+"их через свой домен, используя HTTP-проксирование."
+msgstr ""
+"In this case, the guaranteed work is recommended to connect them through "
+"your domain using HTTP proxying."
+
+#: ../../source/integration.rst:162
+msgid "Ниже пример конфигурации для nginx: ::"
+msgstr "Below is an example configuration for nginx: ::"
+
+#: ../../source/integration.rst:177
+msgid ""
+"При такой настройке в коде подключения виджета вместо ``smarty.example.com`` "
+"укажите ваш домен."
+msgstr ""
+"With this setting in the code do instead ``smarty.example.com`` enter your "
+"domain."
+
+#: ../../source/integration.rst:183
+msgid "5.4. Интеграция с популярными видео-серверами"
+msgstr "5.4. Integration with popular video-servers"
+
+#: ../../source/integration.rst:188
+msgid "5.4.1. Интеграция с Astra"
+msgstr "5.4.1. Integration with Astra"
+
+#: ../../source/integration.rst:190
+msgid ""
+"Для интеграции механизма авторизации видеопотоков (стриминг-сервисов) с "
+"`Astra <http://cesbo.com>`_ используется механизм генерации одноразовых "
+"токенов для ссылок на поток на стороне сервера Smarty. Astra в момент "
+"разбора HTTP Request от абонентского устройства выделяет токен и проверяет "
+"его на сервере Smarty на валидность."
+msgstr ""
+"To integrate the authentication mechanism of video streams (streaming) with "
+"`Astra <http://cesbo.com>`_ is a mechanism for generating one-time tokens "
+"for the links to the stream on the server side Smarty. Astra at the time of "
+"parsing HTTP Request from the subscriber device selects a token and checks "
+"it on the server, the Smarty validity."
+
+#: ../../source/integration.rst:194
+msgid ""
+"Для генерации токена необходимо в маске URL стриминг-сервиса в Smarty "
+"добавить переменную ``$token`` в запрос, например: ::"
+msgstr ""
+"To generate the token, you need to mask the URL of the streaming service in "
+"to add Smarty variable ``$token`` in the query, for example: ::"
+
+#: ../../source/integration.rst:202
+msgid "Дополнительная информация:"
+msgstr "Additional information:"
+
+#: ../../source/integration.rst:204
+msgid ""
+"`StreamService API - метод проверки токена StreamServiceTokenCheck "
+"<https://microimpuls.github.io/smarty-tvmw-api-docs/#api-StreamService-"
+"StreamServiceTokenCheck>`_"
+msgstr ""
+"`StreamService API - method validation token StreamServiceTokenCheck "
+"<https://microimpuls.github.io/smarty-tvmw-api-docs/#api-StreamService-"
+"StreamServiceTokenCheck>`_"
+
+#: ../../source/integration.rst:205
+msgid ""
+":ref:`Настройка стриминг-сервисов <smarty-admin-guide-videostreaming-video-"
+"services>`"
+msgstr ""
+":ref:`setup streaming services <smarty-admin-guide-videostreaming-video-"
+"services>`"
+
+#: ../../source/integration.rst:210
+msgid "5.5. Интеграция с онлайн-кинотеатрами"
+msgstr "5.5. Integration with online cinemas"
+
+#: ../../source/integration.rst:215
+msgid "5.5.1. Интеграция с MEGOGO"
+msgstr "5.5.1. Integration with MEGOGO"
+
+#: ../../source/integration.rst:217
+msgid ""
+"Smarty содержит модуль для интеграции с онлайн-кинотеатром `MEGOGO "
+"<http://megogo.net>`_, который включает в себя следующий функционал:"
+msgstr ""
+"Smarty contains a module for integration with online cinema MEGOGO "
+"<http://megogo.net>`_, which includes the following functionality:"
+
+#: ../../source/integration.rst:220
+msgid ""
+"Синхронизация фильмов и сериалов MEGOGO со встроенной видеотекой Smarty "
+"(наименования, описание, жанры, обложки и т.д.)"
+msgstr ""
+"Sync movies MEGOGO with built-in video library Smarty (title, description, "
+"genre, cover, etc.)"
+
+#: ../../source/integration.rst:221 ../../source/integration.rst:291
+msgid "Модель подписки (SVOD)"
+msgstr "The subscription model (SVOD)"
+
+#: ../../source/integration.rst:222
+msgid "Модель покупки отдельных фильмов и сериалов (TVOD)"
+msgstr "The model of purchasing individual movies and series (TVOD)"
+
+#: ../../source/integration.rst:223 ../../source/integration.rst:292
+msgid ""
+"Все стандартные функции встроенной видеотеки Smarty (поиск, фильтрация, "
+"сортировка, группировка по жанрам и т.д.)"
+msgstr ""
+"All the standard functions built-in video library Smarty (search, filtering,"
+" sorting, grouping by genre, etc.)"
+
+#: ../../source/integration.rst:224 ../../source/integration.rst:293
+msgid ""
+"Прозрачная интеграция в стандартные приложения Microimpuls на разных "
+"устройствах - единый интерфейс просмотра ТВ и VOD и других сервисов, "
+"привычный для абонента"
+msgstr ""
+"Transparent integration in standard applications Microimpuls on different "
+"devices - a single interface for viewing live TV and VOD and other services "
+"familiar to the subscriber"
+
+#: ../../source/integration.rst:228
+msgid "5.5.1.1. Настройка модуля megogo"
+msgstr "5.5.1.1. Configuration of the module megogo"
+
+#: ../../source/integration.rst:230
+msgid ""
+"Для подключения интеграции с MEGOGO необходимо проделать следующие шаги:"
+msgstr "To connect integration MEGOGO need to do the following steps:"
+
+#: ../../source/integration.rst:232
+msgid ""
+"Подключить модуль **megogo** в конфигурации Smarty в секции INSTALLED_APPS, "
+"перезагрузить Smarty и выполнить миграцию данных."
+msgstr ""
+"Connect module **megogo** Smarty configuration in the section of "
+"INSTALLED_APPS, restart Smarty and migrate data."
+
+#: ../../source/integration.rst:233
+msgid ""
+"Создать скрытый тарифный пакет, который будет использоваться для возможности"
+" доступа абонентов к каталогу и покупке TVOD или подписке SVOD. Этот "
+"тарифный пакет будет автоматически включаться для всех импортированных "
+"фильмов для того, чтобы фильм был виден абоненту в каталоге."
+msgstr ""
+"Create a hidden tariff package that will be used for the access of "
+"subscribers to the catalog and purchase TVOD or SVOD subscription. This "
+"subscription package will automatically be enabled for all imported films in"
+" order to be visible in the directory."
+
+#: ../../source/integration.rst:235 ../../source/integration.rst:304
+msgid ""
+"Создать тарифный пакет, который будет использоваться для подписки на пакет "
+"фильмов. При покупке SVOD-подписки этот пакет будет подключаться абоненту в "
+"Smarty, а при отключении пакета - будет происходить отписка от пакета SVOD."
+msgstr ""
+"To create a tariff package that will be used for subscription movies. When "
+"buying SVOD-subscription this package will connect to the subscriber in "
+"Smarty, and if you disable the package will be unsubscribing from the SVOD "
+"package."
+
+#: ../../source/integration.rst:237 ../../source/integration.rst:306
+msgid ""
+"В панели администратора в разделе \"Общие настройки\" -> \"Интеграция с API "
+"внешних систем\" создать новую внешнюю систему:"
+msgstr ""
+"In the admin panel under \"General settings\" -> \"API Integration with "
+"external systems\" to create a new external system:"
+
+#: ../../source/integration.rst:238
+msgid "указать название (например, MEGOGO)"
+msgstr "specify the name (for example, MEGOGO)"
+
+#: ../../source/integration.rst:239
+msgid "выбрать из выпадающего списка класс API ``megogo_api_client``"
+msgstr "choose from the drop down list class API ``megogo_api_client``"
+
+#: ../../source/integration.rst:240
+msgid ""
+"выбрать тарифный пакет, созданный на втором шаге. Абоненты, у которых "
+"подключен данный тарифный пакет, будут видеть фильмы в видеотеке и иметь "
+"возможность их купить (по подписке или транзакционно, в зависимости от "
+"параметров фильма в MEGOGO)"
+msgstr ""
+"choose the tariff package that you created in the second step. Subscribers "
+"who have connected to this tariff package will see the videos and be able to"
+" buy them (on a subscription or transactional, depending on the settings of "
+"the film in MEGOGO)"
+
+#: ../../source/integration.rst:243 ../../source/integration.rst:311
+msgid "Указать дополнительные аттрибуты внешней системы:"
+msgstr "To specify additional attributes of the external system:"
+
+#: ../../source/integration.rst:244
+msgid ""
+"``xml_url`` - ссылка на XML-файл с каталогом фильмов MEGOGO. Для РФ: "
+"http://xml.megogo.net/assets/files/ru/all_mgg.xml"
+msgstr ""
+"``xml_url`` - link to XML file with the catalog of movies MEGOGO. For the "
+"Russian Federation: http://xml.megogo.net/assets/files/ru/all_mgg.xml"
+
+#: ../../source/integration.rst:245
+msgid ""
+"``mobile_private_key`` - закрытый ключ для мобильных устройств "
+"(предоставляется MEGOGO)"
+msgstr ""
+"``mobile_private_key`` - the private key for mobile devices (is provided by MEGOGO)"
+
+#: ../../source/integration.rst:246
+msgid ""
+"``mobile_public_key`` - открытый ключ для мобильных устройств (предоставляется"
+" MEGOGO)"
+msgstr ""
+"``mobile_public_key`` - the public key for mobile devices (is provided by MEGOGO)"
+
+#: ../../source/integration.rst:247
+msgid ""
+"``smart_tv_private_key`` - закрытый ключ для Smart TV (предоставляется MEGOGO)"
+msgstr ""
+"``smart_tv_private_key`` - the private key for Smart TV (is provided by MEGOGO)"
+
+#: ../../source/integration.rst:248
+msgid ""
+"``smart_tv_public_key`` - открытый ключ для Smart TV (предоставляется MEGOGO)"
+msgstr ""
+"``smart_tv_public_key`` - the public key for Smart TV (is provided by MEGOGO)"
+
+#: ../../source/integration.rst:249
+msgid "``stb_private_key`` - закрытый ключ для STB (предоставляется MEGOGO)"
+msgstr "``stb_private_key`` - the private key for STB (is provided by MEGOGO)"
+
+#: ../../source/integration.rst:250
+msgid "``stb_public_key`` - открытый ключ для STB (предоставляется MEGOGO)"
+msgstr "``stb_public_key`` - the public key for STB (is provided by MEGOGO)"
+
+#: ../../source/integration.rst:251
+msgid "``partner_id`` - идентификатор партнера (предоставляется MEGOGO)"
+msgstr "``partner_id`` - the partner ID (is provided by MEGOGO)"
+
+#: ../../source/integration.rst:252
+msgid ""
+"``salt`` - ключ, используемый для формирования запроса авторизации в биллинге "
+"(предоставляется MEGOGO)"
+msgstr ""
+"``salt`` - the key used to generate authorization request to billing "
+"(is provided by MEGOGO)"
+
+#: ../../source/integration.rst:253
+msgid ""
+"``svod_service_id`` - идентификаторы сервиса SVOD, используемый для оформления"
+" услуги пользователю (предоставляется MEGOGO)"
+msgstr ""
+"``svod_service_id`` - the identifiers of the SVOD service, which is used for "
+"processing of the service user (is provided by MEGOGO)"
+
+#: ../../source/integration.rst:254
+msgid ""
+"``available_tvod_collection_id`` - идентификатор коллекции для получения "
+"доступных TVOD-обьектов (предоставляется MEGOGO)"
+msgstr ""
+"``available_tvod_collection_id`` - the ID of the collection to get available "
+"TVOD-objects (is provided by MEGOGO)"
+
+#: ../../source/integration.rst:255
+msgid ""
+"``tariff_id`` - идентификатор тарифного пакета, созданного на 3 шаге, который "
+"будет подключен абоненту при активации подписки. Подключенность этого пакета"
+" означает наличие подписки на соответствующий пакет SVOD в MEGOGO. При "
+"отключении данного пакета у абонента/аккаунта в Smarty, будет автоматически "
+"вызван метод отписки от SVOD в MEGOGO."
+msgstr ""
+"``tariff_id`` - the identifier of the tariff package that you created in step "
+"3 which will be connected to the subscriber when activating the "
+"subscription. The connectivity of this package means you subscribe to a "
+"corresponding package of SVOD in MEGOGO. If you disable this package, the "
+"subscriber/account is in Smarty, the method will be called automatically "
+"unsubscribe from SVOD in MEGOGO."
+
+#: ../../source/integration.rst:258
+msgid ""
+"``additional_tariffs_ids`` - идентификаторы смешанных тарифных пакетов "
+"(объединящих телеканалы и подписку MEGOGO), через запятую. При подключении "
+"одного из таких тарифов будет произведена подписка на MEGOGO также, как и "
+"для ``tariff_id``. При отключении всех таких пакетов будет произведена отписка"
+" от MEGOGO также, как и для ``tariff_id``."
+msgstr ""
+"``additional_tariffs_ids`` - IDs mixed tariff packages (unifying channels and "
+"subscription MEGOGO), separated by commas. When you connect one of these "
+"rates will be added to the subscription MEGOGO as well as for ``tariff_id``. "
+"If you disable all of these packages will be unsubscribing from MEGOGO as "
+"well as for ``tariff_id``."
+
+#: ../../source/integration.rst:262 ../../source/integration.rst:319
+msgid ""
+"После выполнения всех шагов необходимо произвести синхронизацию конента с "
+"помощью management-команды: ::"
+msgstr ""
+"After completing all the steps required to synchronize mirrored via miracast"
+" ™ with the help of management team: ::"
+
+#: ../../source/integration.rst:266 ../../source/integration.rst:323
+msgid ""
+"Первая синхронизация может занять около получаса в связи со скачиванием "
+"обложек, последующие синхронизации проходят быстрее. Для регулярной "
+"синхронизации фильмов необходимо добавить вызов команды в crontab."
+msgstr ""
+"The first synchronization can take up to an hour in connection with the "
+"download of the skins, subsequent syncs are faster. For regular sync of "
+"movies, you must add the command to crontab."
+
+#: ../../source/integration.rst:269
+msgid ""
+"После первой синхронизации будут созданы жанры фильмов MEGOGO. Затем "
+"необходимо выполнить финальный шаг:"
+msgstr ""
+"After the first synchronization will be created go to the movies MEGOGO. "
+"Then you can follow final steps:"
+
+#: ../../source/integration.rst:271
+msgid ""
+"Создать требуемые жанры видеотеки в Smarty и произвести маппинг жанров "
+"MEGOGO к жанрам Smarty в служебной панели администратора по адресу "
+"http://smarty.example.com/admin/megogo/megogogenremap/."
+msgstr ""
+"To create the required genres of video library and Smarty to make the "
+"mapping of genres to the genres MEGOGO Smarty in the service panel "
+"administrator at the address "
+"http://smarty.example.com/admin/megogo/megogogenremap/."
+
+#: ../../source/integration.rst:274 ../../source/integration.rst:331
+msgid "При последующей синхронизации фильмов произойдет привязка жанров."
+msgstr ""
+"During a subsequent synchronization of the films will be binding genres."
+
+#: ../../source/integration.rst:279
+msgid ""
+"Для возможности покупки фильмов, доступных в TVOD, для каждого ключа должна "
+"быть подключена данная услуга на стороне MEGOGO."
+msgstr ""
+"For buying movies available in TVOD, each key must be connected to the "
+"service side MEGOGO."
+
+#: ../../source/integration.rst:285
+msgid "5.5.2. Интеграция с tvzavr"
+msgstr "5.5.2. Integration with tvzavr"
+
+#: ../../source/integration.rst:287
+msgid ""
+"Smarty содержит модуль для интеграции с онлайн-кинотеатром `tvzavr "
+"<http://tvzavr.ru>`_, который включает в себя следующий функционал:"
+msgstr ""
+"Smarty contains a module for integration with online cinema tvzavr "
+"<http://tvzavr.ru>`_, which includes the following functionality:"
+
+#: ../../source/integration.rst:290
+msgid ""
+"Синхронизация фильмов и сериалов tvzavr.ru со встроенной видеотекой Smarty "
+"(наименования, описание, жанры, обложки и т.д.)"
+msgstr ""
+"Sync movies and TV series tvzavr.ru with built-in video library Smarty "
+"(title, description, genre, cover, etc.)"
+
+#: ../../source/integration.rst:297
+msgid "5.5.2.1. Настройка модуля tvzavr"
+msgstr "5.5.2.1. Configuration of the module tvzavr"
+
+#: ../../source/integration.rst:299
+msgid ""
+"Для подключения интеграции с tvzavr необходимо проделать следующие шаги:"
+msgstr "To connect integration tvzavr need to do the following steps:"
+
+#: ../../source/integration.rst:301
+msgid ""
+"Подключить модуль **tvzavr** в конфигурации Smarty в секции INSTALLED_APPS, "
+"перезагрузить Smarty и выполнить миграцию данных."
+msgstr ""
+"Connect module **tvzavr** Smarty configuration in the section of "
+"INSTALLED_APPS, restart Smarty and migrate data."
+
+#: ../../source/integration.rst:302
+msgid ""
+"Создать скрытый тарифный пакет, который будет использоваться для возможности"
+" доступа абонентов к каталогу SVOD. Этот тарифный пакет будет автоматически "
+"включаться для всех импортированных фильмов для того, чтобы фильм был виден "
+"абоненту в каталоге."
+msgstr ""
+"Create a hidden tariff package that will be used for the access of "
+"subscribers to the SVOD catalogue. This subscription package will "
+"automatically be enabled for all imported films in order to be visible in "
+"the directory."
+
+#: ../../source/integration.rst:307
+msgid "указать название (например, tvzavr)"
+msgstr "specify the name (for example, tvzavr)"
+
+#: ../../source/integration.rst:308
+msgid "выбрать из выпадающего списка класс API ``tvzavr_api_client``"
+msgstr "choose from the drop down list class API ``tvzavr_api_client``"
+
+#: ../../source/integration.rst:309
+msgid ""
+"выбрать тарифный пакет, созданный на втором шаге. Абоненты, у которых "
+"подключен данный тарифный пакет, будут видеть фильмы в видеотеке и иметь "
+"возможность купить подписку на них."
+msgstr ""
+"choose the tariff package that you created in the second step. Subscribers "
+"who have connected to this tariff package will see the videos and be able to"
+" purchase them."
+
+#: ../../source/integration.rst:312
+msgid "``tvzavr_tariff_id`` - значение этого параметра выдаёт tvzavr"
+msgstr "``tvzavr_tariff_id`` - the value of this parameter gives tvzavr"
+
+#: ../../source/integration.rst:313
+msgid "``plf`` - значение этого параметра выдаёт tvzavr"
+msgstr "``plf`` - the value of this parameter gives tvzavr"
+
+#: ../../source/integration.rst:314
+msgid "``secret`` - значение этого параметра выдаёт tvzavr"
+msgstr "``secret`` - the value of this parameter gives tvzavr"
+
+#: ../../source/integration.rst:315
+msgid ""
+"``subscription_tariff_id`` - идентификатор тарифного пакета, созданного на 3 "
+"шаге, который будет подключен абоненту при активации подписки. "
+"Подключенность этого пакета означает наличие подписки на соответствующий "
+"пакет SVOD в tvzavr. При отключении данного пакета у абонента/аккаунта в "
+"Smarty, будет автоматически вызван метод отписки от SVOD в tvzavr."
+msgstr ""
+"``subscription_tariff_id`` - the identifier of the tariff package that you "
+"created in step 3 which will be connected to the subscriber when activating "
+"the subscription. The connectivity of this package means you subscribe to a "
+"corresponding package of SVOD in tvzavr. If you disable this package, the "
+"subscriber/account is in Smarty, the method will be called automatically "
+"unsubscribe from SVOD in tvzavr."
+
+#: ../../source/integration.rst:326
+msgid ""
+"После первой синхронизации будут созданы жанры фильмов tvzavr. Затем "
+"необходимо выполнить финальный шаг:"
+msgstr ""
+"After the first synchronization will be created go to the movies tvzavr. "
+"Then you can follow final steps:"
+
+#: ../../source/integration.rst:328
+msgid ""
+"Создать требуемые жанры видеотеки в Smarty и произвести маппинг жанров "
+"tvzavr к жанрам Smarty в служебной панели администратора по адресу "
+"http://smarty.example.com/admin/tvzavr/tvzavrgenremap/."
+msgstr ""
+"To create the required genres of video library and Smarty to make the "
+"mapping of genres to the genres tvzavr Smarty in the service panel "
+"administrator at the address "
+"http://smarty.example.com/admin/tvzavr/tvzavrgenremap/."
+
+#: ../../source/integration.rst:336
+msgid ""
+"Для того, чтобы оформленные подписки продлевались на стороне сервера tvzavr,"
+" необходимо также по расписанию вызывать команду ``check_accounts``."
+msgstr ""
+"For to order the subscription was renewed on the server side, tvzavr, you "
+"must also schedule a select team ``check_accounts``."
+
+#: ../../source/integration.rst:342
+msgid "5.6. Интеграция с CAS CMS"
+msgstr "5.6. Integration with CAS CMS"
+
+#: ../../source/integration.rst:344
+msgid ""
+"Smarty поддерживает интеграцию с некоторыми системами CAS по модели единой "
+"системы управления подписками, при этом портальные приложения и клиенты для "
+"приставок и других устройств поддерживают работу с любыми CAS, которые "
+"поддерживаются конкретным устройством."
+msgstr ""
+"Smarty supports integration with certain systems CAS model unified "
+"management system subscriptions with portal applications and customers for "
+"set-top boxes and other devices support operation with any CAS that are "
+"supported by a specific device."
+
+#: ../../source/integration.rst:351
+msgid "5.6.1. Интеграция с Irdeto"
+msgstr "5.6.1. Integration with Irdeto"
+
+#: ../../source/integration.rst:353
+msgid "Настройки интеграции задаются в файле конфигурации Smarty:"
+msgstr "Integration settings are specified in the configuration file Smarty:"
+
+#: ../../source/integration.rst:356
+msgid "IRDETO_NATIONALITY ``str``"
+msgstr "IRDETO_NATIONALITY ``str``"
+
+#: ../../source/integration.rst:356
+msgid "Значение по умолчанию: 'RUS'"
+msgstr "Default value: 'ENG'"
+
+#: ../../source/integration.rst:359
+msgid "IRDETO_REGION_TAG ``str``"
+msgstr "IRDETO_REGION_TAG ``str``"
+
+#: ../../source/integration.rst:359
+msgid "Значение по умолчанию: 'MO'"
+msgstr "Default value: 'MO'"
+
+#: ../../source/integration.rst:363
+msgid "IRDETO_HOST ``str``"
+msgstr "IRDETO_HOST ``str``"
+
+#: ../../source/integration.rst:362
+msgid "Адрес сервера Irdeto с SOAP API, по умолчанию 'http://127.0.0.1:80'"
+msgstr ""
+"Server address Irdeto with the SOAP API, by default 'http://127.0.0.1:80'"
+
+#: ../../source/integration.rst:368
+msgid "5.7. Дополнительные инструменты"
+msgstr "5.7. Additional tools"
+
+#: ../../source/integration.rst:371
+msgid "Скрипт миграции данных smarty между БД по client_id"
+msgstr "The script is smarty data migration between databases on client_id"
+
+#: ../../source/integration.rst:371
+msgid ""
+"https://github.com/microimpuls/admin-tools/tree/master/smarty_migrate_tool"
+msgstr ""
+"https://github.com/microimpuls/admin-tools/tree/master/smarty_migrate_tool"
+
+#: ../../source/integration.rst:374
+msgid "Скрипт миграции с OFT Middleware на Microimpuls Middleware"
+msgstr "The migration script with the OFT Middleware Middleware Microimpuls"
+
+#: ../../source/integration.rst:374
+msgid ""
+"https://github.com/microimpuls/admin-tools/tree/master/oft_db_migrate_tool"
+msgstr ""
+"https://github.com/microimpuls/admin-tools/tree/master/oft_db_migrate_tool"
+
+#: ../../source/integration.rst:377
+msgid ""
+"Скрипт миграции аккаунтов и MAC-адресов с Hydra Billing в Microimpuls "
+"Middleware"
+msgstr ""
+"The migration script accounts and MAC addresses with Billing in the Hydra "
+"Middleware Microimpuls"
+
+#: ../../source/integration.rst:377
+msgid "https://github.com/microimpuls/admin-tools/tree/master/hydra_migrate"
+msgstr "https://github.com/microimpuls/admin-tools/tree/master/hydra_migrate"
+
+#: ../../source/integration.rst:380
+msgid "Скрипт массового создания аккаунтов через Billing API"
+msgstr "Script to bulk create accounts through the Billing API"
+
+#: ../../source/integration.rst:380
+msgid ""
+"https://github.com/microimpuls/admin-tools/tree/master/mass_customer_creator"
+msgstr ""
+"https://github.com/microimpuls/admin-tools/tree/master/mass_customer_creator"
+
+#: ../../source/integration.rst:384
+msgid ""
+"Другие полезные скрипты и утилиты см. в репозитории Microimpuls на Github: "
+"https://github.com/microimpuls/admin-tools"
+msgstr ""
+"Other useful scripts and utilities, see Microimpuls repository on Github: "
+"https://github.com/microimpuls/admin-tools"

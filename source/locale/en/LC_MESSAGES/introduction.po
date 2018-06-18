@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Microimpuls LLC, www.microimpuls.com
+# This file is distributed under the same license as the Smarty package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Smarty Last\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 17:53+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/introduction.rst:5
+msgid "1. Описание системы IPTV/OTT Middleware Smarty"
+msgstr "1. The description of IPTV/OTT Middleware Smarty"
+
+#: ../../source/introduction.rst:7
+msgid ""
+"**Smarty** - платформа Middleware для построения операторского сервиса "
+"интерактивного телевидения IPTV и OTT, предназначенная для взаимодействия "
+"абонентских устройств, биллинга и видео-стриминговой инфраструктуры "
+"оператора. Smarty адаптирована под все современные устройства, "
+"медиаплатформы, Smart TV и все популярные операторские IP-приставки Set-Top "
+"Box (в том числе «ветераны» IPTV-рынка MAG, Amino и т.д.), мобильные "
+"устройства и самые современные медиа-приставки."
+msgstr ""
+"**Smarty** - Middleware platform for building carrier-service interactive "
+"TV, IPTV and OTT services, is designed to interact subscriber devices, "
+"billing and video streaming infrastructure operator. Smarty adapted to all "
+"modern devices, media platforms, Smart TV operators and the ever-popular IP "
+"set-top box Set-Top Box (including \"veterans\" IPTV-market MAG, Amino, "
+"etc.), mobile devices, and most modern media consoles."
+
+#: ../../source/introduction.rst:17
+msgid "1.1. Архитектура системы"
+msgstr "1.1. The system architecture"
+
+#: ../../source/introduction.rst:19
+msgid ""
+"Архитектура системы - клиент-серверная, где сервером (back-end) выступает "
+"платформа Middleware, состоящая из различных модулей и предоставляющая "
+"интерфейс API, который используют клиенты (front-end) - приложения и виджеты"
+" для абонентских устройств (Set-Top Box, Smart TV, мобильные планшеты и "
+"телефоны, компьютеры и т.д.)."
+msgstr ""
+"The system architecture is client-server, where the server (back-end) is a "
+"Middleware platform consisting of various modules and provide the interface "
+"API, used by clients (front-end) - apps and widgets to subscriber devices "
+"(Set-Top Box, Smart TV, tablets and mobile phones, computers, etc.)."
+
+#: ../../source/introduction.rst:23
+msgid ""
+"Абонентское устройство взаимодействует с веб-сервером для загрузки портала "
+"(для приложений, использующих портал как интерфейс пользователя), портал "
+"(или нативные приложения на устройствах) взаимодействует с сервером "
+"приложений Middleware через API. Сервер приложений представляет собой связку"
+" nginx + uwsgi + подсистемы для хранения данных (СУБД), хранения данных "
+"телесмотрения (MongoDB), кеш-серверы (Redis)."
+msgstr ""
+"The subscriber device communicates with the web server to download the "
+"portal (for applications using the portal as the user interface), the portal"
+" (or the native application on the device) communicates with the application"
+" server through the Middleware API. The application server is a nginx + "
+"uwsgi + subsystem for data storage (DBMS), data warehousing, watching TV "
+"(MongoDB), caching servers (Redis)."
+
+#: ../../source/introduction.rst:33
+msgid "1.2. Системные требования"
+msgstr "1.2. System requirements"
+
+#: ../../source/introduction.rst:35
+msgid ""
+"Для работы Smarty требуется 64-битная версия ОС семейства Linux, желательно "
+"Linux Debian 8 Jessie с версией Python ветки 2.7."
+msgstr ""
+"To work Smarty requires a 64-bit version of the OS family of Linux, "
+"preferably Debian Linux 8 Jessie with the version of Python 2.7 branch."
+
+#: ../../source/introduction.rst:40
+msgid "1.2.1. Расчет конфигурации сервера Middleware"
+msgstr "1.2.1. The calculation of the configuration of the server Middleware"
+
+#: ../../source/introduction.rst:42
+msgid ""
+"Оптимальная конфигурация на 50000 одновременных пользователей при повышенной"
+" интерактивности абонентского приложения (автоматические обновления "
+"информации, быстрый отклик, расширенная программа передач, отправка данных "
+"статистики просмотров, формирование фильтрованных выборок данных и т.д.): ::"
+msgstr ""
+"Optimal configuration at 50,000 concurrent users with increased "
+"interactivity of subscriber applications (automatic update of information, "
+"quick response, enhanced program guide, data sending statistics, the "
+"formation of filtered data samples, etc.):::"
+
+#: ../../source/introduction.rst:50
+msgid ""
+"Максимальная производительность сервера зависит от используемых абонентских "
+"приложений и их функций."
+msgstr ""
+"Maximum server performance depends on the subscriber's applications and "
+"their functions."
+
+#: ../../source/introduction.rst:52
+msgid ""
+"Результаты нагрузочного тестирования Smarty при 100000 одновременных "
+"пользователей: https://github.com/microimpuls/admin-"
+"tools/tree/master/smarty_stress_test/results"
+msgstr ""
+"The results of stress testing Smarty with 100000 concurrent users: "
+"https://github.com/microimpuls/admin-"
+"tools/tree/master/smarty_stress_test/results"
+
+#: ../../source/introduction.rst:58
+msgid "1.3. Поддерживаемые СУБД"
+msgstr "1.3. Supported DBMS"
+
+#: ../../source/introduction.rst:60
+msgid ""
+"Для хранения данных Smarty использует внешнюю систему управления базами "
+"данных. Поддерживаются системы:"
+msgstr ""
+"To store data Smarty uses an external database management system. Supported "
+"systems:"
+
+#: ../../source/introduction.rst:62
+msgid "SQLite"
+msgstr "SQLite"
+
+#: ../../source/introduction.rst:63
+msgid "MySQL"
+msgstr "MySQL"
+
+#: ../../source/introduction.rst:64
+msgid "Percona XtraDB"
+msgstr "Percona XtraDB"
+
+#: ../../source/introduction.rst:65
+msgid "PostgreSQL"
+msgstr "PostgreSQL"
+
+#: ../../source/introduction.rst:66
+msgid "Oracle"
+msgstr "Oracle"
+
+#: ../../source/introduction.rst:68
+msgid ""
+"Для создания схемы с резервированием данных рекомендуется использовать СУБД "
+"с репликацией по схеме Multi Master, например Percona XtraDB Cluster или "
+"Oracle RAC."
+msgstr ""
+"To create a schema with redundant data it is recommended to use DBMS "
+"replication scheme is Multi Master, for example, Percona XtraDB Cluster or "
+"Oracle RAC."
+
+#: ../../source/introduction.rst:74
+msgid "1.3.1. Расчет конфигурации сервера СУБД"
+msgstr "1.3.1. Calculating the configuration of the DBMS server"
+
+#: ../../source/introduction.rst:76
+msgid "Оптимальная конфигурация сервера СУБД для MySQL/Percona: ::"
+msgstr "Optimal server configuration, database for MySQL/Percona: ::"

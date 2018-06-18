@@ -1,0 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Microimpuls LLC, www.microimpuls.com
+# This file is distributed under the same license as the Smarty package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Smarty Last\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 17:53+0300\n"
+"PO-Revision-Date: 2018-06-05 18:29+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"Last-Translator: Елизавета <travka.zeleneet@inbox.ru>\n"
+"Language-Team: \n"
+"Language: en\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: ../../source/index.rst:7
+msgid ""
+"Microimpuls Middleware «Smarty»  - документация по решению для "
+"управления интерактивным телевидением IPTV/OTT"
+msgstr ""
+"Microimpuls Middleware \"Smarty\" - documentation for interactive IPTV/"
+"OTT TV management solution"
+
+#: ../../source/index.rst:9
+msgid "Содержание:"
+msgstr "Contents:"
