@@ -569,3 +569,85 @@ show_sort_screen ``bool``
         Helper.setHtml('info-menu-activation-days-left', value);
     };
 
+6.5 Кастомизация стилей оформления портала
+==========================================
+
+Smarty позволяет для каждого устройства задать внешний css-файл для кастомного оформления портала, например, установить
+своё фоновое изображение, сменить цвет шрифта или фокуса.
+
+Для этого необходимо открыть в панели администрирования "Общие настройки" -> "Настройки STB и приложений" ->
+<устройство для настройки> и прописать в поле "Внешний CSS" путь до файла с новыми стилями. Как правило, данный файл
+располагают на том же веб-сервере, что и портал.
+
+Для создания файла с внешними стилями достаточно с помощью отладчика любого браузера проследить какие классы и
+идентификаторы отвечают за тот или иной элемент экрана в портале, после чего перезаписать/дописать нужные свойства к ним.
+Ниже представлены самые часто встречающиеся примеры кастомизации для шаблонов ``futuristic`` и ``impuls``.
+
+Пример внешнего css-файла для кастомизации шаблона ``futuristic``. ::
+
+    /* Установка кастомного фонового изображения */
+
+    .screen, .android_stb .screen {
+        background: url('example-bg.jpg') no-repeat;
+    }
+
+    /* Установка кастомного фонового изображения для верхней панели с лого оператора */
+
+    #statusbar-screen {
+        background: transparent url('statusbar-bg.png') no-repeat;
+    }
+
+    /* Установка кастомного изображения для фокуса главного меню  */
+
+    div#main-menu-selection {
+        background: transparent url('example-selection-bg.png') no-repeat center 0px;
+    }
+
+Пример внешнего css-файла для кастомизации шаблона ``impuls``. ::
+
+    /* Установка кастомного лоадера */
+
+    .screen-container.loader, #player-mode-icon.loader, #loading-bar {
+        background: transparent url("loader-example.gif") center center no-repeat;
+    }
+
+    #firstloading-loader {
+        background: url('loader-example.gif') no-repeat;
+        height: 65px;
+        width: 120px;
+    }
+
+    .loader#video-actions-panel {
+        background: transparent url("loader-example.gif") center left no-repeat;
+        height: 120px;
+    }
+
+    /* Установка кастомного фонового изображения */
+
+    .screen, body, .play .screen, .png-transparency .screen, .play.png-transparency .screen,
+    .transparent.png-transparency .screen, .transparent .screen {
+        background: url('example-bg.jpg') no-repeat;
+    }
+
+    body.play {
+        background: transparent;
+    }
+
+    /* Установка кастомных координат для логотипа оператора */
+
+    .client-logo {
+        margin-top: 75px !important;
+        margin-right: 30px;
+    }
+
+.. note::
+
+    Нужно учесть, что для корректной работы внешних стилей, необходимо, чтобы все дополнительные ресурсы (изображения,
+    шрифты), используемые в них, были доступны и имели правильные пути.
+
+.. note::
+    После установки обновлений шаблонов необходимо внимательно читать changelog и тщательно тестировать портал на
+    предмет корректности работы внешнего CSS, так как внутренние css- и html-файлы могут претерпевать изменения, что
+    так или иначе влияет на отображение кастомных стилей.
+
+
