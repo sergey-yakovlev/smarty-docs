@@ -204,6 +204,42 @@ payment_type ``str``
   * `StreamService API - метод проверки токена StreamServiceTokenCheck <https://microimpuls.github.io/smarty-tvmw-api-docs/#api-StreamService-StreamServiceTokenCheck>`_
   * :ref:`Настройка стриминг-сервисов <smarty-admin-guide-videostreaming-video-services>`
 
+.. _flussonic:
+
+5.4.1. Интеграция с Flussonic
+-----------------------------
+
+Для интеграции механизма авторизации видеопотоков (стриминг-сервисов) с `Flussonic <http://flussonic.com>`_ используется механизм генерации
+одноразовых токенов для ссылок на поток на стороне сервера Smarty. Flussonic в момент разбора HTTP Request от
+абонентского устройства выделяет токен и проверяет его на сервере Smarty на валидность.
+
+Для генерации токена необходимо в маске URL стриминг-сервиса в Smarty добавить переменную ``$token`` в запрос,
+например: ::
+
+  http://streamer.example.com:8080/mychannel/?token=$token
+
+
+На стороне Flussonic необходимо настроить авторизационный бекенд, указав адрес API-метода StreamServiceTokenCheck на стороне Smarty: ::
+
+    auth_backend main {
+        backend https://smarty.example.com/tvmiddleware/api/streamservice/token/check/;
+    }
+
+и в свойствах канала прописать параметр ``auth``: ::
+
+    stream example {
+        url hls://example.com/channel/index.m3u8;
+        title "Channel Name";
+        auth auth://main;
+    }
+
+.. note::
+
+  Дополнительная информация:
+
+  * `StreamService API - метод проверки токена StreamServiceTokenCheck <https://microimpuls.github.io/smarty-tvmw-api-docs/#api-StreamService-StreamServiceTokenCheck>`_
+  * :ref:`Настройка стриминг-сервисов <smarty-admin-guide-videostreaming-video-services>`
+
 .. _online-vod-services-integration:
 
 5.5. Интеграция с онлайн-кинотеатрами

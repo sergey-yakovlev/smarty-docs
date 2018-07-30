@@ -517,6 +517,8 @@ MONGODB_USERNAME ``str``
 MONGODB_PASSWORD ``str``
   Пароль для авторизации.
 
+В секции **INSTALLED_APPS** в файле конфигурации Smarty необходимо добавить модуль ``viewstats``.
+
 .. _sms-settings:
 
 2.4.8. Настройка модуля отправки SMS
