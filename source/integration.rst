@@ -379,7 +379,7 @@ Payture – платежный шлюз с возможностью привяз
 
 * для оплаты в мобильных и десктопных браузерах (стандартная форма Payture). Имя шаблона – Payture
 * для оплаты из приложения внутри телевизора или приставки (адаптирована под управление пультом, поддерживается только
-на устройствах с протоколом TLS 1.2 и выше). Имя шаблона – пустая строка
+  на устройствах с протоколом TLS 1.2 и выше). Имя шаблона – пустая строка
 * для оплаты из приложения внутри телевизора Samsung Smart TV под Orsay (загружает специальные плагины для взаимодействия
 с данными устройствами). Имя шаблона – Orsay
 
@@ -390,82 +390,23 @@ Payture – платежный шлюз с возможностью привяз
 
 * Создать объект PaytureMerchantData в Django-панели Smarty
 * * В поле Client необходимо добавить клиента, для которого будет доступна оплата с помощью этого шлюза.
-* * Данные для полей API host, Merchant ‘Pay’ key, Merchant ‘Add’ key необходимо получить непосредственно у
-платежного шлюза после подписания договора с ним.
+* * Данные для полей API host, Merchant ‘Pay’ key, Merchant ‘Add’ key необходимо получить непосредственно у платежного
+    шлюза после подписания договора с ним.
 * * В поле Widget template указать один из шаблонов страниц оплаты (описание см. 5.7.1). В случае, если будет использоваться
-оплата с помощью виджета на сайте, по умолчанию рекомендуется указать шаблон "Payture", а для оплаты внутри приложения
-на телевизоре настроить шаблон через сlient.js (параметр template_of_payment_page)
+    оплата с помощью виджета на сайте, по умолчанию рекомендуется указать шаблон "Payture", а для оплаты внутри приложения
+    на телевизоре настроить шаблон через сlient.js (параметр template_of_payment_page)
 * * В поле Remember card field указать способ отображения флажка «Запомнить карту» на странице оплаты.
 * * * Not checked – галочка отображается, по умолчанию не отмечена .
 * * * Checked – галочка отображается, по умолчанию отмечена.
 * * *  Disable – галочка скрыта и по умолчанию отмечена, возможности оплаты без привязки карты и инициации автоплатежа – нет.
 * Настроить нотификацию на: http://smarty.example.com/billing/payment/payture/validate_notify/ (оcуществляется на стороне
-платежного шлюза по запросу).
+    платежного шлюза по запросу).
 * Настроить лог smarty_payment
-
-Пример лога: ::
-
-Tue Jan 22 10:50:12+0000 2019 WARNING payment_views:169 notify_payment[7185.MainThread] NOTIFY_ERROR client='0'
-transaction='457978' payment_source='payture' params='<QueryDict: {u'AddCard': [u''], u'Notification':
-[u'CustomerPaySuccess'], u'CardId': [u'FreePay'], u'DateTime': [u'636837509036464843'], u'MerchantOrderId':
-[u'457978'], u'SessionId': [u'191e7c4a-5b8d-420a-a707-7901f06c6080'], u'SessionType': [u'Pay'], u'Product':
-[u'\u041e\u043f\u043b\u0430\u0442\u0430 IPTV \u043f\u043e \u0441\u0447\u0435\u0442\u0443 \u2116 457978'],
-u'TransactionDate': [u'1/22/2019 10:50:07 AM'], u'CardNumber': [u'123456xxxxxx1234'], u'CardHolder': [u'IVAN IVANOV],
-u'MerchantId': [u'1067'], u'MerchantContract': [u'VWImpulstvOpenAdd'], u'Success': [u'True'], u'Url':
-[u'https://example.com//widgets/api/show/1'], u'IP': [u'94.41.184.217'], u'TemplateTag': [u'Payture'], u'RefNumber':
-[u'902270026797'], u'Amount': [u'100'], u'CustomFields': [u''], u'OrderId': [u'457978'], u'VWUserLgn': [u'575524'],
-u'AuthCode': [u'255468'], u'Total': [u'1.0'], u'EDate': [u'11/19'], u'IsAlfa': [u'False']}>'
-error='DoesNotExist('CustomerTransaction matching query does not exist.',)'
-Tue Jan 22 10:50:13+0000 2019 WARNING payment_views:270 notify_add_card[7185.MainThread] NOTIFY_ERROR client='0'
-customer='575524' payment_source='payture' params='<QueryDict: {u'AddCard': [u''], u'Notification':
-[u'CustomerAddSuccess'], u'CardId': [u'4accf42a-fac2-47b1-ab7e-40f8da08c114'], u'DateTime': [u'636837510069589843'],
-u'MerchantOrderId': [u'457978'], u'SessionId': [u'1418789a-c87f-4fab-9f92-ea2584054dbc'], u'SessionType': [u'Pay'],
-u'Product': [u'\u041e\u043f\u043b\u0430\u0442\u0430 IPTV \u043f\u043e \u0441\u0447\u0435\u0442\u0443 \u2116 457978'],
-u'CardName': [u'427646xxxxxx1372'], u'TransactionDate': [u'1/22/2019 10:50:08 AM'], u'CardNumber': [u'12345xxxxxx1234'],
-u'CardHolder': [u'IVAN IVANOV '], u'MerchantId': [u'1067'], u'MerchantContract': [u'VWImpulstvOpenAdd'], u'Success':
-[u'True'], u'Url': [u'https://impulstv.tv//widgets/api/show/22'], u'IP': [u'1.1.1.1'], u'TemplateTag': [u'Payture'],
-u'Amount': [u'100'], u'CustomFields': [u''], u'OrderId': [u'457978'], u'VWUserLgn': [u'575524'], u'VWUserPsw':
-[u'iIvbb9k2svOFqFVZa8xmbBbEcVgZRVyp/BHUCdnlqZAawOyCS2lPIFpr9Q
-RM8DN3e/87kZcooMvhDKYJPRsu1HQdSAqmCBW/CYZlT8iJavcsh7odcSnVfN2kSM1z3zRPzGjU8Df/f
-bbABUvhKrd7ETYf2jKz9AVFoOkifHJ5RY5m7ALLAAA0t4nU96SOcNpI/UmrArVVjzl0S1ViC jzX
-mKIURxjtArc03AZyfE946mpf64pji6Yzh/kFi7SDFlq6vqOSbaTq0z1vMla/Yd0hV8uJsNU2chkyLSyGUzmk1HH62/uaLzrBSPdrUDgHU0mGREL9XzNUD1p1sSW3JPrZKBENKUIVLA2fk13QHIpml82cibc05thGQV v/rx2Sd 4zHTfez7sbs35yCS6QQAI3Efp6RlEs2xPZpLgmZVTPcNzW2
-gb9LONOtOl2aA/AWx8TywYuAb3EhtY60UJcPIfRZr9mrSYz9lFljbVfLSddQDynKaSWsjL1mvmzi/Kb6MsrxYTuhPWjAjG0uy5obb964T6LhqSf2IFt0ZNH0FNPU4u7pAOygKwMtOwhS7Mqoe83GKaaiBga6Ef/sP o4epKOpK6obGKib/MkIEZE3X8 uRvK/1tXPzdCZ1SRwcCsNSl2y4G2pNtyXfe3slLDAPbAHVgB7142QzdC7zh4='],
-u'Total': [u'1.0'], u'EDate': [u'11/19'], u'IsAlfa': [u'False']}>' error='DoesNotExist('Customer matching query does not exist.',)'
-
-Описание полей лога:
-
-* * NOTIFY_ERROR - ошибка обработки сообщения нотификации.
-
-Дополнительный контекст:
-- `client` - ID клиента в платёжном шлюзе.
-- `transaction` - ID транзакции.
-- `payment_source` - название платёжного шлюза.
-- `params` - параметры запроса.
-- `error` - описание ошибки.
-
-Возможные причины ошибки:
-- Неверная настройка платёжного шлюза.
-- Передача неверных параметров платёжному шлюзу.
-- Платёж не прошёл.
-
-* * NOTIFY_SUCCESS - успешная нотификация.
-
-Дополнительный контекст:
-- `client` - ID клиента в платёжном шлюзе.
-- `transaction` - ID транзакции.
-- `payment_source` - название платёжного шлюза.
-- `params` - параметры запроса.
-
-* * PAYTURE_REQUEST - запрос к платёжному шлюзу Payture.
-- `url` - URL API Payture, на который выполняется запрос.
-- `args` - аргументы запроса.
-- `response` - ответ от API в виде XML.
-
 * Убедиться в том, что используемый шаблон оформления поддерживает оплату с помощью Payture.
 * В client.js настроить поля merchant_type и template_of_payment_page (есть возможность произвести тонкую настройку
-данных полей в зависимости от устройств).
+    данных полей в зависимости от устройств).
 * Удостовериться в корректности работы платежной формы внутри приложения, а также в виджете оплаты на сайте,
-если таковой используется.
+    если таковой используется.
 
 .. _tools-and-scripts:
 
