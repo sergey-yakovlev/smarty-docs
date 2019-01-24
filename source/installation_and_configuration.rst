@@ -519,9 +519,40 @@ MONGODB_PASSWORD ``str``
 
 В секции **INSTALLED_APPS** в файле конфигурации Smarty необходимо добавить модуль ``viewstats``.
 
+.. _devicemonitoring-settings:
+
+2.4.8. Настройка модуля мониторинга устройств
+---------------------------------------------
+
+Для сохранения данных метрик и системной информации устройств абонентов используется сервер **MongoDB**.
+
+.. note::
+
+    Минимальная версия MongoDB необходимая для работы - 3.4
+
+Настройки задаются переменными в файле конфигурации Smarty.
+
+
+MONGODB_MONITORING_HOST ``str``
+  Адрес сервера MongoDB.
+
+MONGODB_MONITORING_PORT ``int``
+  Порт сервера MongoDB.
+
+MONGODB_MONITORING_NAME ``str``
+  Название базы данных.
+
+MONGODB_MONITORING_USERNAME ``str``
+  Имя пользователя для авторизации.
+
+MONGODB_MONITORING_PASSWORD ``str``
+  Пароль для авторизации.
+
+В секции **INSTALLED_APPS** в файле конфигурации Smarty необходимо добавить модуль ``device_monitoring``.
+
 .. _sms-settings:
 
-2.4.8. Настройка модуля отправки SMS
+2.4.9. Настройка модуля отправки SMS
 ------------------------------------
 
 SMS отправляются системой при использовании виджетов, интегрированных с сайтом, например, во время регистрации абонента.
@@ -536,7 +567,7 @@ SMS_ATTEMPTS ``int``
 
 .. _smsc.ru:
 
-2.4.8.1. Шлюз smsc.ru
+2.4.9.1. Шлюз smsc.ru
 ~~~~~~~~~~~~~~~~~~~~~
 
 Значение для **SMS_BACKEND** = ``'sms.backends.smscru.SMSCBackend'``
@@ -552,7 +583,7 @@ SMSC_SENDER ``str``
 
 .. _mobipace:
 
-2.4.8.2. Шлюз mobipace.com
+2.4.9.2. Шлюз mobipace.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Значение для **SMS_BACKEND** = ``'sms.backends.mobipace.MobipaceBackend'``
@@ -568,7 +599,7 @@ MOBIPACE_SENDER ``str``
 
 .. _sentry-settings:
 
-2.4.9. Подключение системы мониторинга ошибок Sentry
+2.4.10. Подключение системы мониторинга ошибок Sentry
 ----------------------------------------------------
 
 Для подключения ``Sentry`` необходимо в файле конфигурации Smarty добавить в **INSTALLED_APPS** модуль ``raven.contrib.django.raven_compat``
@@ -582,7 +613,7 @@ MOBIPACE_SENDER ``str``
 
 .. _nginx-config:
 
-2.4.10. Настройка nginx и uwsgi
+2.4.11. Настройка nginx и uwsgi
 -------------------------------
 
 Образец файла конфигурации для **nginx** находится в файле ``/etc/nginx/sites-available/smarty``.
@@ -590,7 +621,7 @@ MOBIPACE_SENDER ``str``
 Конфигурация для **uwsgi** находится в файлах ``/etc/uwsgi/apps-available/smarty`` и ``/etc/microimpuls/smarty/uwsgi/smarty.uwsgi``,
 на него (или на другой используемый конфиг) должен указывать симлинк в ``/usr/share/nginx/html/microimpuls/smarty/<uwsgi settings name>.uwsgi``.
 
-2.4.11. Настройка мультиязычности контента в Smarty
+2.4.12. Настройка мультиязычности контента в Smarty
 ---------------------------------------------------
 
 Smarty позволяет сохранять в базе данных контент с названиями локализуемых полей на разных языках - например, названия
