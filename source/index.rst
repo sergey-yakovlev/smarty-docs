@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Microimpuls Middleware «Smarty»  - документация по решению для управления интерактивным телевидением IPTV/OTT
-=============================================================================================================
+Microimpuls Smarty  - документация по платформе Middleware для управления интерактивным IPTV/OTT
+================================================================================================
 
 Содержание:
 
@@ -16,6 +16,7 @@ Microimpuls Middleware «Smarty»  - документация по решени�
     service_configuration.rst
     log.rst
     integration.rst
+    portal_setup.rst
     troubleshooting.rst
     additional_docs.rst
 

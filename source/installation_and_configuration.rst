@@ -9,13 +9,7 @@
 2.1. Где скачать установочные пакеты
 ====================================
 
-Для всех
-  Инсталляционные пакеты ПО распространяются через FTP, доступ к которому предоставляется на время действия договора.
-  Более подробная инфорамция по ссылке http://forum.micro.im/ в разделе “Дистрибутивы и обновления ПО”.
-
-Для инженеров Microimpuls
-  При установке ПО на сервер через систему оркестровки все необходимые установочные пакеты актуальных версий
-  скачиваются из репозитория автоматически.
+Инсталляционные пакеты ПО распространяются через FTP, доступ к которому предоставляется на время действия договора.
 
 .. _install-on-debian:
 
@@ -79,6 +73,35 @@
 
     - :ref:`Особенности установки и настройки подключения Smarty к СУБД Oracle <cx_oracle>`
 
+.. _create-superuser:
+
+2.2.4. Создание пользователя администратора
+-------------------------------------------
+
+Создание пользователя с правами служебного администратора осуществляется командой: ::
+
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py createsuperuser --settings=settings.<settings filename>
+
+- *<settings filename>* - имя файла настроек Smarty, в котором должны быть установлены параметры подключения к БД
+  (см. :ref:`Описание основных параметров <settings-description>`).
+
+
+.. _create-setup-initial-data:
+
+2.2.5. Создание системных объектов в базе данных и примера настроек оператора
+-----------------------------------------------------------------------------
+
+Для создания системных объектов Smarty в базе данных, а также примера настроек выполните команду: ::
+
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py setup_initial_data --settings=settings.<settings filename>
+
+- *<settings filename>* - имя файла настроек Smarty, в котором должны быть установлены параметры подключения к БД
+  (см. :ref:`Описание основных параметров <settings-description>`).
+
+.. note::
+
+    Можно пропустить создание образца настроек оператора, добавив флаг ``--no-sample-data``
+
 
 .. _install-on-centos:
 
@@ -90,13 +113,13 @@
 
 .. _system-configuration:
 
-2.4. Добавление конфигурации
-============================
+2.4. Конфигурация Smarty
+========================
 
 .. _smarty-config:
 
-2.4.1. Настройка Smarty
------------------------
+2.4.1. Файл настроек Smarty
+---------------------------
 
 После первичной установки базовый файл конфигурации Smarty находится по адресу ``/etc/microimpuls/smarty/base.py``
 (симлинк на ``/usr/share/nginx/html/microimpuls/smarty/settings/base.py``).
@@ -121,8 +144,8 @@
 
 .. _settings-description:
 
-2.4.2. Описание основных параметров конфигурации Smarty
--------------------------------------------------------
+2.4.2. Описание параметров конфигурации Smarty
+----------------------------------------------
 
 Файл конфигурации задается на языке Python.
 
@@ -183,10 +206,19 @@ TVMIDDLEWARE_PROGRAM_LIST_SEARCH_DAYS ``int``
   поиск будет осуществляться дольше и задействовать больше ресурсов сервера БД и Middleware.
   По умолчанию 1.
 
+TVMIDDLEWARE_PROGRAM_LIST_SEARCH_LIMIT_RESULTS_TO ``int``
+  Максимальное количество результатов, которое будет возвращено сервером на запрос поиска передач (метод ProgramListSearch).
+  По умолчанию 20.
+
 TVMIDDLEWARE_VIDEO_NEW_DAYS ``int``
   Период в днях с даты добавления фильма, в течение которого добавленный фильм считается новинкой и отображается
   в соответствующем разделе в приложениях абонента.
   По умолчанию 60.
+
+TVMIDDLEWARE_VIDEO_PREMIERE_DAYS ``int``
+  Период в днях с даты премьеры фильма, в течение которого фильм считается премьерой и отображается
+  в соответствующем разделе в приложениях абонента.
+  По умолчанию 90.
 
 TVMIDDLEWARE_CONTENT_POSITION_TTL_DAYS ``int``
   Период в днях, в течение которого необходимо хранить на сервере сохраненные позиции просмотра контента для
@@ -206,9 +238,126 @@ TVMIDDLEWARE_WEATHER_WIDGET_CACHE_TIMEOUT ``int``
   Время в секундах, на которое необходимо кешировать результат запроса прогноза погоды. Используется, чтобы
   уменьшить количество запросов. По умолчанию 900.
 
+TVMIDDLEWARE_EXCHANGE_WIDGET_CACHE_TIMEOUT ``int``
+  Время в секундах, на которое необходимо кешировать результат запроса курсов валют. Используется, чтобы
+  уменьшить количество запросов. По умолчанию 7200.
+
+TVMIDDLEWARE_EXCHANGE_WIDGET_FIRST_CURRENCY ``str``
+  Первая валюта для виджета курсов валют в портале. (см. http://www.cbr.ru/scripts/Root.asp?PrtId=SXML)
+  По умолчанию ``USD``.
+
+TVMIDDLEWARE_EXCHANGE_WIDGET_SECOND_CURRENCY ``str``
+  Вторая валюта для виджета курсов валют в портале. (см. http://www.cbr.ru/scripts/Root.asp?PrtId=SXML)
+  По умолчанию ``EUR``.
+
+TVMIDDLEWARE_EXCHANGE_WIDGET_COUNTRY_CODE ``str``
+  Код страны. В зависимости от этого будет выбран источник данных для курсов валют.
+  Возможные значения:
+  ``RU`` (http://www.cbr.ru/scripts/XML_daily.asp),
+  ``KG`` (http://www.nbkr.kg/XML/daily.xml),
+  ``EE`` (https://www.eestipank.ee/en/exchange-rates/export/xml/latest).
+  По умолчанию ``RU``.
+
+TVMIDDLEWARE_RSS_WIDGET_CACHE_TIMEOUT ``int``
+  Время в секундах, на которое необходимо кешировать результат запроса RSS-ленты. Используется, чтобы
+  уменьшить количество запросов. По умолчанию 900.
+
 TVMIDDLEWARE_STREAM_SERVICE_TOKEN_TTL ``int``
   Время жизни одноразового токена для авторизации стриминг-сервисов (при использовании Smarty как токен-сервера) в
   секундах. По умолчанию 3600 (60 минут).
+
+TVMIDDLEWARE_CLEAN_OLD_SESSIONS_DAYS ``int``
+  Время жизни сессии авторизации в днях. Если сессия не была в статусе "онлайн" в течение этого периода, то она будет
+  автоматически удалена.
+  По умолчанию 3650.
+
+TVMIDDLEWARE_MULTILOGIN_ENABLED ``bool``
+  Включает или отключает механизм мультилогинов (аккаунт с неограниченными возможностями авторизации) в Smarty.
+  По умолчанию True.
+
+TVMIDDLEWARE_CHANNEL_AUTOSORT ``list``
+  Позволяет отключить функцию автосортировки каналов в Smarty, если задать значение ``[]``.
+
+TVMIDDLEWARE_ADS_ENABLED ``bool``
+  При значении True будет в методах ChannelUrl и ProgramUrl будет возвращаться параметр ``ads``.
+  Необходимо для работоспособности функционала рекламных блоков и роликов в шаблонах, которые это
+  поддерживают. Может приводить к снижению производительности Smarty при большом количестве пользователей
+  на один сервер.
+  По умолчанию False.
+
+TVMW_CLIENT_LOGO_MAX_HEIGHT ``int``
+  Максимальная высота логотипа оператора. Загруженный логотип будет сжат до этого размера.
+  По умолчанию 240.
+
+TVMW_CLIENT_LOGO_MAX_WIDTH ``int``
+  Максимальная ширина логотипа оператора. Загруженный логотип будет сжат до этого размера.
+  По умолчанию 320.
+
+TVMW_CLIENT_PLAY_DEVICE_LOGO_MAX_HEIGHT ``int``
+  Максимальная высота основного логотипа в абонентском приложении. Загруженный логотип будет сжат до этого размера.
+  По умолчанию 240.
+
+TVMW_CLIENT_PLAY_DEVICE_LOGO_MAX_WIDTH ``int``
+  Максимальная ширина основного логотипа в абонентском приложении. Загруженный логотип будет сжат до этого размера.
+  По умолчанию 320.
+
+TVMW_CLIENT_PLAY_DEVICE_LOGO_LOGIN_MAX_HEIGHT ``int``
+  Максимальная высота логотипа для экрана авторизации в абонентском приложении. Загруженный логотип будет сжат до этого размера.
+  По умолчанию 240.
+
+TVMW_CLIENT_PLAY_DEVICE_LOGO_LOGIN_MAX_WIDTH ``int``
+  Максимальная ширина логотипа для экрана авторизации в абонентском приложении. Загруженный логотип будет сжат до этого размера.
+  По умолчанию 320.
+
+TVMW_CLIENT_PLAY_DEVICE_LOGO_LOADING_MAX_HEIGHT ``int``
+  Максимальная высота логотипа для экрана загрузки в абонентском приложении. Загруженный логотип будет сжат до этого размера.
+  По умолчанию 240.
+
+TVMW_CLIENT_PLAY_DEVICE_LOGO_LOADING_MAX_WIDTH ``int``
+  Максимальная ширина логотипа для экрана авторизации в абонентском приложении. Загруженный логотип будет сжат до этого размера.
+  По умолчанию 320.
+
+TVMW_VIDEO_POSTER_BIG_MAX_HEIGHT ``int``
+  Максимальная высота обложки фильма VOD. Загруженная обложка будет сжата до этого размера.
+  По умолчанию 800.
+
+TVMW_VIDEO_POSTER_BIG_MAX_WIDTH ``int``
+  Максимальная ширина обложки фильма VOD. Загруженная обложка будет сжата до этого размера.
+  По умолчанию 800.
+
+TVMW_VIDEO_POSTER_SMALL_MAX_HEIGHT ``int``
+  Максимальная высота обложки для предпросмотра фильма VOD. Загруженная обложка будет сжата до этого размера.
+  По умолчанию 300.
+
+TVMW_VIDEO_POSTER_SMALL_MAX_WIDTH ``int``
+  Максимальная ширина обложки для предпросмотра фильма VOD. Загруженная обложка будет сжата до этого размера.
+  По умолчанию 300.
+
+TVMW_VIDEO_FILE_PROMO_IMAGE_MAX_HEIGHT ``int``
+  Максимальная высота промо-картинки видео-ассета в VOD. Загруженная картинка будет сжата до этого размера.
+  По умолчанию 720.
+
+TVMW_VIDEO_FILE_PROMO_IMAGE_MAX_WIDTH ``int``
+  Максимальная ширина промо-картинки видео-ассета в VOD. Загруженная картинка будет сжата до этого размера.
+  По умолчанию 1280.
+
+TVMW_ACTOR_PHOTO_MAX_HEIGHT ``int``
+  Максимальная высота фотографии актера в VOD. Загруженная картинка будет сжата до этого размера.
+  По умолчанию 800.
+
+TVMW_ACTOR_PHOTO_MAX_WIDTH ``int``
+  Максимальная ширина фотографии актера в VOD. Загруженная картинка будет сжата до этого размера.
+  По умолчанию 800.
+
+TVMW_CONSIDER_PROGRAM_CATEGORY ``bool``
+  Если значение False, то в выдаче API-метода ProgramCategoryChannelList ("ТВ по интересам") категория текущей передачи
+  не учитывается, и список каналов формируется только исходя из категории EpgChannel.
+  По умолчанию True.
+
+TVMW_PREVENT_CASCADE_DELETION ``bool``
+  При значении True запрещает удаление объектов в Smarty через панель администратора при наличии у объектов дочерних связанных объектов.
+  При значении False удаление таких объектов разрешено, но дочерние объекты при этом удалены не будут.
+  По умолчанию False.
 
 
 .. _license-settings:
@@ -258,16 +407,16 @@ TVMIDDLEWARE_STREAM_SERVICE_TOKEN_TTL ``int``
     CACHES = {
         "default": {
             "BACKEND": "core.cache.backends.RedisCache",
-            "LOCATION": "redis://10.1.1.1:6379/0",
+            "LOCATION": "redis://192.168.33.11:7000/0", # не используется, но необходимо
             "OPTIONS": {
                 "REDIS_CLIENT_CLASS": "rediscluster.client.StrictRedisCluster",
-                "CONNECTION_POOL_CLASS": "rediscluster.connection.ClusterConnectionPool",
+                "CONNECTION_POOL_CLASS": "core.cache.cluster_connection.ClusterConnectionPool",
                 "CONNECTION_POOL_KWARGS": {
                     "startup_nodes": [
-                        {"host": "10.1.1.1", "port": "6379"},
-                        {"host": "10.1.1.2", "port": "6379"},
-                        {"host": "10.1.1.3", "port": "6379"},
-                        {"host": "10.1.1.4", "port": "6379"},
+                        # masters
+                        {"host": "192.168.33.11", "port": "7000"},
+                        {"host": "192.168.33.12", "port": "7000"},
+                        {"host": "192.168.33.13", "port": "7000"},
                     ]
                 }
             }
@@ -319,7 +468,7 @@ TVMIDDLEWARE_STREAM_SERVICE_TOKEN_TTL ``int``
 
 
 После выбора локатора и синхронизации данных механизм геолокации готов к использованию. Доступность тех или иных
-сервисов Middleware (телеканалы, фильмы, стриминг-сервисы, опции и т.д.) определяется тарифными планами
+сервисов Middleware (телеканалы, фильмы, стриминг-сервисы, опции и т.д.) определяется тарифными пакетами
 (см. :ref:`Возможности тарификации <billing-tariffs-features>`), в настройках которых можно указать те страны и города,
 в которых они действуют.
 
@@ -345,7 +494,13 @@ MONITORING_AGENT_SOCKET_TCP_BUFFER ``int``
 --------------------------------------------
 
 Для сохранения данных телесмотрения абонентов используется сервер **MongoDB**.
+
+.. note::
+
+    Минимальная версия MongoDB необходимая для работы - 3.4
+
 Настройки задаются переменными в файле конфигурации Smarty.
+
 
 MONGODB_HOST ``str``
   Адрес сервера MongoDB.
@@ -361,6 +516,8 @@ MONGODB_USERNAME ``str``
 
 MONGODB_PASSWORD ``str``
   Пароль для авторизации.
+
+В секции **INSTALLED_APPS** в файле конфигурации Smarty необходимо добавить модуль ``viewstats``.
 
 .. _sms-settings:
 
@@ -382,7 +539,7 @@ SMS_ATTEMPTS ``int``
 2.4.8.1. Шлюз smsc.ru
 ~~~~~~~~~~~~~~~~~~~~~
 
-Значение для **SMS_BACKEND** = ``sms.backends.smscru.SMSCBackend``
+Значение для **SMS_BACKEND** = ``'sms.backends.smscru.SMSCBackend'``
 
 SMSC_LOGIN ``str``
   Имя пользователя в сервисе smsc.ru
@@ -392,6 +549,22 @@ SMSC_PASSWORD ``str``
 
 SMSC_SENDER ``str``
   Имя отправителя, которое будет отображаться в SMS, отправленных через сервис smsc.ru
+
+.. _mobipace:
+
+2.4.8.2. Шлюз mobipace.com
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Значение для **SMS_BACKEND** = ``'sms.backends.mobipace.MobipaceBackend'``
+
+MOBIPACE_LOGIN ``str``
+  Имя пользователя в сервисе mobipace.
+
+MOBIPACE_PASSWORD ``str``
+  Пароль в сервисе mobipace.
+
+MOBIPACE_SENDER ``str``
+  Имя отправителя для СМС-сообщений.
 
 .. _sentry-settings:
 
@@ -417,10 +590,36 @@ SMSC_SENDER ``str``
 Конфигурация для **uwsgi** находится в файлах ``/etc/uwsgi/apps-available/smarty`` и ``/etc/microimpuls/smarty/uwsgi/smarty.uwsgi``,
 на него (или на другой используемый конфиг) должен указывать симлинк в ``/usr/share/nginx/html/microimpuls/smarty/<uwsgi settings name>.uwsgi``.
 
+2.4.11. Настройка мультиязычности контента в Smarty
+---------------------------------------------------
+
+Smarty позволяет сохранять в базе данных контент с названиями локализуемых полей на разных языках - например, названия
+телеканалов, фильмов, категорий, жанров, EPG и др.
+Чтобы активировать этот механизм, необходимо добавить в файл конфигурации параметр **SMARTY_ADDITIONAL_LANGUAGES**
+с перечнем необходимых языков (не более 5 дополнительных к основному языков), а также указать основной язык.
+Названия языков должны совпадать с названием локализации в абонентском приложении, по умолчанию используются
+двухбуквенные названия.
+
+SMARTY_DEFAULT_LANGUAGE ``str``
+  Название основного языка.
+  По умолчанию ``ru``.
+
+SMARTY_ADDITIONAL_LANGUAGES ``list``
+  Список дополнительных языков, задается в квадратных скобках с указанием значений через запятую, например:
+  ``[ 'en', 'fr', 'de', 'es', 'pt' ]``
+  По умолчанию пустой.
+
+После настройки параметров мультиязычности и перезагрузки **uwsgi** в панели администратора Smarty в полях формы
+локализуемых полей появится возможность указать название на дополнительных языках.
+
+Для того, чтобы сервер Smarty в ответе на запрос API вернул значение на нужном языке, необходимо дополнительно передавать
+параметр ``lang``. Подробнее в документации `TVMiddleware API <https://microimpuls.github.io/smarty-tvmw-api-docs>`_.
+
+
 .. _crontab-settings:
 
-2.5. Настройка планировщика задач crontab
-=========================================
+2.5. Системные команды Smarty и настройка crontab
+=================================================
 
 .. note::
 
@@ -433,7 +632,7 @@ SMSC_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.<settings name>
 
 Рекомендуется запускать эту команду каждую минуту. При пустом кеше списка телеканалов абоненту будет выдаваться сообщение,
 что список телеканалов пуст.
@@ -445,11 +644,13 @@ SMSC_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.<settings name>
 
 Рекомендуется запускать импорт несколько раз в день для поддержания актуальности телепрограммы
 (см. :ref:`Настройка EPG и телеканалов <epg-setup>`).
 Если не произвести импорт EPG, то программа телепередач на устройстве абонента будет пустой.
+
+В данную команду можно также передать параметр ``--epg_channel_id`` для импорта EPG только для определенного EpgChannel.
 
 .. _check-accounts-command:
 
@@ -458,7 +659,7 @@ SMSC_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py check_accounts --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py check_accounts --settings=settings.<settings name>
 
 Команда осуществляет деактивацию аккаунтов, для которых подошел к концу расчетный период, а также производит списание средств
 и продление действующих аккаунтов. Рекомендуется запускать каждую ночь (см. :ref:`Описание встроенного биллинга <builtin-billing>`).
@@ -470,20 +671,9 @@ SMSC_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py check_streams --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py check_streams --settings=settings.<settings name>
 
 Рекомендуется запускать каждые 1-5 минут для актуального состояния данных.
-
-.. _check-events-command:
-
-2.5.5. Выполнение действий по триггерам модуля мониторинга видеопотоков
------------------------------------------------------------------------
-
-Команда: ::
-
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py check_events --settings=settings.<settings name>
-
-Рекомендуется запускать каждую минуту для актуального информирования об авариях.
 
 .. _send-activation-expires-messages-command:
 
@@ -492,7 +682,7 @@ SMSC_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count <количество оставшихся дней> --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py send_activation_expires_messages --days_count <количество оставшихся дней> --settings=settings.<settings name>
 
 Рекомендуется запускать каждый вечер.
 
@@ -503,7 +693,7 @@ SMSC_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.<settings name>
 
 .. _resend-sms-command:
 
@@ -512,21 +702,43 @@ SMSC_SENDER ``str``
 
 Команда: ::
 
-    python /usr/local/nginx/html/microimpuls/smarty/manage.py resend_sms --settings=settings.<settings name>
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py resend_sms --settings=settings.<settings name>
 
 Рекомендуется запускать каждые 1-3 минуты.
 
+.. _delete-authkeys:
+
+2.5.9. Команда удаления всех сессий авторизации всех аккаунтов для заданного Client ID
+--------------------------------------------------------------------------------------
+
+Команда: ::
+
+    python manage.py delete_authkeys --client_id=<client_id> --settings=settings.<settings name>
+
+Внимание, выполнение команды приведет к логауту всех устройств.
+
+2.5.10. Команда проверки доступности стриминг-сервисов для механизма отказоустойчивости
+---------------------------------------------------------------------------------------
+
+Команда: ::
+
+    python manage.py check_stream_services --settings=settings.<settings name>
+
+При настройке отказоустойчивой схемы сервиса с балансировкой нагрузки рекомендуется выполнять эту команду каждую минуту.
+
+Команда проверяет сервисы по тем методам проверки, которые настроены в свойствах стриминг-сервиса.
+
 .. _crontab-example:
 
-2.5.9. Пример настройки crontab
--------------------------------
+2.5.11. Пример настройки crontab
+--------------------------------
 
 Пример: ::
 
     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-    */1 * * * *         python /usr/local/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.prod
-    0 5,9,13 * * *      python /usr/local/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.prod
-    0 3 * * *           python /usr/local/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
+    */1 * * * *         python /usr/share/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.prod
+    0 5,9,13 * * *      python /usr/share/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.prod
+    0 3 * * *           python /usr/share/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
 
 .. _init-script:
 
@@ -573,6 +785,29 @@ SMSC_SENDER ``str``
 
     Если не выполнить команду обновления кеша *flushall*, то в кеше могут оказаться данные со старой структурой,
     что может привести к непредсказуемым ошибкам в работе приложений.
+
+2.7.1. Устранение ошибки конфликта миграций
+-------------------------------------------
+
+В процессе миграции схемы БД может возникнуть ошибка конфликта миграций:
+``To fix them run 'python manage.py makemigrations --merge'``. Не нужно делать команду ``makemigrations``.
+Ошибка может возникнуть в случае нарушения правильного порядка действий при установке или обновлении системы.
+Чтобы устранить эту ошибку, необходимо выполнить следующие действия:
+
+* Удалить содержимое папки /tvmiddleware/migrations
+
+* Переустановить пакет обновления smarty, который был установлен в тот момент, когда возникла данная ошибка.
+  Временно удалить из папки /tvmiddleware/migrations все новые миграции (дата создания у которых новее чем дата последнего успешного обновления smarty).
+
+* Очистить таблицу ``django_migrations`` в базе данных smarty.
+
+* Выполнить команду: ::
+
+    $ python manage.py migrate --fake --settings=settings.<settings filename>
+
+* Скопировать обратно миграции, временно удаленные на шаге 2. Повторно выполнить команду миграции: ::
+
+    $ python manage.py migrate --settings=settings.<settings filename>
 
 .. _scalability-failsafe:
 
@@ -625,3 +860,39 @@ REPLICATED_DATABASE_DOWNTIME ``int``
 
     REPLICATED_DATABASE_SLAVES = ['slave1', 'slave2']
     REPLICATED_DATABASE_DOWNTIME = 60
+
+
+.. _statsd:
+
+2.8.3. Настройка логирования статистики запросов в statsd
+---------------------------------------------------------
+
+statsd - сервер аггрегации статистических данных: https://github.com/etsy/statsd.
+
+Smarty позволяет выгружать в statsd статистику по запросам к API (количество запросов, время ответа, количество
+выполненных SQL-запросов, время ответа СУБД). Для этого необходимо добавить в файл конфигурации Smarty параметры,
+указанные ниже: ::
+
+    MIDDLEWARE_CLASSES += (
+        'core.middleware.StatsMiddleware',
+    )
+
+    STATSD_HOST = 'X.X.X.X'
+    STATSD_PORT = '8125'
+
+Где:
+
+STATSD_HOST ``str``
+  IP-адрес сервера statsd для выгрузки данных статистики и мониторинга работы сервера Smarty.
+
+STATSD_PORT ``int``
+  Порт сервера statsd для выгрузки данных статистики и мониторинга работы сервера Smarty.
+
+STATSD_PREFIX ``str``
+  Префикс, который будет добавляться (если задан) к ключам параметров, передаваемых в statsd.
+
+.. note::
+
+    Внимание! Необходимо обеспечить доступность сервера statsd и правильность настроек подключения,
+    в противном случае подключенная ```core.middleware.StatsMiddleware``` и отсутствие соединения
+    со statsd может приводить к чрезмерному потреблению оперативной памяти.

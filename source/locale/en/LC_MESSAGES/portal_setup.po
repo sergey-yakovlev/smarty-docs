@@ -1,0 +1,1022 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Microimpuls LLC, www.microimpuls.com
+# This file is distributed under the same license as the Smarty package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Smarty Last\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 17:53+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../source/portal_setup.rst:5
+msgid "6. Установка и настройка портала для STB и Smart TV"
+msgstr "6. Install and configure portal for STB and Smart TV"
+
+#: ../../source/portal_setup.rst:7
+msgid ""
+"Портал - это набор Javascript-приложений (JS/HTML/CSS) в разных стилевых и "
+"функциональных вариантах (шаблонов), представляющих собой оболочку "
+"(интерфейс) для абонента. Портал загружается встроенным в устройство "
+"(приставку или Smart TV) браузером."
+msgstr ""
+"The portal is a set of Javascript (JS/HTML/CSS) in different stylistic and "
+"functional options (templates), which is a shell (interface) for a user. The"
+" portal is loaded to built-in device (set-top box or Smart TV) browser."
+
+#: ../../source/portal_setup.rst:11
+msgid "6.1. Установка портала"
+msgstr "6.1. Installing portal"
+
+#: ../../source/portal_setup.rst:13
+msgid ""
+"Поскольку портал это статические файлы, не требующие сервера приложений с "
+"поддержкой выполнения каких-либо скриптов, то для его хостинга достаточно "
+"любого веб-сервера. Также, при необходимости, портал может быть размещен на "
+"CDN-сервисе или встроен в прошивку устройства."
+msgstr ""
+"Since the portal is a static file that does not require the application "
+"server support any scripting, hosting any web server. Also, if necessary, "
+"the portal can be hosted on a CDN service, or embedded in the firmware of "
+"the device."
+
+#: ../../source/portal_setup.rst:17
+msgid ""
+"С сервером Smarty портал взаимодействует через HTTP API посредством "
+"выполнения XMLHttpRequest-запросов."
+msgstr ""
+"With Smarty the portal server communicates over HTTP API, through the "
+"implementation of XMLHttpRequest requests."
+
+#: ../../source/portal_setup.rst:19
+msgid "Для хостинга портала рекомендуется использовать веб-сервер nginx."
+msgstr "For hosting the portal, use the web server nginx."
+
+#: ../../source/portal_setup.rst:21
+msgid ""
+"Настройки портала задаются в файле ``client.js``, размещенном в корневой "
+"директории. Для удобства деплоя и администрирования client.js, обычно, "
+"является симлинком на специфичный для данного провайдера конфиг, размещенный"
+" в ``/etc/microimpuls/portal/``."
+msgstr ""
+"The portal settings are specified in the file ``client.js`` hosted in the root"
+" directory. For ease of deployment and administration client.js is usually "
+"that on the specific provider config, located in the "
+"``/etc/microimpuls/portal/``."
+
+#: ../../source/portal_setup.rst:26
+msgid ""
+"Из-за политики ограничения выполнения кроссдоменных запросов на некоторых "
+"устройствах рекомендуется для выполнения запросов к Smarty использовать тот "
+"же домен, где размещен портал. В стандартном конфиге nginx для портала, "
+"который идет в комплекте с установочным пакетом портала, указан специальный "
+"location /api, осуществляющий редирект на Smarty."
+msgstr ""
+"Because of the restriction policy implementation crossdomain requests on "
+"some devices it is recommended to query to Smarty to use the same domain "
+"that hosts the portal. In the standard nginx configuration for the portal "
+"that comes with the installation package of the portal, provides special "
+"location /api performing a redirect to Smarty."
+
+#: ../../source/portal_setup.rst:34
+msgid "6.2. Параметры конфигурации client.js"
+msgstr "6.2. Configuration options client.js"
+
+#: ../../source/portal_setup.rst:36
+msgid ""
+"В конфиге client.js задаются как основные параметры (например, данные для "
+"подключения к Smarty), так и специфичные для каждого приложения (шаблона)."
+msgstr ""
+"In the config client.js are defined as key parameters (for example, the "
+"information to connect to Smarty) and specific for each application "
+"(template)."
+
+#: ../../source/portal_setup.rst:42
+msgid "Обязательные параметры"
+msgstr "Required parameters"
+
+#: ../../source/portal_setup.rst:45
+msgid "client_id ``int``"
+msgstr "client_id ``int``"
+
+#: ../../source/portal_setup.rst:45
+msgid "Client ID в Smarty."
+msgstr "Client ID in Smarty."
+
+#: ../../source/portal_setup.rst:48
+msgid "api_key ``str``"
+msgstr "api_key ``str``"
+
+#: ../../source/portal_setup.rst:48
+msgid "API key в Smarty для данного Client ID."
+msgstr "The API key in Smarty for this Client ID."
+
+#: ../../source/portal_setup.rst:51
+msgid "api_url ``str``"
+msgstr "api_url ``str``"
+
+#: ../../source/portal_setup.rst:51
+msgid ""
+"Адрес сервера Smarty. Может быть задан относительно домена портала, по "
+"которому он был загружен, например, */api*."
+msgstr ""
+"The address of the server Smarty. Can be specified relative to the domain of"
+" the portal on which it was downloaded, e.g.: /api*."
+
+#: ../../source/portal_setup.rst:55
+msgid "template_name ``str``"
+msgstr "template_name ``str``"
+
+#: ../../source/portal_setup.rst:54
+msgid ""
+"Название шаблона, используемого по умолчанию. Список доступных шаблонов "
+"можно посмотреть в папке templates. Данное значение может быть "
+"переопределено в настройках приложения в Smarty, а также в настройках "
+"аккаунта."
+msgstr ""
+"The name of the template used by default. The list of available templates in"
+" the templates directory. This value can be overridden in the application "
+"settings in Smarty, but also in the account settings."
+
+#: ../../source/portal_setup.rst:61
+msgid "template_size ``array``"
+msgstr "template_size ``array``"
+
+#: ../../source/portal_setup.rst:58
+msgid ""
+"Список доступных разрешений шаблонов. Необходимо указывать только в том "
+"случае, если для шаблона есть отдельно сверстанный стиль в соответствующее "
+"указываемое разрешение. Например, шаблон ``classic`` имеет отдельную верстку "
+"для разрешений 1280х720 и 720х576. Для других шаблонов используется "
+"автоматический скейлинг, поэтому размеры указывать не нужно."
+msgstr ""
+"List of available permission templates. You need to specify only if the "
+"template is separately converted into the style specified in the relevant "
+"resolution. For example, the pattern ``classic`` has a separate layout for "
+"resolutions of 1280x720 and 720x576. For other templates, use automatic "
+"scaling so the size should not be specified."
+
+#: ../../source/portal_setup.rst:68
+msgid "settings_filename ``str``"
+msgstr "settings_filename ``str``"
+
+#: ../../source/portal_setup.rst:64
+msgid ""
+"Имя файла для сохранения локальных настроек на устройстве. Желательно "
+"указывать уникальное имя (например, совпадающее с префиксом конфига "
+"провайдера), т.к. в этом файле сохраняются в том числе логин и пароль "
+"аккаунта. Если для уже работающего сервиса в процессе эксплуатации (или "
+"переезда на другой сервер) поменять это имя, то при следующем включении "
+"устройства у абонентов произойдет логаут. Значение по умолчанию "
+"*example.dat*."
+msgstr ""
+"The name of the file to save the local settings on the device. It is "
+"desirable to specify a unique name (for example, matching a config prefix of"
+" the provider), since this file is stored including the username and "
+"password of the account. If the already running service in operation (or "
+"move to another server) to change this name, the next time you turn on the "
+"device, subscribers will be logout. The default value *example.dat*."
+
+#: ../../source/portal_setup.rst:73
+msgid "Дополнительные параметры"
+msgstr "Additional options"
+
+#: ../../source/portal_setup.rst:78
+msgid "site_url ``str``"
+msgstr "site_url ``str``"
+
+#: ../../source/portal_setup.rst:76
+msgid ""
+"Адрес сайта провайдера. Используется в служебных сообщениях портала для "
+"абонента, связанных с информированием о технических неполадках и вопросами "
+"получения дополнительной информации. Значение по умолчанию "
+"*www.example.com*."
+msgstr ""
+"The website address of the provider. Used in official communications portal "
+"for the subscriber associated with informing about technical problems and "
+"questions more information. The default value *www.example.com*."
+
+#: ../../source/portal_setup.rst:83
+msgid "push_stat_interval ``int``"
+msgstr "push_stat_interval ``int``"
+
+#: ../../source/portal_setup.rst:81
+msgid ""
+"Периодичность выполнения запросов к серверу Smarty для сохранения данных о "
+"телесмотрении, задается в миллисекундах. Не стоит использовать слишком "
+"маленькое значение, однако чем меньше это значение, тем точнее будут данные "
+"о сессиях просмотра и рейтинга контента. Значение по умолчанию *300000* (5 "
+"минут)."
+msgstr ""
+"The frequency of requests to the server Smarty to save the data on TV "
+"viewing, specified in milliseconds. Do not use too small a value, however "
+"the smaller the value, the more accurate will be the data about the browsing"
+" sessions and rating content. The default value is *300000* (5 minutes)."
+
+#: ../../source/portal_setup.rst:88
+msgid "content_position_set_interval ``int``"
+msgstr "content_position_set_interval ``int``"
+
+#: ../../source/portal_setup.rst:86
+msgid ""
+"Периодичность выполнения запросов к серверу Smarty для сохранения текущей "
+"позиции просмотра контента PVR и VOD для работы функции возвращения к "
+"последней сохраненной позиции просмотра. Задается в миллисекундах. Значение "
+"по умолчанию *30000* (30 секунд)."
+msgstr ""
+"The frequency of requests to the server Smarty to save the current viewing "
+"position of the content PVR and VOD for the function return to the last "
+"saved viewing positions. Specified in milliseconds. The default value "
+"*30000* (30 seconds)."
+
+#: ../../source/portal_setup.rst:95
+msgid "default_timezone ``int``"
+msgstr "default_timezone ``int``"
+
+#: ../../source/portal_setup.rst:91
+msgid ""
+"Значение опции, задаваемой абонентом \"Часовой сдвиг\" по умолчанию. "
+"Значение в диапазоне от 0 (что соответствует поясу -12) до 24 (+12). Сдвиг "
+"добавляется к системному времени на устройстве, поэтому если время задано "
+"корректно и/или используется NTP, то опцию default_timezone необходимо "
+"установить в значение 12 (соответствует +0). По умолчанию *false* (означает:"
+" не задано)."
+msgstr ""
+"The option value specified by the subscriber of \"Hour shift\" by default. "
+"The value ranges from 0 (which corresponds to the zone of -12) to 24 (+12). "
+"The offset is added to the system time on the device, so if the time is set "
+"correctly and/or use NTP, then the option default_timezone must be set to "
+"the value of 12 (corresponding to +0). Default *false* (meaning: not set)."
+
+#: ../../source/portal_setup.rst:105
+msgid "default_buffersize ``int``"
+msgstr "default_buffersize ``int``"
+
+#: ../../source/portal_setup.rst:98
+msgid ""
+"Значение опции, задаваемой абонентом \"Размер буферизации\" по умолчанию. "
+"Варианты: 0 - автоматически; 1 - нет буферизации; 2 - малый буфер; 3 - "
+"средний буфер; 4 - большой буфер; 5 - очень большой буфер. По умолчанию "
+"*false* (означает: не задано)."
+msgstr ""
+"The option value specified by the subscriber \"the size of the buffer\" by "
+"default. Options are: 0 - automatically; 1 - no buffering; 2 - small buffer;"
+" 3 - average buffer; 4 - large bumper; 5 - a very large buffer. Default "
+"*false* (meaning: not set)."
+
+#: ../../source/portal_setup.rst:110
+msgid "default_lang ``int``"
+msgstr "default_lang ``int``"
+
+#: ../../source/portal_setup.rst:108
+msgid ""
+"Значение опции, задаваемой абонентом \"Язык интерфейса\" по умолчанию. "
+"Означает индекс (начиная с 0) языка из списка языков, которые поддерживаются"
+" конкретным шаблоном. По умолчанию *false* (означает: не задано)."
+msgstr ""
+"The option value specified by the subscriber \"interface Language\" by "
+"default. Does the index (starting with 0) of the language from the list of "
+"languages supported by a specific template. Default *false* (meaning: not "
+"set)."
+
+#: ../../source/portal_setup.rst:114
+msgid "system_debug ``bool``"
+msgstr "system_debug ``bool``"
+
+#: ../../source/portal_setup.rst:113
+msgid ""
+"Включает показ системной консоли портала, в которой отображается "
+"дополнительная служебная информация для отладки. По умолчанию *false*."
+msgstr ""
+"Shows the system console of the portal, which displays additional internal "
+"information for debugging. Default *false*."
+
+#: ../../source/portal_setup.rst:120
+msgid "user_debug ``bool``"
+msgstr "user_debug ``bool``"
+
+#: ../../source/portal_setup.rst:117
+msgid ""
+"Включает показ сообщений абоненту о различных служебных ошибках, возникших в"
+" ходе работы портала (в том числе, например, ошибки связи с сервером "
+"Middleware). По умолчанию *false*. Поддерживается только в шаблонах: "
+"``futuristic``."
+msgstr ""
+"The show includes updates on various service errors encountered during the "
+"operation of the portal (including, for example, of a communication error "
+"with the server Middleware). Default *false*. Only supported in the "
+"templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:126
+msgid "block_requests_in_standby ``bool``"
+msgstr "block_requests_in_standby ``bool``"
+
+#: ../../source/portal_setup.rst:123
+msgid ""
+"Включает блокировку запросов к серверу, если устройство находится в режиме "
+"Stand-By. После выхода из Stand-By отправка запросов к серверу "
+"восстанавливается, однако данные в интерфейсе могут быть устаревшими в "
+"течение некоторого времени. По умолчанию *false*."
+msgstr ""
+"Includes lock requests to the server, if the device is in Stand-By mode. "
+"After leaving Stand-By sending requests to the server to be restored but the"
+" data in the interface may be out of date for some time. Default *false*."
+
+#: ../../source/portal_setup.rst:131
+msgid "Специфичные для шаблонов параметры"
+msgstr "Specific template parameters"
+
+#: ../../source/portal_setup.rst:136
+msgid "signup_auto_activation_period ``int``"
+msgstr "signup_auto_activation_period ``int``"
+
+#: ../../source/portal_setup.rst:134
+msgid ""
+"Количество дней, на которое будет выдан бесплатный доступ для первичного "
+"использования аккаунта после регистрации. По умолчанию *0*. Поддерживается "
+"только в шаблонах: ``impuls``."
+msgstr ""
+"The number of days that will be given free access for primary usage of your "
+"account after registration. Default *0*. Only supported in the templates: "
+"``impuls``."
+
+#: ../../source/portal_setup.rst:141
+msgid "show_welcome_message ``bool``"
+msgstr "show_welcome_message ``bool``"
+
+#: ../../source/portal_setup.rst:139
+msgid ""
+"Показывать или нет приветственное сообщение при первом запуске приложения. "
+"По умолчанию *false*. Поддерживается только в шаблонах: ``impuls``."
+msgstr ""
+"Or not to show the welcome message when you first launch the application. "
+"Default *false*. Only supported in the templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:146
+msgid "welcome_message ``str``"
+msgstr "welcome_message ``str``"
+
+#: ../../source/portal_setup.rst:144
+msgid ""
+"Текст приветственного сообщения при первом запуске приложеня. По умолчанию "
+"*не задан*. Поддерживается только в шаблонах: ``impuls``."
+msgstr ""
+"The text of the welcome message when you first run your tools. By default "
+"*not configured*. Only supported in the templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:151
+msgid "registration_available ``bool``"
+msgstr "registration_available ``bool``"
+
+#: ../../source/portal_setup.rst:149
+msgid ""
+"Показывать или нет кнопку и экран регистрации через СМС. По умолчанию "
+"*false*. Поддерживается только в шаблонах: ``impuls``."
+msgstr ""
+"Or not to show the button and the registration screen via SMS. Default "
+"*false*. Only supported in the templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:156
+msgid "settings_menu_custom_items ``list``"
+msgstr "settings_menu_custom_items ``list``"
+
+#: ../../source/portal_setup.rst:154
+msgid ""
+"Список ключей дополнительных пунктов меню настроек в интерфейсе абонента. "
+"Пример настройки ниже. По умолчанию *[]*. Поддерживается только в шаблонах: "
+"``impuls``."
+msgstr ""
+"Key list of additional menu items settings in the interface of the "
+"subscriber. The example settings below. By default, * []*. Only supported in"
+" the templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:163
+msgid "auth_mode ``str``"
+msgstr "auth_mode ``str``"
+
+#: ../../source/portal_setup.rst:159
+msgid ""
+"Режим авторизации. Возможные значения: *abonement* - только по логину, без "
+"пароля; *password* - по логину и паролю (по умолчанию); *device_uid* - по "
+"уникальному идентификатору устройства (обычно MAC-адресу). Поддерживается "
+"только в шаблонах: ``impuls``, ``focus``, ``futuristic``."
+msgstr ""
+"The authorization mode. Possible values are: *abonement* - only login, no "
+"password; *password* username and password (default); *device_uid* - unique "
+"device identifier (typically its MAC address). Only supported in the "
+"templates: ``impuls``, ``focus``, ``futuristic``."
+
+#: ../../source/portal_setup.rst:169
+msgid "play_record_continuously ``bool``"
+msgstr "play_record_continuously ``bool``"
+
+#: ../../source/portal_setup.rst:166
+msgid ""
+"Режим воспроизведения передач в архиве, при значении *true* архив "
+"воспроизводится непрерывно с автоматическим переходом на следующую передачу,"
+" при значении *false* по окончанию передачи происходит переключение в прямой"
+" эфир. По умолчанию *true*. Поддерживается только в шаблонах: ``focus`` (в "
+"остальных шаблонах  всегда режим непрерывного воспроизведения)."
+msgstr ""
+"The playback gear in the archive, when set to *true*, the files play "
+"continuously with automatic transition to the next gear, when set to *false*"
+" by the end of the transmission is switched to live. Default *true*. Only "
+"supported in the templates: ``focus`` (templates are always gapless playback)."
+
+#: ../../source/portal_setup.rst:176
+msgid "server_rewind_mode ``bool``"
+msgstr "server_rewind_mode ``bool``"
+
+#: ../../source/portal_setup.rst:172
+msgid ""
+"Режим перемотки плеера. При значении *true* при перемотке будет "
+"использоваться позиционирование с помощью указания временной метки видео-"
+"серверу с перезапросом видеопотока. При значении *false* - перемотка по "
+"потоку методом seek средствами плеера (работает не всегда корректно из-за "
+"различной реализации на плеерах, однако быстрее). По умолчанию *true*. "
+"Поддерживается только в шаблонах: ``impuls``, ``focus``, ``futuristic``."
+msgstr ""
+"The rewind mode of player. When set to *true* when rewinding is to be used "
+"positioning by specifying the timestamp of the video server perezapisi of "
+"the video stream. If the value is *false* - rewind the stream method seek a "
+"media player (does not always work correctly because of different "
+"implementations on the players, but faster). Default *true*. Only supported "
+"in the templates: ``impuls``, ``focus``, ``futuristic``."
+
+#: ../../source/portal_setup.rst:182
+msgid "use_template_default_resolution ``bool``"
+msgstr "use_template_default_resolution ``bool``"
+
+#: ../../source/portal_setup.rst:179
+msgid ""
+"При значении *true* если на приставке MAG выбрано разрешение больше чем "
+"1280х720, то оно будет изменено на 1280х720 с выдачей сообщения о смене "
+"разрешения. По умолчанию *false*. Поддерживается только в шаблонах: ``focus``."
+msgstr ""
+"When set to *true* if the MAG selected resolution more than 1280x720, it "
+"will be changed to 1280x720 with a message about changing permissions. "
+"Default *false*. Only supported in the templates: ``focus``."
+
+#: ../../source/portal_setup.rst:187
+msgid "show_disconnect_message ``bool``"
+msgstr "show_disconnect_message ``bool``"
+
+#: ../../source/portal_setup.rst:185
+msgid ""
+"Показывать или нет сообщение об ошибке при разрыве соединения приставки с "
+"сетью. По умолчанию *true*. Поддерживается только в шаблонах: ``focus``."
+msgstr ""
+"Display or not error message if the connection of consoles to the network. "
+"Default *true*. Only supported in the templates: ``focus``."
+
+#: ../../source/portal_setup.rst:193
+msgid "samsung_guidelines_compatibility_mode ``bool``"
+msgstr "samsung_guidelines_compatibility_mode ``bool``"
+
+#: ../../source/portal_setup.rst:190
+msgid ""
+"Включить или нет режим соблюдения гайдлайнов Samsung (используется для "
+"включения некоторых специальных ограничений для более простой публикации в "
+"магазин Samsung). По умолчанию *false*. Поддерживается только в шаблонах: "
+"``impuls``, ``futuristic``."
+msgstr ""
+"To include compliance with the guidelines Samsung (used to enable some "
+"special restrictions to publication in the Samsung store). Default *false*. "
+"Only supported in the templates: ``impuls``, ``futuristic``."
+
+#: ../../source/portal_setup.rst:199
+msgid "auto_launch_last_viewed_channel ``bool``"
+msgstr "auto_launch_last_viewed_channel ``bool``"
+
+#: ../../source/portal_setup.rst:196
+msgid ""
+"Значение по умолчанию для опции, задаваемой абонентом - \"Воспроизводить "
+"последний просматриваемый канал\" автоматически при запуске приложения. По "
+"умолчанию *false*. Поддерживается только в шаблонах: ``impuls``."
+msgstr ""
+"The default value for the option specified by the subscriber \"to Replay the"
+" last viewed channel\" automatically when the application starts. Default "
+"*false*. Only supported in the templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:204
+msgid "is_letters_in_password ``bool``"
+msgstr "is_letters_in_password ``bool``"
+
+#: ../../source/portal_setup.rst:202
+msgid ""
+"Разрешено ли использовать буквы в пароле в экранной клавиатуре при "
+"авторизации. По умолчанию *false*. Поддерживается только в шаблонах: "
+"``impuls``, ``futuristic``."
+msgstr ""
+"Is it allowed to use letters in a password in the keypad during "
+"authorization. Default *false*. Only supported in the templates: ``impuls``, "
+"``futuristic``."
+
+#: ../../source/portal_setup.rst:209
+msgid "vod_show_news ``bool``"
+msgstr "vod_show_news ``bool``"
+
+#: ../../source/portal_setup.rst:207
+msgid ""
+"Показывать ли категорию видеотеки \"Новинки\". По умолчанию *true*. "
+"Поддерживается только в шаблонах: ``impuls``, ``futuristic``."
+msgstr ""
+"Whether to show the category of the video library \"what's New\". Default "
+"*true*. Only supported in the templates: ``impuls``, ``futuristic``."
+
+#: ../../source/portal_setup.rst:214
+msgid "vod_show_packages ``bool``"
+msgstr "vod_show_packages ``bool``"
+
+#: ../../source/portal_setup.rst:212
+msgid ""
+"Показывать ли категорию видеотеки \"Пакеты фильмов\". По умолчанию *true*. "
+"Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"Whether to show the category of the video library \"Package films\". Default"
+" *true*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:219
+msgid "vod_show_purchased ``bool``"
+msgstr "vod_show_purchased ``bool``"
+
+#: ../../source/portal_setup.rst:217
+msgid ""
+"Показывать ли категорию видеотеки \"Купленное\". По умолчанию *false*. "
+"Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"Whether to show the category of the video library of \"Purchased\". Default "
+"*false*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:224
+msgid "show_logout_option ``bool``"
+msgstr "show_logout_option ``bool``"
+
+#: ../../source/portal_setup.rst:222
+msgid ""
+"Показывать ли кнопку и возможность логаута в экране профиля. По умолчанию "
+"*false*. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"Whether to show the button, and the ability to logout in the profile screen."
+" Default *false*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:231
+msgid "navigation_mode ``str``"
+msgstr "navigation_mode ``str``"
+
+#: ../../source/portal_setup.rst:227
+msgid ""
+"Режим навигации в приложении, возможные значения: *normal* - обычная "
+"навигация; *horizontal* - переход между экранами стрелками пульта. По "
+"умолчанию *normal*. Поддерживается только в шаблонах: ``impuls``, "
+"``futuristic``."
+msgstr ""
+"The navigation mode within the application, possible values are: *normal* - "
+"normal navigation; *horizontal* - screen navigation arrows of the remote. "
+"Default *normal*. Only supported in the templates: ``impuls``, ``futuristic``."
+
+#: ../../source/portal_setup.rst:236
+msgid "disable_set_button_on_mag ``bool``"
+msgstr "disable_set_button_on_mag ``bool``"
+
+#: ../../source/portal_setup.rst:234
+msgid ""
+"При значении *true* кнопка **Setup** на пульте приставки MAG будет "
+"заблокирована. По умолчанию *false*. Поддерживается только в шаблонах: "
+"``futuristic``."
+msgstr ""
+"When set to *true* button **Setup** on the remote MAG is blocked. Default "
+"*false*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:242
+msgid "restore_login_form_inputs_from_settings ``bool``"
+msgstr "restore_login_form_inputs_from_settings ``bool``"
+
+#: ../../source/portal_setup.rst:239
+msgid ""
+"Отображать ли значения полей \"Логин\" и \"Пароль\" в форме авторизации при "
+"перезапуске приложения. При методе авторизации *password* рекомендуется "
+"использовать эту опцию. По умолчанию *false*. Поддерживается только в "
+"шаблонах: ``futuristic``."
+msgstr ""
+"Whether to display the values of the fields \"Username\" and \"Password\" in"
+" the login form when the application is restarted. The method of "
+"authorization *password* it is recommended to use this option. Default "
+"*false*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:253
+msgid "tv_channels_list_mode ``str``"
+msgstr "tv_channels_list_mode ``str``"
+
+#: ../../source/portal_setup.rst:245
+msgid ""
+"Режим отображения списка каналов. Возможные значения для шаблона "
+"``futuristic``: *list* - список по умолчанию; *grid* - сетка; *longlist* - "
+"длинный список (10 каналов на страницу вместо 5). Возможные значения для "
+"шаблона ``impuls``: *list* - список по умолчанию; *preview* - с окном "
+"предпросмотра (плеером). По умолчанию *list*. Поддерживается только в "
+"шаблонах: ``futuristic``, ``impuls``."
+msgstr ""
+"The display mode of the channel list. The possible values for template "
+"``futuristic``: *list* - default list; *grid* grid; *longlist* - long list (10"
+" channels per page instead of 5). The possible values for template ``impuls``:"
+" *list* - default list; *preview* preview window (player). The default "
+"*list*. Only supported in the templates: ``futuristic``, ``impuls``."
+
+#: ../../source/portal_setup.rst:258
+msgid "allow_to_change_tv_channels_list_mode ``bool``"
+msgstr "allow_to_change_tv_channels_list_mode ``bool``"
+
+#: ../../source/portal_setup.rst:256
+msgid ""
+"Разрешить ли абоненту изменять режим отображения каналов. По умолчанию "
+"*false*. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"Whether to allow the caller to change the display mode of channels. Default "
+"*false*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:263
+msgid "custom_body_class ``str``"
+msgstr "custom_body_class ``str``"
+
+#: ../../source/portal_setup.rst:261
+msgid ""
+"Подключить дополнительный класс к тегу body портала. По умолчанию *не "
+"задан*. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"To add extra class to the body tag of the portal. By default *not "
+"configured*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:268
+msgid "change_volume_on_left_right_arrows_keys ``bool``"
+msgstr "change_volume_on_left_right_arrows_keys ``bool``"
+
+#: ../../source/portal_setup.rst:266
+msgid ""
+"Включить управление громкостью с помощью стрелок пульта дополнительно к "
+"обычным кнопкам громкости. По умолчанию *false*. Поддерживается только в "
+"шаблонах: ``impuls``."
+msgstr ""
+"Enable volume control with arrow keys of the remote control in addition to "
+"the standard volume buttons. Default *false*. Only supported in the "
+"templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:273
+msgid "open_infobar_on_ok_key ``bool``"
+msgstr "open_infobar_on_ok_key ``bool``"
+
+#: ../../source/portal_setup.rst:271
+msgid ""
+"При значении *true* инфобар будет открываться по нажатию кнопки OK (если он "
+"был скрыт). По умолчанию *false*. Поддерживается только в шаблонах: "
+"``impuls``."
+msgstr ""
+"When set to *true* Infobar will open by pressing OK (if it was hidden). "
+"Default *false*. Only supported in the templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:279
+msgid "loop_epg_screen_menu_on_up_down_keys ``bool``"
+msgstr "loop_epg_screen_menu_on_up_down_keys ``bool``"
+
+#: ../../source/portal_setup.rst:276
+msgid ""
+"При значении *true* в экране EPG при достижении начала списка и переходе "
+"вверх будет происходить переход в конец текущего дня, а при переходе вниз с "
+"конца - в начало списка (режим зацикливания), без перехода по дням. По "
+"умолчанию *false*. Поддерживается только в шаблонах: ``impuls``."
+msgstr ""
+"When set to *true* in the EPG screen when reaching the top of the list and "
+"move up, will go to the end of the day, and the transition down from the end"
+" to the beginning of the list (looping), without moving for days. Default "
+"*false*. Only supported in the templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:286
+msgid "reboot_device_after_login_with_password ``bool``"
+msgstr "reboot_device_after_login_with_password ``bool``"
+
+#: ../../source/portal_setup.rst:282
+msgid ""
+"При значении *true* после авторизации абонента логином и паролем через форму"
+" авторизации произойдет перезагрузка устройства. Может быть использовано для"
+" выполнения системных операций биллинга при первичной \"активации\" "
+"приставки абонентом. По умолчанию *false*. Поддерживается только в шаблонах:"
+" ``futuristic``."
+msgstr ""
+"When set to *true* after authorization of the subscriber username and "
+"password through the login form there will be a reboot of the device. Can be"
+" used to perform the system operations billing at initial \"activation\" "
+"prefix by the subscriber. Default *false*. Only supported in the templates: "
+"``futuristic``."
+
+#: ../../source/portal_setup.rst:292
+msgid "show_number_of_channels_in_all_category ``bool``"
+msgstr "show_number_of_channels_in_all_category ``bool``"
+
+#: ../../source/portal_setup.rst:289
+msgid ""
+"При значении *true* в разделе \"ТВ\" в названии категории \"Все каналы\" "
+"будет добавлено отображения количества телеканалов в этой категории. По "
+"умолчанию *false*. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"When set to *true* in the section \"TV\" in the category name \"All "
+"channels\" will be added to display the number of channels in this category."
+" Default *false*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:298
+msgid "default_notification_time ``int``"
+msgstr "default_notification_time ``int``"
+
+#: ../../source/portal_setup.rst:295
+msgid ""
+"Время, за которое должно показываться напоминание о передаче (напоминания "
+"устанавливаются на грядущие передачи из экрана \"Программа\". По умолчанию "
+"*0*. Поддерживается только в шаблонах: ``impuls``."
+msgstr ""
+"The time at which to display a reminder on the transfer (reminders are set "
+"for the upcoming transfer of screen Program. Default *0*. Only supported in "
+"the templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:304
+msgid "account_renewal_message ``str``"
+msgstr "account_renewal_message ``str``"
+
+#: ../../source/portal_setup.rst:301
+msgid ""
+"Текст сообщения, которое выводится пользователю при окончании его подписки. "
+"В нём, как правило, указывается способ продления подписки. По умолчанию *не "
+"задан*, показывается сообщение, зашитое в приложение. Поддерживается только "
+"в шаблонах: ``impuls``."
+msgstr ""
+"The text of the message that is displayed to the user at the end of its "
+"subscription. It usually indicate method of renewal. The default *is not "
+"defined*, it displays a message sewn into the app. Only supported in the "
+"templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:308
+msgid "player_rewind_step ``int``"
+msgstr "player_rewind_step ``int``"
+
+#: ../../source/portal_setup.rst:307
+msgid ""
+"Шаг перемотки плеера в секундах, в режиме архива и VOD. По умолчанию 30 "
+"секунд. Поддерживается только в шаблонах: ``impuls``, ``futuristic``."
+msgstr ""
+"Step rewinding the player in seconds, in the archive mode and VOD. The "
+"default is 30 seconds. Only supported in the templates: ``impuls``, "
+"``futuristic``."
+
+#: ../../source/portal_setup.rst:312
+msgid "allow_to_change_data_center ``bool``"
+msgstr "allow_to_change_data_center ``bool``"
+
+#: ../../source/portal_setup.rst:311
+msgid ""
+"При значении *true* в настройках абонента появится возможность изменения "
+"дата-центра (сервера вещания). Поддерживается только в шаблонах: "
+"``futuristic``."
+msgstr ""
+"When set to *true* in the settings of the subscriber will be able to change "
+"the data center (the broadcast server). Only supported in the templates: "
+"``futuristic``."
+
+#: ../../source/portal_setup.rst:317
+msgid "show_radio_in_services ``bool``"
+msgstr "show_radio_in_services ``bool``"
+
+#: ../../source/portal_setup.rst:315
+msgid ""
+"При значении *true* в разделе \"Сервисы\" будет добавлен пункт \"Радио\". По"
+" умолчанию *true*. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"When set to *true* in section \"Services\" will be added to the item "
+"\"Radio\". Default *true*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:322
+msgid "show_balance_menu ``bool``"
+msgstr "show_balance_menu ``bool``"
+
+#: ../../source/portal_setup.rst:320
+msgid ""
+"При значении *true* будет отображаться меню \"Баланс\". По умолчанию *true*."
+" Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"When set to true menu will display \"Balance\". Default *true*. Only "
+"supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:327
+msgid "show_messages_menu ``bool``"
+msgstr "show_messages_menu ``bool``"
+
+#: ../../source/portal_setup.rst:325
+msgid ""
+"При значении *true* будет отображаться меню \"Сообщения\". По умолчанию "
+"*true*. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"When set to *true* to display menu Messages. Default *true*. Only supported "
+"in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:332
+msgid "allow_autoregistration ``bool``"
+msgstr "allow_autoregistration ``bool``"
+
+#: ../../source/portal_setup.rst:330
+msgid ""
+"При значении *true* при первом запуске приложения на устройстве происходит "
+"регистрация нового аккаунта. По умолчанию *false*. Поддерживается только в "
+"шаблонах: ``impuls``."
+msgstr ""
+"When set to *true* when you first launch the app on the device registers a "
+"new account. Default *false*. Only supported in the templates: ``impuls``."
+
+#: ../../source/portal_setup.rst:338
+msgid "switching_channels_inside_category ``bool``"
+msgstr "switching_channels_inside_category ``bool``"
+
+#: ../../source/portal_setup.rst:335
+msgid ""
+"При значении *true* переключение каналов кнопками CH+/CH- будет происходить "
+"внутри выбранной категории каналов, а не в полном списке каналов. По "
+"умолчанию *false*. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"When set to *true* to switch channels with the buttons CH+/CH - will occur "
+"within the selected category the channels and not the full channel list. "
+"Default *false*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:345
+msgid "main_screen_mode ``str``"
+msgstr "main_screen_mode ``str``"
+
+#: ../../source/portal_setup.rst:341
+msgid ""
+"Режим отображения главного меню портала. Возможные значения для шаблона "
+"``futuristic``: *classic_menu* - стандартное меню с виджетами; *showcase* - "
+"витрина с контентом, виджетами, приложениями и меню. По умолчаию "
+"``classic_menu``. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"The display mode of the main menu of the portal. The possible values for "
+"template ``futuristic``: *classic_menu* standard menu with widgets; *showcase*"
+" showcase content, widgets, apps and menu. Default ``classic_menu``. Only "
+"supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:350
+msgid "allow_to_change_main_screen_mode ``bool``"
+msgstr "allow_to_change_main_screen_mode ``bool``"
+
+#: ../../source/portal_setup.rst:348
+msgid ""
+"При значении *true* при нажатии желтой кнопки в главное меню будет "
+"изменяться режим *main_screen_mode*. По умолчанию *false*. Поддерживается "
+"только в шаблонах: ``futuristic``."
+msgstr ""
+"When set to *true* when you press the yellow button in main menu change mode"
+" *main_screen_mode*. Default *false*. Only supported in the templates: "
+"``futuristic``."
+
+#: ../../source/portal_setup.rst:355
+msgid "tv_show_favorites ``bool``"
+msgstr "tv_show_favorites ``bool``"
+
+#: ../../source/portal_setup.rst:353
+msgid ""
+"При значении *true* в шаблоне будет включена категория \"Избранное\". По "
+"умолчанию *false*. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"When set to *true* in the template will include the category of "
+"\"favorites\". Default *false*. Only supported in the templates: "
+"``futuristic``."
+
+#: ../../source/portal_setup.rst:361
+msgid "check_account_template ``bool``"
+msgstr "check_account_template ``bool``"
+
+#: ../../source/portal_setup.rst:358
+msgid ""
+"При значении *true* после авторизации акканта будет осуществляться проверка "
+"шаблона, установленного в настройках аккаунта в Smarty, и если он отличается"
+" от используемого приложение будет перезагружено в нужном шаблоне. По "
+"умолчанию *false*. Поддерживается только в шаблонах: ``futuristic``."
+msgstr ""
+"When set to *true* after authorization of the Bank account should be "
+"validated against the template specified in your account settings in Smarty,"
+" and if it differs from your application will restart in the desired "
+"pattern. Default *false*. Only supported in the templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:368
+msgid "save_aspect_ratio_per_channel ``bool``"
+msgstr "save_aspect_ratio_per_channel ``bool``"
+
+#: ../../source/portal_setup.rst:364
+msgid ""
+"При значении *true* в настройках портала на устройстве выбранное соотношение"
+" сторон будет сохраняться отдельно для каждого канала, при значении *false* "
+"- общее значение для всех каналов. По умолчанию *false*. Поддерживается "
+"только в шаблонах: ``futuristic``."
+msgstr ""
+"When set to *true* in the setting of portal on device is selected the aspect"
+" ratio will be maintained separately for each channel, when set to *false*, "
+"the total value for all channels. Default *false*. Only supported in the "
+"templates: ``futuristic``."
+
+#: ../../source/portal_setup.rst:373
+msgid "6.3. Механизм событий"
+msgstr "6.3. The event mechanism"
+
+#: ../../source/portal_setup.rst:375
+msgid ""
+"События позволяют добавлять или переопределять некоторый функционал портала "
+"в разные моменты его жизненного цикла. Обработчики событий задаются в "
+"конфиге client.js, что позволяет сохранить кастомные настройки и функции "
+"даже при обновлении портала на новую версию."
+msgstr ""
+"Events allow you to add or override some functionality of the portal at "
+"different points in its life cycle. Event handlers are defined in the config"
+" client.js that allows you to save custom settings and functions even if you"
+" upgrade the portal to new version."
+
+#: ../../source/portal_setup.rst:379
+msgid "Доступные события:"
+msgstr "Available events:"
+
+#: ../../source/portal_setup.rst:381
+msgid ""
+"*OnDataRequestError* - ошибка выполнения запроса к Smarty, в качестве "
+"аргумента - код ошибки"
+msgstr ""
+"*OnDataRequestError* - error running query to Smarty as argument - error "
+"code"
+
+#: ../../source/portal_setup.rst:382
+msgid "*OnAppInitBegin* - старт инициализации приложения"
+msgstr "*OnAppInitBegin* - start application initialization"
+
+#: ../../source/portal_setup.rst:383
+msgid "*OnAppInitEnd* - завершение инициализации приложения"
+msgstr "*OnAppInitEnd* - completion of application initialization"
+
+#: ../../source/portal_setup.rst:384
+msgid "*OnDeviceInitBegin* - старт инициализации драйвера устройства"
+msgstr "*OnDeviceInitBegin* - start initialization of the device driver"
+
+#: ../../source/portal_setup.rst:385
+msgid "*OnDeviceInitEnd* - завершение инициализации драйвера устройства"
+msgstr "*OnDeviceInitEnd* - completion of initialization of the device driver"
+
+#: ../../source/portal_setup.rst:386
+msgid ""
+"*OnDeviceKeyEvent* - событие нажатия клавиши пульта, в качестве аргумента - "
+"код клавиши"
+msgstr ""
+"*OnDeviceKeyEvent* event keypress of the remote, as the argument is the "
+"keycode"
+
+#: ../../source/portal_setup.rst:387
+msgid "*OnAccountLoginSuccessful* - успешная авторизация аккаунта"
+msgstr "*OnAccountLoginSuccessful* successful authorization of the account"
+
+#: ../../source/portal_setup.rst:389
+msgid ""
+"Жизненный цикл: *OnAppInitBegin > OnDeviceInitBegin > OnDeviceInitEnd > "
+"OnAppInitEnd*."
+msgstr ""
+"Life cycle: *OnAppInitBegin > OnDeviceInitBegin > OnDeviceInitEnd > "
+"OnAppInitEnd*."
+
+#: ../../source/portal_setup.rst:391
+msgid "Пример создания обработчиков событий приведен ниже."
+msgstr "Example of creating event handlers is shown below."
+
+#: ../../source/portal_setup.rst:395
+msgid ""
+"Внимание! Использование этого механизма требует навыков программирования на "
+"Javascript, знания архитектуры и API портала и API устройств."
+msgstr ""
+"Attention! The use of this mechanism requires programming skills in "
+"Javascript, knowledge of architecture and API portal and API devices."
+
+#: ../../source/portal_setup.rst:398
+msgid "6.4. Пример конфигурации"
+msgstr "6.4. Example configuration"
+
+#: ../../source/portal_setup.rst:400
+msgid ""
+"Пример ниже предназначен для шаблона ``impuls`` и кроме стандартного поведения"
+" добавляет дополнительный пункт в меню настроек абонента - \"Режим "
+"ожидания\", включающий или отключающий обработку событий "
+"подключения/отключения HDMI-кабеля на приставке MAG, а также проверяет "
+"версию прошивки и запускает обновление в случае необходимости при старте "
+"приложения и добавляет некоторые другие функции. ::"
+msgstr ""
+"The example below is for template ``impuls`` and in addition to the default "
+"behavior adds an additional item in the settings menu of the subscriber - "
+"\"standby Mode\" that enables or disables the event handling "
+"connect/disconnect HDMI cable on MAG, and also checks the firmware version "
+"and runs the update if necessary when starting the application, and adds "
+"some other functions. ::"
