@@ -359,6 +359,9 @@ TVMW_PREVENT_CASCADE_DELETION ``bool``
   При значении False удаление таких объектов разрешено, но дочерние объекты при этом удалены не будут.
   По умолчанию False.
 
+DEALERS_DISPLAY_MANUAL_ACCOUNT_ACTIVATION_DATE ``bool``
+  Включить/выключить возможность ручного ввода даты активации и деактивации в личном кабинете дилера.
+  По умолчанию False.
 
 .. _license-settings:
 
