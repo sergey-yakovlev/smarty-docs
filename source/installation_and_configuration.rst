@@ -363,6 +363,14 @@ TVMW_PREVENT_CASCADE_DELETION ``bool``
   При значении False удаление таких объектов разрешено, но дочерние объекты при этом удалены не будут.
   По умолчанию False.
 
+TVMIDDLEWARE_MOVIEDB ``str``
+  Выбор базы с фильмами, которая используется для заполнения информации о добавляемых фильмах.
+  Доступные значения: ``kinopoisk`` и ``cinemate``.
+  По умолчанию ``kinopoisk``.
+
+TVMIDDLEWARE_CINEMATE_KEY ``str``
+  API ключ для работы с базой ``cinemate``.
+
 DEALERS_DISPLAY_MANUAL_ACCOUNT_ACTIVATION_DATE ``bool``
   Включить/выключить возможность ручного ввода даты активации и деактивации в личном кабинете дилера.
   По умолчанию False.
@@ -524,6 +532,9 @@ MONGODB_USERNAME ``str``
 MONGODB_PASSWORD ``str``
   Пароль для авторизации.
 
+MONGODB_AUTH_METHOD ``str``
+  Метод авторизации. Метод авторизации зависит от версии **MongoDB**.
+
 В секции **INSTALLED_APPS** в файле конфигурации Smarty необходимо добавить модуль ``viewstats``.
 
 .. _devicemonitoring-settings:
@@ -540,6 +551,13 @@ MONGODB_PASSWORD ``str``
 Настройки задаются переменными в файле конфигурации Smarty.
 
 
+DEVMON_SINGLE_CLIENT ``bool``
+  Включить режим единого доступа мониторинга устройств. Обеспечивает одинаковый доступ как к функционалу, так и ко всей базе мониторинга устройств для всех клиентов.
+
+.. note::
+
+  В режиме единого доступа разные клиенты могут иметь доступ к устройствам, которые этим клиентам не принадлежат.
+
 MONGODB_MONITORING_HOST ``str``
   Адрес сервера MongoDB.
 
@@ -554,6 +572,9 @@ MONGODB_MONITORING_USERNAME ``str``
 
 MONGODB_MONITORING_PASSWORD ``str``
   Пароль для авторизации.
+
+MONGODB_MONITORING_AUTH_METHOD ``str``
+  Метод авторизации. Метод авторизации зависит от версии **MongoDB**.
 
 В секции **INSTALLED_APPS** в файле конфигурации Smarty необходимо добавить модуль ``device_monitoring``.
 
