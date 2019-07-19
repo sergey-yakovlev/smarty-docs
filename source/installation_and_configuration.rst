@@ -285,6 +285,10 @@ TVMIDDLEWARE_ADS_ENABLED ``bool``
   на один сервер.
   По умолчанию False.
 
+TVMIDDLEWARE_VIDEO_EXTERNAL_API_REQUIRED ``bool``
+  При значении True поля "Внешний ID" и "Обработчик API" в форме создания фильма будут обязательными.
+  По умолчанию False.
+
 TVMW_CLIENT_LOGO_MAX_HEIGHT ``int``
   Максимальная высота логотипа оператора. Загруженный логотип будет сжат до этого размера.
   По умолчанию 240.
@@ -359,6 +363,9 @@ TVMW_PREVENT_CASCADE_DELETION ``bool``
   При значении False удаление таких объектов разрешено, но дочерние объекты при этом удалены не будут.
   По умолчанию False.
 
+DEALERS_DISPLAY_MANUAL_ACCOUNT_ACTIVATION_DATE ``bool``
+  Включить/выключить возможность ручного ввода даты активации и деактивации в личном кабинете дилера.
+  По умолчанию False.
 
 .. _license-settings:
 
