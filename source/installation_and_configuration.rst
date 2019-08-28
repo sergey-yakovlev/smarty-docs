@@ -847,7 +847,7 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
 
 После установки обновления необходимо установить новые требуемые python-библиотеки через ``pip``: ::
 
-    sudo pip install -r /usr/share/nginx/html/microimpuls/smarty/requirements.txt
+    sudo pip install -r /usr/share/nginx/html/microimpuls/smarty/requirements.txt --ignore-installed
 
 Миграция схемы БД осуществляется командой: ::
 
