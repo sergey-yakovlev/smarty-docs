@@ -744,55 +744,55 @@ http://smarty.example.com/admin/users/user/.
 
 * Виджет - в приложение будет добавлен внутренний виджет, разработанный специально для шаблона. На текущий момент виджеты доступны только для шаблона futuristic:
     * Прогноз погоды
-       Системное название: WeatherWidget
-       url: /templates/futuristic/default/apps/weather-widget/weather.widget.js
-       Атрибуты:
-        * city__NUM__name: название города
-        * city__NUM__id: идентификатор города в источнике, заданном в конфиге Smarty
+       * Системное название: WeatherWidget
+       * url: /templates/futuristic/default/apps/weather-widget/weather.widget.js
+       * Атрибуты:
+            * city__NUM__name: название города
+            * city__NUM__id: идентификатор города в источнике, заданном в конфиге Smarty
     * Курс валют
-       Системное название: ExchangeWidget
-       url: /templates/futuristic/default/apps/exchange-widget/exchange.widget.js
+       * Системное название: ExchangeWidget
+       * url: /templates/futuristic/default/apps/exchange-widget/exchange.widget.js
     * Телеканал
-        Системное название: TVChannelWidget
-        url: /templates/futuristic/default/apps/tvchannel-widget/tvchannel.widget.js
-        Атрибуты:
-        * number: номер канала по порядку в Smarty
+        * Системное название: TVChannelWidget
+        * url: /templates/futuristic/default/apps/tvchannel-widget/tvchannel.widget.js
+        * Атрибуты:
+            * number: номер канала по порядку в Smarty
     * Баннер
-        Системное название: PromoImageWidget
-        url: /templates/futuristic/default/apps/promo-image-widget/promo.image.widget.js
-        Атрибуты:
-        * image_url: адрес превью-картинки баннера
-        * big_image_url: адрес полноэкранной картинки баннера
-        * refresh_interval: интервал для обновления картинки с сервера (в секундах)
+        * Системное название: PromoImageWidget
+        * url: /templates/futuristic/default/apps/promo-image-widget/promo.image.widget.js
+        * Атрибуты:
+            * image_url: адрес превью-картинки баннера
+            * big_image_url: адрес полноэкранной картинки баннера
+            * refresh_interval: интервал для обновления картинки с сервера (в секундах)
     * Новости
-        Системное название: NewsWidget
-        url: /templates/futuristic/default/apps/news-widget/news.widget.js
-        Атрибуты:
-        * rss_url: адрес RSS-ленты
+        * Системное название: NewsWidget
+        * url: /templates/futuristic/default/apps/news-widget/news.widget.js
+        * Атрибуты:
+            * rss_url: адрес RSS-ленты
     * Баннер-ссылка
-        Системное название: LinkImageWidget
-        url: /templates/futuristic/default/apps/link-image-widget/link.image.widget.js
-        Атрибуты:
-        * image_url: адрес превью-картинки баннера
-        * link_url: адрес ссылки, открывающийся при запуске виджета
+        * Системное название: LinkImageWidget
+        * url: /templates/futuristic/default/apps/link-image-widget/link.image.widget.js
+        * Атрибуты:
+            * image_url: адрес превью-картинки баннера
+            * link_url: адрес ссылки, открывающийся при запуске виджета
     * Поиск
-        Системное название: SearchWidget
-        url: /templates/futuristic/default/apps/search-widget/search.widget.js
+        * Системное название: SearchWidget
+        * url: /templates/futuristic/default/apps/search-widget/search.widget.js
     * Промо фильма
-        Системное название: PromoVodWidget
-        url: /templates/futuristic/default/apps/promo-vod-widget/promo.vod.widget.js
-        Атрибуты:
-        * items__NUM__id: идентификатор фильма/подписки в Smarty
-        * items__NUM__content_type: тип контента, значения: 0 - фильм, 1 - подписка
-        * items__NUM__content_name: название контента
-        * items__NUM__trailer_url: url трейлера
-        * items__NUM__preview_url: url превью-картинки
+        * Системное название: PromoVodWidget
+        * url: /templates/futuristic/default/apps/promo-vod-widget/promo.vod.widget.js
+        * Атрибуты:
+            * items__NUM__id: идентификатор фильма/подписки в Smarty
+            * items__NUM__content_type: тип контента, значения: 0 - фильм, 1 - подписка
+            * items__NUM__content_name: название контента
+            * items__NUM__trailer_url: url трейлера
+            * items__NUM__preview_url: url превью-картинки
     * Промо канала
-        Системное название: PromoStreamWidget
-        url: /templates/futuristic/default/apps/promo-stream-widget/promo.stream.widget.js
-        Атрибуты:
-        * items__NUM__trailer_url: url трейлера
-        * items__NUM__preview_url: url превью-картинки
+        * Системное название: PromoStreamWidget
+        * url: /templates/futuristic/default/apps/promo-stream-widget/promo.stream.widget.js
+        * Атрибуты:
+            * items__NUM__trailer_url: url трейлера
+            * items__NUM__preview_url: url превью-картинки
 
 * Экран настроек Android - виджет, который при запуске открывает системные настройки Android
 
