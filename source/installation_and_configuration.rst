@@ -410,6 +410,10 @@ TVMIDDLEWARE_CINEMATE_KEY ``str``
 DEALERS_DISPLAY_MANUAL_ACCOUNT_ACTIVATION_DATE ``bool``
   Включить/выключить возможность ручного ввода даты активации и деактивации в личном кабинете дилера.
   По умолчанию False.
+  
+TVMW_EPG_DO_NOT_IMPORT_UNUSED ``bool``
+   Опция позволяет отключить импорт неиспользуемых EPG-каналов.
+   По умолчанию False.
 
 .. _license-settings:
 
