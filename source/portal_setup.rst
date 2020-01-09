@@ -590,7 +590,7 @@ vod_show_all ``bool``
 
 allow_to_change_access_restriction_for_purchase_content ``bool``
     Флаг, который добавляет в список настроек пункт для изменения доступа к покупкам.
-    По умолчанию *false*.
+    По умолчанию *true*.
     Поддерживается только в шаблонах: ``futuristic``.
 
 show_payment_menu ``bool``
