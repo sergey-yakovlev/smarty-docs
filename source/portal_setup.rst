@@ -365,6 +365,7 @@ player_rewind_step ``int``
 
 allow_to_change_data_center ``bool``
     При значении *true* в настройках абонента появится возможность изменения дата-центра (сервера вещания).
+    По умолчанию *false*.
     Поддерживается только в шаблонах: ``futuristic``.
 
 show_balance_menu ``bool``
