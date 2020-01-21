@@ -817,6 +817,9 @@ http://smarty.example.com/admin/users/user/.
         * Атрибуты:
             * items__NUM__trailer_url: url трейлера
             * items__NUM__preview_url: url превью-картинки
+    * ТВ Премьеры
+        * Системное название: PremieresWidget
+        * url: /templates/futuristic/default/apps/premieres-widget/premieres.widget.js
 
 * Экран настроек Android - виджет, который при запуске открывает системные настройки Android
 
