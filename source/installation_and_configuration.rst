@@ -549,6 +549,9 @@ MONITORING_CONCURRENT_STREAMS_COUNT ``int``
 MONITORING_AGENT_SOCKET_TCP_BUFFER ``int``
   Размер буфера данных при приеме ответа от анализатора MicroTS. Значение по умолчанию 4096 байт.
 
+MONITORING_STREAM_CHECKS_TTL_DAYS ``int``
+  Период жизни проб и событий потока.
+
 Скрипт опроса анализаторов запускается через crontab - см. :ref:`Настройка планировщика задач crontab <crontab-settings>`.
 
 .. _reports-settings:
