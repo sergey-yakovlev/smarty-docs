@@ -130,6 +130,7 @@ http://smarty.example.com/admin/tvmiddleware/playdevice/
     Системное название типа устройства, возможные значения см. ниже.
 
 Поддерживаемые типы устройств (системные названия): 
+
 ``android`` - под данным типом устройства распознается мобильный клиент под Android.
 
 ``android_stb`` - Smart TV или STB под OS Android.
