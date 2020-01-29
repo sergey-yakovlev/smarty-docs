@@ -129,8 +129,44 @@ http://smarty.example.com/admin/tvmiddleware/playdevice/
 Системное название
     Системное название типа устройства, возможные значения см. ниже.
 
-Поддерживаемые типы устройств (системные названия): ``android`` ``android_stb`` ``dune`` ``eltex`` ``tvip`` ``lg_netcast``
-``lg_webos`` ``mag`` ``pc`` ``sagemcom`` ``samsung_smart_tv`` ``tizen_tv`` ``ios`` ``wrt`` ``amino`` ``imaqliq`` ``kodi``
+Поддерживаемые типы устройств (системные названия): 
+``android`` - под данным типом устройства распознается мобильный клиент под Android.
+
+``android_stb`` - Smart TV или STB под OS Android.
+
+``dune`` - STB Dune HD, начиная с модели Dune HD TV-101 и новее (модели PRO 4K, NEO 4K PLUS, NEO 4K T2 PLUS, SKY 4K PLUS работают под OS Android и относятся к типу устройства ``android_stb``).
+
+``eltex`` - STB Eltex под OS Linux (NV-102).
+
+``tvip`` - STB Tvip.
+
+``lg_netcast`` - LG Smart TV под OS Netcast.
+
+``lg_webos`` - LG Smart TV под OS WebosTV.
+
+``mag`` - STB MAG.
+
+``pc`` - под данным типом устройства распознается ПК-клиент (не поддерживается на текущий момент).
+
+``sagemcom`` - STB Sagemcom.
+
+``samsung_smart_tv`` - Samsung Smart TV под Orsay (серии E, F, H).
+
+``tizen_tv`` - Samsung Smart TV под Tizen (серии J, K, M, Q, N, R).
+
+``ios`` - под данным типом устройства распознается мобильный клиент под iOS.
+
+``wrt``- STB WRTech.
+
+``amino`` - STB Amino.
+
+``imaqliq`` - STB Imaqliq под OS Linux (G-box, Q-box). Модели под OS Android (Q-box Ultra) относятся к типу устройства ``android_stb``
+
+``kodi`` - медиаплеер Kodi.
+
+``vewd`` - Smart TV, запускающие видео через HTML5-плеер (бывш. OperaTV). К таким телевизорам могут относиться устройства на платформах: Zeasn (Philips Smart TV), AmazonFireOS, Vewd и другие.
+
+``tbrowser`` - телевизоры TCL и те, которые используют внутренний движок tbrowser (Panasonic FSR400).
 
 .. _playdevice-assigning-to-client:
 
