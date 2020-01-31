@@ -713,7 +713,7 @@ template_style ``str``
         'client_id': 1,
         'api_key': '***',
         'api_url': '/api',
-        'template_name': 'futuristic',
+        'template_name': 'impuls',
         'template_size': {
             'impuls': {
                 'default': [1280, 720]
@@ -723,6 +723,7 @@ template_style ``str``
                 '720x576': [720, 576]
             },
         },
+        'available_templates': ['futuristic'],
         'template_styles': {
             'futuristic': ['futuristic', 'futuristic_x']
         },
