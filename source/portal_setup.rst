@@ -663,8 +663,8 @@ service_description ``str``
     Поддерживается только в шаблонах: ``impuls``.
     
 template_styles ``array``
-    Список доступных для абонента стилей оформления шаблона. Изменить стиль можно в экране настроек. Стиль оформления никак не влияет на функционал шаблона.
-    По умолчанию *[]*
+    Список доступных для абонента стилей оформления шаблона (прописывается отдельно для каждого шаблона). Изменить стиль можно в экране настроек. Стиль оформления никак не влияет на функционал шаблона.
+    По умолчанию *{}*
     Поддерживается только в шаблонах: ``futuristic``.
 
 template_style ``str``
@@ -713,7 +713,7 @@ template_style ``str``
         'client_id': 1,
         'api_key': '***',
         'api_url': '/api',
-        'template_name': 'impuls',
+        'template_name': 'futuristic',
         'template_size': {
             'impuls': {
                 'default': [1280, 720]
@@ -722,6 +722,9 @@ template_style ``str``
                 'default': [1280, 720],
                 '720x576': [720, 576]
             },
+        },
+        'template_styles': {
+            'futuristic': ['futuristic', 'futuristic_x']
         },
         'settings_filename': 'example.dat',
         'site_url': 'www.example.com',
