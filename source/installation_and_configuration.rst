@@ -525,7 +525,7 @@ SMARTY_MESSAGING_LOG_FILE ``str``
   Путь к файлу лога сообщений
 
 SMARTY_MANAGEMENT_LOG_FILE ``str``
-  Путь к файлу лога management команд
+  Путь к файлу лога management-команд
 
 SMARTY_CACHE_LOG_FILE ``str``
   Путь к файлу лога кэша
@@ -558,7 +558,7 @@ SMARTY_CUSTOM_LOG_FILE ``str``
   Путь к файлу лога аккаунтов
 
 SMARTY_DEVMONITOR_LOG_FILE ``str``
-  Путь к файлу лога мониторинга устрйоств
+  Путь к файлу лога мониторинга устройств
 
 SMARTY_HBB_LOG_FILE ``str``
   Путь к файлу лога hbb
