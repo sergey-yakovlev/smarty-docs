@@ -121,6 +121,22 @@
     Можно перенести также все телеканалы, фильмы, радиостанции, камеры и сервисы, используя соответствующие опции
     ``--clone-channels`` ``--clone-video`` ``--clone-radio`` ``--clone-cameras`` ``--clone-apps``
 
+2.2.7. Создание пользователя или восстановление пароля
+------------------------------------------------------
+
+В Smarty возможно создание или восстановление пользователя через команду `create_user`: ::
+
+    python ./manage.py create_user --settings=settings.<settings filename> --username=new_user --password=new_password --is_admin=True --client_id=1 --is_superuser=True
+
+Параметры:
+
+- `--username` - имя пользователя, обязательный.
+- `--password` - пароль, обязательный.
+- `--is_admin` - `True` или `False`, если `True`, то создаваемому пользователю будет доступна служебная часть сайта, по умолчанию `False`.
+- `--client_id` - ID клиента, к которому будет привязан создаваемы пользователь.
+- `--is_superuser` - `True` или `False`, если `True`, то будет создаен суперпользователь, по умолчанию `False`.
+- `--monitoring_user` - `True` или `False`, если `True`, то пользователь будет являться оператором мониторинга устройств, по умолчанию `False`.
+- `--reset_password` - если `True`, то в случае, если указанный username уже используется, то вместо создания нового будет изменён пароль у старого пользователя; по умолчанию `False`.
 
 .. _install-on-centos:
 
@@ -207,9 +223,22 @@ SMARTY_URL ``str``
   URL к инстансу Smarty. Используется в панели администратора.
   По умолчанию "http://smarty.example.com".
 
+MEDIA_ROOT ``str``
+  Путь к директории, в которой размещаются статические файлы (css, картинки, js).
+  По умолчанию - подпапка media
+
 MEDIA_BASE_URL ``str``
   URL, который используется в ответах API в качестве базового пути к изображениям и статическим ресурсам,
   например для иконок телеканалов, картинок EPG или обложек фильмов.
+
+UPLOAD_URL ``str``
+  URL папки для загруженного пользователями контента.
+  
+MAIN_MENU ``dict``
+  Описывает структуру главного меню админки смарти. Поля:
+  {"role":[{'name': '', 'title': '', 'icon': '', 
+            'subitems': [{'name': '', 'title': '', 'url': ''}, ...]
+        }, ...]}, где role - вид клиента (client, dealer, copyright_holder, etc)
 
 TVMIDDLEWARE_PORTAL_DOMAIN ``str``
   Домен, на котором располагается портал для устройств типа STB и Smart TV. Используется только для вспомогательных
@@ -220,8 +249,13 @@ TVMIDDLEWARE_API_URL ``str``
   По умолчанию "http://smarty.example.com/tvmiddleware/api". Для мультидоменной инсталляции можно использовать
   относительное значение "/api".
 
-TVMIDDLEWARE_PROGRAM_LIST_SEARCH_DAYS ``int``
-  Глубина поиска EPG в днях. Используется при запросах на поиск контента. При использовании большого значения
+TVMIDDLEWARE_PROGRAM_LIST_SEARCH_DAYS_PAST ``int``
+  Глубина поиска EPG в прошлое в днях. Используется при запросах на поиск контента. При использовании большого значения
+  поиск будет осуществляться дольше и задействовать больше ресурсов сервера БД и Middleware.
+  По умолчанию 1.
+
+TVMIDDLEWARE_PROGRAM_LIST_SEARCH_DAYS_FUTURE ``int``
+  Глубина поиска EPG в будущее в днях. Используется при запросах на поиск контента. При использовании большого значения
   поиск будет осуществляться дольше и задействовать больше ресурсов сервера БД и Middleware.
   По умолчанию 1.
 
@@ -239,8 +273,12 @@ TVMIDDLEWARE_VIDEO_PREMIERE_DAYS ``int``
   в соответствующем разделе в приложениях абонента.
   По умолчанию 90.
 
-TVMIDDLEWARE_CONTENT_POSITION_TTL_DAYS ``int``
-  Период в днях, в течение которого необходимо хранить на сервере сохраненные позиции просмотра контента для
+TVMIDDLEWARE_CONTENT_POSITION_TTL_DAYS_VIDEO ``int``
+  Период в днях, в течение которого необходимо хранить на сервере сохраненные позиции просмотра видео для
+  возможности предложить абоненту продолжить просмотр с прошлой позиции. По умолчанию 30.
+
+TVMIDDLEWARE_CONTENT_POSITION_TTL_DAYS_PROGRAM ``int``
+  Период в днях, в течение которого необходимо хранить на сервере сохраненные позиции просмотра программы для
   возможности предложить абоненту продолжить просмотр с прошлой позиции. По умолчанию 30.
 
 TVMIDDLEWARE_RECOMMENDATIONS_ENABLED ``bool``
@@ -367,6 +405,18 @@ TVMW_VIDEO_FILE_PROMO_IMAGE_MAX_HEIGHT ``int``
 TVMW_VIDEO_FILE_PROMO_IMAGE_MAX_WIDTH ``int``
   Максимальная ширина промо-картинки видео-ассета в VOD. Загруженная картинка будет сжата до этого размера.
   По умолчанию 1280.
+  
+TVMW_VIDEO_SCREENSHOT_BIG_MAX_HEIGHT ``int``
+  Максимальная высота промо-картинки видео-ассета в VOD. Загруженная картинка будет сжата до этого размера.
+  По умолчанию 720.  
+
+TVMW_VIDEO_SCREENSHOT_BIG_MAX_WIDTH ``int``
+  Максимальная ширина промо-картинки видео-ассета в VOD. Загруженная картинка будет сжата до этого размера.
+  По умолчанию 1280.
+  
+TVMW_VIDEO_SCREENSHOT_BLUR_RADIUS ``int``
+  Радиус размытия, применяемый к скриншотам видео-ассета при загрузке.
+  По умолчанию 4
 
 TVMW_EXAPP_ICON_MAX_HEIGHT ``int``
   Максимальная высота иконки стороннего приложения. Загруженная картинка будет сжата до этого размера.
@@ -417,11 +467,105 @@ TVMIDDLEWARE_CINEMATE_KEY ``str``
 
 DEALERS_DISPLAY_MANUAL_ACCOUNT_ACTIVATION_DATE ``bool``
   Включить/выключить возможность ручного ввода даты активации и деактивации в личном кабинете дилера.
-  По умолчанию False.
+  По умолчанию False.  
   
 TVMW_EPG_DO_NOT_IMPORT_UNUSED ``bool``
-   Опция позволяет отключить импорт неиспользуемых EPG-каналов.
-   По умолчанию False.
+  Опция позволяет отключить импорт неиспользуемых EPG-каналов.
+  По умолчанию False.
+  
+WEATHER_DEFAULT_BACKEND ``str``
+  Бэкенд источника информации о погоде, используемый по умолчанию
+  
+WEATHER_GISMETEO_TOKEN ``str``
+  Токен для сервиса гисметео
+
+WEATHER_FOBOS_USER ``str``
+  Имя пользователя для сервиса погоды "Фобос"
+
+WEATHER_FOBOS_PASS ``str``
+  Пароль пользователя для сервиса погоды "Фобос"
+
+LOG_FILE_OWNER_USER ``str``
+  Имя пользователя-владельца лог-файлов
+  
+LOG_FILE_OWNER_GROUP ``str``
+  Имя группы пользователя-владельца лог-файлов
+  
+LOGGING ``dict``
+  Конфигурация логов смарти
+
+SMARTY_ACCOUNTS_LOG_FILE ``str``
+  Путь к файлу лога аккаунтов
+  
+SMARTY_BILLING_OUT_LOG_FILE ``str``
+  Путь к файлу лога внешнего биллинга
+  
+SMARTY_BILLING_IN_LOG_FILE ``str``
+  Путь к файлу лога встроенного биллинга
+  
+SMARTY_PAYMENT_LOG_FILE ``str``
+  Путь к файлу лога платежей
+  
+SMARTY_PORTAL_LOG_FILE ``str``
+  Путь к файлу лога портала
+
+SMARTY_EPG_LOG_FILE ``str``
+  Путь к файлу лога epg
+
+SMARTY_ADMIN_LOG_FILE ``str``
+  Путь к файлу лога действий в панели администрирования
+
+SMARTY_CONTENT_REQUESTS_LOG_FILE ``str``
+  Путь к файлу лога запросов контента
+
+SMARTY_API_REQUESTS_LOG_FILE ``str``
+  Путь к файлу лога api
+
+SMARTY_MESSAGING_LOG_FILE ``str``
+  Путь к файлу лога сообщений
+
+SMARTY_MANAGEMENT_LOG_FILE ``str``
+  Путь к файлу лога management-команд
+
+SMARTY_CACHE_LOG_FILE ``str``
+  Путь к файлу лога кэша
+
+SMARTY_MAIN_LOG_FILE ``str``
+  Путь к файлу общего лога
+
+SMARTY_STREAM_SERVICES_LOG_FILE ``str``
+  Путь к файлу лога потоковых сервисов
+
+SMARTY_VIDEOSERVICES_LOG_FILE ``str``
+  Путь к файлу лога видеосервисов
+
+SMARTY_SMS_LOG_FILE ``str``
+  Путь к файлу лога смс
+
+SMARTY_RQ_LOG_FILE ``str``
+  Путь к файлу лога работ
+
+SMARTY_MEGOGO_LOG_FILE ``str``
+  Путь к файлу лога запросов к api megogo
+
+SMARTY_TVZAVR_LOG_FILE ``str``
+  Путь к файлу лога запросов к api tvzavr
+
+SMARTY_IRDETO_LOG_FILE ``str``
+  Путь к файлу лога запросов к api irdeto
+
+SMARTY_CUSTOM_LOG_FILE ``str``
+  Путь к файлу лога аккаунтов
+
+SMARTY_DEVMONITOR_LOG_FILE ``str``
+  Путь к файлу лога мониторинга устройств
+
+SMARTY_HBB_LOG_FILE ``str``
+  Путь к файлу лога hbb
+
+SMARTY_ADS_LOG_FILE ``str``
+  Путь к файлу лога рекламных блоков
+
 
 .. _license-settings:
 
@@ -551,6 +695,11 @@ MONITORING_AGENT_SOCKET_TCP_BUFFER ``int``
 
 MONITORING_STREAM_CHECKS_TTL_DAYS ``int``
   Период жизни проб и событий потока.
+
+MONITORING_STREAM_TEST_DURATION ``int``
+  Длительность ожидания отдельного потока с анализаторов MicroTS.
+  Данный параметр влияет на производительность и быстроту обновления данных на странице мониторинга потоков.
+  Значение по умолчанию 10
 
 Скрипт опроса анализаторов запускается через crontab - см. :ref:`Настройка планировщика задач crontab <crontab-settings>`.
 
