@@ -473,6 +473,10 @@ TVMW_EPG_DO_NOT_IMPORT_UNUSED ``bool``
   Опция позволяет отключить импорт неиспользуемых EPG-каналов.
   По умолчанию False.
   
+TVMW_EPG_SAVE_MULTIPLE_CATEGORIES ``bool``
+  Определяет, сохранять ли все переданные категории при импорте epg. При значении False будет сохранена только первая найденная категория. Опция присутствует для обеспечения обратной совместимости.
+  По умолчанию True
+  
 WEATHER_DEFAULT_BACKEND ``str``
   Бэкенд источника информации о погоде, используемый по умолчанию
   
@@ -492,7 +496,24 @@ LOG_FILE_OWNER_GROUP ``str``
   Имя группы пользователя-владельца лог-файлов
   
 LOGGING ``dict``
-  Конфигурация логов смарти
+  Конфигурация логов смарти. Формат: ::
+
+    LOGGING = {
+        'disable_existing_loggers': False, # - отключить ранее определенные логи (логи по умолчанию)
+          'filters': {...},  # - дополнительные фильтры для логов
+          'handlers': {   # - описание обработчиков 
+          'mail_admins': {
+            'level': 'ERROR', # - уровни событий, которые перехватывает обработчик. Варианты: DEBUG, INFO, WARNING, ERROR, CRITICAL
+            'class': 'django.utils.log.AdminEmailHandler'   # - класс, реализующий функционал обработчика
+            }, ...
+           },
+         'loggers': {
+            'smarty_ads': {
+            'handlers': ['smarty_ads_handler', 'console'], # - обработчик типа логов. Описывается выше в 'handlers' 
+            'level': 'DEBUG',     # - уровни событий, которые перехватывает логгер. Варианты: DEBUG, INFO, WARNING, ERROR, CRITICAL
+            'propagate': True,    # - передает ли логгер событие дальше для обработки другими логгерами. 
+         }, ...
+        }
 
 SMARTY_ACCOUNTS_LOG_FILE ``str``
   Путь к файлу лога аккаунтов
@@ -543,7 +564,7 @@ SMARTY_SMS_LOG_FILE ``str``
   Путь к файлу лога смс
 
 SMARTY_RQ_LOG_FILE ``str``
-  Путь к файлу лога работ
+  Путь к файлу лога очереди работ редиса
 
 SMARTY_MEGOGO_LOG_FILE ``str``
   Путь к файлу лога запросов к api megogo
