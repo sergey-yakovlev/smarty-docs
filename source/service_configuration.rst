@@ -877,6 +877,9 @@ http://smarty.example.com/admin/users/user/.
     * ТВ Премьеры
         * Системное название: PremieresWidget
         * url: /templates/futuristic/default/apps/premieres-widget/premieres.widget.js
+    * Тест скорости
+        * Системное название: SpeedTestWidget
+        * url: /templates/impuls/default/apps/speedtest-widget/speedtest.widget.js
 
 * Экран настроек Android - виджет, который при запуске открывает системные настройки Android
 
