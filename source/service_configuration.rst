@@ -883,6 +883,8 @@ http://smarty.example.com/admin/users/user/.
     * Тест скорости
         * Системное название: SpeedTestWidget
         * url: /templates/impuls/default/apps/speedtest-widget/speedtest.widget.js
+        * Атрибуты:
+            * speedtest_server_url: url сервера, до которого измеряется скорость (на сервере должны находиться дополнительные файлы для корректной работы виджета, выдаются по запросу)
 
 * Экран настроек Android - виджет, который при запуске открывает системные настройки Android
 
