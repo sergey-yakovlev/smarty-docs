@@ -587,6 +587,13 @@ SMARTY_HBB_LOG_FILE ``str``
 SMARTY_ADS_LOG_FILE ``str``
   Путь к файлу лога рекламных блоков
 
+SMARTY_DEFAULT_ICON_SIZE ``(int, int)``
+  Стандартный размер иконки.
+
+SMARTY_DEFAULT_ICON_SIZES ``list``
+  Список дополнительных размеров для иконок. Каждое значение должно быть кортежем из двух целочисленных значений.
+  Максимум 3 дополнительных размера.
+
 
 .. _license-settings:
 
