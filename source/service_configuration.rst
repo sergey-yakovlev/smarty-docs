@@ -822,7 +822,7 @@ http://smarty.example.com/admin/users/user/.
 
 * Воспроизведение потока по ссылке - воспроизведение любого потока по ссылке, указанной в поле "URL / Название / ID приложения".
 
-* Виджет - в приложение будет добавлен внутренний виджет, разработанный специально для шаблона. На текущий момент виджеты доступны только для шаблона futuristic:
+* Виджет - в приложение будет добавлен внутренний виджет, разработанный специально для шаблона. Виджеты для шаблона `futuristic`:
 
     * Прогноз погоды
        * Системное название: WeatherWidget
@@ -877,6 +877,9 @@ http://smarty.example.com/admin/users/user/.
     * ТВ Премьеры
         * Системное название: PremieresWidget
         * url: /templates/futuristic/default/apps/premieres-widget/premieres.widget.js
+ 
+Виджеты для шаблона `impuls`:
+
     * Тест скорости
         * Системное название: SpeedTestWidget
         * url: /templates/impuls/default/apps/speedtest-widget/speedtest.widget.js
