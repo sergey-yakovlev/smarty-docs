@@ -465,6 +465,9 @@ TVMIDDLEWARE_MOVIEDB ``str``
 TVMIDDLEWARE_CINEMATE_KEY ``str``
   API ключ для работы с базой ``cinemate``.
 
+TVMIDDLEWARE_CACHE_ICONS ``bool``
+  Включить кэширование существующих иконок. По умнолчанию выключено.
+
 DEALERS_DISPLAY_MANUAL_ACCOUNT_ACTIVATION_DATE ``bool``
   Включить/выключить возможность ручного ввода даты активации и деактивации в личном кабинете дилера.
   По умолчанию False.  
@@ -1098,6 +1101,19 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
     0 3 * * *           python /usr/share/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
 
 .. _init-script:
+
+2.5.14. Команда кэширования существующих иконок
+---------------------------------------------------------------------------------------
+
+Команда: ::
+
+    python manage.py recache_icons --settings=settings.<settings name>
+
+Вызывается в случае отсутствия информации о существующих иконках.
+
+Команда проверяет и сохраняет в кэше существование иконок для всех EpgChannel по размерам, указанным в
+``SMARTY_DEFAULT_ICON_SIZE`` и ``SMARTY_DEFAULT_ICON_SIZES``.
+
 
 2.6. Запуск, перезапуск и остановка Smarty
 ==========================================
