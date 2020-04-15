@@ -938,6 +938,15 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
 
 .. _init-script:
 
+2.5.14. Очистка старых отчетов
+-------------------------
+
+Команда: ::
+
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py delete_old_reports --save-days=30 --settings=settings.<settings name>
+
+В данную команду необходимо передать параметр ``--save-days`` для указания количества дней, за которое отчеты нужно сохранить.
+
 2.6. Запуск, перезапуск и остановка Smarty
 ==========================================
 
