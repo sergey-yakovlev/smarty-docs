@@ -1116,6 +1116,14 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
 Команда проверяет и сохраняет в кэше существование иконок для всех EpgChannel по размерам, указанным в
 ``SMARTY_DEFAULT_ICON_SIZE`` и ``SMARTY_DEFAULT_ICON_SIZES``.
 
+2.5.15. Очистка старых отчетов
+-------------------------
+
+Команда: ::
+
+    python /usr/share/nginx/html/microimpuls/smarty/manage.py delete_old_reports --save-days=30 --settings=settings.<settings name>
+
+В данную команду необходимо передать параметр ``--save-days`` для указания количества дней, за которое отчеты нужно сохранить.
 
 2.6. Запуск, перезапуск и остановка Smarty
 ==========================================
