@@ -866,13 +866,13 @@ http://smarty.example.com/admin/users/user/.
             * items__NUM__id: идентификатор фильма/подписки в Smarty
             * items__NUM__content_type: тип контента, значения: 0 - фильм, 1 - подписка
             * items__NUM__content_name: название контента
-            * items__NUM__trailer_url: url трейлера
+            * items__NUM__trailer_url: url потока трейлера фильма, который запустится при нажатии на виджет
             * items__NUM__preview_url: url превью-картинки
     * Промо канала
         * Системное название: PromoStreamWidget
         * url: /templates/futuristic/default/apps/promo-stream-widget/promo.stream.widget.js
         * Атрибуты:
-            * items__NUM__trailer_url: url трейлера
+            * items__NUM__trailer_url: url потока трейлера канала, который запустится при нажатии на виджет
             * items__NUM__preview_url: url превью-картинки
     * ТВ Премьеры
         * Системное название: PremieresWidget
