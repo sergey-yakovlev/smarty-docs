@@ -880,7 +880,7 @@ http://smarty.example.com/admin/users/user/.
  
 Виджеты для шаблона `impuls`:
 
-    * Тест скорости
+    * Тест скорости (корректная работа гарантирована на ``tvip``, ``redbox``, ``tizen_tv``, прочие устройства в работе)
         * Системное название: SpeedTestWidget
         * url: /templates/impuls/default/apps/speedtest-widget/speedtest.widget.js
         * Атрибуты:
