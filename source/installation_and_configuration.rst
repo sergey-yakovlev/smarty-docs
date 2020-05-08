@@ -471,8 +471,9 @@ TVMIDDLEWARE_MOVIEDB ``str``
 TVMIDDLEWARE_CINEMATE_KEY ``str``
   API ключ для работы с базой ``cinemate``.
 
-TVMIDDLEWARE_CACHE_ICONS ``bool``
-  Включить кэширование существующих иконок. По умнолчанию выключено.
+TVMIDDLEWARE_CACHE_EXISTING_ICONS ``bool``
+  Включить кэширование данных о размерах существующих иконок. Необходимо для отправки иконок корректных размеров для устройств.
+  По умнолчанию False.
 
 DEALERS_DISPLAY_MANUAL_ACCOUNT_ACTIVATION_DATE ``bool``
   Включить/выключить возможность ручного ввода даты активации и деактивации в личном кабинете дилера.
