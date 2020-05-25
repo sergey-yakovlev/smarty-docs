@@ -1107,21 +1107,9 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
     python manage.py make_autopayments --settings=settings.<settings name>
 
 Производит оплату для тех клиентов, у которых активен автоплатёж, будет списание средств при проверке аккаунтов сегодня и количество средств недостаточно для проделения всех аккаунтов клиента. Рекомендуется выполнять непосредственно перед вызовом check_accounts.
-.. _crontab-example:
-
-2.5.13. Пример настройки crontab
---------------------------------
-
-Пример: ::
-
-    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-    */1 * * * *         python /usr/share/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.prod
-    0 5,9,13 * * *      python /usr/share/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.prod
-    0 3 * * *           python /usr/share/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
-
 .. _init-script:
 
-2.5.14. Команда кэширования существующих иконок
+2.5.13. Команда кэширования существующих иконок
 ---------------------------------------------------------------------------------------
 
 Команда: ::
@@ -1133,7 +1121,7 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
 Команда проверяет и сохраняет в кэше существование иконок для всех EpgChannel по размерам, указанным в
 ``SMARTY_DEFAULT_ICON_SIZE`` и ``SMARTY_DEFAULT_ICON_SIZES``.
 
-2.5.15. Очистка старых отчетов
+2.5.14. Очистка старых отчетов
 -------------------------
 
 Команда: ::
@@ -1141,6 +1129,18 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
     python /usr/share/nginx/html/microimpuls/smarty/manage.py delete_old_reports --save-days=30 --settings=settings.<settings name>
 
 В данную команду необходимо передать параметр ``--save-days`` для указания количества дней, за которое отчеты нужно сохранить.
+
+.. _crontab-example:
+
+2.5.15. Пример настройки crontab
+--------------------------------
+
+Пример: ::
+
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    */1 * * * *         python /usr/share/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.prod
+    0 5,9,13 * * *      python /usr/share/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.prod
+    0 3 * * *           python /usr/share/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
 
 2.6. Запуск, перезапуск и остановка Smarty
 ==========================================
