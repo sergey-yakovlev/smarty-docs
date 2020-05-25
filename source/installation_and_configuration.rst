@@ -329,6 +329,9 @@ TVMIDDLEWARE_STREAM_SERVICE_TOKEN_MAX_TTL ``int``
 TVMIDDLEWARE_STREAM_SERVICE_TOKEN_PROLONGATION_THRESHOLD_TTL ``int``
   Пороговое значение оставшегося времени жизни токена в секундах, после которого осуществляется продление. По умолчанию 360     (6 минут).
 
+TVMW_DONT_USE_ENDLESS_WRT ``bool``
+   При True отключается добавление флага endless=1 для приставок WRT в ссылках на видеопотоки.
+
 TVMIDDLEWARE_CLEAN_OLD_SESSIONS_DAYS ``int``
   Время жизни сессии авторизации в днях. Если сессия не была в статусе "онлайн" в течение этого периода, то она будет
   автоматически удалена.
