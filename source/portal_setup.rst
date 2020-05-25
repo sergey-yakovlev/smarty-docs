@@ -435,6 +435,10 @@ volume_control_step ``int``
     Шаг увеличения/уменьшения громкости.
     По умолчанию *5*.
     Поддерживается только в шаблонах: ``impuls``, ``futuristic``, ``focus``, ``classic``, ``infinitly``.
+    
+show_password_recovery ``bool``
+    Флаг, который включает возможность восстановления пароля через отправку СМС. 
+    По умолчанию: false. Поддерживается только в шаблонах: ``futuristic``.
 
 .. _portal_event_system:
 
