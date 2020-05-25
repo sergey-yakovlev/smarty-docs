@@ -431,6 +431,11 @@ switch_channels_by_up_down_keys ``bool``
     По умолчанию *false*.
     Поддерживается только в шаблонах: ``futuristic``.
 
+volume_control_step ``int``
+    Шаг увеличения/уменьшения громкости.
+    По умолчанию *5*.
+    Поддерживается только в шаблонах: ``impuls``, ``futuristic``, ``focus``, ``classic``, ``infinitly``.
+
 .. _portal_event_system:
 
 6.3. Механизм событий
