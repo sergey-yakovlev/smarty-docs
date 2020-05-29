@@ -329,6 +329,9 @@ TVMIDDLEWARE_STREAM_SERVICE_TOKEN_MAX_TTL ``int``
 TVMIDDLEWARE_STREAM_SERVICE_TOKEN_PROLONGATION_THRESHOLD_TTL ``int``
   Пороговое значение оставшегося времени жизни токена в секундах, после которого осуществляется продление. По умолчанию 360     (6 минут).
 
+TVMW_DONT_USE_ENDLESS_WRT ``bool``
+   При True отключается добавление флага endless=1 для приставок WRT в ссылках на видеопотоки.
+
 TVMIDDLEWARE_CLEAN_OLD_SESSIONS_DAYS ``int``
   Время жизни сессии авторизации в днях. Если сессия не была в статусе "онлайн" в течение этого периода, то она будет
   автоматически удалена.
@@ -1088,6 +1091,8 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
 
 Внимание, выполнение команды приведет к логауту всех устройств.
 
+.. _check_stream_services:
+
 2.5.11. Команда проверки доступности стриминг-сервисов для механизма отказоустойчивости
 ---------------------------------------------------------------------------------------
 
@@ -1098,6 +1103,7 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
 При настройке отказоустойчивой схемы сервиса с балансировкой нагрузки рекомендуется выполнять эту команду каждую минуту.
 
 Команда проверяет сервисы по тем методам проверки, которые настроены в свойствах стриминг-сервиса.
+.. _make_autopayments:
 
 2.5.12. Команда совершения автоплатежей
 --------------------------------------------------------------------------------------
@@ -1107,21 +1113,9 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
     python manage.py make_autopayments --settings=settings.<settings name>
 
 Производит оплату для тех клиентов, у которых активен автоплатёж, будет списание средств при проверке аккаунтов сегодня и количество средств недостаточно для проделения всех аккаунтов клиента. Рекомендуется выполнять непосредственно перед вызовом check_accounts.
-.. _crontab-example:
+.. _recache_icons:
 
-2.5.13. Пример настройки crontab
---------------------------------
-
-Пример: ::
-
-    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-    */1 * * * *         python /usr/share/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.prod
-    0 5,9,13 * * *      python /usr/share/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.prod
-    0 3 * * *           python /usr/share/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
-
-.. _init-script:
-
-2.5.14. Команда кэширования существующих иконок
+2.5.13. Команда кэширования существующих иконок
 ---------------------------------------------------------------------------------------
 
 Команда: ::
@@ -1132,8 +1126,9 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
 
 Команда проверяет и сохраняет в кэше существование иконок для всех EpgChannel по размерам, указанным в
 ``SMARTY_DEFAULT_ICON_SIZE`` и ``SMARTY_DEFAULT_ICON_SIZES``.
+.. _delete_old_reports:
 
-2.5.15. Очистка старых отчетов
+2.5.14. Очистка старых отчетов
 -------------------------
 
 Команда: ::
@@ -1141,6 +1136,18 @@ SMARTY_ADDITIONAL_LANGUAGES ``list``
     python /usr/share/nginx/html/microimpuls/smarty/manage.py delete_old_reports --save-days=30 --settings=settings.<settings name>
 
 В данную команду необходимо передать параметр ``--save-days`` для указания количества дней, за которое отчеты нужно сохранить.
+
+.. _crontab-example:
+
+2.5.15. Пример настройки crontab
+--------------------------------
+
+Пример: ::
+
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    */1 * * * *         python /usr/share/nginx/html/microimpuls/smarty/manage.py cache_channel_list --settings=settings.prod
+    0 5,9,13 * * *      python /usr/share/nginx/html/microimpuls/smarty/manage.py epg_import --settings=settings.prod
+    0 3 * * *           python /usr/share/nginx/html/microimpuls/smarty/manage.py clean_old_messages --days_count 3 --settings=settings.prod
 
 2.6. Запуск, перезапуск и остановка Smarty
 ==========================================
