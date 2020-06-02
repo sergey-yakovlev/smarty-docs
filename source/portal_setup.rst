@@ -455,6 +455,11 @@ health_check_attemts ``array``
     По умолчанию: *[30]*.
     Поддерживается только в шаблонах: ``futuristic``.
 
+show_udp_proxy_settings ``bool``
+    Флаг, который позволяет для устройств android_stb отобразить в настройках пункт "UDP Proxy".
+    По умолчанию *false*.
+    Поддерживается только в шаблонах: ``futuristic``, ``impuls``, ``infinitly``.
+
 
 .. _portal_event_system:
 
